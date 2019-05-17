@@ -25,5 +25,5 @@ package ml.educationallydesigned.thyme.core;
  *
  * @version    1.0
  */
-public class EscapeRoom implements State, Playable {
+public class PanicRoom implements GameState, Playable {
 }

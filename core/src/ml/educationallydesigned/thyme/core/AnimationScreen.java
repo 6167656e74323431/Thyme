@@ -25,5 +25,5 @@ package ml.educationallydesigned.thyme.core;
  *
  * @version    1.0
  */
-public class AnimationScreen implements State {
+public class AnimationScreen implements GameState {
 }
