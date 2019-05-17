@@ -25,5 +25,5 @@ package ml.educationallydesigned.thyme.core;
  *
  * @version    1.0
  */
-public class HomeScreen implements State {
+public class HomeScreen implements GameState {
 }
