@@ -25,7 +25,7 @@ import java.awt.Point;
  *
  * @author     Theodore Preduta
  *
- * @version    1.1
+ * @version    1.1.1
  */
 public abstract class Window {
 	private boolean visibility;
@@ -35,12 +35,12 @@ public abstract class Window {
 	private Point location;
 
 	/**
-	 * Gets called when the window becomes active.
+	 * Gets called when the window becomes inactive.
 	 */
 	public abstract void onInactivity();
 
 	/**
-	 * Gets called when the window becomes inactive.
+	 * Gets called when the window becomes active.
 	 */
 	public abstract void onActivity();
 
