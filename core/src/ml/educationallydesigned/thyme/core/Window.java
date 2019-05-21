@@ -18,12 +18,103 @@
 
 package ml.educationallydesigned.thyme.core;
 
+import java.awt.Point;
+
 /**
  * Class to outline and implement some methods that all winows have.
  *
  * @author     Theodore Preduta
  *
- * @version    1.0
+ * @version    1.1
  */
 public abstract class Window {
+	private boolean visibility;
+	private int id;
+	private String name;
+	private Point size;
+	private Point location;
+
+	/**
+	 * Gets called when the window becomes active.
+	 */
+	public abstract void onInactivity();
+
+	/**
+	 * Gets called when the window becomes inactive.
+	 */
+	public abstract void onActivity();
+
+	/**
+	 * Function that draws the windows graphics.
+	 */
+	public abstract void drawWindow();
+
+	/**
+	 * Most powerful window constructor.
+	 *
+	 * @param      visibility  The visibility of the window.
+	 * @param      name        The name of the window.
+	 * @param      size        The size of the window as a Point of the max X
+	 *                         and max Y if the location is (0, 0).
+	 * @param      location    The location of the window on screen.
+	 */
+	public Window(boolean visibility, String name, Point size, Point location) {
+		this.visibility = visibility;
+		id = 0;
+		this.name = name;
+		this.size = size;
+		this.location = location;
+	}
+
+	/**
+	 * Constructor where only the name is specified. Other parameters are set as
+	 * follows <br> <ul>
+	 * <li>visibility - false.</li>
+	 * <li>size - (100, 100).</li>
+	 * <li>location - (0, 0).</li> </ul>
+	 *
+	 * @param      name  The name of the window
+	 */
+	public Window(String name) {
+		this(false, name, new Point(100, 100), new Point());
+	}
+
+	/**
+	 * Sets the id of the window. This can only be done by an instance of the
+	 * Desktop class to ensure no multiple assignments
+	 *
+	 * @param      id       The unique identifier to be set.
+	 * @param      manager  The manager class instance that is assigning the id.
+	 */
+	public void setID(int id, Object manager) {
+		if (manager instanceof Desktop)
+			this.id = id;
+	}
+
+	/**
+	 * Returns the id of the window instance.
+	 *
+	 * @return     The unique id of the window instance.
+	 */
+	public int getID() {
+		return id;
+	}
+
+	/**
+	 * Changes the visibility of the window. Calls either onInvisibility or
+	 * onVisibility depending on the new visibility.
+	 */
+	public void toggleVisibility() {
+		visibility = !visibility;
+	}
+
+	/**
+	 * Gets the visibility of the window.
+	 *
+	 * @return     The visibility of the window, true meaning the window is
+	 *             visible.
+	 */
+	public boolean getVisibility() {
+		return visibility;
+	}
 }
