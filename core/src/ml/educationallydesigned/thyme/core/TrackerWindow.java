@@ -23,7 +23,13 @@ package ml.educationallydesigned.thyme.core;
  *
  * @author     Theodore Preduta
  *
- * @version    1.0
+ * @version    1.1
  */
 public class TrackerWindow extends Window {
+	/* beginning of temporary methods to allow for successful compilation */
+	public void onActivity() {}
+	public void onInactivity() {}
+	public TrackerWindow() { super(""); }
+	public void drawWindow() {}
+	/* end of temporary methods to allow for successful compilation */
 }
