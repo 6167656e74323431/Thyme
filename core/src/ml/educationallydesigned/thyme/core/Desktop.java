@@ -1,6 +1,6 @@
 /*
 	Thyme is an educational game to assist teenagers in time management, and tracking.
-	Copyright (C) 2019 Theodore Preduta
+	Copyright (C) 2019 Theodore Preduta, Larry Yuan
 
 	This program is free software: you can redistribute it and/or modify
 	it under the terms of the GNU Affero General Public License as published
@@ -25,6 +25,7 @@ import java.util.ArrayList;
  * Class to manage all the windows in our virttual desktop.
  *
  * @author     Theodore Preduta
+ * @author     Larry Yuan
  *
  * @version    1.1
  */
