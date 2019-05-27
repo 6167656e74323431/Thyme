@@ -16,15 +16,24 @@
 	along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-package ml.educationallydesigned.thyme.core;
+package ml.educationallydesigned.thyme.core.time;
 
 /**
- * Class to abstract the time functionality for the video game.
+ * Exception for when a timer method is called in an invalid state
  *
  * @author     Theodore Preduta
  * @author     Larry Yuan
  *
- * @version    1.0
+ * @version    1.1
  */
-public class Timer {
+public class InvalidTimerStateException extends IllegalStateException {
+
+	/**
+	 * Makes the exception exist as an object.
+	 *
+	 * @param      message  The error message
+	 */
+	public InvalidTimerStateException(String message) {
+		super(message);
+	}
 }
