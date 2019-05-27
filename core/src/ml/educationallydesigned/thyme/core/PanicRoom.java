@@ -28,7 +28,7 @@ import com.badlogic.gdx.InputProcessor;
  *
  * @version    1.0
  */
-public class PanicRoom implements GameState, Playable {
+public class PanicRoom implements GameState {
 	/* temporory methods for compiling. */
 	public InputProcessor getInputProcessor() {
 		return null;
