@@ -1,14 +1,16 @@
 package ml.educationallydesigned.thyme;
 
-import com.badlogic.gdx.Game;
+import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.scenes.scene2d.ui.Skin;
-import com.kotcrab.vis.ui.VisUI;
-import ml.educationallydesigned.thyme.core.HomeScreen;
+import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
-public class Thyme extends Game {
+public class Thyme extends ApplicationAdapter {
+	SpriteBatch batch;
+	Texture img;
+
 	@Override
-<<<<<<< Updated upstream
 	public void create () {
 		batch = new SpriteBatch();
 		img = new Texture("badlogic.jpg");
@@ -22,17 +24,10 @@ public class Thyme extends Game {
 		batch.draw(img, 0, 0);
 		batch.end();
 	}
-	
+
 	@Override
 	public void dispose () {
 		batch.dispose();
 		img.dispose();
 	}
 }
-=======
-	public void create() {
-		VisUI.load(VisUI.SkinScale.X2);
-		this.setScreen(new HomeScreen(this));
-	}
-}
->>>>>>> Stashed changes

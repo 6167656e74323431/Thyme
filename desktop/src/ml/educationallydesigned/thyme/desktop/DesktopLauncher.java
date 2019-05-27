@@ -37,8 +37,6 @@ public class DesktopLauncher {
 	 */
 	public static void main (String[] arg) {
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
-<<<<<<< Updated upstream
-=======
 		// allow software rendering for school computers
 		System.setProperty("org.lwjgl.opengl.Display.allowSoftwareOpenGL", "true");
 		// full screen borderless mode
@@ -46,7 +44,6 @@ public class DesktopLauncher {
 		config.width = LwjglApplicationConfiguration.getDesktopDisplayMode().width;
 		config.height = LwjglApplicationConfiguration.getDesktopDisplayMode().height;
 		config.resizable = false;
->>>>>>> Stashed changes
 		new LwjglApplication(new Thyme(), config);
 	}
 }
