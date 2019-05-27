@@ -18,6 +18,7 @@
 
 package ml.educationallydesigned.thyme.core;
 
+import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
@@ -37,7 +38,7 @@ import com.kotcrab.vis.ui.widget.VisTextButton;
  * @author     Theodore Preduta
  * @author     Larry Yuan
  *
- * @version    1.0
+ * @version    1.1
  */
 public class HomeScreen implements GameState, Screen {
     private Stage stage;
@@ -52,6 +53,11 @@ public class HomeScreen implements GameState, Screen {
 
     public HomeScreen(Game game) {
         this.game = game;
+    }
+    
+    /* temporory methods for compiling. */
+    public InputProcessor getInputProcessor() {
+        return null;
     }
 
     /**

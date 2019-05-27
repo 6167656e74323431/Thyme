@@ -18,6 +18,8 @@
 
 package ml.educationallydesigned.thyme.core;
 
+import com.badlogic.gdx.InputProcessor;
+
 /**
  * Class to implement the social media window in our game.
  *
@@ -27,4 +29,8 @@ package ml.educationallydesigned.thyme.core;
  * @version    1.0
  */
 public class SocialMediaWebsite extends Website {
+	/* temporory methods for compiling. */
+	public InputProcessor getInputProcessor() {
+		return null;
+	}
 }
