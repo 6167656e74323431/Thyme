@@ -18,6 +18,8 @@
 
 package ml.educationallydesigned.thyme.core;
 
+import com.badlogic.gdx.InputProcessor;
+
 /**
  * Class to implement the second level of the Thyme game.
  *
@@ -27,4 +29,12 @@ package ml.educationallydesigned.thyme.core;
  * @version    1.0
  */
 public class PanicRoom implements GameState, Playable {
+	/* temporory methods for compiling. */
+	public InputProcessor getInputProcessor() {
+		return null;
+	}
+	public void render() {
+	}
+	public void dispose() {
+	}
 }

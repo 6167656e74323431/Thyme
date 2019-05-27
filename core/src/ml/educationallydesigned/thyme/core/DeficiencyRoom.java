@@ -18,6 +18,8 @@
 
 package ml.educationallydesigned.thyme.core;
 
+import com.badlogic.gdx.InputProcessor;
+
 /**
  * Class to implement the first room gamemode.
  *
@@ -27,4 +29,12 @@ package ml.educationallydesigned.thyme.core;
  * @version    1.0
  */
 public class DeficiencyRoom implements GameState, Playable {
+	/* temporory methods for compiling. */
+	public InputProcessor getInputProcessor() {
+		return null;
+	}
+	public void render() {
+	}
+	public void dispose() {
+	}
 }

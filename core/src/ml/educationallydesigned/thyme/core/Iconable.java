@@ -18,13 +18,35 @@
 
 package ml.educationallydesigned.thyme.core;
 
+import com.badlogic.gdx.graphics.Texture;
+
 /**
  * Interface to deine all the methods doe all classes that can have an icon.
  *
  * @author     Theodore Preduta
  * @author     Larry Yuan
  *
- * @version    1.0
+ * @version    1.1
  */
 public interface Iconable {
+	/**
+	 * Loads the icon.
+	 *
+	 * @return     true if the icon is loaded sucessfully, false otherwise.
+	 */
+	public boolean loadIcon();
+
+	/**
+	 * Returns the loaded icon.
+	 */
+	public Texture getIcon();
+
+	/**
+	 * Sets the icon path.
+	 *
+	 * @param      path  The path of the new icon.
+	 *
+	 * @return     true if the icon was changes, false otherwise.
+	 */
+	public boolean setIcon(String path);
 }

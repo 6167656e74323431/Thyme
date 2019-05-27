@@ -18,6 +18,8 @@
 
 package ml.educationallydesigned.thyme.core;
 
+import com.badlogic.gdx.graphics.Texture;
+
 /**
  * Class that creates a usable website for the Thyme game.
  *
@@ -27,4 +29,14 @@ package ml.educationallydesigned.thyme.core;
  * @version    1.0
  */
 public class Website implements Iconable {
+	/* temporary method to allow for compilation */
+	public boolean loadIcon() {
+		return false;
+	}
+	public Texture getIcon()  {
+		return null;
+	}
+	public boolean setIcon(String path) {
+		return false;
+	}
 }
