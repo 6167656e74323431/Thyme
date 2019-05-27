@@ -52,7 +52,6 @@ public class Task implements Iconable {
 		this.priority = priority;
 		iconPath = DEFAULT_TASK_ICON_PATH;
 		isIconLoaded = false;
-		tracker = new Timer();
 	}
 
 	/**
