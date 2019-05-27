@@ -15,34 +15,16 @@
 	You should have received a copy of the GNU Affero General Public License
 	along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
-
 package ml.educationallydesigned.thyme;
 
-import com.badlogic.gdx.ApplicationAdapter;
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.GL20;
-import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.Game;
+import com.kotcrab.vis.ui.VisUI;
+import ml.educationallydesigned.thyme.core.HomeScreen;
 
-public class Thyme extends ApplicationAdapter {
-	SpriteBatch batch;
-	Texture img;
-	
+public class Thyme extends Game {
 	@Override
-	public void create () {
-		batch = new SpriteBatch();
-	}
-
-	@Override
-	public void render () {
-		Gdx.gl.glClearColor(1, 0, 0, 1);
-		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-		batch.begin();
-		batch.end();
-	}
-	
-	@Override
-	public void dispose () {
-		batch.dispose();
+	public void create() {
+		VisUI.load(VisUI.SkinScale.X2);
+		this.setScreen(new HomeScreen(this));
 	}
 }
