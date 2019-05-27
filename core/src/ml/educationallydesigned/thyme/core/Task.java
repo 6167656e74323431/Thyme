@@ -37,7 +37,6 @@ public class Task implements Iconable {
 	private String title;
 	private String description;
 	private int priority;
-	private Timer tracker; // methods for this to be completed onece Timer is merged
 
 	/**
 	 * Constructs the task object.
