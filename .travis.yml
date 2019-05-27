@@ -5,7 +5,7 @@ jdk:
 dist: precise
 script:
 - "chmod +x ./gradlew"
-- "./gradlew desktop:dist -Dhttps.protocols=TLSv1.2"
+- "./gradlew desktop:dist"
 deploy:
   provider: releases
   skip_cleanup: true
