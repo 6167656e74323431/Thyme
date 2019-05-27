@@ -37,14 +37,4 @@ public interface GameState {
 	 * @return     The input processor that should be in control.
 	 */
 	public InputProcessor getInputProcessor();
-
-	/**
-	 * Function that renders the new game state.
-	 */
-	public void render();
-
-	/**
-	 * Function that distroys everuthiing in the game state.
-	 */
-	public void dispose();
 }
