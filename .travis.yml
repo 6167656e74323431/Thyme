@@ -1,7 +1,7 @@
 language: java
 install: true
 jdk:
-  - openjdk7
+  - oraclejdk
 dist: precise
 script:
   - "chmod +x ./gradlew"
