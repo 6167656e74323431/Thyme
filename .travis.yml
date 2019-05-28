@@ -1,4 +1,8 @@
-dist: xenial
+language: java
+install: true
+jdk:
+  - openjdk7
+dist: trusty
 script:
   - "chmod +x ./gradlew"
   - "./gradlew desktop:dist"
