@@ -19,12 +19,14 @@ package ml.educationallydesigned.thyme;
 
 import com.badlogic.gdx.Game;
 import com.kotcrab.vis.ui.VisUI;
+import ml.educationallydesigned.thyme.core.AnimationScreen;
 import ml.educationallydesigned.thyme.core.HomeScreen;
 
 public class Thyme extends Game {
 	@Override
 	public void create() {
 		VisUI.load(VisUI.SkinScale.X2);
-		this.setScreen(new HomeScreen(this));
+		this.setScreen(new AnimationScreen(this));
 	}
+
 }
