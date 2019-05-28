@@ -20,7 +20,6 @@ package ml.educationallydesigned.thyme;
 import com.badlogic.gdx.Game;
 import com.kotcrab.vis.ui.VisUI;
 import ml.educationallydesigned.thyme.core.AnimationScreen;
-import ml.educationallydesigned.thyme.core.HomeScreen;
 
 public class Thyme extends Game {
 	@Override

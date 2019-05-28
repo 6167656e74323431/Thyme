@@ -26,6 +26,7 @@ import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
+import com.badlogic.gdx.scenes.scene2d.InputListener;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.viewport.ScreenViewport;
@@ -50,7 +51,7 @@ public class HomeScreen implements GameState, Screen {
     private VisImage gameTitle;
     private VisTextButton scoreboardButton;
     private VisTextButton exitButton;
-    private AssetManager manager = new AssetManager();
+    private AssetManager manager;
 
     public HomeScreen(Game game) {
         this.game = game;
@@ -120,6 +121,7 @@ public class HomeScreen implements GameState, Screen {
      */
     public void show() {
         // load assets
+        manager = new AssetManager();
         manager.load("logos/thyme.png", Texture.class);
         manager.finishLoading();
         // make stage
@@ -149,7 +151,8 @@ public class HomeScreen implements GameState, Screen {
 
         // add the scoreboard and exit buttons.
         VisTable split = new VisTable();
-        scoreboardButton = new VisTextButton("Scoreboard");
+        scoreboardButton = new VisTextButton("Scores");
+
         exitButton = new VisTextButton("Exit");
         split.add(scoreboardButton).width(240).height(80).padRight(20);
         split.add(exitButton).width(240).height(80);
@@ -161,6 +164,15 @@ public class HomeScreen implements GameState, Screen {
             @Override
             public void clicked(InputEvent event, float x, float y) {
                 Gdx.app.exit();
+            }
+        });
+
+        // add listener for scoreboard button
+
+        scoreboardButton.addListener(new ClickListener() {
+            @Override
+            public void clicked(InputEvent event, float x, float y) {
+                game.setScreen(new ScoreScreen(game));
             }
         });
 
