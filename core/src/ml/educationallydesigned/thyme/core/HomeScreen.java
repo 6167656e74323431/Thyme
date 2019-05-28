@@ -28,6 +28,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
+import com.badlogic.gdx.utils.viewport.ScreenViewport;
 import com.kotcrab.vis.ui.widget.VisImage;
 import com.kotcrab.vis.ui.widget.VisTable;
 import com.kotcrab.vis.ui.widget.VisTextButton;
@@ -55,9 +56,14 @@ public class HomeScreen implements GameState, Screen {
         this.game = game;
     }
     
-    /* temporory methods for compiling. */
+    /* temporary methods for compiling. */
+
+    /**
+     * Gets the input processor for this screen
+     * @return the input processor
+     */
     public InputProcessor getInputProcessor() {
-        return null;
+        return stage;
     }
 
     /**
@@ -100,6 +106,11 @@ public class HomeScreen implements GameState, Screen {
         stage.draw();
     }
 
+    /**
+     * Called when the window is resized
+     * @param width new width
+     * @param height new height
+     */
     public void resize(int width, int height) {
         stage.getViewport().update(width, height, true);
     }
@@ -113,6 +124,7 @@ public class HomeScreen implements GameState, Screen {
         manager.finishLoading();
         // make stage
         stage = new Stage();
+        stage.setViewport(new ScreenViewport());
         // make table
         VisTable table = new VisTable();
         table.setFillParent(true);
