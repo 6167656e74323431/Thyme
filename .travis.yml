@@ -1,14 +1,11 @@
 language: java
 install: true
 jdk:
-  - oraclejdk7
-dist: precise
+  - openjdk7
+dist: trusty
 script:
   - "chmod +x ./gradlew"
   - "./gradlew desktop:dist"
-  - "rvm install ruby-2.5.5"
-  - "rvm use 2.5.5"
-  - "alias travis_internal_ruby='echo 2.5.5'"
 deploy:
   provider: releases
   skip_cleanup: true

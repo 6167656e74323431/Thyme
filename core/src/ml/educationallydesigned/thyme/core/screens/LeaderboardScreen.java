@@ -16,25 +16,27 @@
 	along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-package ml.educationallydesigned.thyme.core;
+package ml.educationallydesigned.thyme.core.screens;
 
 import com.badlogic.gdx.InputProcessor;
+import ml.educationallydesigned.thyme.util.GameState;
 
 /**
- * Interface to define the necessary methods and variables for all classes
- * considered distinc game states.
+ * Non-level game state.
  *
- * @author     Theodore Preduta
- * @author     Larry Yuan
- *
- * @version    1.1
+ * @author Theodore Preduta
+ * @author Larry Yuan
+ * @version 1.0
  */
-public interface GameState {
-	/**
-	 * Gets the input processor that should be in control during this game
-	 * state.
-	 *
-	 * @return     The input processor that should be in control.
-	 */
-	public InputProcessor getInputProcessor();
+public class LeaderboardScreen implements GameState {
+	/* temporory methods for compiling. */
+	public InputProcessor getInputProcessor() {
+		return null;
+	}
+
+	public void render() {
+	}
+
+	public void dispose() {
+	}
 }

@@ -19,13 +19,31 @@ package ml.educationallydesigned.thyme;
 
 import com.badlogic.gdx.Game;
 import com.kotcrab.vis.ui.VisUI;
-import ml.educationallydesigned.thyme.core.AnimationScreen;
+import ml.educationallydesigned.thyme.core.screens.AnimationScreen;
+import ml.educationallydesigned.thyme.core.screens.HomeScreen;
 
+/**
+ * Launches the game by displaying the first screen.
+ *
+ * @author Larry Yuan
+ * @author Theodore Preduta
+ * @version 1.1
+ */
 public class Thyme extends Game {
+	/**
+	 * Show the intro animation or the home screen.
+	 * <p>
+	 * On linux, FFMPEG does not play very well with LibGDX-video
+	 */
 	@Override
 	public void create() {
 		VisUI.load(VisUI.SkinScale.X2);
-		this.setScreen(new AnimationScreen(this));
+		// check if windows or linux
+		// libgdx-video does not currently work well with ffmpeg on linux.
+		if (System.getProperty("os.name").toLowerCase().contains("win")) {
+			this.setScreen(new AnimationScreen(this));
+		} else {
+			this.setScreen(new HomeScreen(this));
+		}
 	}
-
 }

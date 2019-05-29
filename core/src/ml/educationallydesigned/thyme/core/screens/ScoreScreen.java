@@ -16,7 +16,7 @@
 	along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-package ml.educationallydesigned.thyme.core;
+package ml.educationallydesigned.thyme.core.screens;
 
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
@@ -31,16 +31,18 @@ import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.Align;
 import com.kotcrab.vis.ui.util.dialog.Dialogs;
 import com.kotcrab.vis.ui.widget.*;
+import ml.educationallydesigned.thyme.util.GameState;
+import ml.educationallydesigned.thyme.util.scoreboard.Score;
+import ml.educationallydesigned.thyme.util.scoreboard.Scoreboard;
 
 import java.util.prefs.BackingStoreException;
 
 /**
  * Displays the scoreboard
  *
- * @author     Theodore Preduta
- * @author     Larry Yuan
- *
- * @version    1.1
+ * @author Theodore Preduta
+ * @author Larry Yuan
+ * @version 1.1
  */
 public class ScoreScreen implements GameState, Screen {
 	private final static int MAX_ITEMS = 12;
@@ -133,7 +135,7 @@ public class ScoreScreen implements GameState, Screen {
 				// clear scoreboard and re-render scoreboard
 				try {
 					scoreboard.clear();
-				} catch(BackingStoreException e) {
+				} catch (BackingStoreException e) {
 					Gdx.app.error("Scoreboard", "Failed to clear database");
 					Gdx.app.exit();
 				}
@@ -171,7 +173,7 @@ public class ScoreScreen implements GameState, Screen {
 	/**
 	 * Called when the window is resized
 	 *
-	 * @param width new width
+	 * @param width  new width
 	 * @param height new height
 	 */
 	@Override

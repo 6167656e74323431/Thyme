@@ -24,18 +24,18 @@ import ml.educationallydesigned.thyme.Thyme;
 /**
  * Class to launch the game.
  *
- * @author     Theodore Preduta
- * @author     Larry Yuan
- *
- * @version    1.1
+ * @author Theodore Preduta
+ * @author Larry Yuan
+ * @version 1.1
  */
 
 public class DesktopLauncher {
 	/**
 	 * Launcher for desktop application, configures Lwjgl with some settings.
+	 *
 	 * @param arg Command line arguments
 	 */
-	public static void main (String[] arg) {
+	public static void main(String[] arg) {
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
 		// allow software rendering for school computers
 		System.setProperty("org.lwjgl.opengl.Display.allowSoftwareOpenGL", "true");

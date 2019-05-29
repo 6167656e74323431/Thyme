@@ -16,21 +16,35 @@
 	along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-package ml.educationallydesigned.thyme.core;
+package ml.educationallydesigned.thyme.util;
+
+import com.badlogic.gdx.graphics.Texture;
 
 /**
- * Class to implement the time tracker window in the Thyme video game.
+ * Interface to deine all the methods doe all classes that can have an icon.
  *
- * @author     Theodore Preduta
- * @author     Larry Yuan
- *
- * @version    1.1
+ * @author Theodore Preduta
+ * @author Larry Yuan
+ * @version 1.1
  */
-public class TrackerWindow extends Window {
-	/* beginning of temporary methods to allow for successful compilation */
-	public void onActivity() {}
-	public void onInactivity() {}
-	public TrackerWindow() { super(""); }
-	public void drawWindow() {}
-	/* end of temporary methods to allow for successful compilation */
+public interface Iconable {
+	/**
+	 * Loads the icon.
+	 *
+	 * @return true if the icon is loaded sucessfully, false otherwise.
+	 */
+	boolean loadIcon();
+
+	/**
+	 * Returns the loaded icon.
+	 */
+	Texture getIcon();
+
+	/**
+	 * Sets the icon path.
+	 *
+	 * @param path The path of the new icon.
+	 * @return true if the icon was changes, false otherwise.
+	 */
+	boolean setIcon(String path);
 }
