@@ -29,7 +29,8 @@ import com.badlogic.gdx.Screen;
  * @author Larry Yuan
  * @version 1.1
  */
-public class ScoreScreen implements Screen {;
+public class ScoreScreen implements Screen {
+	;
 
 	/**
 	 * Called when this screen becomes the current screen for a {@link Game}.

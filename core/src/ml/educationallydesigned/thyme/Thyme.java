@@ -48,7 +48,6 @@ public class Thyme extends Game {
 	}
 
 	/**
-	 *
 	 * Sets the input processor, but allows us to override certain keys.
 	 *
 	 * @param processor The input processor to use

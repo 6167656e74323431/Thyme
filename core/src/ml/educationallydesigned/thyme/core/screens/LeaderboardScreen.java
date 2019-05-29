@@ -18,7 +18,10 @@
 
 package ml.educationallydesigned.thyme.core.screens;
 
-import com.badlogic.gdx.*;
+import com.badlogic.gdx.ApplicationListener;
+import com.badlogic.gdx.Game;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
@@ -53,7 +56,7 @@ public class LeaderboardScreen implements Screen {
 	 *
 	 * @param game The game
 	 */
-	public LeaderboardScreen (Thyme game) {
+	public LeaderboardScreen(Thyme game) {
 		this.game = game;
 	}
 
@@ -87,7 +90,7 @@ public class LeaderboardScreen implements Screen {
 
 	/**
 	 * Called when this screen becomes the current screen for a {@link Game}.
-	 *
+	 * <p>
 	 * Creates the GUI items
 	 */
 	@Override

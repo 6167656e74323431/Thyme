@@ -35,21 +35,6 @@ public abstract class Window {
 	private Point location;
 
 	/**
-	 * Gets called when the window becomes inactive.
-	 */
-	public abstract void onInactivity();
-
-	/**
-	 * Gets called when the window becomes active.
-	 */
-	public abstract void onActivity();
-
-	/**
-	 * Function that draws the windows graphics.
-	 */
-	public abstract void drawWindow();
-
-	/**
 	 * Most powerful window constructor.
 	 *
 	 * @param visibility The visibility of the window.
@@ -78,6 +63,21 @@ public abstract class Window {
 	public Window(String name) {
 		this(false, name, new Point(100, 100), new Point());
 	}
+
+	/**
+	 * Gets called when the window becomes inactive.
+	 */
+	public abstract void onInactivity();
+
+	/**
+	 * Gets called when the window becomes active.
+	 */
+	public abstract void onActivity();
+
+	/**
+	 * Function that draws the windows graphics.
+	 */
+	public abstract void drawWindow();
 
 	/**
 	 * Sets the id of the window. This can only be done by an instance of the

@@ -18,19 +18,20 @@
 
 package ml.educationallydesigned.thyme.core.screens;
 
-import com.badlogic.gdx.*;
+import com.badlogic.gdx.ApplicationListener;
+import com.badlogic.gdx.Game;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
-import com.badlogic.gdx.utils.viewport.ScreenViewport;
 import com.kotcrab.vis.ui.widget.VisImage;
 import com.kotcrab.vis.ui.widget.VisTable;
 import com.kotcrab.vis.ui.widget.VisTextButton;
 import ml.educationallydesigned.thyme.Thyme;
-import ml.educationallydesigned.thyme.util.GameState;
 
 /**
  * Non-level game state.
@@ -49,7 +50,7 @@ public class HomeScreen implements Screen {
 
 	/**
 	 * Called when this screen becomes the current screen for a {@link Game}.
-	 *
+	 * <p>
 	 * Creates the various UI components of the home screen.
 	 */
 	@Override
