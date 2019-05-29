@@ -16,7 +16,7 @@
 	along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-package ml.educationallydesigned.thyme.core.time;
+package ml.educationallydesigned.thyme.util.time;
 
 /**
  * Exception for when a timer method is called in an invalid state

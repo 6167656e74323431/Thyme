@@ -16,7 +16,7 @@
 	along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-package ml.educationallydesigned.thyme.core;
+package ml.educationallydesigned.thyme.util;
 
 import com.badlogic.gdx.InputProcessor;
 
@@ -36,5 +36,5 @@ public interface GameState {
 	 *
 	 * @return     The input processor that should be in control.
 	 */
-	public InputProcessor getInputProcessor();
+	InputProcessor getInputProcessor();
 }

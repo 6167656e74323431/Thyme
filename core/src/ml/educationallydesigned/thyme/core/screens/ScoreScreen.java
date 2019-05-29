@@ -16,7 +16,7 @@
 	along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-package ml.educationallydesigned.thyme.core;
+package ml.educationallydesigned.thyme.core.screens;
 
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
@@ -31,6 +31,9 @@ import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.Align;
 import com.kotcrab.vis.ui.util.dialog.Dialogs;
 import com.kotcrab.vis.ui.widget.*;
+import ml.educationallydesigned.thyme.util.GameState;
+import ml.educationallydesigned.thyme.util.scoreboard.Score;
+import ml.educationallydesigned.thyme.util.scoreboard.Scoreboard;
 
 import java.util.prefs.BackingStoreException;
 

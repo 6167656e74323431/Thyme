@@ -16,7 +16,7 @@
 	along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-package ml.educationallydesigned.thyme.core.time;
+package ml.educationallydesigned.thyme.util.time;
 
 /**
  * Class to abstract the time functionality for the video game.
@@ -53,7 +53,7 @@ public class Timer {
 	 * Checks if the timer can be mutated.
 	 */
 	private void checkMutableState() {
-		if (hasFinished == true) {
+        if (hasFinished) {
 			throw new InvalidTimerStateException("Timer cannot be changed after its end.");
 		}
 	}

@@ -1,4 +1,4 @@
-package ml.educationallydesigned.thyme.core;
+package ml.educationallydesigned.thyme.util.scoreboard;
 
 /**
  * Score data class.
@@ -10,8 +10,8 @@ package ml.educationallydesigned.thyme.core;
  */
 
 public class Score implements Comparable<Score> {
-	String username;
-	int score;
+	public String username;
+	public int score;
 
 	/**
 	 * Initiates the score with name and score

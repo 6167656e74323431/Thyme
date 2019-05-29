@@ -16,9 +16,9 @@
 	along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-package ml.educationallydesigned.thyme.core;
+package ml.educationallydesigned.thyme.core.windows;
 
-import java.awt.Point;
+import java.awt.*;
 
 /**
  * Class to outline and implement some methods that all winows have.

@@ -15,7 +15,7 @@
 	You should have received a copy of the GNU Affero General Public License
 	along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
-package ml.educationallydesigned.thyme.core;
+package ml.educationallydesigned.thyme.util.scoreboard;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -53,9 +53,8 @@ public class Scoreboard {
 	/**
 	 * Creates a unique ID that has not been used in the database yet
 	 * @return the unique ID
-	 * @throws BackingStoreException when reading the database fails
 	 */
-	private String makeId() throws BackingStoreException {
+    private String makeId() {
 		StringBuilder id;
 		do {
 			id = new StringBuilder();
@@ -88,9 +87,8 @@ public class Scoreboard {
 	 *
 	 * @param score the score to add
 	 * @return the ID of the created score
-	 * @throws BackingStoreException when writing to the database fails.
 	 */
-	public String addScore(Score score) throws BackingStoreException {
+    public String addScore(Score score) {
 		String serialized = score.toString();
 		String id = makeId();
 		scoreDatabase.put(id, serialized);

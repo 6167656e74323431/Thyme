@@ -16,7 +16,7 @@
 	along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-package ml.educationallydesigned.thyme.core;
+package ml.educationallydesigned.thyme.util;
 
 import com.badlogic.gdx.graphics.Texture;
 
@@ -34,12 +34,12 @@ public interface Iconable {
 	 *
 	 * @return     true if the icon is loaded sucessfully, false otherwise.
 	 */
-	public boolean loadIcon();
+	boolean loadIcon();
 
 	/**
 	 * Returns the loaded icon.
 	 */
-	public Texture getIcon();
+	Texture getIcon();
 
 	/**
 	 * Sets the icon path.
@@ -48,5 +48,5 @@ public interface Iconable {
 	 *
 	 * @return     true if the icon was changes, false otherwise.
 	 */
-	public boolean setIcon(String path);
+	boolean setIcon(String path);
 }
