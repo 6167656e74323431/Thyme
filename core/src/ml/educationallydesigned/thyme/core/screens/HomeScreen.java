@@ -109,6 +109,15 @@ public class HomeScreen implements Screen {
 			}
 		});
 
+		// add listener for first level
+
+		levelOneButton.addListener(new ClickListener() {
+			@Override
+			public void clicked(InputEvent event, float x, float y) {
+				game.setScreen(new Desktop(game));
+			}
+		});
+
 		stage.addActor(table);
 	}
 
