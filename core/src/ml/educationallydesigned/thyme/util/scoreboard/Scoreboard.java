@@ -15,7 +15,7 @@
 	You should have received a copy of the GNU Affero General Public License
 	along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
-package ml.educationallydesigned.thyme.core;
+package ml.educationallydesigned.thyme.util.scoreboard;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -28,10 +28,9 @@ import java.util.prefs.Preferences;
 /**
  * Main interface for the scoreboard, handles reading and writing.
  *
- * @author     Theodore Preduta
- * @author     Larry Yuan
- *
- * @version    1.0
+ * @author Theodore Preduta
+ * @author Larry Yuan
+ * @version 1.0
  */
 
 public class Scoreboard {
@@ -52,17 +51,17 @@ public class Scoreboard {
 
 	/**
 	 * Creates a unique ID that has not been used in the database yet
+	 *
 	 * @return the unique ID
-	 * @throws BackingStoreException when reading the database fails
 	 */
-	private String makeId() throws BackingStoreException {
+	private String makeId() {
 		StringBuilder id;
 		do {
 			id = new StringBuilder();
 			for (int i = 0; i < ID_LENGTH; i++) {
 				id.append(ID_CHARACTERS.charAt(random.nextInt(ID_LENGTH)));
 			}
-		} while(scoreDatabase.get(id.toString(), null) != null);
+		} while (scoreDatabase.get(id.toString(), null) != null);
 
 		return id.toString();
 	}
@@ -88,9 +87,8 @@ public class Scoreboard {
 	 *
 	 * @param score the score to add
 	 * @return the ID of the created score
-	 * @throws BackingStoreException when writing to the database fails.
 	 */
-	public String addScore(Score score) throws BackingStoreException {
+	public String addScore(Score score) {
 		String serialized = score.toString();
 		String id = makeId();
 		scoreDatabase.put(id, serialized);

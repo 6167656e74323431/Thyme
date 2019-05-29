@@ -16,24 +16,27 @@
 	along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-package ml.educationallydesigned.thyme.core.time;
+package ml.educationallydesigned.thyme.core.screens;
+
+import com.badlogic.gdx.InputProcessor;
+import ml.educationallydesigned.thyme.util.GameState;
 
 /**
- * Exception for when a timer method is called in an invalid state
+ * Non-level game state.
  *
- * @author     Theodore Preduta
- * @author     Larry Yuan
- *
- * @version    1.1
+ * @author Theodore Preduta
+ * @author Larry Yuan
+ * @version 1.0
  */
-public class InvalidTimerStateException extends IllegalStateException {
+public class LevelChooserScreen implements GameState {
+	/* temporory methods for compiling. */
+	public InputProcessor getInputProcessor() {
+		return null;
+	}
 
-	/**
-	 * Makes the exception exist as an object.
-	 *
-	 * @param      message  The error message
-	 */
-	public InvalidTimerStateException(String message) {
-		super(message);
+	public void render() {
+	}
+
+	public void dispose() {
 	}
 }

@@ -16,7 +16,7 @@
 	along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-package ml.educationallydesigned.thyme.core;
+package ml.educationallydesigned.thyme.core.screens;
 
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
@@ -25,16 +25,16 @@ import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.video.VideoPlayer;
 import com.badlogic.gdx.video.VideoPlayerCreator;
+import ml.educationallydesigned.thyme.util.GameState;
 
 import java.io.FileNotFoundException;
 
 /**
  * Screen that displays the intro
  *
- * @author     Theodore Preduta
- * @author     Larry Yuan
- *
- * @version    1.1
+ * @author Theodore Preduta
+ * @author Larry Yuan
+ * @version 1.1
  */
 public class AnimationScreen implements GameState, Screen {
 	private VideoPlayer player;
@@ -42,6 +42,7 @@ public class AnimationScreen implements GameState, Screen {
 
 	/**
 	 * Initializes the class with the current game
+	 *
 	 * @param game the current game
 	 */
 	public AnimationScreen(Game game) {
@@ -72,6 +73,7 @@ public class AnimationScreen implements GameState, Screen {
 
 	/**
 	 * Renders the video
+	 *
 	 * @param delta amount of time since last frame (unused)
 	 */
 	@Override
@@ -81,7 +83,8 @@ public class AnimationScreen implements GameState, Screen {
 
 	/**
 	 * Called when window has been resized
-	 * @param width width of the resized window
+	 *
+	 * @param width  width of the resized window
 	 * @param height height of the resized window
 	 */
 	@Override

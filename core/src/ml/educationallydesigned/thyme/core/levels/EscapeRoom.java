@@ -16,37 +16,27 @@
 	along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-package ml.educationallydesigned.thyme.core;
+package ml.educationallydesigned.thyme.core.levels;
 
-import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.InputProcessor;
+import ml.educationallydesigned.thyme.util.GameState;
 
 /**
- * Interface to deine all the methods doe all classes that can have an icon.
+ * Class to implement the third game mode for the Thyme video game.
  *
- * @author     Theodore Preduta
- * @author     Larry Yuan
- *
- * @version    1.1
+ * @author Theodore Preduta
+ * @author Larry Yuan
+ * @version 1.0
  */
-public interface Iconable {
-	/**
-	 * Loads the icon.
-	 *
-	 * @return     true if the icon is loaded sucessfully, false otherwise.
-	 */
-	public boolean loadIcon();
+public class EscapeRoom implements GameState {
+	/* temporory methods for compiling. */
+	public InputProcessor getInputProcessor() {
+		return null;
+	}
 
-	/**
-	 * Returns the loaded icon.
-	 */
-	public Texture getIcon();
+	public void render() {
+	}
 
-	/**
-	 * Sets the icon path.
-	 *
-	 * @param      path  The path of the new icon.
-	 *
-	 * @return     true if the icon was changes, false otherwise.
-	 */
-	public boolean setIcon(String path);
+	public void dispose() {
+	}
 }

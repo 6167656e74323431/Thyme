@@ -16,15 +16,14 @@
 	along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-package ml.educationallydesigned.thyme.core.time;
+package ml.educationallydesigned.thyme.util.time;
 
 /**
  * Class to abstract the time functionality for the video game.
  *
- * @author     Theodore Preduta
- * @author     Larry Yuan
- *
- * @version    1.1
+ * @author Theodore Preduta
+ * @author Larry Yuan
+ * @version 1.1
  */
 public class Timer {
 	private long startTime;
@@ -35,7 +34,7 @@ public class Timer {
 	/**
 	 * Makes a timer with a custom start time.
 	 *
-	 * @param      startTime  The start time
+	 * @param startTime The start time
 	 */
 	public Timer(long startTime) {
 		this.startTime = startTime;
@@ -53,7 +52,7 @@ public class Timer {
 	 * Checks if the timer can be mutated.
 	 */
 	private void checkMutableState() {
-		if (hasFinished == true) {
+		if (hasFinished) {
 			throw new InvalidTimerStateException("Timer cannot be changed after its end.");
 		}
 	}
@@ -78,7 +77,7 @@ public class Timer {
 	/**
 	 * Gets the amount of time elapsed.
 	 *
-	 * @return     The elpased time.
+	 * @return The elpased time.
 	 */
 	public long getTime() {
 		// sets the time to either the time when the timer was stopped or the current time
