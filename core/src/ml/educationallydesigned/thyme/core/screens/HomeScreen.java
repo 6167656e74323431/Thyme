@@ -18,10 +18,7 @@
 
 package ml.educationallydesigned.thyme.core.screens;
 
-import com.badlogic.gdx.Game;
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.InputProcessor;
-import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.*;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
@@ -32,6 +29,7 @@ import com.badlogic.gdx.utils.viewport.ScreenViewport;
 import com.kotcrab.vis.ui.widget.VisImage;
 import com.kotcrab.vis.ui.widget.VisTable;
 import com.kotcrab.vis.ui.widget.VisTextButton;
+import ml.educationallydesigned.thyme.Thyme;
 import ml.educationallydesigned.thyme.util.GameState;
 
 /**
@@ -41,120 +39,53 @@ import ml.educationallydesigned.thyme.util.GameState;
  * @author Larry Yuan
  * @version 1.1
  */
-public class HomeScreen implements GameState, Screen {
+public class HomeScreen implements Screen {
 	private Stage stage;
-	private Game game;
-	private VisTextButton levelOneButton;
-	private VisTextButton levelTwoButton;
-	private VisTextButton levelThreeButton;
-	private VisImage gameTitle;
-	private VisTextButton scoreboardButton;
-	private VisTextButton exitButton;
-	private AssetManager manager;
+	private Thyme game;
 
-	public HomeScreen(Game game) {
+	public HomeScreen(Thyme game) {
 		this.game = game;
 	}
 
-	/* temporary methods for compiling. */
-
 	/**
-	 * Gets the input processor for this screen
+	 * Called when this screen becomes the current screen for a {@link Game}.
 	 *
-	 * @return the input processor
+	 * Creates the various UI components of the home screen.
 	 */
-	public InputProcessor getInputProcessor() {
-		return stage;
-	}
-
-	/**
-	 * Destroys the screen
-	 */
-	public void dispose() {
-
-	}
-
-	/**
-	 * Hides the screen
-	 */
-	public void hide() {
-
-	}
-
-	/**
-	 * Pauses the screen
-	 */
-	public void pause() {
-
-	}
-
-	/**
-	 * Resumes the game
-	 */
-	public void resume() {
-
-	}
-
-	/**
-	 * Renders the scene (render-loop)
-	 *
-	 * @param delta amount of time passed since last call to render
-	 */
-	public void render(float delta) {
-		Gdx.gl.glClearColor(0, 0, 0, 1);
-		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-		stage.act(delta);
-		stage.draw();
-	}
-
-	/**
-	 * Called when the window is resized
-	 *
-	 * @param width  new width
-	 * @param height new height
-	 */
-	public void resize(int width, int height) {
-		stage.getViewport().update(width, height, true);
-	}
-
-	/**
-	 * Displays the home screen and creates all UI components
-	 */
+	@Override
 	public void show() {
 		// load assets
-		manager = new AssetManager();
+		AssetManager manager = new AssetManager();
 		manager.load("logos/thyme.png", Texture.class);
 		manager.finishLoading();
 		// make stage
 		stage = new Stage();
-		stage.setViewport(new ScreenViewport());
+		game.setInputProcessor(stage);
 		// make table
 		VisTable table = new VisTable();
 		table.setFillParent(true);
-		//table.debug();
-		Gdx.input.setInputProcessor(stage);
 		// make title
-		gameTitle = new VisImage(manager.get("logos/thyme.png", Texture.class));
+		VisImage gameTitle = new VisImage(manager.get("logos/thyme.png", Texture.class));
 		table.add(gameTitle).padBottom(20);
 		table.row();
 		// make level buttons
-		levelOneButton = new VisTextButton("Level One");
+		VisTextButton levelOneButton = new VisTextButton("Level One");
 		table.add(levelOneButton).width(500).height(80).padBottom(20);
 		table.row();
 
-		levelTwoButton = new VisTextButton("Level Two");
+		VisTextButton levelTwoButton = new VisTextButton("Level Two");
 		table.add(levelTwoButton).width(500).height(80).padBottom(20);
 		table.row();
 
-		levelThreeButton = new VisTextButton("Level Three");
+		VisTextButton levelThreeButton = new VisTextButton("Level Three");
 		table.add(levelThreeButton).width(500).height(80).padBottom(20);
 		table.row();
 
 		// add the scoreboard and exit buttons.
 		VisTable split = new VisTable();
-		scoreboardButton = new VisTextButton("Scores");
+		VisTextButton scoreboardButton = new VisTextButton("Scores");
 
-		exitButton = new VisTextButton("Exit");
+		VisTextButton exitButton = new VisTextButton("Exit");
 		split.add(scoreboardButton).width(240).height(80).padRight(20);
 		split.add(exitButton).width(240).height(80);
 		table.add(split);
@@ -173,10 +104,65 @@ public class HomeScreen implements GameState, Screen {
 		scoreboardButton.addListener(new ClickListener() {
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
-				game.setScreen(new ScoreScreen(game));
+				game.setScreen(new LeaderboardScreen(game));
 			}
 		});
 
 		stage.addActor(table);
+	}
+
+	/**
+	 * Called when the screen should render itself.
+	 *
+	 * @param delta The time in seconds since the last render.
+	 */
+	@Override
+	public void render(float delta) {
+		Gdx.gl.glClearColor(0, 0, 0, 1);
+		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+		stage.act(delta);
+		stage.draw();
+	}
+
+	/**
+	 * @param width
+	 * @param height
+	 * @see ApplicationListener#resize(int, int)
+	 */
+	@Override
+	public void resize(int width, int height) {
+
+	}
+
+	/**
+	 * @see ApplicationListener#pause()
+	 */
+	@Override
+	public void pause() {
+
+	}
+
+	/**
+	 * @see ApplicationListener#resume()
+	 */
+	@Override
+	public void resume() {
+
+	}
+
+	/**
+	 * Called when this screen is no longer the current screen for a {@link Game}.
+	 */
+	@Override
+	public void hide() {
+
+	}
+
+	/**
+	 * Called when this screen should release all resources.
+	 */
+	@Override
+	public void dispose() {
+
 	}
 }

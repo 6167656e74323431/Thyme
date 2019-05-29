@@ -18,13 +18,11 @@
 
 package ml.educationallydesigned.thyme.core.screens;
 
-import com.badlogic.gdx.Game;
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.InputProcessor;
-import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.*;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.video.VideoPlayer;
 import com.badlogic.gdx.video.VideoPlayerCreator;
+import ml.educationallydesigned.thyme.Thyme;
 import ml.educationallydesigned.thyme.util.GameState;
 
 import java.io.FileNotFoundException;
@@ -36,19 +34,24 @@ import java.io.FileNotFoundException;
  * @author Larry Yuan
  * @version 1.1
  */
-public class AnimationScreen implements GameState, Screen {
+public class AnimationScreen implements Screen {
 	private VideoPlayer player;
-	private Game game;
+	private Thyme game;
 
 	/**
 	 * Initializes the class with the current game
 	 *
 	 * @param game the current game
 	 */
-	public AnimationScreen(Game game) {
+	public AnimationScreen(Thyme game) {
 		this.game = game;
 	}
 
+
+	/**
+	 * Called when this screen becomes the current screen for a {@link Game}.
+	 */
+	@Override
 	public void show() {
 		player = VideoPlayerCreator.createVideoPlayer();
 		// move to home screen when video finishes
@@ -70,11 +73,10 @@ public class AnimationScreen implements GameState, Screen {
 		}
 	}
 
-
 	/**
-	 * Renders the video
+	 * Called when the screen should render itself.
 	 *
-	 * @param delta amount of time since last frame (unused)
+	 * @param delta The time in seconds since the last render.
 	 */
 	@Override
 	public void render(float delta) {
@@ -82,39 +84,44 @@ public class AnimationScreen implements GameState, Screen {
 	}
 
 	/**
-	 * Called when window has been resized
-	 *
-	 * @param width  width of the resized window
-	 * @param height height of the resized window
+	 * @param width
+	 * @param height
+	 * @see ApplicationListener#resize(int, int)
 	 */
 	@Override
 	public void resize(int width, int height) {
-		player.resize(width, height);
+
 	}
 
-	/* The following methods are unused, but required due to the Screen interface */
+	/**
+	 * @see ApplicationListener#pause()
+	 */
 	@Override
 	public void pause() {
 
 	}
 
+	/**
+	 * @see ApplicationListener#resume()
+	 */
 	@Override
 	public void resume() {
 
 	}
 
+	/**
+	 * Called when this screen is no longer the current screen for a {@link Game}.
+	 */
 	@Override
 	public void hide() {
 
 	}
 
+	/**
+	 * Called when this screen should release all resources.
+	 */
 	@Override
 	public void dispose() {
 
-	}
-
-	@Override
-	public InputProcessor getInputProcessor() {
-		return null;
 	}
 }

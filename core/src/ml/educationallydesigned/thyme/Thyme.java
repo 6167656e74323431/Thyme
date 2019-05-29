@@ -17,7 +17,7 @@
 */
 package ml.educationallydesigned.thyme;
 
-import com.badlogic.gdx.Game;
+import com.badlogic.gdx.*;
 import com.kotcrab.vis.ui.VisUI;
 import ml.educationallydesigned.thyme.core.screens.AnimationScreen;
 import ml.educationallydesigned.thyme.core.screens.HomeScreen;
@@ -45,5 +45,25 @@ public class Thyme extends Game {
 		} else {
 			this.setScreen(new HomeScreen(this));
 		}
+	}
+
+	/**
+	 *
+	 * Sets the input processor, but allows us to override certain keys.
+	 *
+	 * @param processor The input processor to use
+	 */
+
+	public void setInputProcessor(InputProcessor processor) {
+		InputMultiplexer multiplexer = new InputMultiplexer();
+		// reserve the escape key so that the current state can be exited.
+		multiplexer.addProcessor(new InputAdapter() {
+			@Override
+			public boolean keyTyped(char character) {
+				return false;
+			}
+		});
+		multiplexer.addProcessor(processor);
+		Gdx.input.setInputProcessor(multiplexer);
 	}
 }
