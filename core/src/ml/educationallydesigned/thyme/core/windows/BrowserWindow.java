@@ -26,15 +26,15 @@ package ml.educationallydesigned.thyme.core.windows;
  * @version 1.1
  */
 public class BrowserWindow extends Window {
+	public BrowserWindow() {
+		super("");
+	}
+
 	/* beginning of temporary methods to allow for successful compilation */
 	public void onActivity() {
 	}
 
 	public void onInactivity() {
-	}
-
-	public BrowserWindow() {
-		super("");
 	}
 
 	public void drawWindow() {

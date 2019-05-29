@@ -26,15 +26,15 @@ package ml.educationallydesigned.thyme.core.windows;
  * @version 1.1
  */
 public class TextEditorWindow extends Window {
+	public TextEditorWindow() {
+		super("");
+	}
+
 	/* beginning of temporary methods to allow for successful compilation */
 	public void onActivity() {
 	}
 
 	public void onInactivity() {
-	}
-
-	public TextEditorWindow() {
-		super("");
 	}
 
 	public void drawWindow() {
