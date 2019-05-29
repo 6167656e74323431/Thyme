@@ -21,16 +21,23 @@ package ml.educationallydesigned.thyme.core.windows;
 /**
  * Class to implement out in-game browser.
  *
- * @author     Theodore Preduta
- * @author     Larry Yuan
- *
- * @version    1.1
+ * @author Theodore Preduta
+ * @author Larry Yuan
+ * @version 1.1
  */
 public class BrowserWindow extends Window {
 	/* beginning of temporary methods to allow for successful compilation */
-	public void onActivity() {}
-	public void onInactivity() {}
-	public BrowserWindow() { super(""); }
-	public void drawWindow() {}
+	public void onActivity() {
+	}
+
+	public void onInactivity() {
+	}
+
+	public BrowserWindow() {
+		super("");
+	}
+
+	public void drawWindow() {
+	}
 	/* end of temporary methods to allow for successful compilation */
 }

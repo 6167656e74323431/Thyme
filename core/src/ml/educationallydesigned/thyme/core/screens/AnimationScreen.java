@@ -32,10 +32,9 @@ import java.io.FileNotFoundException;
 /**
  * Screen that displays the intro
  *
- * @author     Theodore Preduta
- * @author     Larry Yuan
- *
- * @version    1.1
+ * @author Theodore Preduta
+ * @author Larry Yuan
+ * @version 1.1
  */
 public class AnimationScreen implements GameState, Screen {
 	private VideoPlayer player;
@@ -43,6 +42,7 @@ public class AnimationScreen implements GameState, Screen {
 
 	/**
 	 * Initializes the class with the current game
+	 *
 	 * @param game the current game
 	 */
 	public AnimationScreen(Game game) {
@@ -73,6 +73,7 @@ public class AnimationScreen implements GameState, Screen {
 
 	/**
 	 * Renders the video
+	 *
 	 * @param delta amount of time since last frame (unused)
 	 */
 	@Override
@@ -82,7 +83,8 @@ public class AnimationScreen implements GameState, Screen {
 
 	/**
 	 * Called when window has been resized
-	 * @param width width of the resized window
+	 *
+	 * @param width  width of the resized window
 	 * @param height height of the resized window
 	 */
 	@Override

@@ -21,17 +21,16 @@ package ml.educationallydesigned.thyme.util.time;
 /**
  * Exception for when a timer method is called in an invalid state
  *
- * @author     Theodore Preduta
- * @author     Larry Yuan
- *
- * @version    1.1
+ * @author Theodore Preduta
+ * @author Larry Yuan
+ * @version 1.1
  */
 public class InvalidTimerStateException extends IllegalStateException {
 
 	/**
 	 * Makes the exception exist as an object.
 	 *
-	 * @param      message  The error message
+	 * @param message The error message
 	 */
 	public InvalidTimerStateException(String message) {
 		super(message);

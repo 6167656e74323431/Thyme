@@ -24,19 +24,20 @@ import ml.educationallydesigned.thyme.util.Iconable;
 /**
  * Class that creates a usable website for the Thyme game.
  *
- * @author     Theodore Preduta
- * @author     Larry Yuan
- *
- * @version    1.0
+ * @author Theodore Preduta
+ * @author Larry Yuan
+ * @version 1.0
  */
 public class Website implements Iconable {
 	/* temporary method to allow for compilation */
 	public boolean loadIcon() {
 		return false;
 	}
-	public Texture getIcon()  {
+
+	public Texture getIcon() {
 		return null;
 	}
+
 	public boolean setIcon(String path) {
 		return false;
 	}

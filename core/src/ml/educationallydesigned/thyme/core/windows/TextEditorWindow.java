@@ -21,16 +21,23 @@ package ml.educationallydesigned.thyme.core.windows;
 /**
  * Class to implement the text editor window for in the Thyme game.
  *
- * @author     Theodore Preduta
- * @author     Larry Yuan
- *
- * @version    1.1
+ * @author Theodore Preduta
+ * @author Larry Yuan
+ * @version 1.1
  */
 public class TextEditorWindow extends Window {
 	/* beginning of temporary methods to allow for successful compilation */
-	public void onActivity() {}
-	public void onInactivity() {}
-	public TextEditorWindow() { super(""); }
-	public void drawWindow() {}
+	public void onActivity() {
+	}
+
+	public void onInactivity() {
+	}
+
+	public TextEditorWindow() {
+		super("");
+	}
+
+	public void drawWindow() {
+	}
 	/* end of temporary methods to allow for successful compilation */
 }

@@ -23,10 +23,9 @@ import com.badlogic.gdx.InputProcessor;
 /**
  * Class to implement the social media window in our game.
  *
- * @author     Theodore Preduta
- * @author     Larry Yuan
- *
- * @version    1.0
+ * @author Theodore Preduta
+ * @author Larry Yuan
+ * @version 1.0
  */
 public class SocialMediaWebsite extends Website {
 	/* temporory methods for compiling. */

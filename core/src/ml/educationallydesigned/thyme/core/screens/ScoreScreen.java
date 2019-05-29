@@ -40,10 +40,9 @@ import java.util.prefs.BackingStoreException;
 /**
  * Displays the scoreboard
  *
- * @author     Theodore Preduta
- * @author     Larry Yuan
- *
- * @version    1.1
+ * @author Theodore Preduta
+ * @author Larry Yuan
+ * @version 1.1
  */
 public class ScoreScreen implements GameState, Screen {
 	private final static int MAX_ITEMS = 12;
@@ -136,7 +135,7 @@ public class ScoreScreen implements GameState, Screen {
 				// clear scoreboard and re-render scoreboard
 				try {
 					scoreboard.clear();
-				} catch(BackingStoreException e) {
+				} catch (BackingStoreException e) {
 					Gdx.app.error("Scoreboard", "Failed to clear database");
 					Gdx.app.exit();
 				}
@@ -174,7 +173,7 @@ public class ScoreScreen implements GameState, Screen {
 	/**
 	 * Called when the window is resized
 	 *
-	 * @param width new width
+	 * @param width  new width
 	 * @param height new height
 	 */
 	@Override

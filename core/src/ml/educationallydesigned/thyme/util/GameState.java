@@ -24,17 +24,16 @@ import com.badlogic.gdx.InputProcessor;
  * Interface to define the necessary methods and variables for all classes
  * considered distinc game states.
  *
- * @author     Theodore Preduta
- * @author     Larry Yuan
- *
- * @version    1.1
+ * @author Theodore Preduta
+ * @author Larry Yuan
+ * @version 1.1
  */
 public interface GameState {
 	/**
 	 * Gets the input processor that should be in control during this game
 	 * state.
 	 *
-	 * @return     The input processor that should be in control.
+	 * @return The input processor that should be in control.
 	 */
 	InputProcessor getInputProcessor();
 }

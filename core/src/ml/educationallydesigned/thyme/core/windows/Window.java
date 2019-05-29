@@ -23,10 +23,9 @@ import java.awt.*;
 /**
  * Class to outline and implement some methods that all winows have.
  *
- * @author     Theodore Preduta
- * @author     Larry Yuan
- *
- * @version    1.1.1
+ * @author Theodore Preduta
+ * @author Larry Yuan
+ * @version 1.1.1
  */
 public abstract class Window {
 	private boolean visibility;
@@ -53,11 +52,11 @@ public abstract class Window {
 	/**
 	 * Most powerful window constructor.
 	 *
-	 * @param      visibility  The visibility of the window.
-	 * @param      name        The name of the window.
-	 * @param      size        The size of the window as a Point of the max X
-	 *                         and max Y if the location is (0, 0).
-	 * @param      location    The location of the window on screen.
+	 * @param visibility The visibility of the window.
+	 * @param name       The name of the window.
+	 * @param size       The size of the window as a Point of the max X
+	 *                   and max Y if the location is (0, 0).
+	 * @param location   The location of the window on screen.
 	 */
 	public Window(boolean visibility, String name, Point size, Point location) {
 		this.visibility = visibility;
@@ -74,7 +73,7 @@ public abstract class Window {
 	 * <li>size - (100, 100).</li>
 	 * <li>location - (0, 0).</li> </ul>
 	 *
-	 * @param      name  The name of the window
+	 * @param name The name of the window
 	 */
 	public Window(String name) {
 		this(false, name, new Point(100, 100), new Point());
@@ -84,8 +83,8 @@ public abstract class Window {
 	 * Sets the id of the window. This can only be done by an instance of the
 	 * Desktop class to ensure no multiple assignments
 	 *
-	 * @param      id       The unique identifier to be set.
-	 * @param      manager  The manager class instance that is assigning the id.
+	 * @param id      The unique identifier to be set.
+	 * @param manager The manager class instance that is assigning the id.
 	 */
 	public void setID(int id, Object manager) {
 		if (manager instanceof Desktop)
@@ -95,7 +94,7 @@ public abstract class Window {
 	/**
 	 * Returns the id of the window instance.
 	 *
-	 * @return     The unique id of the window instance.
+	 * @return The unique id of the window instance.
 	 */
 	public int getID() {
 		return id;
@@ -112,8 +111,8 @@ public abstract class Window {
 	/**
 	 * Gets the visibility of the window.
 	 *
-	 * @return     The visibility of the window, true meaning the window is
-	 *             visible.
+	 * @return The visibility of the window, true meaning the window is
+	 * visible.
 	 */
 	public boolean getVisibility() {
 		return visibility;

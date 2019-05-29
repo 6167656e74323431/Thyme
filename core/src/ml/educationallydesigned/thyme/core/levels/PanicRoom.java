@@ -24,18 +24,19 @@ import ml.educationallydesigned.thyme.util.GameState;
 /**
  * Class to implement the second level of the Thyme game.
  *
- * @author     Theodore Preduta
- * @author     Larry Yuan
- *
- * @version    1.0
+ * @author Theodore Preduta
+ * @author Larry Yuan
+ * @version 1.0
  */
 public class PanicRoom implements GameState {
 	/* temporory methods for compiling. */
 	public InputProcessor getInputProcessor() {
 		return null;
 	}
+
 	public void render() {
 	}
+
 	public void dispose() {
 	}
 }
