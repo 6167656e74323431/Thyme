@@ -52,7 +52,7 @@ project(":desktop") {
         compile "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-desktop"
         compile "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-desktop"
         compile "com.badlogicgames.gdx:gdx-tools:$gdxVersion"
-
+        compile "es.e-ucm.com.badlogicgames.gdx:gdx-video-desktop:0.0.1-SNAPSHOT"
     }
 }
 
@@ -65,6 +65,8 @@ project(":core") {
         compile "com.badlogicgames.gdx:gdx-box2d:$gdxVersion"
         compile "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
         compile "com.kotcrab.vis:vis-ui:$visuiVersion"
+        compile "es.e-ucm.com.badlogicgames.gdx:gdx-video:0.0.1-SNAPSHOT"
+
     }
 }
 

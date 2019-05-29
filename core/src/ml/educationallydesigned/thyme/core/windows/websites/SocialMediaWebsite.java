@@ -16,15 +16,20 @@
 	along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-package ml.educationallydesigned.thyme.core;
+package ml.educationallydesigned.thyme.core.windows.websites;
+
+import com.badlogic.gdx.InputProcessor;
 
 /**
- * Class to implement a usable button for within our custom environment. 
+ * Class to implement the social media window in our game.
  *
- * @author     Theodore Preduta
- * @author     Larry Yuan
- *
- * @version    1.0
+ * @author Theodore Preduta
+ * @author Larry Yuan
+ * @version 1.0
  */
-public class Button {
+public class SocialMediaWebsite extends Website {
+	/* temporory methods for compiling. */
+	public InputProcessor getInputProcessor() {
+		return null;
+	}
 }

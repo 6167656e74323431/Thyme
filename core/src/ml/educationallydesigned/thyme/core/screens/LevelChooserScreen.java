@@ -16,25 +16,27 @@
 	along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-package ml.educationallydesigned.thyme.core;
+package ml.educationallydesigned.thyme.core.screens;
 
 import com.badlogic.gdx.InputProcessor;
+import ml.educationallydesigned.thyme.util.GameState;
 
 /**
- * Class to implement the first room gamemode.
+ * Non-level game state.
  *
- * @author     Theodore Preduta
- * @author     Larry Yuan
- *
- * @version    1.0
+ * @author Theodore Preduta
+ * @author Larry Yuan
+ * @version 1.0
  */
-public class DeficiencyRoom implements GameState {
+public class LevelChooserScreen implements GameState {
 	/* temporory methods for compiling. */
 	public InputProcessor getInputProcessor() {
 		return null;
 	}
+
 	public void render() {
 	}
+
 	public void dispose() {
 	}
 }

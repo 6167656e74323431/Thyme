@@ -16,25 +16,35 @@
 	along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-package ml.educationallydesigned.thyme.core;
+package ml.educationallydesigned.thyme.util;
 
-import com.badlogic.gdx.InputProcessor;
+import com.badlogic.gdx.graphics.Texture;
 
 /**
- * Non-level game state.
+ * Interface to deine all the methods doe all classes that can have an icon.
  *
- * @author     Theodore Preduta
- * @author     Larry Yuan
- *
- * @version    1.0
+ * @author Theodore Preduta
+ * @author Larry Yuan
+ * @version 1.1
  */
-public class TutorialScreen implements GameState {
-	/* temporory methods for compiling. */
-	public InputProcessor getInputProcessor() {
-		return null;
-	}
-	public void render() {
-	}
-	public void dispose() {
-	}
+public interface Iconable {
+	/**
+	 * Loads the icon.
+	 *
+	 * @return true if the icon is loaded sucessfully, false otherwise.
+	 */
+	boolean loadIcon();
+
+	/**
+	 * Returns the loaded icon.
+	 */
+	Texture getIcon();
+
+	/**
+	 * Sets the icon path.
+	 *
+	 * @param path The path of the new icon.
+	 * @return true if the icon was changes, false otherwise.
+	 */
+	boolean setIcon(String path);
 }

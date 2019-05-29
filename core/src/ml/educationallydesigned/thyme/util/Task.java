@@ -16,17 +16,16 @@
 	along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-package ml.educationallydesigned.thyme.core;
+package ml.educationallydesigned.thyme.util;
 
 import com.badlogic.gdx.graphics.Texture;
 
 /**
  * Class to store all data required for each individual in-game task.
  *
- * @author     Theodore Preduta
- * @author     Larry Yuan
- *
- * @version    1.1
+ * @author Theodore Preduta
+ * @author Larry Yuan
+ * @version 1.1
  */
 public class Task implements Iconable {
 	public static String DEFAULT_TASK_ICON_PATH = "";
@@ -41,10 +40,10 @@ public class Task implements Iconable {
 	/**
 	 * Constructs the task object.
 	 *
-	 * @param      title        The title of the task.
-	 * @param      description  The description of the task.
-	 * @param      priority     The priority of the task, a higher nujmber means
-	 *                          a higher priority.
+	 * @param title       The title of the task.
+	 * @param description The description of the task.
+	 * @param priority    The priority of the task, a higher nujmber means
+	 *                    a higher priority.
 	 */
 	public Task(String title, String description, int priority) {
 		this.title = title;
@@ -57,7 +56,7 @@ public class Task implements Iconable {
 	/**
 	 * Loads a task's icon.
 	 *
-	 * @return     true if something was loaded, false if nothing has changed.
+	 * @return true if something was loaded, false if nothing has changed.
 	 */
 	public boolean loadIcon() {
 		if (!isIconLoaded) {
@@ -70,18 +69,17 @@ public class Task implements Iconable {
 	/**
 	 * Gets the icon.
 	 *
-	 * @return     The icon as a com.badlogic.gdx.graphics.Texture.
+	 * @return The icon as a com.badlogic.gdx.graphics.Texture.
 	 */
-	public Texture getIcon()  {
+	public Texture getIcon() {
 		return loadedIcon;
 	}
 
 	/**
 	 * Sets the icon path.
 	 *
-	 * @param      path  The path of the new icon.
-	 *
-	 * @return     true if the path changed, false otherwise.
+	 * @param path The path of the new icon.
+	 * @return true if the path changed, false otherwise.
 	 */
 	public boolean setIcon(String path) {
 		if (!path.equals(iconPath)) {
@@ -95,7 +93,7 @@ public class Task implements Iconable {
 	/**
 	 * Gets the title of the task.
 	 *
-	 * @return     The title of the task.
+	 * @return The title of the task.
 	 */
 	public String getTitle() {
 		return title;
@@ -104,7 +102,7 @@ public class Task implements Iconable {
 	/**
 	 * Gets the description of the task.
 	 *
-	 * @return     The description of the task.
+	 * @return The description of the task.
 	 */
 	public String getDescription() {
 		return description;
@@ -113,7 +111,7 @@ public class Task implements Iconable {
 	/**
 	 * Gets the priority of the task.
 	 *
-	 * @return     The priority of the task.
+	 * @return The priority of the task.
 	 */
 	public int getPriority() {
 		return priority;

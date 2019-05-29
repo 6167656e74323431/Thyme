@@ -16,21 +16,29 @@
 	along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-package ml.educationallydesigned.thyme.core;
+package ml.educationallydesigned.thyme.core.windows.websites;
+
+import com.badlogic.gdx.graphics.Texture;
+import ml.educationallydesigned.thyme.util.Iconable;
 
 /**
- * Class to implement the text editor window for in the Thyme game.
+ * Class that creates a usable website for the Thyme game.
  *
- * @author     Theodore Preduta
- * @author     Larry Yuan
- *
- * @version    1.1
+ * @author Theodore Preduta
+ * @author Larry Yuan
+ * @version 1.0
  */
-public class TextEditorWindow extends Window {
-	/* beginning of temporary methods to allow for successful compilation */
-	public void onActivity() {}
-	public void onInactivity() {}
-	public TextEditorWindow() { super(""); }
-	public void drawWindow() {}
-	/* end of temporary methods to allow for successful compilation */
+public class Website implements Iconable {
+	/* temporary method to allow for compilation */
+	public boolean loadIcon() {
+		return false;
+	}
+
+	public Texture getIcon() {
+		return null;
+	}
+
+	public boolean setIcon(String path) {
+		return false;
+	}
 }

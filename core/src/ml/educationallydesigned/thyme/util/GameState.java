@@ -16,25 +16,24 @@
 	along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-package ml.educationallydesigned.thyme.core;
+package ml.educationallydesigned.thyme.util;
 
 import com.badlogic.gdx.InputProcessor;
 
 /**
- * Class to implement the third game mode for the Thyme video game.
+ * Interface to define the necessary methods and variables for all classes
+ * considered distinc game states.
  *
- * @author     Theodore Preduta
- * @author     Larry Yuan
- *
- * @version    1.0
+ * @author Theodore Preduta
+ * @author Larry Yuan
+ * @version 1.1
  */
-public class EscapeRoom implements GameState {
-	/* temporory methods for compiling. */
-	public InputProcessor getInputProcessor() {
-		return null;
-	}
-	public void render() {
-	}
-	public void dispose() {
-	}
+public interface GameState {
+	/**
+	 * Gets the input processor that should be in control during this game
+	 * state.
+	 *
+	 * @return The input processor that should be in control.
+	 */
+	InputProcessor getInputProcessor();
 }

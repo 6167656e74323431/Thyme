@@ -16,25 +16,28 @@
 	along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-package ml.educationallydesigned.thyme.core;
-
-import com.badlogic.gdx.InputProcessor;
+package ml.educationallydesigned.thyme.core.windows;
 
 /**
- * Non-level game state.
+ * Class to implement the text editor window for in the Thyme game.
  *
- * @author     Theodore Preduta
- * @author     Larry Yuan
- *
- * @version    1.0
+ * @author Theodore Preduta
+ * @author Larry Yuan
+ * @version 1.1
  */
-public class LeaderboardScreen implements GameState {
-	/* temporory methods for compiling. */
-	public InputProcessor getInputProcessor() {
-		return null;
+public class TextEditorWindow extends Window {
+	/* beginning of temporary methods to allow for successful compilation */
+	public void onActivity() {
 	}
-	public void render() {
+
+	public void onInactivity() {
 	}
-	public void dispose() {
+
+	public TextEditorWindow() {
+		super("");
 	}
+
+	public void drawWindow() {
+	}
+	/* end of temporary methods to allow for successful compilation */
 }

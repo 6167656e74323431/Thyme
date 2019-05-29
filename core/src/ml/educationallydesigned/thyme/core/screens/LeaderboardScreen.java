@@ -16,27 +16,27 @@
 	along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-package ml.educationallydesigned.thyme.core;
+package ml.educationallydesigned.thyme.core.screens;
 
-import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.InputProcessor;
+import ml.educationallydesigned.thyme.util.GameState;
 
 /**
- * Class that creates a usable website for the Thyme game.
+ * Non-level game state.
  *
- * @author     Theodore Preduta
- * @author     Larry Yuan
- *
- * @version    1.0
+ * @author Theodore Preduta
+ * @author Larry Yuan
+ * @version 1.0
  */
-public class Website implements Iconable {
-	/* temporary method to allow for compilation */
-	public boolean loadIcon() {
-		return false;
-	}
-	public Texture getIcon()  {
+public class LeaderboardScreen implements GameState {
+	/* temporory methods for compiling. */
+	public InputProcessor getInputProcessor() {
 		return null;
 	}
-	public boolean setIcon(String path) {
-		return false;
+
+	public void render() {
+	}
+
+	public void dispose() {
 	}
 }
