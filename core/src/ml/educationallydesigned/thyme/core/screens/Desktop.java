@@ -6,8 +6,8 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.scenes.scene2d.Stage;
-import com.kotcrab.vis.ui.widget.VisWindow;
 import ml.educationallydesigned.thyme.Thyme;
+import ml.educationallydesigned.thyme.core.windows.DesktopWindow;
 
 public class Desktop implements Screen {
 
@@ -31,7 +31,7 @@ public class Desktop implements Screen {
 	public void show() {
 		stage = new Stage();
 		game.setInputProcessor(stage);
-		VisWindow test = new VisWindow("Hello, World!");
+		DesktopWindow test = new DesktopWindow("Hello, World!");
 		test.setWidth(500);
 		test.setHeight(500);
 		stage.addActor(test);

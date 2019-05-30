@@ -18,26 +18,23 @@
 
 package ml.educationallydesigned.thyme.core.windows;
 
+import com.kotcrab.vis.ui.VisUI;
+import com.kotcrab.vis.ui.widget.VisWindow;
+
 /**
- * Class to implement the text editor window for in the Thyme game.
+ * Class to outline and implement some methods that all winows have.
  *
  * @author Theodore Preduta
  * @author Larry Yuan
- * @version 1.1
+ * @version 2.0
  */
-public class TextEditorWindow extends DesktopWindow {
-	public TextEditorWindow() {
-		super("");
+public class DesktopWindow extends VisWindow {
+	public DesktopWindow(String title) {
+		super(title);
+		WindowStyle style = new WindowStyle(this.getStyle());
+		style.titleFont = VisUI.getSkin().getFont("small-font");
+		this.setStyle(style);
+		this.getTitleTable().padLeft(10);
+		this.addCloseButton();
 	}
-
-	/* beginning of temporary methods to allow for successful compilation */
-	public void onActivity() {
-	}
-
-	public void onInactivity() {
-	}
-
-	public void drawWindow() {
-	}
-	/* end of temporary methods to allow for successful compilation */
 }
