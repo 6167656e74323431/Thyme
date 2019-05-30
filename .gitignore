@@ -28,3 +28,9 @@ build
 
 # intellij files
 .idea
+
+# VSCode
+.vscode
+.settings
+.project
+.classpath

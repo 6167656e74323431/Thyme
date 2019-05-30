@@ -25,7 +25,7 @@ package ml.educationallydesigned.thyme.core.windows;
  * @author Larry Yuan
  * @version 1.1
  */
-public class TextEditorWindow extends Window {
+public class TextEditorWindow extends DesktopWindow {
 	public TextEditorWindow() {
 		super("");
 	}

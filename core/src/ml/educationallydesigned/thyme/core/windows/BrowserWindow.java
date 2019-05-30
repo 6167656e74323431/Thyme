@@ -25,19 +25,8 @@ package ml.educationallydesigned.thyme.core.windows;
  * @author Larry Yuan
  * @version 1.1
  */
-public class BrowserWindow extends Window {
+public class BrowserWindow extends DesktopWindow {
 	public BrowserWindow() {
 		super("");
 	}
-
-	/* beginning of temporary methods to allow for successful compilation */
-	public void onActivity() {
-	}
-
-	public void onInactivity() {
-	}
-
-	public void drawWindow() {
-	}
-	/* end of temporary methods to allow for successful compilation */
 }
