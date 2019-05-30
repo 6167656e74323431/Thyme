@@ -23,6 +23,7 @@ package ml.educationallydesigned.thyme.core.windows;
  *
  * @author Theodore Preduta
  * @author Larry Yuan
+ * 
  * @version 1.1
  */
 public class TrackerWindow extends Window {
