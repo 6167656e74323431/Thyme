@@ -21,6 +21,7 @@ package ml.educationallydesigned.thyme.core.screens;
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.InputAdapter;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.video.VideoPlayer;
@@ -34,7 +35,7 @@ import java.io.FileNotFoundException;
  *
  * @author Theodore Preduta
  * @author Larry Yuan
- * @version 1.1
+ * @version 1.2
  */
 public class AnimationScreen implements Screen {
 	private VideoPlayer player;
@@ -69,6 +70,20 @@ public class AnimationScreen implements Screen {
 			player.play(Gdx.files.internal("videos/intro.ogv"));
 			// set size to size of window
 			player.resize(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
+
+			// skip intro handler if the escape key is pressed
+			Gdx.input.setInputProcessor(new InputAdapter() {
+				@Override
+				public boolean keyTyped(char character) {
+					// stop video if escape is pressed
+					if (character == (char)27) {
+						player.stop();
+						game.setScreen(new HomeScreen(game));
+						return true;
+					}
+					return false;
+				}
+			});
 		} catch (FileNotFoundException e) {
 			Gdx.app.error("Failed to load intro", "Intro file not found");
 			Gdx.app.exit();
