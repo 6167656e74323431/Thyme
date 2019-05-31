@@ -21,11 +21,13 @@ package ml.educationallydesigned.thyme.core.screens;
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.InputAdapter;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.video.VideoPlayer;
 import com.badlogic.gdx.video.VideoPlayerCreator;
 import ml.educationallydesigned.thyme.Thyme;
+import ml.educationallydesigned.thyme.util.Skippable;
 
 import java.io.FileNotFoundException;
 
@@ -34,9 +36,9 @@ import java.io.FileNotFoundException;
  *
  * @author Theodore Preduta
  * @author Larry Yuan
- * @version 1.1
+ * @version 1.2
  */
-public class AnimationScreen implements Screen {
+public class AnimationScreen implements Screen, Skippable {
 	private VideoPlayer player;
 	private Thyme game;
 
@@ -49,6 +51,13 @@ public class AnimationScreen implements Screen {
 		this.game = game;
 	}
 
+	/**
+	 * Skip to the humescreen, and stop the video of it's still playing.
+	 */
+	public void skip() {
+		player.stop();
+		game.setScreen(new HomeScreen(game));
+	}
 
 	/**
 	 * Called when this screen becomes the current screen for a {@link Game}.
@@ -69,6 +78,8 @@ public class AnimationScreen implements Screen {
 			player.play(Gdx.files.internal("videos/intro.ogv"));
 			// set size to size of window
 			player.resize(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
+			// add a InputProcessor to the window
+			game.setInputProcessor(new InputAdapter());
 		} catch (FileNotFoundException e) {
 			Gdx.app.error("Failed to load intro", "Intro file not found");
 			Gdx.app.exit();

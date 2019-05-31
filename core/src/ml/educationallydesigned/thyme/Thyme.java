@@ -21,6 +21,7 @@ import com.badlogic.gdx.*;
 import com.kotcrab.vis.ui.VisUI;
 import ml.educationallydesigned.thyme.core.screens.AnimationScreen;
 import ml.educationallydesigned.thyme.core.screens.HomeScreen;
+import ml.educationallydesigned.thyme.util.Skippable;
 
 /**
  * Launches the game by displaying the first screen.
@@ -52,13 +53,16 @@ public class Thyme extends Game {
 	 *
 	 * @param processor The input processor to use
 	 */
-
 	public void setInputProcessor(InputProcessor processor) {
 		InputMultiplexer multiplexer = new InputMultiplexer();
 		// reserve the escape key so that the current state can be exited.
 		multiplexer.addProcessor(new InputAdapter() {
 			@Override
 			public boolean keyTyped(char character) {
+				if (character == (char)27 && screen instanceof Skippable) {
+					((Skippable)screen).skip();
+					return true;
+				}
 				return false;
 			}
 		});
