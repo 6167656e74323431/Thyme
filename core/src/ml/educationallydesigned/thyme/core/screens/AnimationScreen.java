@@ -51,6 +51,9 @@ public class AnimationScreen implements Screen, Skippable {
 		this.game = game;
 	}
 
+	/**
+	 * Skip to the humescreen, and stop the video of it's still playing.
+	 */
 	public void skip() {
 		player.stop();
 		game.setScreen(new HomeScreen(game));
@@ -75,15 +78,8 @@ public class AnimationScreen implements Screen, Skippable {
 			player.play(Gdx.files.internal("videos/intro.ogv"));
 			// set size to size of window
 			player.resize(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
-
-			// skip intro handler if any key is pressed
-			game.setInputProcessor(new InputAdapter() {
-				@Override
-				public boolean keyTyped(char character) {
-					skip();
-					return true;
-				}
-			});
+			// add a InputProcessor to the window
+			game.setInputProcessor(new InputAdapter());
 		} catch (FileNotFoundException e) {
 			Gdx.app.error("Failed to load intro", "Intro file not found");
 			Gdx.app.exit();
