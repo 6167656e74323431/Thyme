@@ -27,6 +27,7 @@ import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.video.VideoPlayer;
 import com.badlogic.gdx.video.VideoPlayerCreator;
 import ml.educationallydesigned.thyme.Thyme;
+import ml.educationallydesigned.thyme.util.Skippable;
 
 import java.io.FileNotFoundException;
 
@@ -37,7 +38,7 @@ import java.io.FileNotFoundException;
  * @author Larry Yuan
  * @version 1.2
  */
-public class AnimationScreen implements Screen {
+public class AnimationScreen implements Screen, Skippable {
 	private VideoPlayer player;
 	private Thyme game;
 
@@ -50,6 +51,10 @@ public class AnimationScreen implements Screen {
 		this.game = game;
 	}
 
+	public void skip() {
+		player.stop();
+		game.setScreen(new HomeScreen(game));
+	}
 
 	/**
 	 * Called when this screen becomes the current screen for a {@link Game}.
@@ -71,17 +76,12 @@ public class AnimationScreen implements Screen {
 			// set size to size of window
 			player.resize(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
 
-			// skip intro handler if the escape key is pressed
-			Gdx.input.setInputProcessor(new InputAdapter() {
+			// skip intro handler if any key is pressed
+			game.setInputProcessor(new InputAdapter() {
 				@Override
 				public boolean keyTyped(char character) {
-					// stop video if escape is pressed
-					if (character == (char)27) {
-						player.stop();
-						game.setScreen(new HomeScreen(game));
-						return true;
-					}
-					return false;
+					skip();
+					return true;
 				}
 			});
 		} catch (FileNotFoundException e) {

@@ -52,7 +52,6 @@ public class Thyme extends Game {
 	 *
 	 * @param processor The input processor to use
 	 */
-
 	public void setInputProcessor(InputProcessor processor) {
 		InputMultiplexer multiplexer = new InputMultiplexer();
 		// reserve the escape key so that the current state can be exited.
