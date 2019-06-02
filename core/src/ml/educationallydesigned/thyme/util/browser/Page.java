@@ -16,34 +16,26 @@
 	along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-package ml.educationallydesigned.thyme.core.windows;
-
-import java.net.URI;
-
-import com.badlogic.gdx.Gdx;
+package ml.educationallydesigned.thyme.util.browser;
 
 /**
- * Class to implement out in-game browser.
+ * Class to represent a Web Page.
  *
  * @author Theodore Preduta
  * @author Larry Yuan
- * @version 1.1
+ * @version 1.0
  */
-public class BrowserWindow extends DesktopWindow {
-	private static int DEFAULT_WIDTH = 850;
-	private static int DEFAULT_HEIGHT = 900;
-
-	/**
-	 * Makes the browser window and sets the width and height
-	 */
-	public BrowserWindow() {
-		super("Browser 1.0");
-		this.setWidth(DEFAULT_WIDTH);
-		this.setHeight(DEFAULT_HEIGHT);
-		this.centerOnDesktop();
-	}
-
-	public boolean browseTo(URI url) {
-		
-	}
+public class Page {
+    private String name;
+    private String fileName;
+    /**
+     * Creates a page with a name and file name
+     * 
+     * @param name
+     * @param fileName
+     */
+    public Page(String name, String fileName) {
+        this.name = name;
+        this.fileName = fileName;
+    }
 }

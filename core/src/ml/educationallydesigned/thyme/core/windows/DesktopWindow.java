@@ -18,6 +18,7 @@
 
 package ml.educationallydesigned.thyme.core.windows;
 
+import com.badlogic.gdx.Gdx;
 import com.kotcrab.vis.ui.VisUI;
 import com.kotcrab.vis.ui.widget.VisWindow;
 
@@ -29,12 +30,21 @@ import com.kotcrab.vis.ui.widget.VisWindow;
  * @version 2.0
  */
 public class DesktopWindow extends VisWindow {
+	/**
+	 * Creates the window with a title and close button
+	 * @param title
+	 */
 	public DesktopWindow(String title) {
 		super(title);
-		WindowStyle style = new WindowStyle(this.getStyle());
-		style.titleFont = VisUI.getSkin().getFont("small-font");
-		this.setStyle(style);
+		WindowStyle windowStyle = new WindowStyle(this.getStyle());
+		windowStyle.titleFont = VisUI.getSkin().getFont("small-font"); 
 		this.getTitleTable().padLeft(10);
+		this.setStyle(windowStyle);
 		this.addCloseButton();
+	}
+
+	public void centerOnDesktop() {
+		this.setX(Gdx.graphics.getWidth() / 2 - this.getWidth() / 2);
+		this.setY(Gdx.graphics.getHeight() / 2 - this.getHeight() / 2);
 	}
 }
