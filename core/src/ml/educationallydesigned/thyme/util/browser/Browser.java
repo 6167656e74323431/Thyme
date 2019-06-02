@@ -26,15 +26,16 @@ package ml.educationallydesigned.thyme.util.browser;
  * @version 1.0
  */
 public class Browser {
-    Site currentSite;
-    Page currentPage;
-    /**
-     * Initiates the browser starting at the root path of the site.
-     * 
-     * @param site the site to begin
-     */
-    public Browser(Site site) {
-        this.currentSite = site;
-        this.currentPage = site.fetchPage("/");
-    }
+	Site currentSite;
+	Page currentPage;
+
+	/**
+	 * Initiates the browser starting at the root path of the site.
+	 *
+	 * @param site the site to begin
+	 */
+	public Browser(Site site) {
+		this.currentSite = site;
+		this.currentPage = site.fetchPage("/");
+	}
 }

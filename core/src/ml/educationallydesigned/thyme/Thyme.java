@@ -59,8 +59,8 @@ public class Thyme extends Game {
 		multiplexer.addProcessor(new InputAdapter() {
 			@Override
 			public boolean keyTyped(char character) {
-				if (character == (char)27 && screen instanceof Skippable) {
-					((Skippable)screen).skip();
+				if (character == (char) 27 && screen instanceof Skippable) {
+					((Skippable) screen).skip();
 					return true;
 				}
 				return false;

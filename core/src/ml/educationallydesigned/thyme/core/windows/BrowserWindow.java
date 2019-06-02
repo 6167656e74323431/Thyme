@@ -20,8 +20,6 @@ package ml.educationallydesigned.thyme.core.windows;
 
 import java.net.URI;
 
-import com.badlogic.gdx.Gdx;
-
 /**
  * Class to implement out in-game browser.
  *
@@ -44,6 +42,6 @@ public class BrowserWindow extends DesktopWindow {
 	}
 
 	public boolean browseTo(URI url) {
-		
+
 	}
 }

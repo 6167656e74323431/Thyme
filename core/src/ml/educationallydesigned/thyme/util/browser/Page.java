@@ -26,16 +26,17 @@ package ml.educationallydesigned.thyme.util.browser;
  * @version 1.0
  */
 public class Page {
-    private String name;
-    private String fileName;
-    /**
-     * Creates a page with a name and file name
-     * 
-     * @param name
-     * @param fileName
-     */
-    public Page(String name, String fileName) {
-        this.name = name;
-        this.fileName = fileName;
-    }
+	private String name;
+	private String fileName;
+
+	/**
+	 * Creates a page with a name and file name
+	 *
+	 * @param name
+	 * @param fileName
+	 */
+	public Page(String name, String fileName) {
+		this.name = name;
+		this.fileName = fileName;
+	}
 }

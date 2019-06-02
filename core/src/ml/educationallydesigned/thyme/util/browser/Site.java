@@ -29,56 +29,56 @@ import com.badlogic.gdx.utils.XmlReader;
  * @version 1.0
  */
 public class Site {
-    private String hostName = "";
-    private Node root;
+	private String hostName = "";
+	private Node root;
 
-    /**
-     * Creates a new site with a host name
-     * 
-     * @param hostName the hostname to get
-     */
-    public Site(String hostName, FileHandle fileTree) {
-        this.hostName = hostName;
-        this.root = new Node("/");
-        XmlReader parser = new XmlReader();
-        this.parse(root, parser.parse(fileTree));
-    }
+	/**
+	 * Creates a new site with a host name
+	 *
+	 * @param hostName the hostname to get
+	 */
+	public Site(String hostName, FileHandle fileTree) {
+		this.hostName = hostName;
+		this.root = new Node("/");
+		XmlReader parser = new XmlReader();
+		this.parse(root, parser.parse(fileTree));
+	}
 
-    /**
-     * Parses the XML file tree into node representations recursively.
-     * 
-     * @param current The current node
-     * @param element The current XML element
-     */
-    public void parse(Node current, XmlReader.Element XMLNode) {
-        for (int i = 0; i < XMLNode.getChildCount(); i++) {
-            XmlReader.Element child = XMLNode.getChild(i);
-            if (child.getChildCount() == 0) {
-                // no more children, this is a "leaf" node.
-                current.addChild(child.getAttribute("name"), child.getAttribute("fileName"));
-            } else {
-                // there are more children, continue to recurse
-                parse(current.addChild(child.getAttribute("name")), child);
-            }
-        }
-    }
+	/**
+	 * Parses the XML file tree into node representations recursively.
+	 *
+	 * @param current The current node
+	 * @param element The current XML element
+	 */
+	public void parse(Node current, XmlReader.Element XMLNode) {
+		for (int i = 0; i < XMLNode.getChildCount(); i++) {
+			XmlReader.Element child = XMLNode.getChild(i);
+			if (child.getChildCount() == 0) {
+				// no more children, this is a "leaf" node.
+				current.addChild(child.getAttribute("name"), child.getAttribute("fileName"));
+			} else {
+				// there are more children, continue to recurse
+				parse(current.addChild(child.getAttribute("name")), child);
+			}
+		}
+	}
 
-    /**
-     * Gets the page with the specified path, returns null if page doesn't exist
-     * 
-     * @param path
-     * @return the page
-     */
-    public Page fetchPage(String path) {
-        String[] split = path.split("/");
-        Node currentNode = root;
-        for (String pathName : split) {
-            Node nextNode = root.getChild(pathName);
-            if (nextNode == null) {
-                return null;
-            }
-            currentNode = nextNode;
-        }
-        return currentNode.getPage();
-    }
+	/**
+	 * Gets the page with the specified path, returns null if page doesn't exist
+	 *
+	 * @param path
+	 * @return the page
+	 */
+	public Page fetchPage(String path) {
+		String[] split = path.split("/");
+		Node currentNode = root;
+		for (String pathName : split) {
+			Node nextNode = root.getChild(pathName);
+			if (nextNode == null) {
+				return null;
+			}
+			currentNode = nextNode;
+		}
+		return currentNode.getPage();
+	}
 }

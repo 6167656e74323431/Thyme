@@ -34,7 +34,7 @@ public class Node {
 
 	/**
 	 * Creates a new non-leaf node.
-	 * 
+	 *
 	 * @param name
 	 */
 	public Node(String name) {
@@ -47,22 +47,23 @@ public class Node {
 	public Node(String name, Page page) {
 		this.name = name;
 		this.page = page;
-		this.children = new HashMap<String,Node>();
+		this.children = new HashMap<String, Node>();
 	}
 
 	/**
 	 * Gets the subpath with name
+	 *
 	 * @param name
 	 * @return the node of the subpath
 	 */
 	public Node getChild(String name) {
 		return children.get(name);
 	}
-	
+
 	/**
 	 * Adds a leaf child to the node
-	 * 
-	 * @param name the name of the child
+	 *
+	 * @param name     the name of the child
 	 * @param fileName the name of the file
 	 * @return the newly created node
 	 */
@@ -71,9 +72,10 @@ public class Node {
 		children.put(name, newNode);
 		return newNode;
 	}
-	
+
 	/**
 	 * Adds a new inode to the node.
+	 *
 	 * @param name The name of the inode
 	 */
 	public Node addChild(String name) {

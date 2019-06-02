@@ -32,12 +32,13 @@ import com.kotcrab.vis.ui.widget.VisWindow;
 public class DesktopWindow extends VisWindow {
 	/**
 	 * Creates the window with a title and close button
+	 *
 	 * @param title
 	 */
 	public DesktopWindow(String title) {
 		super(title);
 		WindowStyle windowStyle = new WindowStyle(this.getStyle());
-		windowStyle.titleFont = VisUI.getSkin().getFont("small-font"); 
+		windowStyle.titleFont = VisUI.getSkin().getFont("small-font");
 		this.getTitleTable().padLeft(10);
 		this.setStyle(windowStyle);
 		this.addCloseButton();
