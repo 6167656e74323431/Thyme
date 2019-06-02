@@ -18,11 +18,15 @@
 
 package ml.educationallydesigned.thyme.core.windows;
 
+import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.scenes.scene2d.Actor;
+import com.badlogic.gdx.scenes.scene2d.InputEvent;
+import com.badlogic.gdx.scenes.scene2d.InputListener;
 import com.badlogic.gdx.scenes.scene2d.ui.Container;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.utils.BaseDrawable;
+import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.scenes.scene2d.utils.Drawable;
 import com.badlogic.gdx.utils.Align;
 import com.kotcrab.vis.ui.VisUI;
@@ -50,6 +54,7 @@ public class BrowserWindow extends DesktopWindow {
 			new Bookmark("Site #5", "wikipedia.org"),
 			new Bookmark("Site #6", "wikipedia.org"),
 	};
+	private static String prefix = " local://";
 
 	private VisTable browserDisplay;
 
@@ -58,7 +63,7 @@ public class BrowserWindow extends DesktopWindow {
 	 * Makes the browser window and sets the width and height
 	 */
 	public BrowserWindow() {
-		super("Browser 1.0");
+		super("Browser");
 		// set default parameters for window
 		this.setWidth(DEFAULT_WIDTH);
 		this.setHeight(DEFAULT_HEIGHT);
@@ -76,8 +81,20 @@ public class BrowserWindow extends DesktopWindow {
 		topTable.add(backButton).width(50).height(40);
 
 		BitmapFont smallFont = VisUI.getSkin().getFont("small-font");
+
 		// initialize url bar
 		this.urlBar = new VisTextField();
+		// listen for when user hits enter
+		urlBar.addListener(new InputListener() {
+			@Override
+			public boolean keyDown(InputEvent event, int keycode) {
+				if (keycode == Input.Keys.ENTER) {
+					BrowserWindow self = BrowserWindow.this;
+					self.browseTo(self.getURL());
+				}
+				return true;
+			}
+		});
 		VisTextField.VisTextFieldStyle urlBarStyle = urlBar.getStyle();
 		urlBarStyle.focusBorder = new BaseDrawable(); // no border on active
 		urlBarStyle.font = smallFont; // make font smaller
@@ -98,8 +115,16 @@ public class BrowserWindow extends DesktopWindow {
 		bookmarkButtonStyle.up = noBackground;
 
 		// add each bookmark to bar
-		for (Bookmark bookmark : bookmarks) {
+		for (final Bookmark bookmark : bookmarks) {
 			VisTextButton bookmarkButton = new VisTextButton(bookmark.name);
+			// add handler for when user clicks bookmark
+			bookmarkButton.addListener(new ClickListener() {
+				@Override
+				public void clicked(InputEvent event, float x, float y) {
+					BrowserWindow.this.browseTo(bookmark.URL);
+				}
+			});
+
 			bookmarkButton.setStyle(bookmarkButtonStyle);
 			bookmarksBar.add(bookmarkButton).height(40).padRight(10);
 		}
@@ -126,7 +151,7 @@ public class BrowserWindow extends DesktopWindow {
 	 * @param URL the url to browse to
 	 */
 	public void browseTo(String URL) {
-		urlBar.setText(" local://" + URL);
+		urlBar.setText(prefix + URL);
 		browserDisplay.clearChildren();
 		try {
 			Page page = Browser.fetch(URL);
@@ -141,5 +166,12 @@ public class BrowserWindow extends DesktopWindow {
 			VisLabel notFoundLabel = new VisLabel("Page not found!");
 			browserDisplay.add(notFoundLabel);
 		}
+	}
+
+	/**
+	 * Gets the current URL in bar (not the current page!)
+	 */
+	public String getURL() {
+		return urlBar.getText().replace(prefix, "");
 	}
 }
