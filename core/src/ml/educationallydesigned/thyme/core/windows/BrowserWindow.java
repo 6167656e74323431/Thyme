@@ -24,10 +24,8 @@ import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.InputListener;
 import com.badlogic.gdx.scenes.scene2d.ui.Container;
-import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.utils.BaseDrawable;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
-import com.badlogic.gdx.scenes.scene2d.utils.Drawable;
 import com.badlogic.gdx.utils.Align;
 import com.kotcrab.vis.ui.VisUI;
 import com.kotcrab.vis.ui.widget.*;
@@ -59,6 +57,7 @@ public class BrowserWindow extends DesktopWindow {
 	private VisTable browserDisplay;
 
 	private VisTextField urlBar;
+
 	/**
 	 * Makes the browser window and sets the width and height
 	 */
@@ -148,6 +147,7 @@ public class BrowserWindow extends DesktopWindow {
 
 	/**
 	 * Browse to a certain URL
+	 *
 	 * @param URL the url to browse to
 	 */
 	public void browseTo(String URL) {

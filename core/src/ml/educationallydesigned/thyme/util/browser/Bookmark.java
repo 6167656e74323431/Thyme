@@ -22,6 +22,7 @@ package ml.educationallydesigned.thyme.util.browser;
 
 /**
  * Class representing a bookmark
+ *
  * @author Theodore Preduta
  * @author Larry Yuan
  * @version 1.0
@@ -32,8 +33,9 @@ public class Bookmark {
 
 	/**
 	 * Creates a new bookmark with a name and url
+	 *
 	 * @param name the name
-	 * @param URL the url
+	 * @param URL  the url
 	 */
 	public Bookmark(String name, String URL) {
 		this.name = name;

@@ -26,9 +26,6 @@ import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.utils.GdxRuntimeException;
 import com.github.czyzby.lml.parser.LmlParser;
 import com.github.czyzby.lml.util.Lml;
-import com.github.czyzby.lml.vis.util.VisLml;
-
-import java.io.FileNotFoundException;
 
 /**
  * Class to assist with the reading and parsing of web pages
@@ -39,16 +36,17 @@ import java.io.FileNotFoundException;
  */
 public class Browser {
 	public static LmlParser parser = Lml.parser()
-										.skin(new Skin(Gdx.files.internal("skins/website")))
-										.styles(Gdx.files.internal("styles/website.lss"))
-										.build();
+			.skin(new Skin(Gdx.files.internal("skins/website")))
+			.styles(Gdx.files.internal("styles/website.lss"))
+			.build();
+
 	/**
 	 * Fetches the page at a specific URL
 	 *
 	 * @param url the url to fetch
 	 * @return the page
 	 * @throws NotFoundException When the page cannot be found
- 	 */
+	 */
 	public static Page fetch(String url) throws NotFoundException {
 		try {
 			FileHandle file = Gdx.files.internal("websites/" + url + ".xml");
