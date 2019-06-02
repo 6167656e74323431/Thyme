@@ -33,7 +33,7 @@ public class DesktopWindow extends VisWindow {
 	/**
 	 * Creates the window with a title and close button
 	 *
-	 * @param title
+	 * @param title The title of the window
 	 */
 	public DesktopWindow(String title) {
 		super(title);
@@ -45,7 +45,7 @@ public class DesktopWindow extends VisWindow {
 	}
 
 	public void centerOnDesktop() {
-		this.setX(Gdx.graphics.getWidth() / 2 - this.getWidth() / 2);
-		this.setY(Gdx.graphics.getHeight() / 2 - this.getHeight() / 2);
+		this.setX((Gdx.graphics.getWidth() >> 1) - this.getWidth() / 2);
+		this.setY((Gdx.graphics.getHeight() >> 1) - this.getHeight() / 2);
 	}
 }

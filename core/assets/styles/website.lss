@@ -18,36 +18,7 @@
  * /
  */
 
-package ml.educationallydesigned.thyme.util.browser;
-
-import com.badlogic.gdx.scenes.scene2d.Actor;
-import com.badlogic.gdx.utils.Array;
-
-/**
- * Class to represent a page on a web site.
- *
- * @author Theodore Preduta
- * @author Larry Yuan
- * @version 1.0
- */
-public class Page {
-	private Array<Actor> elements;
-
-	/**
-	 * Initializes the page with some elements
-	 *
-	 * @param elements the elements the page should have
-	 */
-	public Page(Array<Actor> elements) {
-		this.elements = elements;
-	}
-
-	/**
-	 * Retrieves the elements on the page
-	 *
-	 * @return the elements on the page
-	 */
-	public Array<Actor> getElements() {
-		return elements;
-	}
+label {
+    wrap: true;
+    multiline: true;
 }

@@ -20,34 +20,23 @@
 
 package ml.educationallydesigned.thyme.util.browser;
 
-import com.badlogic.gdx.scenes.scene2d.Actor;
-import com.badlogic.gdx.utils.Array;
-
 /**
- * Class to represent a page on a web site.
- *
+ * Class representing a bookmark
  * @author Theodore Preduta
  * @author Larry Yuan
  * @version 1.0
  */
-public class Page {
-	private Array<Actor> elements;
+public class Bookmark {
+	public String name;
+	public String URL;
 
 	/**
-	 * Initializes the page with some elements
-	 *
-	 * @param elements the elements the page should have
+	 * Creates a new bookmark with a name and url
+	 * @param name the name
+	 * @param URL the url
 	 */
-	public Page(Array<Actor> elements) {
-		this.elements = elements;
-	}
-
-	/**
-	 * Retrieves the elements on the page
-	 *
-	 * @return the elements on the page
-	 */
-	public Array<Actor> getElements() {
-		return elements;
+	public Bookmark(String name, String URL) {
+		this.name = name;
+		this.URL = URL;
 	}
 }
