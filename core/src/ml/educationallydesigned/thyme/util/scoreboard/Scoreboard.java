@@ -113,6 +113,4 @@ public class Scoreboard {
 	public void clear() throws BackingStoreException {
 		scoreDatabase.clear();
 	}
-
-
 }

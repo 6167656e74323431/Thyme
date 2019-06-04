@@ -31,7 +31,7 @@ import com.badlogic.gdx.utils.Array;
  * @version 1.0
  */
 public class Page {
-	private Array<Actor> elements;
+	public Array<Actor> elements;
 
 	/**
 	 * Initializes the page with some elements
@@ -40,14 +40,5 @@ public class Page {
 	 */
 	public Page(Array<Actor> elements) {
 		this.elements = elements;
-	}
-
-	/**
-	 * Retrieves the elements on the page
-	 *
-	 * @return the elements on the page
-	 */
-	public Array<Actor> getElements() {
-		return elements;
 	}
 }

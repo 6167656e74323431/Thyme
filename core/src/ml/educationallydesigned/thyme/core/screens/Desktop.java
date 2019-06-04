@@ -7,7 +7,7 @@ import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import ml.educationallydesigned.thyme.Thyme;
-import ml.educationallydesigned.thyme.core.windows.BrowserWindow;
+import ml.educationallydesigned.thyme.core.windows.browser.BrowserWindow;
 
 public class Desktop implements Screen {
 

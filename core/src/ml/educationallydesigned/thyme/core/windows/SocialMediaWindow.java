@@ -20,37 +20,16 @@
 
 package ml.educationallydesigned.thyme.core.windows;
 
-import com.badlogic.gdx.Gdx;
-import com.kotcrab.vis.ui.VisUI;
-import com.kotcrab.vis.ui.widget.VisWindow;
+import ml.educationallydesigned.thyme.core.windows.browser.BrowserWindow;
 
 /**
- * Class to outline and implement some methods that all winows have.
+ * Class representing a Social Media window, used as a distraction
  *
- * @author Theodore Preduta
  * @author Larry Yuan
- * @version 2.0
+ * @author Theodore Preduta
+ *
+ * @version 1.0
  */
-public class DesktopWindow extends VisWindow {
-	/**
-	 * Creates the window with a title and close button
-	 *
-	 * @param title The title of the window
-	 */
-	public DesktopWindow(String title) {
-		super(title);
-		WindowStyle windowStyle = new WindowStyle(this.getStyle());
-		windowStyle.titleFont = VisUI.getSkin().getFont("small-font");
-		this.getTitleTable().padLeft(10);
-		this.setStyle(windowStyle);
-		this.addCloseButton();
-	}
+public class SocialMediaWindow extends BrowserWindow {
 
-	/**
-	 * Center the window on the desktop
-	 */
-	public void centerOnDesktop() {
-		this.setX((Gdx.graphics.getWidth() >> 1) - this.getWidth() / 2);
-		this.setY((Gdx.graphics.getHeight() >> 1) - this.getHeight() / 2);
-	}
 }

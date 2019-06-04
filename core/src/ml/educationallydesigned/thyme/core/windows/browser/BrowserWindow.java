@@ -1,34 +1,38 @@
 /*
-	Thyme is an educational game to assist teenagers in time management, and tracking.
-	Copyright (C) 2019 Theodore Preduta, Larry Yuan
+ *
+ * 	Thyme is an educational game to assist teenagers in time management, and tracking.
+ * 	Copyright (C) 2019 Theodore Preduta, Larry Yuan
+ *
+ * 	This program is free software: you can redistribute it and/or modify
+ * 	it under the terms of the GNU Affero General Public License as published
+ * 	by the Free Software Foundation, either version 3 of the License, or
+ * 	(at your option) any later version.
+ *
+ * 	This program is distributed in the hope that it will be useful,
+ * 	but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * 	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * 	GNU Affero General Public License for more details.
+ *
+ * 	You should have received a copy of the GNU Affero General Public License
+ * 	along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ * /
+ */
 
-	This program is free software: you can redistribute it and/or modify
-	it under the terms of the GNU Affero General Public License as published
-	by the Free Software Foundation, either version 3 of the License, or
-	(at your option) any later version.
+package ml.educationallydesigned.thyme.core.windows.browser;
 
-	This program is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	GNU Affero General Public License for more details.
-
-	You should have received a copy of the GNU Affero General Public License
-	along with this program.  If not, see <https://www.gnu.org/licenses/>.
-*/
-
-package ml.educationallydesigned.thyme.core.windows;
-
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.InputListener;
 import com.badlogic.gdx.scenes.scene2d.ui.Container;
-import com.badlogic.gdx.scenes.scene2d.utils.BaseDrawable;
-import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
+import com.badlogic.gdx.scenes.scene2d.utils.*;
 import com.badlogic.gdx.utils.Align;
 import com.kotcrab.vis.ui.VisUI;
 import com.kotcrab.vis.ui.widget.*;
+import ml.educationallydesigned.thyme.core.windows.DesktopWindow;
 import ml.educationallydesigned.thyme.util.browser.Bookmark;
 import ml.educationallydesigned.thyme.util.browser.Browser;
 import ml.educationallydesigned.thyme.util.browser.NotFoundException;
@@ -44,19 +48,15 @@ import ml.educationallydesigned.thyme.util.browser.Page;
 public class BrowserWindow extends DesktopWindow {
 	private static int DEFAULT_WIDTH = 850;
 	private static int DEFAULT_HEIGHT = 900;
+	private static String HOME_URL = "wikipedia.org";
 	private static Bookmark[] bookmarks = {
-			new Bookmark("Site #1", "randomfacts.com"),
-			new Bookmark("Site #2", "wikipedia.org"),
-			new Bookmark("Site #3", "wikipedia.org"),
-			new Bookmark("Site #4", "wikipedia.org"),
-			new Bookmark("Site #5", "wikipedia.org"),
-			new Bookmark("Site #6", "wikipedia.org"),
+			new Bookmark("Wikipedia", new Texture(Gdx.files.internal("favicons/wikipedia.png")),"google.com"),
 	};
 	private static String prefix = " local://";
-
 	private VisTable browserDisplay;
-
 	private VisTextField urlBar;
+	private String lastURL = HOME_URL;
+	private String currentURL = HOME_URL;
 
 	/**
 	 * Makes the browser window and sets the width and height
@@ -73,11 +73,19 @@ public class BrowserWindow extends DesktopWindow {
 		VisTable topTable = new VisTable();
 
 		// initialize back button
-		VisImageButton backButton = new VisImageButton(VisUI.getSkin().getDrawable("icon-arrow-left"));
+		final VisImageButton backButton = new VisImageButton(VisUI.getSkin().getDrawable("icon-arrow-left"));
 		backButton.getStyle().up = VisUI.getSkin().getDrawable("button-blue");
 		backButton.getStyle().over = VisUI.getSkin().getDrawable("button-blue-over");
 		backButton.getStyle().down = VisUI.getSkin().getDrawable("button-blue-down");
 		topTable.add(backButton).width(50).height(40);
+
+		// add listener for back button
+		backButton.addListener(new ClickListener() {
+			@Override
+			public void clicked(InputEvent event, float x, float y) {
+				browseTo(lastURL);
+			}
+		});
 
 		BitmapFont smallFont = VisUI.getSkin().getFont("small-font");
 
@@ -88,10 +96,12 @@ public class BrowserWindow extends DesktopWindow {
 			@Override
 			public boolean keyDown(InputEvent event, int keycode) {
 				if (keycode == Input.Keys.ENTER) {
-					BrowserWindow self = BrowserWindow.this;
-					self.browseTo(self.getURL());
+					// browse to requested link
+					browseTo(getURL());
+					// unfocus text box
+					getStage().unfocusAll();
 				}
-				return true;
+				return false;
 			}
 		});
 		VisTextField.VisTextFieldStyle urlBarStyle = urlBar.getStyle();
@@ -104,18 +114,30 @@ public class BrowserWindow extends DesktopWindow {
 
 		// initialize bookmarks bar
 		VisTable bookmarksBar = new VisTable();
-		// properly style each bookmark
-		VisTextButton.VisTextButtonStyle bookmarkButtonStyle = (VisTextButton.VisTextButtonStyle) (new VisTextButton("")).getStyle();
-		bookmarkButtonStyle.focusBorder = new BaseDrawable();
-		bookmarkButtonStyle.font = smallFont;
-		BaseDrawable noBackground = new BaseDrawable();
-		noBackground.setLeftWidth(8);
-		noBackground.setRightWidth(8);
-		bookmarkButtonStyle.up = noBackground;
 
 		// add each bookmark to bar
 		for (final Bookmark bookmark : bookmarks) {
-			VisTextButton bookmarkButton = new VisTextButton(bookmark.name);
+			final VisImageTextButton bookmarkButton = new VisImageTextButton("Wikipedia", new TextureRegionDrawable(bookmark.favicon));
+
+			// properly style bookmark
+			VisImageTextButton.VisImageTextButtonStyle bookmarkButtonStyle = bookmarkButton.getStyle();
+			// remove background and border
+			bookmarkButtonStyle.focusBorder = new BaseDrawable();
+			bookmarkButtonStyle.up = new BaseDrawable();
+			bookmarkButtonStyle.over = new BaseDrawable();
+			bookmarkButtonStyle.down.setLeftWidth(0);
+			bookmarkButtonStyle.down.setRightWidth(0);
+			bookmarkButtonStyle.focused = new BaseDrawable();
+			bookmarkButton.setStyle(bookmarkButtonStyle);
+
+			// make font text small
+			VisLabel.LabelStyle bookmarkLabelStyle = bookmarkButton.getLabel().getStyle();
+			bookmarkLabelStyle.font = VisUI.getSkin().getFont("small-font");
+			bookmarkButton.getLabel().setStyle(bookmarkLabelStyle);
+
+			// make favicon small
+			bookmarkButton.getImageCell().height(30);
+
 			// add handler for when user clicks bookmark
 			bookmarkButton.addListener(new ClickListener() {
 				@Override
@@ -124,12 +146,11 @@ public class BrowserWindow extends DesktopWindow {
 				}
 			});
 
-			bookmarkButton.setStyle(bookmarkButtonStyle);
-			bookmarksBar.add(bookmarkButton).height(40).padRight(10);
+			bookmarksBar.add(bookmarkButton).height(35).padRight(10);
 		}
 		bookmarksBar.align(Align.left);
 		bookmarksBar.row();
-		this.add(bookmarksBar).width(DEFAULT_WIDTH - 10).height(40).row();
+		this.add(bookmarksBar).width(DEFAULT_WIDTH - 10).height(40).padBottom(5).row();
 
 		// add separator
 		VisTable separator = new VisTable();
@@ -142,7 +163,7 @@ public class BrowserWindow extends DesktopWindow {
 		VisScrollPane scrollPane = new VisScrollPane(this.browserDisplay);
 		scrollPane.setFlickScroll(true);
 		this.add(scrollPane).row();
-		this.browseTo("google.com/home");
+		this.browseTo(HOME_URL);
 	}
 
 	/**
@@ -151,16 +172,26 @@ public class BrowserWindow extends DesktopWindow {
 	 * @param URL the url to browse to
 	 */
 	public void browseTo(String URL) {
+		lastURL = currentURL;
+		currentURL = URL;
 		urlBar.setText(prefix + URL);
 		browserDisplay.clearChildren();
+		// check if only the root of the website is being accessed and if so, display search
+		// first replaces the final slash if it has one, then checks if there is any slash
+		// domain names cannot contain slashes
+		if (Gdx.files.internal("websites/" + URL).exists() && !URL.replace("/$", "").contains("/")) {
+			browserDisplay.add(new SearchView(URL.replace("/", "")));
+			return;
+		}
 		try {
 			Page page = Browser.fetch(URL);
-			for (Actor element : page.getElements().items) {
+			for (Actor element : page.elements.items) {
+				// ignore null elements
 				if (element == null) continue;
-				Container<Actor> labelContainer = new Container<Actor>(element);
-				labelContainer.prefWidth(DEFAULT_WIDTH - 30);
-				labelContainer.width(DEFAULT_WIDTH - 30);
-				browserDisplay.add(labelContainer).padBottom(10).row();
+				Container<Actor> actorContainer = new Container<Actor>(element);
+				actorContainer.prefWidth(DEFAULT_WIDTH - 30);
+				actorContainer.width(DEFAULT_WIDTH - 30);
+				browserDisplay.add(actorContainer).padBottom(10).row();
 			}
 		} catch (NotFoundException e) {
 			VisLabel notFoundLabel = new VisLabel("Page not found!");

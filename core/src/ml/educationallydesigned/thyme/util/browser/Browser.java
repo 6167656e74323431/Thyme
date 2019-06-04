@@ -35,7 +35,7 @@ import com.github.czyzby.lml.util.Lml;
  * @version 1.0
  */
 public class Browser {
-	public static LmlParser parser = Lml.parser()
+	private static LmlParser parser = Lml.parser()
 			.skin(new Skin(Gdx.files.internal("skins/website")))
 			.styles(Gdx.files.internal("styles/website.lss"))
 			.build();

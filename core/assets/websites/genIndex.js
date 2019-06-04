@@ -17,35 +17,31 @@
  * 	along with this program.  If not, see <https://www.gnu.org/licenses/>.
  * /
  */
+const fs = require('fs');
+const path = require('path');
+let walk = (dir) => {
+    const result = [];
 
-package ml.educationallydesigned.thyme.util.browser;
+    const files = [dir];
+    do {
+        const filepath = files.pop();
+        const stat = fs.lstatSync(filepath);
+        if (stat.isDirectory()) {
+            fs
+                .readdirSync(filepath)
+                .forEach(f => files.push(path.join(filepath, f)));
+        } else if (stat.isFile()) {
+            result.push(path.relative(dir, filepath));
+        }
+    } while (files.length !== 0);
 
-import com.badlogic.gdx.files.FileHandle;
-import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.scenes.scene2d.ui.Image;
-import com.kotcrab.vis.ui.widget.VisImage;
+    return result.filter(x => x.length !== 0);
+};
 
-/**
- * Class representing a bookmark
- *
- * @author Theodore Preduta
- * @author Larry Yuan
- * @version 1.0
- */
-public class Bookmark {
-	public String URL;
-	public Texture favicon;
-	public String name;
+const websites = fs.readdirSync(__dirname).filter(x => !fs.lstatSync(
+    __dirname + "/" + x
+).isFile());
 
-	/**
-	 * Creates a new bookmark with a name and url
-	 *
-	 * @param favicon the favicon
-	 * @param URL  the url
-	 */
-	public Bookmark(String name, Texture favicon, String URL) {
-		this.name = name;
-		this.favicon = favicon;
-		this.URL = URL;
-	}
+for (let website of websites) {
+    fs.writeFileSync(websites + "/index", walk(__dirname + "/" + website).join("\n"));
 }
