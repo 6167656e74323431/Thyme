@@ -19,7 +19,9 @@ package ml.educationallydesigned.thyme;
 
 import com.badlogic.gdx.*;
 import com.kotcrab.vis.ui.VisUI;
+import ml.educationallydesigned.thyme.core.screens.AnimationScreen;
 import ml.educationallydesigned.thyme.core.screens.Desktop;
+import ml.educationallydesigned.thyme.core.screens.HomeScreen;
 import ml.educationallydesigned.thyme.util.Skippable;
 
 /**
@@ -39,8 +41,6 @@ public class Thyme extends Game {
 	public void create() {
 		VisUI.load(VisUI.SkinScale.X2);
 
-		this.setScreen(new Desktop(this));
-		/*
 		// check if windows or linux
 		// libgdx-video does not currently work well with ffmpeg on linux.
 		if (System.getProperty("os.name").toLowerCase().contains("win")) {
@@ -48,7 +48,6 @@ public class Thyme extends Game {
 		} else {
 			this.setScreen(new HomeScreen(this));
 		}
-		*/
 	}
 
 	/**
