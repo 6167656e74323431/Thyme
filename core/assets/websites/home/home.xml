@@ -1,0 +1,3 @@
+<:import macros/html.xml />
+<:h1>Welcome!</:h1>
+<:p>Pick a bookmark or enter a url to access a page.</:p>

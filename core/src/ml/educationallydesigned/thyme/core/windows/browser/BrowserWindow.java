@@ -48,9 +48,9 @@ import ml.educationallydesigned.thyme.util.browser.Page;
 public class BrowserWindow extends DesktopWindow {
 	private static int DEFAULT_WIDTH = 850;
 	private static int DEFAULT_HEIGHT = 900;
-	private static String HOME_URL = "wikipedia.org";
+	private static String HOME_URL = "home/home";
 	private static Bookmark[] bookmarks = {
-			new Bookmark("Wikipedia", new Texture(Gdx.files.internal("favicons/wikipedia.png")),"google.com"),
+			new Bookmark("Wikipedia", new Texture(Gdx.files.internal("favicons/wikipedia.png")),"wikipedia.org"),
 	};
 	private static String prefix = " local://";
 	private VisTable browserDisplay;
@@ -180,7 +180,8 @@ public class BrowserWindow extends DesktopWindow {
 		// first replaces the final slash if it has one, then checks if there is any slash
 		// domain names cannot contain slashes
 		if (Gdx.files.internal("websites/" + URL).exists() && !URL.replace("/$", "").contains("/")) {
-			browserDisplay.add(new SearchView(URL.replace("/", "")));
+			browserDisplay.add(new SearchView(this, URL.replace("/", "")))
+					      .width(DEFAULT_WIDTH - 30);
 			return;
 		}
 		try {

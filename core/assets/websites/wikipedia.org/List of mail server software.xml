@@ -1,0 +1,7 @@
+<:import macros/html.xml />
+<:h1>List of mail server software</:h1>
+<:p>This is a list of mail server software: mail transfer agents, mail delivery agents, and other computer software which provide e-mail.</:p>
+<:p>All such figures are necessarily estimates because data about mail server share is difficult to obtain; there are few reliable primary sources—and no agreed methodologies for its collection.</:p>
+<:p>Surveys probing Internet-exposed systems typically attempt to identify systems via their banner, or other identifying features; and report Postfix and exim as overwhelming leaders, with greater than 80% share between them.</:p>
+<:p>- Comparison of mail servers</:p>
+<:p>- Message transfer agent</:p>

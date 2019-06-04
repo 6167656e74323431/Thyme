@@ -1,0 +1,7 @@
+<:import macros/html.xml />
+<:h1>List of FTP server return codes</:h1>
+<:p>FTP server return codes always have three digits, and each digit has a special meaning. The first digit denotes whether the response is good, bad or incomplete:</:p>
+<:p>The second digit is a grouping digit and encodes the following information:</:p>
+<:p>Below is a list of all known return codes that may be issued by an FTP server.</:p>
+<:p>- List of FTP commands</:p>
+<:p>- List of HTTP status codes</:p>

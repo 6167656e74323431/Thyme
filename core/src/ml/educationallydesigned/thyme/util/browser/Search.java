@@ -40,7 +40,6 @@ import java.util.Scanner;
 public class Search {
 	private String domain;
 	private List<String> pages;
-	private List<String> pageNames;
 	/**
 	 * Initializes the object with the domain to search through.
 	 *
@@ -50,13 +49,6 @@ public class Search {
 		this.domain = domain;
 		// read the index and split for each line
 		this.pages = Arrays.asList(Gdx.files.internal("websites/" + domain + "/index").readString().split("\n"));
-		// extract only the file name
-		pageNames = new ArrayList<>();
-		for (String page : pages) {
-			// remove the file extension
-			String fileName = Paths.get(page).getFileName().toString();
-			pageNames.add(fileName.substring(0, fileName.lastIndexOf(".")));
-		}
 	}
 
 	/**
@@ -64,12 +56,15 @@ public class Search {
 	 *
 	 * @param keyword the keyword
 	 * @param number the number of results to list
+	 * @param threshold the threshold required to be selected
 	 */
-	public String[] search(String keyword, int number) {
-		List<ExtractedResult> results = FuzzySearch.extractSorted(keyword, pageNames, number);
-		String[] resultList = new String[results.size()];
-		for (int i = 0; i < results.size(); i++) {
-			resultList[i] = results.get(i).getString();
+	public List<String> search(String keyword, int number, int threshold) {
+		List<ExtractedResult> results = FuzzySearch.extractSorted(keyword, pages, number);
+		List<String> resultList = new ArrayList<String>();
+		for (int i = 0; i < number; i++) {
+			if (results.get(i).getScore() >= threshold) {
+				resultList.add(results.get(i).getString());
+			}
 		}
 		return resultList;
 	}

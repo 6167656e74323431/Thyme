@@ -1,0 +1,8 @@
+<:import macros/html.xml />
+<:h1>List of IP protocol numbers</:h1>
+<:p>Below are the Internet Protocol numbers found in the "Protocol" field of the IPv4 header and the "Next Header" field of the IPv6 header. The same values are used in both versions of the field and define the layout of the header that will immediately follow the IPv4 or IPv6 header. Both the "Protocol" and "Next Header" fields are eight bits wide. The numbers used in these fields are managed and assigned by the Internet Assigned Numbers Authority (IANA).</:p>
+<:p>- Internet Protocol</:p>
+<:p>- IPv4 (including packet structure)</:p>
+<:p>- IPv6 (and packet structure)</:p>
+<:p>- EtherType</:p>
+<:p>- Official list of protocol numbers</:p>

@@ -1,0 +1,338 @@
+<:import macros/html.xml />
+<:h1>List of Google products</:h1>
+<:p>The following is a list of products and services provided by Google.</:p>
+<:p>- Google Cultural Institute</:p>
+<:p>- Google Art Project</:p>
+<:p>- FeedBurner – used in news feed management services, including feed traffic analysis and advertising facilities.</:p>
+<:p>- Google 3D Warehouse – online service that hosts 3D models of existing objects, locations (including buildings) and vehicles created in Google SketchUp. Models can be downloaded into Google Sketch-up by other users or Google Earth.</:p>
+<:p>- G Suite – service for businesses, enterprise, and education providing independently customizable versions of several Google products under a custom domain name. Services included are Gmail, Google Hangouts, Google Calendar, Google Docs, Google Sheets, Google Forms, Google Slides, Google Sites, Google Contacts and Google Groups.</:p>
+<:p>- Google Hire – human resources hiring tool. Provides a system for employers to collect applications and search for job candidates.</:p>
+<:p>- Blogger – weblog publishing tool. Users can create custom, hosted blogs with features such as photo publishing, comments, group blogs, blogger profiles and mobile-based posting with little technical knowledge.</:p>
+<:p>- Google Bookmarks – free online bookmark storage service.</:p>
+<:p>- Boutiques.com – personalized shopping to find/discover fashion goods.</:p>
+<:p>- Google Business Solutions – collection of services offered by Google directed at webmasters and businesses. Components: Feedburner, Google AdWords, Google AdSense, Google Analytics, Google Enterprise Search solutions, G Suite, Google Checkout, Google Local Business Center, Google Merchant Center, Google Trusted Stores, Postini, Google Webmaster Central, Google Ad Manager, Google Maps and Earth Solutions, Google Website Optimizer.</:p>
+<:p>- Google Calendar – online calendar with Gmail integration, calendar sharing and a "quick add" function to create events using natural language. It is similar to those offered by Yahoo! and Windows Live.</:p>
+<:p>- Google Charts – interactive, Web-based chart image generation from user-supplied JavaScript.</:p>
+<:p>- Google Docs – document, spreadsheet, drawing, survey and presentation application, with document collaboration and publishing capabilities.</:p>
+<:p>- Google Domains — domain registration service, with website publishing partners.</:p>
+<:p>- Google Drive – online backup service and storage space.</:p>
+<:p>- Google Hangouts – an instant messaging and video chat platform.</:p>
+<:p>- Gmail (also termed Google Mail) – IMAP and POP email service, known for its abundant storage, intuitive search-based interface and elasticity.</:p>
+<:p>- Google Keep – a note-taking service.</:p>
+<:p>- Google Play Music – used to upload up to 50,000 songs for free for cloud media access.</:p>
+<:p>- Poly – with it creators can browse, share and download 3D models.</:p>
+<:p>- Google Account – controls how a user appears and presents themselves on Google products.</:p>
+<:p>- Google Sites (formerly Jotspot) – a wiki- and web page-creation tool both for personal and corporate use.</:p>
+<:p>- SMS Channels (Google India only) – used to create and subscribe to channels over SMS. Channels can be based on RSS feeds.</:p>
+<:p>- Speak To Tweet – telephone service created in collaboration with Twitter and SayNow allowing users to phone a specific number and leave a voicemail; a tweet is automatically posted on Twitter with a link to the voice message stored on Google's SayNow.</:p>
+<:p>- Google Voice (United States only) – VoIP system. Google Voice provides a phone number but is not the last mile provider. It includes a follow-me service that lets users forward their Google voice phone number to simultaneously ring up to 6 phone numbers. It also features a unified voice mail service, SMS and free outgoing calls via Google's "click2call" and 3rd party dialers.</:p>
+<:p>- Google Fonts – interactive directory of hosted web font-API's.</:p>
+<:p>- Google Classroom – content management system for schools that aids in distribution and grading of assignments and providing in-class communication.</:p>
+<:p>- Google Cloud Search – smart search engine that allows G Suite business customers to search across G Suite products.</:p>
+<:p>- Google App Engine – write and run web applications.</:p>
+<:p>- Google Developers (was Google Code) – open source code and lists of API services. Provides project hosting for free and open source software.</:p>
+<:p>- Dart – structured web programming language</:p>
+<:p>- Flutter – mobile cross platform development tool for iOS and Android</:p>
+<:p>- Go (programming language) – compiled, concurrent programming language</:p>
+<:p>- OpenSocial – APIs for building social applications on many websites.</:p>
+<:p>- Google PageSpeed Tools – optimize webpage performance</:p>
+<:p>- Google Web Toolkit – open source Java software development framework that allows web developers to create Ajax applications in Java.</:p>
+<:p>- Google Search Console Sitemap – submission and analysis for the Sitemaps protocol.</:p>
+<:p>- Translator Toolkit – collaborative translation tool</:p>
+<:p>- reCAPTCHA – a user-dialogue system used to prevent bots from accessing websites.</:p>
+<:p>- Google Safe Browsing – blacklist service for web resources that contain malware or phishing content.</:p>
+<:p>- Titan Security Key – a security token.</:p>
+<:p>- Google Maps – mapping service that indexes streets and displays satellite and street-level imagery, providing directions and local business search</:p>
+<:p>- Google Street View</:p>
+<:p>- Google Street View Inside Trusted – 360°, interactive tour. Walk around, explore and interact with a business using Street View technology.</:p>
+<:p>- Google My Maps – social custom map making tool based on Google Maps</:p>
+<:p>- Google Maps Gallery – collection of data and historic maps</:p>
+<:p>- Google Mars – imagery of Mars using the Google Maps interface. Elevation, visible imagery and infrared imagery can be shown.</:p>
+<:p>- Google Moon – NASA imagery of the moon through the Google Maps interface</:p>
+<:p>- Google Sky – view planets, stars and galaxies</:p>
+<:p>- Google Transit – public transport trip planning through the Google Maps interface</:p>
+<:p>- Google Santa Tracker – track Santa Claus on Christmas Eve</:p>
+<:p>- Zygote Body – 3D anatomical model of human body</:p>
+<:p>- Build with Chrome – an initiative between Lego and Google to build the world using Lego.</:p>
+<:p>- Smarty Pins – geographical trivia game that features the Google Maps pin</:p>
+<:p>- Google Analytics – traffic statistics generator for defined websites, with AdWords integration. Webmasters can optimize ad campaigns, based on the statistics. Analytics are based on the Urchin software.</:p>
+<:p>- Google Surveys – market research tool.</:p>
+<:p>- Google Correlate – search patterns relating to real world trends.</:p>
+<:p>- Firebase – open, creative commons, attribution licensed collection of structured data, and a Freebase platform for accessing and manipulating that data via the Freebase API.</:p>
+<:p>- Google Fusion Tables – gather and visualize arbitrary data</:p>
+<:p>- Google Ngram Viewer – chart year-by-year frequencies of any set of comma-delimited strings in Google's text corpora.</:p>
+<:p>- Google Public Data Explorer – public data and forecasts from international organizations and academic institutions including the World Bank, OECD, Eurostat and the University of Denver</:p>
+<:p>- TensorFlow – Machine Learning service that simplifies designing neural networks in an easier and more visible fashion</:p>
+<:p>- Google Trends – graphing application for Web Search statistics, showing the popularity of particular search terms over time. Multiple terms can be shown at once. Results can be displayed by city, region or language. Related news stories are shown. Has "Google Trends for Websites" sub-section that shows popularity of websites over time.</:p>
+<:p>- Google Activity Report – monthly report including statistics about a user's Google usage, such as sign-in, third party authentication changes, Gmail usage, calendar, search history and YouTube.</:p>
+<:p>- Android – Linux-based operating system for mobile devices such as smartphones and tablet computers</:p>
+<:p>- Chrome OS – Linux-based operating system for web applications</:p>
+<:p>- Wear OS – version of Google's Android operating system designed for smartwatches and other wearable items.</:p>
+<:p>- Android Auto – version of Android made for automobiles by Google with the help of the Open Automotive Alliance</:p>
+<:p>- Google TV – it was smart TV interface running on smart TVs and set-top boxes.</:p>
+<:p>- Android TV – version of Android made for TVs</:p>
+<:p>- Glass OS – operating system for Google Glass</:p>
+<:p>- Google Fuchsia – unreleased OS predicted to be for laptops and smartphones</:p>
+<:p>- AdWords Editor – desktop application to manage a Google AdWords account; lets users make changes to their account and advertising campaigns before synchronizing with the online service.</:p>
+<:p>- Google Chrome – The most popular web browser in the world.</:p>
+<:p>- Google Earth – virtual 3D globe that uses satellite imagery, aerial photography, GIS from Google's repository.</:p>
+<:p>- Google Input Tools – Input method editor that allows users to enter text in one of the supported languages using a Roman keyboard.</:p>
+<:p>- Google Japanese Input – Japanese input method editor.</:p>
+<:p>- Google Pinyin – input method editor that is used to convert Pinyin characters, which can be entered on Western-style keyboards, to Chinese characters.</:p>
+<:p>- Google Toolbar – web browser toolbar with features such as a Google Search box, pop-up blocker and ability for website owners to create buttons.</:p>
+<:p>- Android Studio – integrated development environment for Android</:p>
+<:p>- Google Web Designer – WYSIWYG editor for making rich HTML5 pages and ads intended to run on multiple devices</:p>
+<:p>- Google Drive – client software to synchronize files between the user's computer and Google Drive storage.</:p>
+<:p>- Google Photos Backup – back up photos and videos to Google Photos service</:p>
+<:p>- Nik Collection – Image editing plugins for Adobe Photoshop</:p>
+<:p>- Tilt Brush – painting game for the Vive and Oculus Rift</:p>
+<:p>- Backup and Sync – client application for Google Drive and Google Photos</:p>
+<:p>- Password Checkup Chrome Extension – An extension that alerts you to unsafe sign-ins.</:p>
+<:p>These products can be accessed through a browser on a mobile device.</:p>
+<:p>- Blogger Mobile – U.S. and Canadian networks only. Allows updating Blogger from mobile devices.</:p>
+<:p>- Google Calendar – display Google Calendar events on a mobile device; users can quickly add events to personal calendars.</:p>
+<:p>- Drive – view documents on a mobile device</:p>
+<:p>- Gmail – access a Gmail account from a mobile device using a mobile web browser. Google provides a specific mobile application to access Gmail messages.</:p>
+<:p>- Google Keep – create, access and organize notes, lists and photos</:p>
+<:p>- Google Maps – find local businesses, view maps and get driving directions</:p>
+<:p>- Maps Navigation – navigation application for GPS-enabled mobile devices with 3D views, voice guided turn-by-turn navigation and automatic rerouting</:p>
+<:p>- Mobilizer – optimize web pages for mobile web browsers</:p>
+<:p>- Google News – access Google News</:p>
+<:p>- Google Offers – with Google Wallet, combine coupons, discounts and payments for people buying things through their phone.</:p>
+<:p>- Google+ – social network, competing with Facebook</:p>
+<:p>- Google Product Search – easily search for information about a product</:p>
+<:p>- Google Photos – unlimited video and photo storage for personal use</:p>
+<:p>- Google Search – search webpages, images, videos and more</:p>
+<:p>- Google Tez – Android payment app that uses the Unified Payments Interface for Indian consumers</:p>
+<:p>- Google Pay – smartphone wallet using near field communication</:p>
+<:p>- Google Pay Send – peer-to-peer payments service under Google Pay</:p>
+<:p>- Google Translate – online language translation service</:p>
+<:p>- YouTube – Video hosting service that publishes to a public web site available for both desktop and mobile</:p>
+<:p>- Quick, Draw! – online game based around a neural network guessing what a drawing represents, intended to teach people about machine learning</:p>
+<:p>- Google Authenticator – MFA (Multi-factor authentication)</:p>
+<:p>- Google Play Books – buy and download books and keep them stored on remote servers, allows reading one book on a variety of devices.</:p>
+<:p>- Gmail – email app</:p>
+<:p>- Catalogs – shopping application for tablet computers</:p>
+<:p>- Drive – access files and documents stored on Google Drive.</:p>
+<:p>- Files by Google – Android storage cleanup, file-browsing and offline file-transfer</:p>
+<:p>- Google Keep – note-taking and web surfing</:p>
+<:p>- Google Goggles – search based on pictures taken with a device's built-in camera; taking pictures of things (examples: famous landmarks, product bar-codes) causes searches for information on them.</:p>
+<:p>- Tango – augmented reality, indoor navigation, 3D mapping, physical space measurement and environmental recognition. It also allows developers to create applications using its APIs.</:p>
+<:p>- Google Maps – view maps</:p>
+<:p>- Google Play Music – online music store</:p>
+<:p>- Google Play Newsstand – news aggregator that combines the features of the discontinued apps Google Play Magazines and Google Currents</:p>
+<:p>- Google Podcasts – podcasts client app for Android</:p>
+<:p>- One Today – allows people to donate to nonprofits that are part of the Google for nonprofits program, .</:p>
+<:p>- Shopper – makes shopping easier and smarter.</:p>
+<:p>- Sky Map – augmented-reality program displaying a star map that shifts perspective following the device's movement</:p>
+<:p>- Google Primer – teaches digital-marketing skills</:p>
+<:p>- Google Sync – synchronizes mobile phones with multiple Google calendars and contacts</:p>
+<:p>- Google Talk – VoIP and texting</:p>
+<:p>- Hangouts – instant-messaging and video-chat platform</:p>
+<:p>- Translate – translate conversations</:p>
+<:p>- Google Voice</:p>
+<:p>- Yinyue ("Music") (Google China) – site linking to a large archive of Chinese pop-music (principally Cantopop and Mandopop), including audio streaming over Google's own player, legal lyric downloads, and in most cases legal MP3 downloads. The archive is provided by Top100.cn (i.e., this service does not search the whole Internet) and is available in mainland China only.</:p>
+<:p>- YouTube</:p>
+<:p>- YouTube Remote – control YouTube video that plays on a TV</:p>
+<:p>- Google Now – personal assistant operated through voice commands</:p>
+<:p>- Google+ (G+) – social network</:p>
+<:p>- Waze – input and view live traffic and alerts.</:p>
+<:p>- Who's Down – indicate social availability to one's friends.</:p>
+<:p>- Gboard (Google Keyboard for iOS and Android) – touchscreen keyboard that features glide typing, GIF search, emoji search and Google search</:p>
+<:p>- Live Transcribe – App for transcribing text; can be used to help the deaf.</:p>
+<:p>- Google Search Appliance – search appliance designed for indexing corporate data</:p>
+<:p>- Google driverless car – autonomous vehicle</:p>
+<:p>- Nexus One – 3.7" phone running Android 2.3 "Gingerbread"</:p>
+<:p>- Nexus S – 4" phone running Android 4.1 "Jelly Bean"</:p>
+<:p>- Galaxy Nexus – 4.7" phone running Android 4.3 "Jelly Bean"</:p>
+<:p>- Nexus Q – media streaming entertainment device in the Google Nexus product family</:p>
+<:p>- Nexus 7 (2012) – 7" tablet running Android 5.1 "Lollipop"</:p>
+<:p>- Nexus 7 (2013) – 7" tablet running Android 6.0 "Marshmallow"</:p>
+<:p>- Nexus 4 – 4.7" phone running Android 5.1 "Lollipop"</:p>
+<:p>- Nexus 5 – 4.95" phone running Android 6.0 "Marshmallow"</:p>
+<:p>- Nexus 6 – 5.96" phone running Android 7.1.1 "Nougat"</:p>
+<:p>- Nexus 9 – 9" tablet running Android 7.1 "Nougat"</:p>
+<:p>- Nexus 10 – 10" tablet running Android 5.1 "Lollipop"</:p>
+<:p>- Nexus 5X – 5" phone running Android 8.1 "Oreo"</:p>
+<:p>- Nexus 6P – 5.7" phone running Android 8.1 "Oreo"</:p>
+<:p>- Nexus Player – streaming media player running Android 8.0 "Oreo"</:p>
+<:p>- Pixel C – 10.2" convertible tablet running Android 8.1 "Oreo"</:p>
+<:p>- Chromebook – laptop computer running Chrome OS</:p>
+<:p>- Chromebook Pixel – laptop computer running Chrome OS</:p>
+<:p>- Pixelbook — laptop running Chrome OS</:p>
+<:p>- Pixel Slate – 2-in-1 PC running Chrome OS</:p>
+<:p>- Chromebox – desktop computer running Chrome OS</:p>
+<:p>- Chromecast – media streaming adapter</:p>
+<:p>- Chromecast Ultra – 4K-capable media streaming adapter</:p>
+<:p>- Chromecast Audio – audio streaming adapter</:p>
+<:p>- Google Glass – wearable computer with an optical head-mounted display and camera that allows the wearer to interact with various applications and the Internet via natural language voice commands</:p>
+<:p>- Google Contact Lens – contact lens capable of monitoring the user's glucose level in tears. It is not yet released.</:p>
+<:p>- Google OnHub – router line</:p>
+<:p>- Google Daydream View – virtual reality headset for smartphones</:p>
+<:p>- Google Home – smart speaker line</:p>
+<:p>- Google Wifi – router</:p>
+<:p>- Pixel – 5" smartphone running Android 9 "Pie"</:p>
+<:p>- Pixel XL – 5.5" smartphone running Android 9 "Pie"</:p>
+<:p>- Pixel 2 – 5" smartphone running Android 9 "Pie"</:p>
+<:p>- Pixel 2 XL – 6" smartphone running Android 9 "Pie"</:p>
+<:p>- Pixel 3 – 5.5" smartphone running Android 9 "Pie"</:p>
+<:p>- Pixel 3 XL – 6.3" smartphone running Android 9 "Pie"</:p>
+<:p>- Pixel 3a – 5.6" smartphone running Android 9 "Pie"</:p>
+<:p>- Pixel 3a XL – 6" smartphone running Android 9 "Pie"</:p>
+<:p>- Nest Labs devices</:p>
+<:p>- Android One smartphones – smartphones from multiple manufacturers</:p>
+<:p>- Jamboard – 55" interactive whiteboard</:p>
+<:p>- Google Cloud Platform – modular cloud-based services for software development</:p>
+<:p>- Google Crisis Response – public project that covers disasters, turmoils and other emergencies and alerts</:p>
+<:p>- Google Fi – cell phone plan aimed at simple plans and pricing</:p>
+<:p>- Google Fiber – experimental broadband internet network infrastructure using fiberoptic communication in Kansas City, Provo and Austin</:p>
+<:p>- Google Get Your Business Online – increase the web presence of small businesses and cities. Advice on search engine optimization and maintaining business owners update their business profile.</:p>
+<:p>- Google Station – public Wi-Fi that can be monetized through ads</:p>
+<:p>- Google Public DNS – publicly accessible DNS server</:p>
+<:p>- Google Ideas – cross-sector, interdisciplinary "think tank" or "think/do tank" based in New York City, dedicated to understanding global challenges and applying technological solutions.</:p>
+<:p>- Google Person Finder – open-source tool that helps people reconnect with others in the aftermath of a disaster</:p>
+<:p>- Google Accelerated Mobile Pages (AMP) – open-source project and service to accelerate content on mobile devices. AMP provides a JavaScript library for developers and restricts the use of third-party JS.</:p>
+<:p>- Google Firebase – real time database that provides an API that allows developers to store and sync data across multiple clients</:p>
+<:p>- Google Cast – display entertainment and apps from a phone, tablet or laptop right on a TV or speakers.</:p>
+<:p>- Stadia – upcoming video game streaming service</:p>
+<:p>Google has retired many offerings, either because of obsolescence, integration into other Google products, or lack of interest. Google's discontinued offerings are colloquially referred to as Google Graveyard. </:p>
+<:p>- Google Answers – online knowledge market that allowed users to post bounties for well-researched answers to their queries. Discontinued on November 28; still accessible (read-only).</:p>
+<:p>- Google Deskbar – desktop bar with a built-in mini browser. Replaced by a similar feature in Google Desktop. Discontinued May 8.</:p>
+<:p>- Writely – web-based word processor. On October 10, Writely was merged into Google Docs & Spreadsheets.</:p>
+<:p>- Google Click-to-Call – allowed a user to speak directly over the phone without charge to businesses found on Google search results pages.</:p>
+<:p>- Related Links – links to information related to a website's content. Discontinued on April 30.</:p>
+<:p>- Public Service Search – non-commercial organization service, which included Google Site Search, traffic reports and unlimited search queries. Discontinued on February, replaced by Google Custom Search.</:p>
+<:p>- Google Video Marketplace – discontinued in August</:p>
+<:p>- Google Browser Sync (Mozilla Firefox) – allowed Firefox users to synchronize settings across multiple computers. Discontinued in June.</:p>
+<:p>- Google Lively – 3D animated chat. Discontinued December 31.</:p>
+<:p>- Hello – send images across the Internet and publish them to blogs. Discontinued on May 15.</:p>
+<:p>- SearchMash – search engine to "test innovative user interfaces". Discontinued on November 24.</:p>
+<:p>- Send to Phone – send links and other information from Firefox to their phone by text message. Discontinued on August 28, replaced by Google Chrome to Phone.</:p>
+<:p>- Web Accelerator – increased load speed of web pages. No longer available for, or supported by, Google as of January 20.</:p>
+<:p>- Audio Ads – radio advertising program for US businesses. Discontinued on February 12.</:p>
+<:p>- Catalogs – search engine for over 6,600 print catalogs, acquired through optical character recognition. Discontinued in January.</:p>
+<:p>- Dodgeball – social networking service. Users could text their location to the service, which would then notify them of nearby people or events of interest. Replaced by Google Latitude.</:p>
+<:p>- Living Stories – collaboration with The New York Times and The Washington Post for presenting news. Discontinued in February 2010.</:p>
+<:p>- Google Mashup Editor – web mashup creation with publishing, syntax highlighting, debugging. Discontinued in July; migrated to Google App Engine.</:p>
+<:p>- Google Ride Finder – taxi and shuttle search service, using real time position of vehicles in 14 U.S. cities. Used the Google Maps interface and cooperated with any car service that wished to participate. Discontinued in October.</:p>
+<:p>- Shared Stuff – web page sharing system, incorporating a bookmarklet to share pages, and a page to view the most popular shared items. Pages could be shared through third party applications such as Delicious or Facebook. Discontinued on March 30.</:p>
+<:p>- Google Page Creator – webpage publishing program that could be used to create pages and to host them on Google servers. Discontinued, with all existing content transferred to Google Sites.</:p>
+<:p>- Marratech e-Meeting – web conferencing software, used internally by Google's employees. Discontinued on February 19.</:p>
+<:p>- Google SearchWiki – annotate and re-order search results. Discontinued March 3, replaced by Google Stars.</:p>
+<:p>- GOOG-411 (also known as Voice Local Search) – directory assistance service. Discontinued on November 12.</:p>
+<:p>- Google Base – submission database that enabled content owners to submit content, have it hosted and made searchable. Information was organized using attributes. Discontinued on December 17, replaced with Google Shopping APIs.</:p>
+<:p>- Google Labs – test and demonstrate new Google products</:p>
+<:p>- Google Buzz – social networking service integrated with Gmail allowing users to share content immediately and make conversations. Discontinued in December.</:p>
+<:p>- Google PowerMeter – view building energy consumption. Discontinued on September 16.</:p>
+<:p>- Real Estate – place real estate listings in Google Maps. Discontinued February 10.</:p>
+<:p>- Google Directory – collection of links arranged into hierarchical subcategories. The links and their categorization were from the Open Directory Project, sorted using PageRank. Discontinued on July 20.</:p>
+<:p>- Google Blog Search – weblog search engine. Discontinued in July.</:p>
+<:p>- Squared – creates tables of information about a subject from unstructured data. Discontinued September.</:p>
+<:p>- Google Sets – generates a list of items when users enter a few examples. For example, entering "Green, Purple, Red" emits the list "Green, Purple, Red, Blue, Black, White, Yellow, Orange, Brown". Discontinued mid-year.</:p>
+<:p>- Google Pack – application suite. Discontinued on September 2.</:p>
+<:p>- Google Fast Flip – online news aggregator. Discontinued September 6.</:p>
+<:p>- Desktop – desktop search application that indexed emails, documents, music, photos, chats, Web history and other files. Discontinued on September 14.</:p>
+<:p>- Aardvark – social search utility that allowed people to ask and answer questions within their social networks. It used people's claimed expertise to match 'askers' with good 'answerers'. Discontinued on September 30.</:p>
+<:p>- Google Sidewiki – browser sidebar and service that allowed contributing and reading helpful information alongside any web page. Discontinued in December.</:p>
+<:p>- Directory – navigation directory, specifically for Chinese users.</:p>
+<:p>- Gears – web browser features, enabling some new web applications.</:p>
+<:p>- Hotpot – local recommendation engine that allowed people to rate restaurants, hotels etc. and share them with friends. Moved to Google Places service in April 2011.</:p>
+<:p>- Google Notebook – online note-taking and web-clipping application. Discontinued in July.</:p>
+<:p>- Google Apps Standard Edition – Discontinued on December 6.</:p>
+<:p>- Google Code Search – software search engine. Discontinued on January 15.</:p>
+<:p>- Google Health – store, manage, and share personal health information in one place. Development ceased June 24, 2011; accessible until January 1, 2012; data available for download until January 1, 2013.</:p>
+<:p>- Google Website Optimizer – testing and optimization tool. Discontinued on August 1.</:p>
+<:p>- TV Ads – Method to place advertising on TV networks. Discontinued on August 30, with all remaining active campaigns ending December 16.</:p>
+<:p>- Google Friend Connect – add social features to websites. Discontinued on March 1, replaced by Google+'s pages and off-site Page badges.</:p>
+<:p>- Google Insights for Search – insights into Google search term usage. Discontinued September 27, merged in Google Trends.</:p>
+<:p>- Knol – write authoritative articles related to various topics. Discontinued October 1.</:p>
+<:p>- Google Wave – online communication and collaborative real-time editor tool. Support ended on April 30, 2012.</:p>
+<:p>- Picnik – online photo editor. Discontinued on April 19, moved to Google+ photo manager.</:p>
+<:p>- Jaiku – social networking, microblogging and lifestreaming service comparable to Twitter.</:p>
+<:p>- Nexus Q – digital media player. Discontinued in November.</:p>
+<:p>- Slide.com – Discontinued on March 6.</:p>
+<:p>- Google Mini – reduced capacity, lower-cost version of the Google Search Appliance. Discontinued on July 31.</:p>
+<:p>- Picasa Web Albums Uploader – upload images to the "Picasa Web Albums" service. It consisted of an iPhoto plug-in and a stand-alone application.</:p>
+<:p>- Google Chart API – interactive Web-based chart image generator, deprecated in 2012 with service commitment to 2015 and still serving as of 2017. Google promotes JavaScript-based Google Charts as a replacement, which is not backwards-compatible with the Google Chart API's HTTP methods.</:p>
+<:p>- Listen – subscribe to and stream podcasts and Web audio. Discontinued in August.</:p>
+<:p>- BumpTop – physics-based desktop application. Discontinued in August.</:p>
+<:p>- Google Refine – data cleansing and processing. It was spun off from Google on October 2, becoming open source; it is now OpenRefine.</:p>
+<:p>- Google Cloud Connect – Microsoft Office plugin for automatically backing up Office documents upon saving onto Google Docs. Discontinued on April 30, in favor of Google Drive.</:p>
+<:p>- Google Building Maker – web-based building and editing tool to create 3D buildings for Google Earth. Discontinued on June 4.</:p>
+<:p>- Google Calendar Sync – sync Microsoft Outlook email and calendar with Gmail and Google Calendar. Synchronization for existing installations stopped on August 1, 2014. Replaced with Google Sync, which does not synchronize Outlook calendars, but can sync email using IMAP or POP3. Also, Google Apps for Business, Education, and Government customers can use Google Apps Sync for Microsoft Outlook</:p>
+<:p>- Meebo – A social networking website discontinued on June 6</:p>
+<:p>- Google Reader – web-based news aggregator, capable of reading Atom and RSS feeds. Discontinued on July 1.</:p>
+<:p>- Google Latitude – mobile geolocation tool that lets friends know where users are. Discontinued on August 9, with some functionality moved to Google+.</:p>
+<:p>- Google Talk – instant messaging service that provided both text and voice communication. Replaced May 15, by Google Hangouts.</:p>
+<:p>- SMS – mobile phone short message service. Discontinued on May 10.</:p>
+<:p>- iGoogle – customisable homepage, which can contain web feeds and Google Gadgets. Discontinued on November 1.</:p>
+<:p>- Google Checkout – online payment processing service, aimed at simplifying the process of paying for online purchases. Discontinued on November 20, merged into Google Wallet.</:p>
+<:p>- My Maps, GIS tools for Google Maps</:p>
+<:p>- Google Schemer – social search to find local activities. Discontinued on February 7.</:p>
+<:p>- Google Notifier – alerted users to new messages in their Gmail account. Discontinued on January 31.</:p>
+<:p>- YouTube My Speed. Discontinued in January, replaced by Google Video Quality Report.</:p>
+<:p>- Orkut – social networking website. Discontinued on September 30.</:p>
+<:p>- Quickoffice – productivity suite for mobile devices. Discontinued in June, merged into Google Drive.</:p>
+<:p>- Google's "discussion search" option. Discontinued in July.</:p>
+<:p>- Google Questions and Answers – community-driven knowledge market website. Discontinued on December 1.</:p>
+<:p>- Google Moderator – rank user-submitted questions, suggestions and ideas via crowdsourcing. Discontinued on June 30.</:p>
+<:p>- Wildfire by Google – social media marketing software</:p>
+<:p>- BebaPay – prepaid ticket payment system. Discontinued on March 15.</:p>
+<:p>- Google Helpouts – Hangout-based live video chat with experts. Discontinued on April 20.</:p>
+<:p>- Google Earth Enterprise – Google Earth for enterprise use. Discontinued on March 20.</:p>
+<:p>- Google Earth Plugin – customize Google Earth. Discontinued on December 15.</:p>
+<:p>- Google Code – Open source code hosting. Discontinued on January 25.</:p>
+<:p>- Picasa – photo organization and editing application. Replaced by Google Photos.</:p>
+<:p>- Google Compare – comparison-shopping site for auto insurance, credit cards and mortgages</:p>
+<:p>- Google Showtimes – movie showtime search engine. Discontinued on November 1.</:p>
+<:p>- MyTracks – GPS logging</:p>
+<:p>- Project Ara – an "initiative to build a phone with interchangeable modules for various components like cameras and batteries" was suspended to "streamline the company's seemingly disorganized product lineup". on September 2.</:p>
+<:p>- Panoramio – geolocation-oriented photo sharing website. Discontinued on November 4. Google's Local Guides program as well as photo upload tools in Google Maps rendered Panoramio redundant.</:p>
+<:p>- Google Feed API – download public Atom or RSS feeds using JavaScript. Deactivated on December 15.</:p>
+<:p>- Google Maps Engine – develop geospatial applications. Discontinued February 1.</:p>
+<:p>- Google Swiffy – convert Adobe Flash files (SWF) into HTML5. Discontinued July 1.</:p>
+<:p>- Google Nexus – Smartphone lineup – replaced by Google Pixel on October 4</:p>
+<:p>- Free Search – embed site/web search into a user's website. Replaced by Google Custom Search.</:p>
+<:p>- Google Hands Free – retail checkout without using your phone or watch. Pilot started in the Bay area March 2016, but discontinued on February 8.</:p>
+<:p>- Google Spaces – group discussions and messaging. Discontinued on April 17.</:p>
+<:p>- Google Map Maker – map editor with browser interface. Discontinued on April 1, replaced by Google Maps and Google Local Guides.</:p>
+<:p>- Trendalyzer – data trend viewing platform. Discontinued in September.</:p>
+<:p>- Blogger Web Comments (Firefox only) – displays related comments from other Blogger users.</:p>
+<:p>- City Tours – overlay to Maps that shows interesting tours within a city</:p>
+<:p>- Dashboard Widgets for Mac (Mac OS X Dashboard Widgets) – suite of mini-applications including Gmail, Blogger and Search History.</:p>
+<:p>- Joga Bonito – soccer community site.</:p>
+<:p>- Local – Local listings service, merged with Google Maps.</:p>
+<:p>- MK-14 – 4U rack-mounted server for Google Radio Automation system. Google sold its Google Radio Automation business to WideOrbit Inc.</:p>
+<:p>- Google Music Trends – music ranking of songs played with iTunes, Winamp, Windows Media Player and Yahoo Music. Trends were generated by Google Talk's "share your music status" feature.</:p>
+<:p>- Personalized Search – search results personalization, merged with Google Accounts and Web History.</:p>
+<:p>- Photos Screensaver – slideshow screensaver as part of Google Pack, which displays images sourced from a hard disk, or through RSS and Atom Web feeds.</:p>
+<:p>- Rebang (Google China) – search trend site, similar to Google Zeitgeist. , part of Google Labs.</:p>
+<:p>- Spreadsheets – spreadsheet management application, before it was integrated with Writely to form Google Docs & Spreadsheets.</:p>
+<:p>- University Search – search engine listing for university websites.</:p>
+<:p>- U.S. Government Search – search engine and personalized homepage that exclusively draws from sites with a .gov TLD. Discontinued June 2006.</:p>
+<:p>- Video Player – view videos from Google Video.</:p>
+<:p>- Voice Search – automated voice system for web search using the telephone. Became Google Voice Local Search and integrated on the Google Mobile web site.</:p>
+<:p>- Google X – redesigned Google search homepage. It appeared in Google Labs, but disappeared the following day for undisclosed reasons.</:p>
+<:p>- Accessible Search – search engine for the visually impaired.</:p>
+<:p>- Quick Search Box – search box, based on Quicksilver, easing access to installed applications and online searches.</:p>
+<:p>- Visigami – image search application screen saver that searches files from Google Images, Picasa and Flickr.</:p>
+<:p>- Wireless access – VPN client for Google WiFi users, whose equipment does not support WPA or 802.1x protocols.</:p>
+<:p>- Google global market finder</:p>
+<:p>- QPX Express API – flight search API</:p>
+<:p>- YouTube Annotations – annotations that were displayed over videos on YouTube. On January 15, all existing annotations were removed from YouTube.</:p>
+<:p>- Google Allo – Google's instant messaging app. Closed on March 12, 2019.</:p>
+<:p>- Google Image Charts - a chart-making service that provided images of rendered chart data, accessed with REST calls. The service was deprecated in 2012, temporarily shuttered in February 2019 and shut off for good on March 18, 2019.</:p>
+<:p>- goo.gl – a URL shortening service. Started to turn down support on March 30, 2018 and was discontinued on March 30, 2019.</:p>
+<:p>- Inbox by Gmail – an email application for Android, iOS, and web platform that organized and automated to-do lists using email content. As of April 2, 2019, accessing the Inbox subdomain redirects to Gmail proper.</:p>
+<:p>- Google+ – The consumer edition of Google's social media platform. As of April 2, 2019 users are greeted with a message stating that "Google+ is no longer available for consumer (personal) and brand accounts."</:p>
+<:p>Applications that are no longer in development, and scheduled to be discontinued in the future:</:p>
+<:p>- Google Search Appliance – A rack mounted device used to index documents. End of hardware sales in 2017 and planned shutdown in 2018- with final shutdown in 2019.</:p>
+<:p>- Google Portfolios – Personal financial securities tracker. Deprecated in November 2017.</:p>
+<:p>- Google Fusion Tables – A service for managing and visualizing data. The service will be shut down on December 3, 2019.</:p>
+<:p>- Works with Nest - the smart home platform of Google brand Nest Labs.</:p>
+<:p>- History of Google</:p>
+<:p>- List of acquisitions by Google</:p>
+<:p>- Google's hoaxes</:p>
+<:p>- X (company)</:p>
+<:p>- Google.org</:p>
+<:p>- Full list of products</:p>
