@@ -27,7 +27,6 @@ import ml.educationallydesigned.thyme.core.windows.browser.BrowserWindow;
  *
  * @author Larry Yuan
  * @author Theodore Preduta
- *
  * @version 1.0
  */
 public class SocialMediaWindow extends BrowserWindow {

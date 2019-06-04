@@ -21,7 +21,6 @@
 package ml.educationallydesigned.thyme.core.windows.browser;
 
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.InputListener;
@@ -35,7 +34,6 @@ import com.kotcrab.vis.ui.widget.VisTextField;
 import ml.educationallydesigned.thyme.util.browser.Search;
 
 import java.io.File;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -43,7 +41,6 @@ import java.util.List;
  *
  * @author Larry Yuan
  * @author Theodore Preduta
- *
  * @version 1.0
  */
 public class SearchView extends VisTable {
@@ -103,6 +100,7 @@ public class SearchView extends VisTable {
 			}
 		});
 	}
+
 	private static String fileName(String path) {
 		File f = new File(path);
 		// remove path and extension

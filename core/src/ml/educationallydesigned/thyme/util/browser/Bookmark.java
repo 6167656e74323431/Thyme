@@ -20,10 +20,7 @@
 
 package ml.educationallydesigned.thyme.util.browser;
 
-import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.scenes.scene2d.ui.Image;
-import com.kotcrab.vis.ui.widget.VisImage;
 
 /**
  * Class representing a bookmark
@@ -41,7 +38,7 @@ public class Bookmark {
 	 * Creates a new bookmark with a name and url
 	 *
 	 * @param favicon the favicon
-	 * @param URL  the url
+	 * @param URL     the url
 	 */
 	public Bookmark(String name, Texture favicon, String URL) {
 		this.name = name;

@@ -28,7 +28,9 @@ import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.InputListener;
 import com.badlogic.gdx.scenes.scene2d.ui.Container;
-import com.badlogic.gdx.scenes.scene2d.utils.*;
+import com.badlogic.gdx.scenes.scene2d.utils.BaseDrawable;
+import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
+import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
 import com.badlogic.gdx.utils.Align;
 import com.kotcrab.vis.ui.VisUI;
 import com.kotcrab.vis.ui.widget.*;
@@ -50,7 +52,7 @@ public class BrowserWindow extends DesktopWindow {
 	private static int DEFAULT_HEIGHT = 900;
 	private static String HOME_URL = "home/home";
 	private static Bookmark[] bookmarks = {
-			new Bookmark("Wikipedia", new Texture(Gdx.files.internal("favicons/wikipedia.png")),"wikipedia.org"),
+			new Bookmark("Wikipedia", new Texture(Gdx.files.internal("favicons/wikipedia.png")), "wikipedia.org"),
 	};
 	private static String prefix = " local://";
 	private VisTable browserDisplay;
@@ -181,7 +183,7 @@ public class BrowserWindow extends DesktopWindow {
 		// domain names cannot contain slashes
 		if (Gdx.files.internal("websites/" + URL).exists() && !URL.replace("/$", "").contains("/")) {
 			browserDisplay.add(new SearchView(this, URL.replace("/", "")))
-					      .width(DEFAULT_WIDTH - 30);
+					.width(DEFAULT_WIDTH - 30);
 			return;
 		}
 		try {

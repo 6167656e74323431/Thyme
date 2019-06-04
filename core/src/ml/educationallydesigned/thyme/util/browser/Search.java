@@ -24,12 +24,9 @@ import com.badlogic.gdx.Gdx;
 import me.xdrop.fuzzywuzzy.FuzzySearch;
 import me.xdrop.fuzzywuzzy.model.ExtractedResult;
 
-import java.io.InputStream;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Scanner;
 
 /**
  * Class that performs searching on the website index.
@@ -40,6 +37,7 @@ import java.util.Scanner;
 public class Search {
 	private String domain;
 	private List<String> pages;
+
 	/**
 	 * Initializes the object with the domain to search through.
 	 *
@@ -54,8 +52,8 @@ public class Search {
 	/**
 	 * Searches through the pages by a keyword and returns the top matches
 	 *
-	 * @param keyword the keyword
-	 * @param number the number of results to list
+	 * @param keyword   the keyword
+	 * @param number    the number of results to list
 	 * @param threshold the threshold required to be selected
 	 */
 	public List<String> search(String keyword, int number, int threshold) {
