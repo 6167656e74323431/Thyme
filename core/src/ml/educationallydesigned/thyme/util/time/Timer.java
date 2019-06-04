@@ -95,5 +95,4 @@ public class Timer {
 		this.hasFinished = true;
 		return getTime();
 	}
-
 }

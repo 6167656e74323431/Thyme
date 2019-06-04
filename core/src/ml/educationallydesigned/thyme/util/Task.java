@@ -18,82 +18,53 @@
 
 package ml.educationallydesigned.thyme.util;
 
-import com.badlogic.gdx.graphics.Texture;
+import ml.educationallydesigned.thyme.util.time.*;
 
 /**
  * Class to store all data required for each individual in-game task.
  *
  * @author Theodore Preduta
  * @author Larry Yuan
- * @version 1.1
+ * @version 2.0
  */
-public class Task implements Iconable {
-	public static String DEFAULT_TASK_ICON_PATH = "";
-
-	private String iconPath;
-	private Texture loadedIcon;
-	private boolean isIconLoaded;
+public class Task {
 	private String title;
 	private String description;
-	private int priority;
+	private String[] questions;
+	private String[] expectedAnswers;
+	private String[] givenAnswers;
+	private double minPassPercentage;
+	private double attemptPercentage;
+	private int numOfAttempts;
+	private Timer tracker;
 
 	/**
 	 * Constructs the task object.
 	 *
-	 * @param title       The title of the task.
-	 * @param description The description of the task.
-	 * @param priority    The priority of the task, a higher nujmber means
-	 *                    a higher priority.
+	 * @param      title              The title of the task.
+	 * @param      description        The description of the task.
+	 * @param      questions          The questions needed to be answered for
+	 *                                this task.
+	 * @param      expectedAnswers    The expected answers that are required.
+	 * @param      minPassPercentage  The minimum pass percentage for the
+	 *                                questions.
 	 */
-	public Task(String title, String description, int priority) {
+	public Task(String title, String description, String[] questions, String[] expectedAnswers, double minPassPercentage) {
 		this.title = title;
 		this.description = description;
-		this.priority = priority;
-		iconPath = DEFAULT_TASK_ICON_PATH;
-		isIconLoaded = false;
-	}
-
-	/**
-	 * Loads a task's icon.
-	 *
-	 * @return true if something was loaded, false if nothing has changed.
-	 */
-	public boolean loadIcon() {
-		if (!isIconLoaded) {
-			loadedIcon = new Texture(iconPath);
-			return true;
-		}
-		return false;
-	}
-
-	/**
-	 * Gets the icon.
-	 *
-	 * @return The icon as a com.badlogic.gdx.graphics.Texture.
-	 */
-	public Texture getIcon() {
-		return loadedIcon;
-	}
-
-	/**
-	 * Sets the icon path.
-	 *
-	 * @param path The path of the new icon.
-	 * @return true if the path changed, false otherwise.
-	 */
-	public boolean setIcon(String path) {
-		if (!path.equals(iconPath)) {
-			iconPath = path;
-			isIconLoaded = false;
-			return true;
-		}
-		return false;
+		this.questions = questions;
+		this.expectedAnswers = expectedAnswers;
+		this.minPassPercentage = minPassPercentage;
+		attemptPercentage = -1.0;
+		numOfAttempts = 0;
+		tracker = new Timer();
+		tracker.pause();
 	}
 
 	/**
 	 * Gets the title of the task.
 	 *
-	 * @return The title of the task.
+	 * @return     The title of the task.
 	 */
 	public String getTitle() {
 		return title;
@@ -102,26 +73,84 @@ public class Task implements Iconable {
 	/**
 	 * Gets the description of the task.
 	 *
-	 * @return The description of the task.
+	 * @return     The description of the task.
 	 */
 	public String getDescription() {
 		return description;
 	}
 
 	/**
-	 * Gets the priority of the task.
+	 * Gets the questions in the quiz.
 	 *
-	 * @return The priority of the task.
+	 * @return     The questions in the quiz.
 	 */
-	public int getPriority() {
-		return priority;
+	public String[] getQuestions() {
+		return questions;
 	}
 
 	/**
-	 * Function that allows the texture to be destroyed by will.
+	 * Gets the minimum pass percentage for the quiz.
+	 *
+	 * @return     The minimum pass percentage for the quiz.
 	 */
-	public void dispose() {
-		loadedIcon.dispose();
-		loadedIcon = null;
+	public double getMinPassPercentage() {
+		return minPassPercentage;
+	}
+
+	/**
+	 * Starts the timer for this task
+	 */
+	public void start() {
+		tracker.unpause();
+	}
+
+	/**
+	 * Checks the answers for errors.
+	 *
+	 * @param      givenAnswers  The given answers to check
+	 *
+	 * @return     true if the task is completed, false otherwise.
+	 */
+	public boolean submit(String[] givenAnswers) {
+		this.givenAnswers = givenAnswers;
+
+		attemptPercentage = 0.0;
+		numOfAttempts++;
+
+		// add number of correct answers
+		for (int i = 0; i < expectedAnswers.length; i++)
+			if (check(givenAnswers[i], expectedAnswers[i]))
+				attemptPercentage++;
+
+		// calcualte percentage
+		attemptPercentage /= (double)expectedAnswers.length;
+		attemptPercentage *= 100;
+
+		if (minPassPercentage <= attemptPercentage) {
+			tracker.stop();
+			return true;
+		} else
+			return false;
+	}
+
+	/**
+	 * Gets the time elapsed since the start.
+	 *
+	 * @return     The timeelapsed since the sart in miliseconds.
+	 */
+	public long getTime() {
+		return tracker.getTime() / 1000000;
+	}
+
+	/**
+	 * Compares two strings, sees if they are close enough
+	 *
+	 * @param      given   The given answer
+	 * @param      target  The target answer
+	 *
+	 * @return     true if given is correct enough, flase otherwise.
+	 */
+	private boolean check(String given, String target) {
+		return given.equals(target);
 	}
 }

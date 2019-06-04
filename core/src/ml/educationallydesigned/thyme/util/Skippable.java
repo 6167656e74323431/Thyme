@@ -23,7 +23,7 @@ import ml.educationallydesigned.thyme.Thyme;
 import java.io.FileNotFoundException;
 
 /**
- * Screen that displays the intro
+ * Interface that describs skippable classes
  *
  * @author Theodore Preduta
  * @author Larry Yuan
