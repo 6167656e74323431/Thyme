@@ -18,10 +18,6 @@
 
 package ml.educationallydesigned.thyme.util;
 
-import ml.educationallydesigned.thyme.Thyme;
-
-import java.io.FileNotFoundException;
-
 /**
  * Screen that displays the intro
  *

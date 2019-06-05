@@ -66,7 +66,7 @@ public class Timer {
 	}
 
 	/**
-	 * Unpauses the timer
+	 * Unpause the timer
 	 */
 	public void unpause() {
 		checkMutableState();
@@ -77,7 +77,7 @@ public class Timer {
 	/**
 	 * Gets the amount of time elapsed.
 	 *
-	 * @return The elpased time.
+	 * @return The elapsed time.
 	 */
 	public long getTime() {
 		// sets the time to either the time when the timer was stopped or the current time

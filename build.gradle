@@ -1,6 +1,4 @@
 buildscript {
-
-
     repositories {
         mavenLocal()
         mavenCentral()
@@ -28,7 +26,6 @@ allprojects {
         ashleyVersion = '1.7.0'
         aiVersion = '1.8.0'
         visuiVersion = '1.4.2'
-
     }
 
     repositories {
@@ -43,7 +40,6 @@ allprojects {
 
 project(":desktop") {
     apply plugin: "java"
-
 
     dependencies {
         compile project(":core")
@@ -66,7 +62,8 @@ project(":core") {
         compile "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
         compile "com.kotcrab.vis:vis-ui:$visuiVersion"
         compile "es.e-ucm.com.badlogicgames.gdx:gdx-video:0.0.1-SNAPSHOT"
-
+        compile "com.github.czyzby:gdx-lml-vis:1.9.1.9.6"
+        compile 'me.xdrop:fuzzywuzzy:1.2.0'
     }
 }
 

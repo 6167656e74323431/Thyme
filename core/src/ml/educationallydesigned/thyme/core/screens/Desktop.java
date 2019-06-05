@@ -7,7 +7,7 @@ import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import ml.educationallydesigned.thyme.Thyme;
-import ml.educationallydesigned.thyme.core.windows.DesktopWindow;
+import ml.educationallydesigned.thyme.core.windows.browser.BrowserWindow;
 
 public class Desktop implements Screen {
 
@@ -31,10 +31,8 @@ public class Desktop implements Screen {
 	public void show() {
 		stage = new Stage();
 		game.setInputProcessor(stage);
-		DesktopWindow test = new DesktopWindow("Hello, World!");
-		test.setWidth(500);
-		test.setHeight(500);
-		stage.addActor(test);
+		BrowserWindow window = new BrowserWindow();
+		stage.addActor(window);
 	}
 
 	/**

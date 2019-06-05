@@ -1,0 +1,8 @@
+<:import macros/html.xml />
+<:h1>List of countries by IPv4 address allocation</:h1>
+<:p>This is a list of countries by IPv4 address allocation, . It includes 252 areas, including all United Nations member states, plus the Holy See, Kosovo and Taiwan.</:p>
+<:p>There are 2 (over four billion) IP addresses in the IPv4 protocol. Of these, almost 600 million are reserved and cannot be used for public routing. The rest are allocated to countries by the Internet Assigned Numbers Authority (IANA) via the regional Internet registries (RIRs).</:p>
+<:p>- IP address</:p>
+<:p>- IPv4 address exhaustion</:p>
+<:p>- Internet Census of 2012 (Carna Botnet)</:p>
+<:p>- List of assigned /8 IPv4 address blocks</:p>

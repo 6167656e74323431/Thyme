@@ -20,6 +20,7 @@ package ml.educationallydesigned.thyme;
 import com.badlogic.gdx.*;
 import com.kotcrab.vis.ui.VisUI;
 import ml.educationallydesigned.thyme.core.screens.AnimationScreen;
+import ml.educationallydesigned.thyme.core.screens.Desktop;
 import ml.educationallydesigned.thyme.core.screens.HomeScreen;
 import ml.educationallydesigned.thyme.util.Skippable;
 
@@ -39,6 +40,7 @@ public class Thyme extends Game {
 	@Override
 	public void create() {
 		VisUI.load(VisUI.SkinScale.X2);
+
 		// check if windows or linux
 		// libgdx-video does not currently work well with ffmpeg on linux.
 		if (System.getProperty("os.name").toLowerCase().contains("win")) {
@@ -59,8 +61,8 @@ public class Thyme extends Game {
 		multiplexer.addProcessor(new InputAdapter() {
 			@Override
 			public boolean keyTyped(char character) {
-				if (character == (char)27 && screen instanceof Skippable) {
-					((Skippable)screen).skip();
+				if (character == (char) 27 && screen instanceof Skippable) {
+					((Skippable) screen).skip();
 					return true;
 				}
 				return false;
