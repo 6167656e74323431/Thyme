@@ -25,7 +25,7 @@ import ml.educationallydesigned.thyme.util.time.*;
  *
  * @author Theodore Preduta
  * @author Larry Yuan
- * @version 2.0
+ * @version 2.1
  */
 public class Task {
 	private String title;
@@ -57,8 +57,6 @@ public class Task {
 		this.minPassPercentage = minPassPercentage;
 		attemptPercentage = -1.0;
 		numOfAttempts = 0;
-		tracker = new Timer();
-		tracker.pause();
 	}
 
 	/**
@@ -98,10 +96,13 @@ public class Task {
 	}
 
 	/**
-	 * Starts the timer for this task
+	 * Starts the timer for this task.
 	 */
 	public void start() {
-		tracker.unpause();
+		if (tracker == null)
+			tracker = new Timer();
+		else
+			tracker.unpause();
 	}
 
 	/**
@@ -138,8 +139,8 @@ public class Task {
 	 *
 	 * @return     The timeelapsed since the sart in miliseconds.
 	 */
-	public long getTime() {
-		return tracker.getTime() / 1000000;
+	public int getTime() {
+		return (int)(tracker.getTime() / 1000000);
 	}
 
 	/**

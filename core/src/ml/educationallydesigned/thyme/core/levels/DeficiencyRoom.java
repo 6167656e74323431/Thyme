@@ -76,7 +76,7 @@ public class DeficiencyRoom extends GameLevel {
 		tasks.add(TaskGenerator.generateTask());
 		
 		// open the windows
-		TrackerWindow tracker = new TrackerWindow(tasks.get(currentTask));
+		TrackerWindow tracker = new TrackerWindow(tasks.get(currentTask), this);
 		TextEditorWindow editor = new TextEditorWindow(tasks.get(currentTask), this);
 		stage.addActor(tracker);
 		windows.add(tracker);

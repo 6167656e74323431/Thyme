@@ -40,7 +40,7 @@ import java.util.Queue;
  *
  * @author Theodore Preduta
  * @author Larry Yuan
- * @version 1.0
+ * @version 1.1
  */
 public class GameLevel implements Screen {
 	protected Thyme game;
@@ -145,6 +145,24 @@ public class GameLevel implements Screen {
 	}
 
 	/**
+	 * Gets the current task position.
+	 *
+	 * @return     The current task position.
+	 */
+	public int getCurrentTask() {
+		return currentTask + 1;
+	}
+
+	/**
+	 * Gets the number of tasks.
+	 *
+	 * @return     The number of tasks.
+	 */
+	public int getNumberOfTasks() {
+		return tasks.size();
+	}
+
+	/**
 	 * Calculates the score once this level is done.
 	 *
 	 * @return     0
@@ -170,7 +188,7 @@ public class GameLevel implements Screen {
 		while (!windows.isEmpty())
 			windows.remove().remove();
 
-		TrackerWindow tracker = new TrackerWindow(tasks.get(currentTask));
+		TrackerWindow tracker = new TrackerWindow(tasks.get(currentTask), this);
 		TextEditorWindow editor = new TextEditorWindow(tasks.get(currentTask), this);
 		stage.addActor(tracker);
 		windows.add(tracker);

@@ -25,31 +25,34 @@ import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.InputListener;
 import ml.educationallydesigned.thyme.util.Task;
+import ml.educationallydesigned.thyme.core.levels.GameLevel;
 
 /**
  * Window to track the progress of tasks in the game.
  *
  * @author Theodore Preduta
  * @author Larry Yuan
- * @version 1.3
+ * @version 1.4bv
  */
 public class TrackerWindow extends DesktopWindow {
 	private Task currentTask;
+	private GameLevel level;
 
 	/**
 	 * Creates a new tracker window and allows the specification of the task
 	 * list.
-	 * 
-	 * @param       taskList  List of tasks that still need to be done.
+	 *
+	 * @param      currentTask  The current task
+	 * @param      level        The level
 	 */
-	public TrackerWindow(Task currentTask) {
+	public TrackerWindow(Task currentTask, GameLevel level) {
 		super("Current Task");
 		this.currentTask = currentTask;
+		this.level = level;
 
 		setWidth(500);
 		setHeight(500);
 		align(Align.topLeft);
-
 
 		VisLabel label = new VisLabel(currentTask.getTitle());
 		label.setWrap(true);
