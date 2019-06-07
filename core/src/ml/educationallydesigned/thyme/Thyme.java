@@ -20,7 +20,6 @@ package ml.educationallydesigned.thyme;
 import com.badlogic.gdx.*;
 import com.kotcrab.vis.ui.VisUI;
 import ml.educationallydesigned.thyme.core.screens.AnimationScreen;
-import ml.educationallydesigned.thyme.core.screens.Desktop;
 import ml.educationallydesigned.thyme.core.screens.HomeScreen;
 import ml.educationallydesigned.thyme.util.Skippable;
 
