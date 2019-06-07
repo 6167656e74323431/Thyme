@@ -18,25 +18,59 @@
 
 package ml.educationallydesigned.thyme.core.levels;
 
-import com.badlogic.gdx.InputProcessor;
-import ml.educationallydesigned.thyme.util.GameState;
+import com.badlogic.gdx.scenes.scene2d.Actor;
+import ml.educationallydesigned.thyme.Thyme;
+import com.badlogic.gdx.ApplicationListener;
+import com.badlogic.gdx.Game;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.scenes.scene2d.Stage;
+import ml.educationallydesigned.thyme.core.windows.*;
+import ml.educationallydesigned.thyme.util.*;
+import ml.educationallydesigned.thyme.core.screens.*;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
 
 /**
  * Class to implement the second level of the Thyme game.
  *
  * @author Theodore Preduta
  * @author Larry Yuan
- * @version 1.0
+ * @version 1.1
  */
-public class PanicRoom implements GameState {
-	/* temporory methods for compiling. */
-	public InputProcessor getInputProcessor() {
-		return null;
+public class PanicRoom extends GameLevel {
+	/**
+	 * Constructs the object.
+	 *
+	 * @param      game  The main game object
+	 */
+	public PanicRoom(Thyme game) {
+		super(game);
 	}
 
-	public void render() {
-	}
+	/**
+	 * Called when this screen becomes the current screen for a {@link Game}.
+	 */
+	@Override
+	public void show() {
+		// call GameLevel's show to initilize protected variables
+		super.show();
+		
+		tasks.add(TaskGenerator.generateTask());
+		
+		// open the windows
+		TrackerWindow tracker = new TrackerWindow(tasks.get(currentTask));
+		TextEditorWindow editor = new TextEditorWindow(tasks.get(currentTask), this);
+		stage.addActor(tracker);
+		windows.add(tracker);
+		stage.addActor(editor);
+		windows.add(editor);
 
-	public void dispose() {
+		// start current task
+		tasks.get(currentTask).start();
 	}
 }

@@ -19,7 +19,7 @@
 package ml.educationallydesigned.thyme.util;
 
 /**
- * Screen that displays the intro
+ * Interface that describs skippable classes
  *
  * @author Theodore Preduta
  * @author Larry Yuan

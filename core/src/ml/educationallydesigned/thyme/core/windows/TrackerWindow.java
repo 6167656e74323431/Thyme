@@ -18,26 +18,44 @@
 
 package ml.educationallydesigned.thyme.core.windows;
 
+import com.kotcrab.vis.ui.VisUI;
+import com.kotcrab.vis.ui.widget.*;
+import com.badlogic.gdx.utils.Align;
+import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
+import com.badlogic.gdx.scenes.scene2d.InputEvent;
+import com.badlogic.gdx.scenes.scene2d.InputListener;
+import ml.educationallydesigned.thyme.util.Task;
+
 /**
- * Class to implement the time tracker window in the Thyme video game.
+ * Window to track the progress of tasks in the game.
  *
  * @author Theodore Preduta
  * @author Larry Yuan
- * @version 1.1
+ * @version 1.3
  */
 public class TrackerWindow extends DesktopWindow {
-	public TrackerWindow() {
-		super("");
-	}
+	private Task currentTask;
 
-	/* beginning of temporary methods to allow for successful compilation */
-	public void onActivity() {
-	}
+	/**
+	 * Creates a new tracker window and allows the specification of the task
+	 * list.
+	 * 
+	 * @param       taskList  List of tasks that still need to be done.
+	 */
+	public TrackerWindow(Task currentTask) {
+		super("Current Task");
+		this.currentTask = currentTask;
 
-	public void onInactivity() {
-	}
+		setWidth(500);
+		setHeight(500);
+		align(Align.topLeft);
 
-	public void drawWindow() {
+
+		VisLabel label = new VisLabel(currentTask.getTitle());
+		label.setWrap(true);
+		add(label).row();
+		label = new VisLabel(currentTask.getDescription());
+		label.setWrap(true);
+		add(label).row();
 	}
-	/* end of temporary methods to allow for successful compilation */
 }

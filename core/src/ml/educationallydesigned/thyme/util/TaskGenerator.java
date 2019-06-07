@@ -16,27 +16,31 @@
 	along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-package ml.educationallydesigned.thyme.core.levels;
+package ml.educationallydesigned.thyme.util;
 
-import com.badlogic.gdx.InputProcessor;
-import ml.educationallydesigned.thyme.util.GameState;
+import java.util.Random;
 
 /**
- * Class to implement the third game mode for the Thyme video game.
+ * Class to generate random tasks.
  *
  * @author Theodore Preduta
  * @author Larry Yuan
  * @version 1.0
  */
-public class EscapeRoom {
-	/* temporory methods for compiling. */
-	public InputProcessor getInputProcessor() {
-		return null;
+public class TaskGenerator {
+	/**
+	 * Private constructor to ensure no one creates an instance of this class.
+	 */
+	private TaskGenerator() {
 	}
 
-	public void render() {
-	}
-
-	public void dispose() {
+	/**
+	 * Generate a task
+	 *
+	 * @return     The same task each time lol
+	 */
+	public static Task generateTask() {
+		String[] ab = {"a", "b"};
+		return new Task("a", "b", ab, ab, 50.0);
 	}
 }
