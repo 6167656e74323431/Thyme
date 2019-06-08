@@ -1,0 +1,67 @@
+<:import macros/html.xml />
+<:h1>List of PHP editors</:h1>
+<:p>This article contains a list of text editors with features specific to the PHP scripting language. </:p>
+<:p>- Aptana Studio – Eclipse-based IDE, able to use PDT plugins, visual JS editor. Open-source, free project. (Community edition merged in).</:p>
+<:p>- Atom – free and open-source text editor with out-of-the-box PHP support.</:p>
+<:p>- Bluefish – a multipurpose editor with PHP syntax support, in-line PHP documentation, etc. With GVFS, supports SFTP, FTP, WebDAV, and SMB.</:p>
+<:p>- Brackets – free and open-source editor in HTML5/NodeJS by Adobe Team the best for integration frontend</:p>
+<:p>- CodeLite – an open source, cross platform IDE for C/C++ and PHP. The built-in plugins supports SVN, SSH/SFTP access, Git database browsing and others.</:p>
+<:p>- Eclipse – PHP Development Tools (PDT) and PHPEclipse projects. With additional plugins supports SVN, CVS, database modelling, SSH/FTP access, database navigation, Trac integration, and others.</:p>
+<:p>- Editra – open source editor. Syntax highlighting and (partial) code completion for PHP + HTML and other IDE-like features like code browser etc.</:p>
+<:p>- Emacs – advanced text editor. The nXhtml addon has special support for PHP (and other template languages). The major mode web-mode.el is designed for editing mixed HTML templates.</:p>
+<:p>- Geany – syntax highlighting for HTML + PHP. Provides PHP function list.</:p>
+<:p>- jEdit – free/open source editor. Supports SFTP and FTP.</:p>
+<:p>- Komodo Edit – general purpose scripting language editor with support for PHP. Free version of the commercial ActiveState Komodo IDE.</:p>
+<:p>- Netbeans – IDE with PHP support and integration with web standards. Supports SFTP and FTP. Full support for SVN and Git since 7.2 and powerful plugin support for added functionality.</:p>
+<:p>- SciTE – PHP syntax highlighting, compiler integration, powerful config via Lua API.</:p>
+<:p>- Sublime Text – trialware text editor.</:p>
+<:p>- Vim – provides PHP syntax highlighting, debugging.</:p>
+<:p>- Alleycode HTML Editor – Shareware editor with syntax highlighting for both PHP and HTML.</:p>
+<:p>- ConTEXT – *No longer under development* Freeware editor with syntax highlighting.</:p>
+<:p>- Crimson Editor – Lightweight editor. Supports FTP.</:p>
+<:p>- Microsoft WebMatrix – A combined editor, server and publishing environment, syntax highlighting for HTML, PHP, Razor, node.js, C# and JavaScript and publishing through WebDeploy and FTP. Supports multiple file encodings as of version 2.</:p>
+<:p>- Notepad2 – Simple editor with syntax highlighting</:p>
+<:p>- Notepad++ – FLOSS multi-language editor with macro support, syntax highlighting (possible export to HTML), code completion, php.net function reference, foldable code blocks etc.; expandable via plugins, e.g. (S)FTP support, version control (Git, SVN), documentation generators, snippet support, spell checking, custom classes completion, code beautifiers</:p>
+<:p>- PSPad – Supports FTP; syntax highlighting.</:p>
+<:p>- RJ TextEd – Text editor with many great features</:p>
+<:p>- SublimeText - Rich source code editor with a Python application programming interface (API).</:p>
+<:p>- Coda (web development software) - Shareware IDE/Editor</:p>
+<:p>- Smultron</:p>
+<:p>- SublimeText - Rich source code editor with a Python application programming interface (API).</:p>
+<:p>- TextMate</:p>
+<:p>- TextWrangler – Supports SFTP and FTP</:p>
+<:p>- gedit</:p>
+<:p>- gPHPEdit</:p>
+<:p>- Kate – Supports any file access protocol that is supported by KIO. This includes HTTP, FTP, SSH, SMB and WebDAV.</:p>
+<:p>- KDevelop – Supports everything as Kate above with addition of references of functions and syntax parser.</:p>
+<:p>- Kwrite</:p>
+<:p>- ActiveState Komodo IDE – Support for PHP syntax checking, debugging, trial available</:p>
+<:p>- Adobe Dreamweaver – Supports SFTP and FTP; Trial available</:p>
+<:p>- BBEdit – Supports SFTP and FTP; Trial available</:p>
+<:p>- Cloud9 - Online editor (supports multiple languages)</:p>
+<:p>- Coda – Supports SFTP and FTP; Trial available</:p>
+<:p>- CodeCharge Studio – Supports FTP</:p>
+<:p>- Codelobster – Editor with syntax highlighting, debugger, code validation, supports FTP.</:p>
+<:p>- Codenvy – Cloud development environment.</:p>
+<:p>- EditPlus – Supports SFTP and FTP; Trial available</:p>
+<:p>- Embarcadero RadPHP (formerly Delphi for PHP) – Focus on web (Facebook, Google) and mobile (iOS, Android) development; Trial available</:p>
+<:p>- EmEditor</:p>
+<:p>- HTML-Kit – Syntax highlighting, supports FTP.</:p>
+<:p>- HyperEdit – Integrates PHP, JavaScript and HTML in an only interface WYSIWYG.</:p>
+<:p>- JetBrains PhpStorm – PHP IDE with editor, on-the-fly code analysis and other web development specific tools including FTP/SFTP synchronization; Trial available</:p>
+<:p>- Koding – Online development environment for many programming languages including PHP.</:p>
+<:p>- Komodo IDE – Cross-platform integrated development environment for PHP as well as Python, Ruby and Perl.</:p>
+<:p>- Microsoft Expression Web – Full PHP support with syntax highlighting, etc.; Trial available</:p>
+<:p>- NoteTab – Allows you to have multiple tabs open for different files, has FTP support, comes in two trial versions (NoteTab Standard, NoteTab Pro) and one free version NoteTab Light. NoteTab Pro highlights tags.</:p>
+<:p>- NuSphere PhpED – A PHP development environment and integration with modern web standards. Supports SFTP, WebDAV, and FTP. Native support for CVS source control system, SVN and Git support can be added using Tortoise Windows Shell plugins.</:p>
+<:p>- PHPEdit – Supports SFTP and FTP</:p>
+<:p>- PHP Tools for Visual Studio PHP syntax highlighting, debugger, code validation, testing, support for other languages, among others. One- month trial available</:p>
+<:p>- Rapid PHP Editor – Support for PHP syntax checking, auto-complete, debug and support for CSS, Javascript and HTML</:p>
+<:p>- SlickEdit</:p>
+<:p>- Smultron</:p>
+<:p>- SourceLair - Online IDE for PHP, as well as JavaScript and Python</:p>
+<:p>- Sublime Text – Commercial multi-language text editor with syntax highlighting. Unlimited trial available.</:p>
+<:p>- TextPad – Trial available</:p>
+<:p>- Top PHP Studio – Supports FTP</:p>
+<:p>- UltraEdit – Supports SFTP and FTP; Trial available</:p>
+<:p>- Zend Studio – (Cross platform) professional PHP IDE, based on the PHP Development Tools plugin for the Eclipse platform; Trial available</:p>

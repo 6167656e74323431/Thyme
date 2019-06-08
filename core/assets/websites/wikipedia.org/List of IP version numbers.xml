@@ -1,0 +1,9 @@
+<:import macros/html.xml />
+<:h1>List of IP version numbers</:h1>
+<:p>Packets that hold Internet Protocol data carry a 4-bit IP version number as the first field of its header. Currently, only IPv4 and IPv6 packets are seen on the Internet, having IP version numbers 4 and 6, respectively.</:p>
+<:p>As the version number is carried in a 4-bit field, only numbers 0-15 can be assigned.</:p>
+<:p>During the development of the first version of the Internet Protocol, in the seventies of the previous century, the initial experimental versions 1 to 3 were not standardized. The first working version that was widely deployed was assigned version number 4.</:p>
+<:p>A separate protocol based on reliable connections was developed, and assigned version 5.</:p>
+<:p>IP version 7 was chosen in 1988 by R. Ullmann as the next IP version because he incorrectly assumed that version 6 was in use for ST-II. However, ST-II had reused version 5 of the original ST protocol.</:p>
+<:p>When it became apparent, in the early nineties of the previous century, that IPv4 could not sustain routing in a growing Internet, several new Internet Protocols were proposed. The Internet Protocol that finally emerged was assigned version number 6, being the lowest free number greater than 4.</:p>
+<:p>The PIP protocol and TUBA protocol used versions 8 and 9, following version 7 for TP/IX.</:p>

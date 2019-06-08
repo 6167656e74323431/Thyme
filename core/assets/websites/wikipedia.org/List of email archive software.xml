@@ -1,0 +1,19 @@
+<:import macros/html.xml />
+<:h1>List of email archive software</:h1>
+<:p>This article provides a list of software products and cloud-based services used for email archiving.</:p>
+<:p>Email archiving has several objectives: long-term preservation of knowledge, regulatory compliance, legal protection, etc. Those different goals may call for different solutions. For example, the preservation of historical records may require a one-time migration (change of format) and storage, while regulatory compliance generally calls for the systematic and continuous archival of messages, using a solution that provides storage and retrieval of email over extended time periods.</:p>
+<:p>Different products have been developed to meet those needs. They may be offered as a standalone computer appliance (possibly in the form of a virtual machine), as installable software that can be deployed on the user's premises, or as a cloud-based service. Those products may perform compression, de-duplication, encryption, indexing and advanced searching. They may work with a variety of email data sources (email systems and email storage file formats) and they may also support other types of messaging systems such as social media or instant messaging. Additionally, several collaborative software products (which commonly have messaging components) can also archive the data that they manage; however, those systems are not listed here since they generally do not archive third-party email data.</:p>
+<:p>In addition to a backup system, several other components are necessary for a useful email archiving system:</:p>
+<:p>- Message header/metadata.</:p>
+<:p>- Message body and related document attachments.</:p>
+<:p>- Search and retrieval.</:p>
+<:p>- Efficient storage.</:p>
+<:p>- Reliable gathering of email flow.</:p>
+<:p>- Policy enforcement, such as retention policy.</:p>
+<:p>- Compliance certification.</:p>
+<:p>- Comparison of mail servers</:p>
+<:p>- Electronic discovery</:p>
+<:p>- Electronic message journaling</:p>
+<:p>- Email archiving</:p>
+<:p>- File archive</:p>
+<:p>- Message transfer agent</:p>

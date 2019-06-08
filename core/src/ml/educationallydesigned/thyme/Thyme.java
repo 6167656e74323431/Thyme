@@ -107,3 +107,4 @@ public class Thyme extends Game {
 			scores.remove();
 	}
 }
+

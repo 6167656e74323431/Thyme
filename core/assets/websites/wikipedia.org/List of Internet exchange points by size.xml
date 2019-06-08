@@ -1,0 +1,13 @@
+<:import macros/html.xml />
+<:h1>List of Internet exchange points by size</:h1>
+<:p>This is a list of Internet Exchange Points by size, measured by peak data rate (throughput), with additional data on location, establishment and average throughput.</:p>
+<:p>Generally only exchanges with more than ten gigabits per second peak throughput have been taken into consideration. The numbers in the list represent switched traffic only (no private interconnects) and are rounded to whole gigabits. Take into consideration that traffic on each exchange point can change quickly, and be seasonal.</:p>
+<:p>This list is not exhaustive, as it includes only exchanges willing to make traffic data public on their website. Particularly data of IXPs from the United States and China is hard to come by. Examples of large peering points without public data are NAP of the Americas or PacketExchange.</:p>
+<:p>- Internet exchange point</:p>
+<:p>- List of Internet exchange points</:p>
+<:p>- Peering</:p>
+<:p>- BGP</:p>
+<:p>- Packet Clearing House - Internet Exchange Directory (automatically updated daily list)</:p>
+<:p>- TeleGeography: The Internet Exchange Points Directory</:p>
+<:p>- Euro-IX Member IXPs</:p>
+<:p>- LookinGlass.Org: IXP's with BGP LG service in the World</:p>
