@@ -18,25 +18,95 @@
 
 package ml.educationallydesigned.thyme.core.levels;
 
-import com.badlogic.gdx.InputProcessor;
-import ml.educationallydesigned.thyme.util.GameState;
+import com.badlogic.gdx.scenes.scene2d.Actor;
+import ml.educationallydesigned.thyme.Thyme;
+import com.badlogic.gdx.ApplicationListener;
+import com.badlogic.gdx.Game;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.scenes.scene2d.Stage;
+import ml.educationallydesigned.thyme.core.windows.*;
+import ml.educationallydesigned.thyme.util.*;
+import ml.educationallydesigned.thyme.core.screens.*;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
 
 /**
  * Class to implement the third game mode for the Thyme video game.
  *
  * @author Theodore Preduta
  * @author Larry Yuan
- * @version 1.0
+ * @version 1.1
  */
-public class EscapeRoom {
-	/* temporory methods for compiling. */
-	public InputProcessor getInputProcessor() {
-		return null;
+public class EscapeRoom extends GameLevel {
+	private int[] estimates;
+
+	/**
+	 * Constructs the object.
+	 *
+	 * @param      game  The main game object
+	 */
+	public EscapeRoom(Thyme game) {
+		super(game);
 	}
 
-	public void render() {
+	/**
+	 * Called when this screen becomes the current screen for a {@link Game}.
+	 */
+	@Override
+	public void show() {
+		// call GameLevel's show to initilize protected variables
+		super.show();
+
+		tasks.add(TaskGenerator.generateTask());
+
+		// prepare survey
+		String[] questions = new String[tasks.size()];
+		for (int i = 0; i < questions.length; i++) {
+			Task current = tasks.get(i);
+			questions[i] = current.getTitle() + "(" + current.getMinPassPercentage() + " - " + current.getQuestions().length + ")";
+		}
+		tasks.add(0, new Survey("Planning Time!",
+								"Enter the amount of time needed for each task",
+								questions, this));
+
+		// open the windows
+		TrackerWindow tracker = new TrackerWindow(tasks.get(currentTask), this);
+		TextEditorWindow editor = new TextEditorWindow(tasks.get(currentTask), this);
+		stage.addActor(tracker);
+		windows.add(tracker);
+		stage.addActor(editor);
+		windows.add(editor);
+
+		// start current task
+		tasks.get(currentTask).start();
 	}
 
-	public void dispose() {
+	/**
+	 * Adds estimate times.
+	 *
+	 * @param      estimates  The estimate times.
+	 */
+	public void addEstimates(int[] estimates) {
+		this.estimates = estimates;
+	}
+
+	/**
+	 * Calculates the score once this level is done.
+	 *
+	 * @return     the score for the escape room.
+	 */
+	@Override
+	protected int calcScore() {
+		int totalDiff = 0;
+		for (int i = 0; i < estimates.length; i++) {
+			totalDiff += Math.abs(estimates[i] - tasks.get(i + 1).getTime() / 1000);
+		}
+
+		return Math.max(0, 10000 - totalDiff);
 	}
 }

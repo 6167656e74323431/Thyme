@@ -5,12 +5,11 @@ package ml.educationallydesigned.thyme.util.scoreboard;
  *
  * @author Theodore Preduta
  * @author Larry Yuan
- * @version 1.0
+ * @version 1.1
  */
-
 public class Score implements Comparable<Score> {
-	public String username;
-	public int score;
+	public final String username;
+	public final int score;
 
 	/**
 	 * Initiates the score with name and score

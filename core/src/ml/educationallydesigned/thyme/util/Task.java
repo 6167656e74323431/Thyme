@@ -25,18 +25,18 @@ import ml.educationallydesigned.thyme.util.time.*;
  *
  * @author Theodore Preduta
  * @author Larry Yuan
- * @version 2.0
+ * @version 2.2
  */
 public class Task {
-	private String title;
-	private String description;
-	private String[] questions;
-	private String[] expectedAnswers;
-	private String[] givenAnswers;
-	private double minPassPercentage;
-	private double attemptPercentage;
-	private int numOfAttempts;
-	private Timer tracker;
+	protected String title;
+	protected String description;
+	protected String[] questions;
+	protected String[] expectedAnswers;
+	protected String[] givenAnswers;
+	protected double minPassPercentage;
+	protected double attemptPercentage;
+	protected int numOfAttempts;
+	protected Timer tracker;
 
 	/**
 	 * Constructs the task object.
@@ -57,8 +57,6 @@ public class Task {
 		this.minPassPercentage = minPassPercentage;
 		attemptPercentage = -1.0;
 		numOfAttempts = 0;
-		tracker = new Timer();
-		tracker.pause();
 	}
 
 	/**
@@ -68,6 +66,24 @@ public class Task {
 	 */
 	public String getTitle() {
 		return title;
+	}
+
+	/**
+	 * Gets the attempt percentage.
+	 *
+	 * @return     The attempt percentage.
+	 */
+	public double getAttemptPercentage() {
+		return attemptPercentage;
+	}
+
+	/**
+	 * Gets the number of attempts.
+	 *
+	 * @return     The number of attempts.
+	 */
+	public int getNumOfAttempts() {
+		return numOfAttempts;
 	}
 
 	/**
@@ -98,10 +114,13 @@ public class Task {
 	}
 
 	/**
-	 * Starts the timer for this task
+	 * Starts the timer for this task.
 	 */
 	public void start() {
-		tracker.unpause();
+		if (tracker == null)
+			tracker = new Timer();
+		else
+			tracker.unpause();
 	}
 
 	/**
@@ -138,8 +157,8 @@ public class Task {
 	 *
 	 * @return     The timeelapsed since the sart in miliseconds.
 	 */
-	public long getTime() {
-		return tracker.getTime() / 1000000;
+	public int getTime() {
+		return (int)(tracker.getTime() / 1000000);
 	}
 
 	/**

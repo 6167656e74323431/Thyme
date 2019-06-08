@@ -69,16 +69,21 @@ public class Scoreboard {
 	/**
 	 * Gets the top scores.
 	 *
-	 * @param numberOfItems The maximum number of scores to retrieve
-	 * @return The top scores. The length of which will be the minimum of the total number of scores and the numberOfItems.
-	 * @throws BackingStoreException when reading the scores from database fails
+	 * @param      numberOfItems          The maximum number of scores to
+	 *                                    retrieve
+	 *
+	 * @return     The top scores. The length of which will be the minimum of
+	 *             the total number of scores and the numberOfItems.
+	 *
+	 * @throws     BackingStoreException  when reading the scores from database
+	 *                                    fails
 	 */
 	public List<Score> getScores(int numberOfItems) throws BackingStoreException {
 		List<Score> scores = new ArrayList<Score>();
 		for (String key : scoreDatabase.keys()) {
 			scores.add(Score.fromString(scoreDatabase.get(key, null)));
 		}
-		Collections.sort(scores);
+		scores = sortScores(scores);
 		return scores.size() < numberOfItems ? scores : scores.subList(0, numberOfItems);
 	}
 
@@ -112,5 +117,38 @@ public class Scoreboard {
 	 */
 	public void clear() throws BackingStoreException {
 		scoreDatabase.clear();
+	}
+
+	/**
+	 * Sort the list of scores using merge sort.
+	 *
+	 * @param      scores  The list of scores to be sorted.
+	 */
+	private static List<Score> sortScores(List<Score> scores) {
+		if (scores.size() < 2)
+			return scores;
+		// split into two
+		int halfSize = scores.size() / 2;
+		List<Score> lower = new ArrayList<Score>();
+		while (scores.size() > halfSize)
+			lower.add(scores.remove(0));
+		List<Score> upper = new ArrayList<Score>();
+		while (!scores.isEmpty())
+			upper.add(scores.remove(0));
+		// recursively sort them
+		lower = sortScores(lower);
+		upper = sortScores(upper);
+		// combine them
+		List<Score> sorted = new ArrayList<Score>();
+		while (!lower.isEmpty() || !upper.isEmpty())
+			if (lower.isEmpty())
+				sorted.add(upper.remove(0));
+			else if (upper.isEmpty())
+				sorted.add(lower.remove(0));
+			else if (lower.get(0).compareTo(upper.get(0)) < 0)
+				sorted.add(upper.remove(0));
+			else
+				sorted.add(lower.remove(0));
+		return sorted;
 	}
 }

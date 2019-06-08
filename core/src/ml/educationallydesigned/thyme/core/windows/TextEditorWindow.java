@@ -72,7 +72,9 @@ public class TextEditorWindow extends DesktopWindow {
 		submitButton.addListener(new ClickListener() {
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
-				TextEditorWindow.this.submit();
+				boolean result = TextEditorWindow.this.submit();
+				if (!result)
+					clearAnswers();
 			}
 		});
 		add(submitButton).row();
@@ -81,12 +83,20 @@ public class TextEditorWindow extends DesktopWindow {
 	/**
 	 * Prepares the input, and submits it through the gamelevel.
 	 */
-	public void submit() {
+	public boolean submit() {
 		String[] attempt = new String[answerBoxes.size()];
 
 		for (int i = 0; i < answerBoxes.size(); i++)
 			attempt[i] = answerBoxes.get(i).getText();
 
-		level.submit(attempt);
+		return level.submit(attempt);
+	}
+
+	/**
+	 * Clears all the text fields.
+	 */
+	public void clearAnswers() {
+		for (VisTextField field : answerBoxes)
+			field.setText("");
 	}
 }

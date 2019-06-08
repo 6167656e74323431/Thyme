@@ -40,7 +40,7 @@ import java.util.Queue;
  *
  * @author Theodore Preduta
  * @author Larry Yuan
- * @version 1.1
+ * @version 1.2
  */
 public class DeficiencyRoom extends GameLevel {
 	/**
@@ -76,7 +76,7 @@ public class DeficiencyRoom extends GameLevel {
 		tasks.add(TaskGenerator.generateTask());
 		
 		// open the windows
-		TrackerWindow tracker = new TrackerWindow(tasks.get(currentTask));
+		TrackerWindow tracker = new TrackerWindow(tasks.get(currentTask), this);
 		TextEditorWindow editor = new TextEditorWindow(tasks.get(currentTask), this);
 		stage.addActor(tracker);
 		windows.add(tracker);
@@ -85,5 +85,25 @@ public class DeficiencyRoom extends GameLevel {
 
 		// start current task
 		tasks.get(currentTask).start();
+	}
+
+	/**
+	 * Calculates the score once this level is done.
+	 *
+	 * @return     the score for the deficciancy room.
+	 */
+	@Override
+	protected int calcScore() {
+		int attempts = -tasks.size();
+		double averagePercentage = 0.0;
+
+		for (Task t : tasks) {
+			attempts += t.getNumOfAttempts();
+			averagePercentage += t.getAttemptPercentage();
+		}
+
+		averagePercentage /= tasks.size();
+
+		return Math.max(0, (int)((10000 - attempts * 100) * averagePercentage));
 	}
 }

@@ -177,7 +177,6 @@ public class LeaderboardScreen implements Screen {
 	 */
 	@Override
 	public void resize(int width, int height) {
-
 	}
 
 	/**
@@ -185,7 +184,6 @@ public class LeaderboardScreen implements Screen {
 	 */
 	@Override
 	public void pause() {
-
 	}
 
 	/**
@@ -193,7 +191,6 @@ public class LeaderboardScreen implements Screen {
 	 */
 	@Override
 	public void resume() {
-
 	}
 
 	/**
@@ -201,7 +198,6 @@ public class LeaderboardScreen implements Screen {
 	 */
 	@Override
 	public void hide() {
-
 	}
 
 	/**
@@ -209,6 +205,5 @@ public class LeaderboardScreen implements Screen {
 	 */
 	@Override
 	public void dispose() {
-
 	}
 }

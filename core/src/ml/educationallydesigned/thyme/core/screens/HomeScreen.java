@@ -38,7 +38,7 @@ import ml.educationallydesigned.thyme.core.levels.*;
  *
  * @author Theodore Preduta
  * @author Larry Yuan
- * @version 1.3
+ * @version 1.4
  */
 public class HomeScreen implements Screen {
 	private Stage stage;
@@ -126,6 +126,14 @@ public class HomeScreen implements Screen {
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
 				new PanicRoom(game);
+			}
+		});
+
+		// add listener for third level
+		levelThreeButton.addListener(new ClickListener() {
+			@Override
+			public void clicked(InputEvent event, float x, float y) {
+				new EscapeRoom(game);
 			}
 		});
 
