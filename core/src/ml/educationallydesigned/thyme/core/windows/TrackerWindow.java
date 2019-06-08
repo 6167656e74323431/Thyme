@@ -18,15 +18,12 @@
 
 package ml.educationallydesigned.thyme.core.windows;
 
-import com.kotcrab.vis.ui.VisUI;
-import com.kotcrab.vis.ui.widget.*;
-import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.utils.Align;
-import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
-import com.badlogic.gdx.scenes.scene2d.InputEvent;
-import com.badlogic.gdx.scenes.scene2d.InputListener;
-import ml.educationallydesigned.thyme.util.Task;
+import com.kotcrab.vis.ui.VisUI;
+import com.kotcrab.vis.ui.widget.VisLabel;
+import com.kotcrab.vis.ui.widget.VisTable;
 import ml.educationallydesigned.thyme.core.levels.GameLevel;
+import ml.educationallydesigned.thyme.util.Task;
 
 /**
  * Window to track the progress of tasks in the game.
@@ -51,8 +48,8 @@ public class TrackerWindow extends DesktopWindow {
 	 * Creates a new tracker window and allows the specification of the task
 	 * list.
 	 *
-	 * @param      currentTask  The current task
-	 * @param      level        The level
+	 * @param currentTask The current task
+	 * @param level       The level
 	 */
 	public TrackerWindow(Task currentTask, GameLevel level) {
 		super("Current Task");
@@ -67,7 +64,7 @@ public class TrackerWindow extends DesktopWindow {
 
 		title = new VisLabel("");
 		mainContainer.add(title).row();
-		
+
 		description = new VisLabel("");
 		VisLabel.LabelStyle descriptionStyle = description.getStyle();
 		descriptionStyle.font = VisUI.getSkin().getFont("small-font");
@@ -87,7 +84,7 @@ public class TrackerWindow extends DesktopWindow {
 	/**
 	 * Changes the task that is being displayed.
 	 *
-	 * @param      t     The task that is being displayed.
+	 * @param t The task that is being displayed.
 	 */
 	public void updateTask(Task t) {
 		currentTask = t;

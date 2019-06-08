@@ -18,18 +18,19 @@
 
 package ml.educationallydesigned.thyme.core.levels;
 
-import com.badlogic.gdx.scenes.scene2d.Actor;
-import ml.educationallydesigned.thyme.Thyme;
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Stage;
-import ml.educationallydesigned.thyme.core.windows.*;
-import ml.educationallydesigned.thyme.util.*;
-import ml.educationallydesigned.thyme.core.screens.*;
-import ml.educationallydesigned.thyme.util.scoreboard.*;
+import ml.educationallydesigned.thyme.Thyme;
+import ml.educationallydesigned.thyme.core.screens.HomeScreen;
+import ml.educationallydesigned.thyme.core.windows.TextEditorWindow;
+import ml.educationallydesigned.thyme.core.windows.TrackerWindow;
+import ml.educationallydesigned.thyme.util.Task;
+import ml.educationallydesigned.thyme.util.scoreboard.Score;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -131,7 +132,7 @@ public class GameLevel implements Screen {
 	 * Submits a set of answers to the current task, increments the current task
 	 * if necessary, and updates windows.
 	 *
-	 * @param      givenAnswers  The given answers.
+	 * @param givenAnswers The given answers.
 	 */
 	public boolean submit(String[] givenAnswers) {
 		if (tasks.get(currentTask).submit(givenAnswers)) {
@@ -153,7 +154,7 @@ public class GameLevel implements Screen {
 	/**
 	 * Gets the current task position.
 	 *
-	 * @return     The current task position.
+	 * @return The current task position.
 	 */
 	public int getCurrentTask() {
 		return currentTask + 1;
@@ -162,7 +163,7 @@ public class GameLevel implements Screen {
 	/**
 	 * Gets the number of tasks.
 	 *
-	 * @return     The number of tasks.
+	 * @return The number of tasks.
 	 */
 	public int getNumberOfTasks() {
 		return tasks.size();
@@ -171,7 +172,7 @@ public class GameLevel implements Screen {
 	/**
 	 * Calculates the score once this level is done.
 	 *
-	 * @return     0
+	 * @return 0
 	 */
 	protected int calcScore() {
 		return 0;

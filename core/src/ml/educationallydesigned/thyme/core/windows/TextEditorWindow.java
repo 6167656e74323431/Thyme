@@ -18,17 +18,17 @@
 
 package ml.educationallydesigned.thyme.core.windows;
 
-import com.kotcrab.vis.ui.VisUI;
-import com.kotcrab.vis.ui.widget.*;
-import com.badlogic.gdx.utils.Align;
-import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
-import com.badlogic.gdx.scenes.scene2d.InputListener;
-import ml.educationallydesigned.thyme.util.Task;
+import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
+import com.badlogic.gdx.utils.Align;
+import com.kotcrab.vis.ui.widget.VisLabel;
+import com.kotcrab.vis.ui.widget.VisTextButton;
+import com.kotcrab.vis.ui.widget.VisTextField;
 import ml.educationallydesigned.thyme.core.levels.GameLevel;
+import ml.educationallydesigned.thyme.util.Task;
 
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Class to implement the text editor window for in the Thyme game.
@@ -50,8 +50,8 @@ public class TextEditorWindow extends DesktopWindow {
 	/**
 	 * Initializes, and draws the window.
 	 *
-	 * @param      currentTask  The current task
-	 * @param      level        The current level
+	 * @param currentTask The current task
+	 * @param level       The current level
 	 */
 	public TextEditorWindow(Task currentTask, GameLevel level) {
 		super("LarryOffice Writer");

@@ -18,23 +18,12 @@
 
 package ml.educationallydesigned.thyme.core.levels;
 
-import com.badlogic.gdx.scenes.scene2d.Actor;
-import ml.educationallydesigned.thyme.Thyme;
-import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Game;
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.Screen;
-import com.badlogic.gdx.graphics.GL20;
-import com.badlogic.gdx.scenes.scene2d.Stage;
-import ml.educationallydesigned.thyme.core.windows.*;
-import ml.educationallydesigned.thyme.util.*;
-import ml.educationallydesigned.thyme.util.time.*;
-import ml.educationallydesigned.thyme.core.screens.*;
-
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import ml.educationallydesigned.thyme.Thyme;
+import ml.educationallydesigned.thyme.core.windows.TextEditorWindow;
+import ml.educationallydesigned.thyme.core.windows.TrackerWindow;
+import ml.educationallydesigned.thyme.util.TaskGenerator;
+import ml.educationallydesigned.thyme.util.time.Timer;
 
 /**
  * Class to implement the second level of the Thyme game.
@@ -54,7 +43,7 @@ public class PanicRoom extends GameLevel {
 	/**
 	 * Constructs the object.
 	 *
-	 * @param      game  The main game object
+	 * @param game The main game object
 	 */
 	public PanicRoom(Thyme game) {
 		super(game);
@@ -87,12 +76,12 @@ public class PanicRoom extends GameLevel {
 	/**
 	 * Calculates the score once this level is done.
 	 *
-	 * @return     the score for the panic room.
+	 * @return the score for the panic room.
 	 */
 	@Override
 	protected int calcScore() {
 		totalTime.stop();
 
-		return Math.max(0, 10000 - (int)(totalTime.getTime() / 100000000L) + 3000);
+		return Math.max(0, 10000 - (int) (totalTime.getTime() / 100000000L) + 3000);
 	}
 }

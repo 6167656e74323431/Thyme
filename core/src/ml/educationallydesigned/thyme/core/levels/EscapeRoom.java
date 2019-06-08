@@ -18,22 +18,13 @@
 
 package ml.educationallydesigned.thyme.core.levels;
 
-import com.badlogic.gdx.scenes.scene2d.Actor;
-import ml.educationallydesigned.thyme.Thyme;
-import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Game;
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.Screen;
-import com.badlogic.gdx.graphics.GL20;
-import com.badlogic.gdx.scenes.scene2d.Stage;
-import ml.educationallydesigned.thyme.core.windows.*;
-import ml.educationallydesigned.thyme.util.*;
-import ml.educationallydesigned.thyme.core.screens.*;
-
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import ml.educationallydesigned.thyme.Thyme;
+import ml.educationallydesigned.thyme.core.windows.TextEditorWindow;
+import ml.educationallydesigned.thyme.core.windows.TrackerWindow;
+import ml.educationallydesigned.thyme.util.Survey;
+import ml.educationallydesigned.thyme.util.Task;
+import ml.educationallydesigned.thyme.util.TaskGenerator;
 
 /**
  * Class to implement the third game mode for the Thyme video game.
@@ -53,7 +44,7 @@ public class EscapeRoom extends GameLevel {
 	/**
 	 * Constructs the object.
 	 *
-	 * @param      game  The main game object
+	 * @param game The main game object
 	 */
 	public EscapeRoom(Thyme game) {
 		super(game);
@@ -76,8 +67,8 @@ public class EscapeRoom extends GameLevel {
 			questions[i] = current.getTitle() + "(" + current.getMinPassPercentage() + " - " + current.getQuestions().length + ")";
 		}
 		tasks.add(0, new Survey("Planning Time!",
-								"Enter the amount of time needed for each task",
-								questions, this));
+				"Enter the amount of time needed for each task",
+				questions, this));
 
 		// open the windows
 		TrackerWindow tracker = new TrackerWindow(tasks.get(currentTask), this);
@@ -94,7 +85,7 @@ public class EscapeRoom extends GameLevel {
 	/**
 	 * Adds estimate times.
 	 *
-	 * @param      estimates  The estimate times.
+	 * @param estimates The estimate times.
 	 */
 	public void addEstimates(int[] estimates) {
 		this.estimates = estimates;
@@ -103,7 +94,7 @@ public class EscapeRoom extends GameLevel {
 	/**
 	 * Calculates the score once this level is done.
 	 *
-	 * @return     the score for the escape room.
+	 * @return the score for the escape room.
 	 */
 	@Override
 	protected int calcScore() {

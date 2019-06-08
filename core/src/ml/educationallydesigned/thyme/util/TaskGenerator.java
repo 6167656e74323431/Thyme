@@ -18,8 +18,6 @@
 
 package ml.educationallydesigned.thyme.util;
 
-import java.util.Random;
-
 /**
  * Class to generate random tasks.
  * <b>Time Spent:</b>
@@ -42,7 +40,7 @@ public class TaskGenerator {
 	/**
 	 * Generate a task
 	 *
-	 * @return     The same task each time lol
+	 * @return The same task each time lol
 	 */
 	public static Task generateTask() {
 		String[] ab = {"a", "b"};

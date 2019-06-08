@@ -17,6 +17,8 @@
 */
 package ml.educationallydesigned.thyme.util.scoreboard;
 
+import java.io.Serializable;
+
 /**
  * Score data class.
  * <b>Time Spent:</b>
@@ -29,7 +31,7 @@ package ml.educationallydesigned.thyme.util.scoreboard;
  * @author Larry Yuan
  * @version 1.1
  */
-public class Score implements Comparable<Score> {
+public class Score implements Comparable<Score>, Serializable {
 	public final String username;
 	public final int score;
 
