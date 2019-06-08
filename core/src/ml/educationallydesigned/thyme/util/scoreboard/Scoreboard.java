@@ -36,6 +36,7 @@ import java.util.List;
  * @author Larry Yuan
  * @version 2.0
  */
+
 public class Scoreboard {
 	private static String scoresLocation;
 
@@ -109,6 +110,7 @@ public class Scoreboard {
 	 * the total number of scores and the numberOfItems.
 	 * @throws IOException when reading the scores file fails
 	 */
+	@SuppressWarnings("unchecked")
 	public List<Score> getScores(int numberOfItems) throws IOException {
 		// if scores file doesn't exist, then return an empty list
 		if (!(new File(scoresLocation)).exists()) {
