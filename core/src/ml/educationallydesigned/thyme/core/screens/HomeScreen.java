@@ -18,7 +18,9 @@
 
 package ml.educationallydesigned.thyme.core.screens;
 
-import com.badlogic.gdx.*;
+import com.badlogic.gdx.ApplicationListener;
+import com.badlogic.gdx.Game;
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.GL20;
@@ -30,7 +32,9 @@ import com.kotcrab.vis.ui.widget.VisImage;
 import com.kotcrab.vis.ui.widget.VisTable;
 import com.kotcrab.vis.ui.widget.VisTextButton;
 import ml.educationallydesigned.thyme.Thyme;
-import ml.educationallydesigned.thyme.core.levels.*;
+import ml.educationallydesigned.thyme.core.levels.DeficiencyRoom;
+import ml.educationallydesigned.thyme.core.levels.EscapeRoom;
+import ml.educationallydesigned.thyme.core.levels.PanicRoom;
 
 /**
  * Non-level game state.
@@ -51,7 +55,7 @@ public class HomeScreen implements Screen {
 	/**
 	 * Constructs the HomeScreen.
 	 *
-	 * @param      game  The game that is creating this class
+	 * @param game The game that is creating this class
 	 */
 	public HomeScreen(Thyme game) {
 		this.game = game;

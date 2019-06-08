@@ -18,22 +18,12 @@
 
 package ml.educationallydesigned.thyme.core.levels;
 
-import com.badlogic.gdx.scenes.scene2d.Actor;
-import ml.educationallydesigned.thyme.Thyme;
-import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Game;
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.Screen;
-import com.badlogic.gdx.graphics.GL20;
-import com.badlogic.gdx.scenes.scene2d.Stage;
-import ml.educationallydesigned.thyme.core.windows.*;
-import ml.educationallydesigned.thyme.util.*;
-import ml.educationallydesigned.thyme.core.screens.*;
-
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import ml.educationallydesigned.thyme.Thyme;
+import ml.educationallydesigned.thyme.core.windows.TextEditorWindow;
+import ml.educationallydesigned.thyme.core.windows.TrackerWindow;
+import ml.educationallydesigned.thyme.util.Task;
+import ml.educationallydesigned.thyme.util.TaskGenerator;
 
 /**
  * Class to implement the first room gamemode.
@@ -42,7 +32,7 @@ import java.util.Queue;
  * <li>Theodore - 30 min</li>
  * <li>Larry - </li>
  * </ul>
- * 
+ *
  * @author Theodore Preduta
  * @author Larry Yuan
  * @version 1.2
@@ -51,7 +41,7 @@ public class DeficiencyRoom extends GameLevel {
 	/**
 	 * Constructs the object.
 	 *
-	 * @param      game  The main game object
+	 * @param game The main game object
 	 */
 	public DeficiencyRoom(Thyme game) {
 		super(game);
@@ -66,20 +56,20 @@ public class DeficiencyRoom extends GameLevel {
 		super.show();
 
 		String[] tutorialQuestions = {"What is the name of the QnA window?",
-										"What is the name of the browser?"};
+				"What is the name of the browser?"};
 
 		String[] tutorialAnswers = {"LarryOffice",
-									"?"};
+				"?"};
 
-		tasks.add(new Task("Tutorial", "Explore the desktop, and see if you can answer the questions in the editor.", 
-							tutorialQuestions, tutorialAnswers, 100.0) {
+		tasks.add(new Task("Tutorial", "Explore the desktop, and see if you can answer the questions in the editor.",
+				tutorialQuestions, tutorialAnswers, 100.0) {
 			private boolean check(String given, String target) {
 				return given.indexOf(target) >= 0;
 			}
 		});
 
 		tasks.add(TaskGenerator.generateTask());
-		
+
 		// open the windows
 		TrackerWindow tracker = new TrackerWindow(tasks.get(currentTask), this);
 		TextEditorWindow editor = new TextEditorWindow(tasks.get(currentTask), this);
@@ -95,7 +85,7 @@ public class DeficiencyRoom extends GameLevel {
 	/**
 	 * Calculates the score once this level is done.
 	 *
-	 * @return     the score for the deficciancy room.
+	 * @return the score for the deficciancy room.
 	 */
 	@Override
 	protected int calcScore() {
@@ -109,6 +99,6 @@ public class DeficiencyRoom extends GameLevel {
 
 		averagePercentage /= tasks.size();
 
-		return Math.max(0, (int)((10000 - attempts * 100) * averagePercentage));
+		return Math.max(0, (int) ((10000 - attempts * 100) * averagePercentage));
 	}
 }

@@ -17,12 +17,11 @@
 */
 package ml.educationallydesigned.thyme.util.scoreboard;
 
+import com.badlogic.gdx.Gdx;
+
+import java.io.*;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
-import java.util.Random;
-import java.util.prefs.BackingStoreException;
-import java.util.prefs.Preferences;
 
 
 /**
@@ -30,103 +29,38 @@ import java.util.prefs.Preferences;
  * <b>Time Spent:</b>
  * <ul>
  * <li>Theodore - 20 min</li>
- * <li>Larry - </li>
+ * <li>Larry - 1.5 hrs</li>
  * </ul>
  *
  * @author Theodore Preduta
  * @author Larry Yuan
- * @version 1.0
+ * @version 2.0
  */
-public class Scoreboard {
-	private static final String SCOREBOARD_NODE = "ml/educationallydesigned/thyme/core/Scoreboard";
-	private static final int ID_LENGTH = 16;
-	private static final String ID_CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
-	private Preferences scoreDatabase;
-	private Random random;
+public class Scoreboard {
+	private static String scoresLocation;
+
+	private List<Score> scores;
 
 	/**
 	 * Initiates the scoreboard with the database and the id random source.
 	 */
-	public Scoreboard() {
-		scoreDatabase = Preferences.userRoot().node(SCOREBOARD_NODE);
-		random = new Random();
-	}
-
-	/**
-	 * Creates a unique ID that has not been used in the database yet
-	 *
-	 * @return the unique ID
-	 */
-	private String makeId() {
-		StringBuilder id;
-		do {
-			id = new StringBuilder();
-			for (int i = 0; i < ID_LENGTH; i++) {
-				id.append(ID_CHARACTERS.charAt(random.nextInt(ID_LENGTH)));
-			}
-		} while (scoreDatabase.get(id.toString(), null) != null);
-
-		return id.toString();
-	}
-
-	/**
-	 * Gets the top scores.
-	 *
-	 * @param      numberOfItems          The maximum number of scores to
-	 *                                    retrieve
-	 *
-	 * @return     The top scores. The length of which will be the minimum of
-	 *             the total number of scores and the numberOfItems.
-	 *
-	 * @throws     BackingStoreException  when reading the scores from database
-	 *                                    fails
-	 */
-	public List<Score> getScores(int numberOfItems) throws BackingStoreException {
-		List<Score> scores = new ArrayList<Score>();
-		for (String key : scoreDatabase.keys()) {
-			scores.add(Score.fromString(scoreDatabase.get(key, null)));
+	public Scoreboard() throws IOException {
+		// check if windows or linux to determine where to store the scores
+		// on windows, we use appdata to store the scores
+		// on linux, we use the home directory
+		if (System.getProperty("os.name").toLowerCase().contains("win")) {
+			scoresLocation = System.getenv("APPDATA") + "/.thyme_scores";
+		} else {
+			scoresLocation = System.getProperty("user.home") + "/.thyme_scores";
 		}
-		scores = sortScores(scores);
-		return scores.size() < numberOfItems ? scores : scores.subList(0, numberOfItems);
-	}
-
-	/**
-	 * Adds a score to the database.
-	 *
-	 * @param score the score to add
-	 * @return the ID of the created score
-	 */
-	public String addScore(Score score) {
-		String serialized = score.toString();
-		String id = makeId();
-		scoreDatabase.put(id, serialized);
-		return id;
-	}
-
-	/**
-	 * Gets the number of scores in the database.
-	 *
-	 * @return the number of scores
-	 * @throws BackingStoreException when reading the database fails
-	 */
-	public int numScores() throws BackingStoreException {
-		return scoreDatabase.keys().length;
-	}
-
-	/**
-	 * Clears the score database
-	 *
-	 * @throws BackingStoreException when clearing the database fails
-	 */
-	public void clear() throws BackingStoreException {
-		scoreDatabase.clear();
+		scores = getScores(Integer.MAX_VALUE);
 	}
 
 	/**
 	 * Sort the list of scores using merge sort.
 	 *
-	 * @param      scores  The list of scores to be sorted.
+	 * @param scores The list of scores to be sorted.
 	 */
 	private static List<Score> sortScores(List<Score> scores) {
 		if (scores.size() < 2)
@@ -154,5 +88,75 @@ public class Scoreboard {
 			else
 				sorted.add(lower.remove(0));
 		return sorted;
+	}
+
+	/**
+	 * Serializes and saves the scores
+	 *
+	 * @throws IOException when the save fails
+	 */
+	private void save() throws IOException {
+		ObjectOutputStream serializer = new ObjectOutputStream(new FileOutputStream(scoresLocation));
+		serializer.writeObject(scores);
+		serializer.close();
+	}
+
+	/**
+	 * Gets the top scores.
+	 *
+	 * @param numberOfItems The maximum number of scores to
+	 *                      retrieve
+	 * @return The top scores. The length of which will be the minimum of
+	 * the total number of scores and the numberOfItems.
+	 * @throws IOException when reading the scores file fails
+	 */
+	@SuppressWarnings("unchecked")
+	public List<Score> getScores(int numberOfItems) throws IOException {
+		// if scores file doesn't exist, then return an empty list
+		if (!(new File(scoresLocation)).exists()) {
+			scores = new ArrayList<Score>();
+			save();
+			return scores;
+		}
+		ObjectInputStream deserializer = new ObjectInputStream(new FileInputStream(scoresLocation));
+		try {
+			scores = (ArrayList<Score>) deserializer.readObject();
+		} catch (ClassNotFoundException e) {
+			Gdx.app.error("Hacking Attempted!", "Detected an invalid score file, crashing...");
+			Gdx.app.exit();
+		}
+		deserializer.close();
+		scores = sortScores(scores);
+		return scores.size() > numberOfItems ? scores.subList(0, numberOfItems) : scores;
+	}
+
+	/**
+	 * Adds a score to the database.
+	 *
+	 * @param score the score to add
+	 */
+	public void addScore(Score score) throws IOException {
+		scores.add(score);
+		save();
+	}
+
+	/**
+	 * Gets the number of scores in the database.
+	 *
+	 * @return the number of scores
+	 * @throws IOException when reading the scores list fails
+	 */
+	public int numScores() throws IOException {
+		return scores.size();
+	}
+
+	/**
+	 * Clears the score database
+	 *
+	 * @throws IOException when saving the scores list fails
+	 */
+	public void clear() throws IOException {
+		scores.clear();
+		save();
 	}
 }

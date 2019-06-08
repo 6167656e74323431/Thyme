@@ -18,7 +18,6 @@
 
 package ml.educationallydesigned.thyme.util;
 
-import ml.educationallydesigned.thyme.util.time.*;
 import ml.educationallydesigned.thyme.core.levels.EscapeRoom;
 
 /**
@@ -45,9 +44,8 @@ public class Survey extends Task {
 	/**
 	 * Submits the given numbers to the room class
 	 *
-	 * @param      givenAnswers  The given answers
-	 *
-	 * @return     true if all answers are integers, false otherwise.
+	 * @param givenAnswers The given answers
+	 * @return true if all answers are integers, false otherwise.
 	 */
 	@Override
 	public boolean submit(String[] givenAnswers) {
@@ -62,11 +60,12 @@ public class Survey extends Task {
 			try {
 				estimates[i] = Integer.parseInt(givenAnswers[i]);
 				attemptPercentage++;
-			} catch (NumberFormatException e) {}
+			} catch (NumberFormatException e) {
+			}
 		}
 
 		// calcualte percentage
-		attemptPercentage /= (double)givenAnswers.length;
+		attemptPercentage /= (double) givenAnswers.length;
 		attemptPercentage *= 100;
 
 		if (minPassPercentage <= attemptPercentage) {

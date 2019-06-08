@@ -35,7 +35,7 @@ import ml.educationallydesigned.thyme.Thyme;
 import ml.educationallydesigned.thyme.util.scoreboard.Score;
 import ml.educationallydesigned.thyme.util.scoreboard.Scoreboard;
 
-import java.util.prefs.BackingStoreException;
+import java.io.IOException;
 
 /**
  * Non-level game state.
@@ -86,7 +86,7 @@ public class LeaderboardScreen implements Screen {
 					scoresTable.row();
 				}
 			}
-		} catch (BackingStoreException e) {
+		} catch (IOException e) {
 			Gdx.app.error("Scoreboard", "Failed to read from database");
 			Gdx.app.exit();
 		}
@@ -103,7 +103,12 @@ public class LeaderboardScreen implements Screen {
 		stage = new Stage();
 		game.setInputProcessor(stage);
 		AssetManager manager = new AssetManager();
-		scoreboard = new Scoreboard();
+		try {
+			scoreboard = new Scoreboard();
+		} catch (IOException e) {
+			Gdx.app.error("Scoreboard", "Failed to read database");
+			Gdx.app.exit();
+		}
 
 		manager.load("logos/scoreboard.png", Texture.class);
 		manager.finishLoading();
@@ -139,7 +144,7 @@ public class LeaderboardScreen implements Screen {
 				// clear scoreboard and re-render scoreboard
 				try {
 					scoreboard.clear();
-				} catch (BackingStoreException e) {
+				} catch (IOException e) {
 					Gdx.app.error("Scoreboard", "Failed to clear database");
 					Gdx.app.exit();
 				}

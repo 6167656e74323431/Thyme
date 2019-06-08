@@ -22,8 +22,10 @@ import com.kotcrab.vis.ui.VisUI;
 import ml.educationallydesigned.thyme.core.screens.AnimationScreen;
 import ml.educationallydesigned.thyme.core.screens.HomeScreen;
 import ml.educationallydesigned.thyme.util.Skippable;
-import ml.educationallydesigned.thyme.util.scoreboard.*;
+import ml.educationallydesigned.thyme.util.scoreboard.Score;
+import ml.educationallydesigned.thyme.util.scoreboard.Scoreboard;
 
+import java.io.IOException;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -72,8 +74,8 @@ public class Thyme extends Game {
 		multiplexer.addProcessor(new InputAdapter() {
 			@Override
 			public boolean keyTyped(char character) {
-				if (character == (char)27 && screen instanceof Skippable) {
-					((Skippable)screen).skip();
+				if (character == (char) 27 && screen instanceof Skippable) {
+					((Skippable) screen).skip();
 					return true;
 				}
 				return false;
@@ -86,7 +88,7 @@ public class Thyme extends Game {
 	/**
 	 * Adds a score to the scores queue.
 	 *
-	 * @param      toAdd  The score tp be added
+	 * @param toAdd The score tp be added
 	 */
 	public void addScore(Score toAdd) {
 		scores.add(toAdd);
@@ -95,7 +97,7 @@ public class Thyme extends Game {
 	/**
 	 * Add the score to the scoreboard
 	 */
-	public void catScores(String name) {
+	public void catScores(String name) throws IOException {
 		int totalScore = 0;
 		while (!scores.isEmpty())
 			totalScore += scores.remove().score;

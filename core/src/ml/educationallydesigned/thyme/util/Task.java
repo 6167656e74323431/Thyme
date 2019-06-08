@@ -18,7 +18,7 @@
 
 package ml.educationallydesigned.thyme.util;
 
-import ml.educationallydesigned.thyme.util.time.*;
+import ml.educationallydesigned.thyme.util.time.Timer;
 
 /**
  * Class to store all data required for each individual in-game task.
@@ -46,13 +46,13 @@ public class Task {
 	/**
 	 * Constructs the task object.
 	 *
-	 * @param      title              The title of the task.
-	 * @param      description        The description of the task.
-	 * @param      questions          The questions needed to be answered for
-	 *                                this task.
-	 * @param      expectedAnswers    The expected answers that are required.
-	 * @param      minPassPercentage  The minimum pass percentage for the
-	 *                                questions.
+	 * @param title             The title of the task.
+	 * @param description       The description of the task.
+	 * @param questions         The questions needed to be answered for
+	 *                          this task.
+	 * @param expectedAnswers   The expected answers that are required.
+	 * @param minPassPercentage The minimum pass percentage for the
+	 *                          questions.
 	 */
 	public Task(String title, String description, String[] questions, String[] expectedAnswers, double minPassPercentage) {
 		this.title = title;
@@ -67,7 +67,7 @@ public class Task {
 	/**
 	 * Gets the title of the task.
 	 *
-	 * @return     The title of the task.
+	 * @return The title of the task.
 	 */
 	public String getTitle() {
 		return title;
@@ -76,7 +76,7 @@ public class Task {
 	/**
 	 * Gets the attempt percentage.
 	 *
-	 * @return     The attempt percentage.
+	 * @return The attempt percentage.
 	 */
 	public double getAttemptPercentage() {
 		return attemptPercentage;
@@ -85,7 +85,7 @@ public class Task {
 	/**
 	 * Gets the number of attempts.
 	 *
-	 * @return     The number of attempts.
+	 * @return The number of attempts.
 	 */
 	public int getNumOfAttempts() {
 		return numOfAttempts;
@@ -94,7 +94,7 @@ public class Task {
 	/**
 	 * Gets the description of the task.
 	 *
-	 * @return     The description of the task.
+	 * @return The description of the task.
 	 */
 	public String getDescription() {
 		return description;
@@ -103,7 +103,7 @@ public class Task {
 	/**
 	 * Gets the questions in the quiz.
 	 *
-	 * @return     The questions in the quiz.
+	 * @return The questions in the quiz.
 	 */
 	public String[] getQuestions() {
 		return questions;
@@ -112,7 +112,7 @@ public class Task {
 	/**
 	 * Gets the minimum pass percentage for the quiz.
 	 *
-	 * @return     The minimum pass percentage for the quiz.
+	 * @return The minimum pass percentage for the quiz.
 	 */
 	public double getMinPassPercentage() {
 		return minPassPercentage;
@@ -131,9 +131,8 @@ public class Task {
 	/**
 	 * Checks the answers for errors.
 	 *
-	 * @param      givenAnswers  The given answers to check
-	 *
-	 * @return     true if the task is completed, false otherwise.
+	 * @param givenAnswers The given answers to check
+	 * @return true if the task is completed, false otherwise.
 	 */
 	public boolean submit(String[] givenAnswers) {
 		this.givenAnswers = givenAnswers;
@@ -147,7 +146,7 @@ public class Task {
 				attemptPercentage++;
 
 		// calcualte percentage
-		attemptPercentage /= (double)expectedAnswers.length;
+		attemptPercentage /= (double) expectedAnswers.length;
 		attemptPercentage *= 100;
 
 		if (minPassPercentage <= attemptPercentage) {
@@ -160,19 +159,18 @@ public class Task {
 	/**
 	 * Gets the time elapsed since the start.
 	 *
-	 * @return     The timeelapsed since the sart in miliseconds.
+	 * @return The timeelapsed since the sart in miliseconds.
 	 */
 	public int getTime() {
-		return (int)(tracker.getTime() / 1000000);
+		return (int) (tracker.getTime() / 1000000);
 	}
 
 	/**
 	 * Compares two strings, sees if they are close enough
 	 *
-	 * @param      given   The given answer
-	 * @param      target  The target answer
-	 *
-	 * @return     true if given is correct enough, flase otherwise.
+	 * @param given  The given answer
+	 * @param target The target answer
+	 * @return true if given is correct enough, flase otherwise.
 	 */
 	private boolean check(String given, String target) {
 		return given.equals(target);
