@@ -42,6 +42,11 @@ import ml.educationallydesigned.thyme.util.browser.Page;
 
 /**
  * Class to implement our in-game browser.
+ * <b>Time Spent:</b>
+ * <ul>
+ * <li>Theodore - 0 min</li>
+ * <li>Larry - </li>
+ * </ul>
  *
  * @author Theodore Preduta
  * @author Larry Yuan

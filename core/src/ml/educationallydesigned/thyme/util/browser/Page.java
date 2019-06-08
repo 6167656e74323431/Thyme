@@ -25,6 +25,11 @@ import com.badlogic.gdx.utils.Array;
 
 /**
  * Class to represent a page on a web site.
+ * <b>Time Spent:</b>
+ * <ul>
+ * <li>Theodore - 0 min</li>
+ * <li>Larry - </li>
+ * </ul>
  *
  * @author Theodore Preduta
  * @author Larry Yuan

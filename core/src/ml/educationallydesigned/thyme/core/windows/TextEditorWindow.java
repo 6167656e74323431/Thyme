@@ -32,6 +32,11 @@ import java.util.ArrayList;
 
 /**
  * Class to implement the text editor window for in the Thyme game.
+ * <b>Time Spent:</b>
+ * <ul>
+ * <li>Theodore - 80 min</li>
+ * <li>Larry - </li>
+ * </ul>
  *
  * @author Theodore Preduta
  * @author Larry Yuan

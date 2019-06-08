@@ -29,6 +29,11 @@ import com.github.czyzby.lml.util.Lml;
 
 /**
  * Class to assist with the reading and parsing of web pages
+ * <b>Time Spent:</b>
+ * <ul>
+ * <li>Theodore - 0 min</li>
+ * <li>Larry - </li>
+ * </ul>
  *
  * @author Theodore Preduta
  * @author Larry Yuan

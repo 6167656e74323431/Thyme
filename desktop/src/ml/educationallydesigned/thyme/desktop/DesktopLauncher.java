@@ -23,12 +23,16 @@ import ml.educationallydesigned.thyme.Thyme;
 
 /**
  * Class to launch the game.
+ * <b>Time Spent:</b>
+ * <ul>
+ * <li>Theodore - 1 min</li>
+ * <li>Larry - </li>
+ * </ul>
  *
  * @author Theodore Preduta
  * @author Larry Yuan
  * @version 1.1
  */
-
 public class DesktopLauncher {
 	/**
 	 * Launcher for desktop application, configures Lwjgl with some settings.

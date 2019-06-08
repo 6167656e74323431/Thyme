@@ -39,6 +39,11 @@ import java.util.prefs.BackingStoreException;
 
 /**
  * Non-level game state.
+ * <b>Time Spent:</b>
+ * <ul>
+ * <li>Theodore - 0 min</li>
+ * <li>Larry - </li>
+ * </ul>
  *
  * @author Theodore Preduta
  * @author Larry Yuan

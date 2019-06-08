@@ -30,11 +30,15 @@ import com.kotcrab.vis.ui.widget.VisImage;
 import com.kotcrab.vis.ui.widget.VisTable;
 import com.kotcrab.vis.ui.widget.VisTextButton;
 import ml.educationallydesigned.thyme.Thyme;
-import ml.educationallydesigned.thyme.util.GameState;
 import ml.educationallydesigned.thyme.core.levels.*;
 
 /**
  * Non-level game state.
+ * <b>Time Spent:</b>
+ * <ul>
+ * <li>Theodore - 10 min</li>
+ * <li>Larry - </li>
+ * </ul>
  *
  * @author Theodore Preduta
  * @author Larry Yuan

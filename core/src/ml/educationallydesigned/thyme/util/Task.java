@@ -22,6 +22,11 @@ import ml.educationallydesigned.thyme.util.time.*;
 
 /**
  * Class to store all data required for each individual in-game task.
+ * <b>Time Spent:</b>
+ * <ul>
+ * <li>Theodore - 150 min</li>
+ * <li>Larry - </li>
+ * </ul>
  *
  * @author Theodore Preduta
  * @author Larry Yuan

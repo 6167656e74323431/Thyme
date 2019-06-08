@@ -30,6 +30,11 @@ import java.util.List;
 
 /**
  * Class that performs searching on the website index.
+ * <b>Time Spent:</b>
+ * <ul>
+ * <li>Theodore - 0 min</li>
+ * <li>Larry - </li>
+ * </ul>
  *
  * @author Larry Yuan
  * @author Theodore Preduta

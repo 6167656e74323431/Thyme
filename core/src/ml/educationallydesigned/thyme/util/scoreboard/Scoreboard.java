@@ -27,12 +27,16 @@ import java.util.prefs.Preferences;
 
 /**
  * Main interface for the scoreboard, handles reading and writing.
+ * <b>Time Spent:</b>
+ * <ul>
+ * <li>Theodore - 20 min</li>
+ * <li>Larry - </li>
+ * </ul>
  *
  * @author Theodore Preduta
  * @author Larry Yuan
  * @version 1.0
  */
-
 public class Scoreboard {
 	private static final String SCOREBOARD_NODE = "ml/educationallydesigned/thyme/core/Scoreboard";
 	private static final int ID_LENGTH = 16;

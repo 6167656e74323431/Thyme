@@ -20,6 +20,11 @@ package ml.educationallydesigned.thyme.util.time;
 
 /**
  * Class to abstract the time functionality for the video game.
+ * <b>Time Spent:</b>
+ * <ul>
+ * <li>Theodore - 10 min</li>
+ * <li>Larry - </li>
+ * </ul>
  *
  * @author Theodore Preduta
  * @author Larry Yuan
