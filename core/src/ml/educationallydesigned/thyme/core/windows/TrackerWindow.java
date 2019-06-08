@@ -20,6 +20,7 @@ package ml.educationallydesigned.thyme.core.windows;
 
 import com.kotcrab.vis.ui.VisUI;
 import com.kotcrab.vis.ui.widget.*;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
@@ -32,11 +33,14 @@ import ml.educationallydesigned.thyme.core.levels.GameLevel;
  *
  * @author Theodore Preduta
  * @author Larry Yuan
- * @version 1.4bv
+ * @version 1.5
  */
 public class TrackerWindow extends DesktopWindow {
 	private Task currentTask;
 	private GameLevel level;
+	private VisLabel title;
+	private VisLabel description;
+	private VisLabel accuracy;
 
 	/**
 	 * Creates a new tracker window and allows the specification of the task
@@ -47,18 +51,44 @@ public class TrackerWindow extends DesktopWindow {
 	 */
 	public TrackerWindow(Task currentTask, GameLevel level) {
 		super("Current Task");
-		this.currentTask = currentTask;
 		this.level = level;
 
 		setWidth(500);
 		setHeight(500);
 		align(Align.topLeft);
 
-		VisLabel label = new VisLabel(currentTask.getTitle());
-		label.setWrap(true);
-		add(label).row();
-		label = new VisLabel(currentTask.getDescription());
-		label.setWrap(true);
-		add(label).row();
+		// create the window
+		VisTable mainContainer = new VisTable();
+
+		title = new VisLabel("");
+		mainContainer.add(title).row();
+		
+		description = new VisLabel("");
+		VisLabel.LabelStyle descriptionStyle = description.getStyle();
+		descriptionStyle.font = VisUI.getSkin().getFont("small-font");
+		description.setStyle(descriptionStyle);
+		description.setWrap(true);
+		mainContainer.add(description).row();
+
+		accuracy = new VisLabel("");
+		mainContainer.add(accuracy).row();
+
+		add(mainContainer);
+
+		// set the text in the window
+		updateTask(currentTask);
+	}
+
+	/**
+	 * Changes the task that is being displayed.
+	 *
+	 * @param      t     The task that is being displayed.
+	 */
+	public void updateTask(Task t) {
+		currentTask = t;
+
+		title.setText(currentTask.getTitle());
+		description.setText(currentTask.getDescription());
+		accuracy.setText("Pass Percentage: " + currentTask.getMinPassPercentage() + "%");
 	}
 }

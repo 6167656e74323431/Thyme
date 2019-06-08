@@ -29,6 +29,7 @@ import com.badlogic.gdx.scenes.scene2d.Stage;
 import ml.educationallydesigned.thyme.core.windows.*;
 import ml.educationallydesigned.thyme.util.*;
 import ml.educationallydesigned.thyme.core.screens.*;
+import ml.educationallydesigned.thyme.util.scoreboard.*;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -48,7 +49,6 @@ public class GameLevel implements Screen {
 	protected List<Task> tasks;
 	protected int currentTask;
 	protected Queue<Actor> windows;
-	protected boolean scoreable;
 
 	/**
 	 * Initiates the class with the game.
@@ -58,7 +58,6 @@ public class GameLevel implements Screen {
 	public GameLevel(Thyme game) {
 		this.game = game;
 		game.setScreen(this);
-		scoreable = false;
 	}
 
 	/**
@@ -129,19 +128,21 @@ public class GameLevel implements Screen {
 	 *
 	 * @param      givenAnswers  The given answers.
 	 */
-	public void submit(String[] givenAnswers) {
+	public boolean submit(String[] givenAnswers) {
 		if (tasks.get(currentTask).submit(givenAnswers)) {
 			currentTask++;
 			if (currentTask < tasks.size()) {
 				resetWindows();
 				tasks.get(currentTask).start();
 			} else {
-				if (scoreable)
-					enterScore(calcScore());
+				enterScore();
 				game.setScreen(new HomeScreen(game));
 			}
-		} else
+			return true;
+		} else {
 			resetWindows();
+			return false;
+		}
 	}
 
 	/**
@@ -167,17 +168,15 @@ public class GameLevel implements Screen {
 	 *
 	 * @return     0
 	 */
-	private int calcScore() {
+	protected int calcScore() {
 		return 0;
 	}
 
 	/**
 	 * Add the score to the scoreboard
-	 *
-	 * @param      score  The score of this game.
 	 */
-	private void enterScore(int score) {
-		// TODO
+	private void enterScore() {
+		game.addScore(new Score("", calcScore()));
 	}
 
 	/**

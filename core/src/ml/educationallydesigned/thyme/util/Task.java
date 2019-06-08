@@ -25,18 +25,18 @@ import ml.educationallydesigned.thyme.util.time.*;
  *
  * @author Theodore Preduta
  * @author Larry Yuan
- * @version 2.1
+ * @version 2.2
  */
 public class Task {
-	private String title;
-	private String description;
-	private String[] questions;
-	private String[] expectedAnswers;
-	private String[] givenAnswers;
-	private double minPassPercentage;
-	private double attemptPercentage;
-	private int numOfAttempts;
-	private Timer tracker;
+	protected String title;
+	protected String description;
+	protected String[] questions;
+	protected String[] expectedAnswers;
+	protected String[] givenAnswers;
+	protected double minPassPercentage;
+	protected double attemptPercentage;
+	protected int numOfAttempts;
+	protected Timer tracker;
 
 	/**
 	 * Constructs the task object.
@@ -66,6 +66,24 @@ public class Task {
 	 */
 	public String getTitle() {
 		return title;
+	}
+
+	/**
+	 * Gets the attempt percentage.
+	 *
+	 * @return     The attempt percentage.
+	 */
+	public double getAttemptPercentage() {
+		return attemptPercentage;
+	}
+
+	/**
+	 * Gets the number of attempts.
+	 *
+	 * @return     The number of attempts.
+	 */
+	public int getNumOfAttempts() {
+		return numOfAttempts;
 	}
 
 	/**

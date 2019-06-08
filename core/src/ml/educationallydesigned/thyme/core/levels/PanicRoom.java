@@ -28,6 +28,7 @@ import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import ml.educationallydesigned.thyme.core.windows.*;
 import ml.educationallydesigned.thyme.util.*;
+import ml.educationallydesigned.thyme.util.time.*;
 import ml.educationallydesigned.thyme.core.screens.*;
 
 import java.util.ArrayList;
@@ -40,9 +41,11 @@ import java.util.Queue;
  *
  * @author Theodore Preduta
  * @author Larry Yuan
- * @version 1.1
+ * @version 1.2
  */
 public class PanicRoom extends GameLevel {
+	private Timer totalTime;
+
 	/**
 	 * Constructs the object.
 	 *
@@ -59,9 +62,9 @@ public class PanicRoom extends GameLevel {
 	public void show() {
 		// call GameLevel's show to initilize protected variables
 		super.show();
-		
+
 		tasks.add(TaskGenerator.generateTask());
-		
+
 		// open the windows
 		TrackerWindow tracker = new TrackerWindow(tasks.get(currentTask), this);
 		TextEditorWindow editor = new TextEditorWindow(tasks.get(currentTask), this);
@@ -72,5 +75,19 @@ public class PanicRoom extends GameLevel {
 
 		// start current task
 		tasks.get(currentTask).start();
+
+		totalTime = new Timer();
+	}
+
+	/**
+	 * Calculates the score once this level is done.
+	 *
+	 * @return     the score for the panic room.
+	 */
+	@Override
+	protected int calcScore() {
+		totalTime.stop();
+
+		return Math.max(0, 10000 - (int)(totalTime.getTime() / 100000000L) + 3000);
 	}
 }

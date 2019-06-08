@@ -22,15 +22,21 @@ import com.kotcrab.vis.ui.VisUI;
 import ml.educationallydesigned.thyme.core.screens.AnimationScreen;
 import ml.educationallydesigned.thyme.core.screens.HomeScreen;
 import ml.educationallydesigned.thyme.util.Skippable;
+import ml.educationallydesigned.thyme.util.scoreboard.*;
+
+import java.util.LinkedList;
+import java.util.Queue;
 
 /**
  * Launches the game by displaying the first screen.
  *
  * @author Larry Yuan
  * @author Theodore Preduta
- * @version 1.1
+ * @version 1.3
  */
 public class Thyme extends Game {
+	private Queue<Score> scores;
+
 	/**
 	 * Show the intro animation or the home screen.
 	 * <p>
@@ -38,6 +44,8 @@ public class Thyme extends Game {
 	 */
 	@Override
 	public void create() {
+		scores = new LinkedList<Score>();
+
 		VisUI.load(VisUI.SkinScale.X2);
 		// check if windows or linux
 		// libgdx-video does not currently work well with ffmpeg on linux.
@@ -68,5 +76,34 @@ public class Thyme extends Game {
 		});
 		multiplexer.addProcessor(processor);
 		Gdx.input.setInputProcessor(multiplexer);
+	}
+
+	/**
+	 * Adds a score to the scores queue.
+	 *
+	 * @param      toAdd  The score tp be added
+	 */
+	public void addScore(Score toAdd) {
+		scores.add(toAdd);
+	}
+
+	/**
+	 * Add the score to the scoreboard
+	 */
+	public void catScores(String name) {
+		int totalScore = 0;
+		while (!scores.isEmpty())
+			totalScore += scores.remove().score;
+
+		// add the score to the scoreboard
+		(new Scoreboard()).addScore(new Score(name, totalScore));
+	}
+
+	/**
+	 * Clear the queue of scores.
+	 */
+	public void clearScores() {
+		while (!scores.isEmpty())
+			scores.remove();
 	}
 }
