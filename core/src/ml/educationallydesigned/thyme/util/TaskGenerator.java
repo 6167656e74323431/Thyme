@@ -22,6 +22,11 @@ import java.util.Random;
 
 /**
  * Class to generate random tasks.
+ * <b>Time Spent:</b>
+ * <ul>
+ * <li>Theodore - 20 min</li>
+ * <li>Larry - </li>
+ * </ul>
  *
  * @author Theodore Preduta
  * @author Larry Yuan

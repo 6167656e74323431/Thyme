@@ -20,7 +20,22 @@
 
 package ml.educationallydesigned.thyme.util.browser;
 
+/**
+ * That contains a custom exception for the browser
+ * <b>Time Spent:</b>
+ * <ul>
+ * <li>Theodore - 0 min</li>
+ * <li>Larry - </li>
+ * </ul>
+ *
+ * @author Theodore Preduta
+ * @author Larry Yuan
+ * @version 1.1
+ */
 public class NotFoundException extends Exception {
+	/**
+	 * Constructs the object.
+	 */
 	public NotFoundException() {
 		super("Page not found");
 	}

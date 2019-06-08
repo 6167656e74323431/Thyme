@@ -37,7 +37,12 @@ import java.util.Queue;
 
 /**
  * Class to implement the first room gamemode.
- *
+ * <b>Time Spent:</b>
+ * <ul>
+ * <li>Theodore - 30 min</li>
+ * <li>Larry - </li>
+ * </ul>
+ * 
  * @author Theodore Preduta
  * @author Larry Yuan
  * @version 1.2

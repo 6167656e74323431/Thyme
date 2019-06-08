@@ -23,6 +23,11 @@ import ml.educationallydesigned.thyme.core.levels.EscapeRoom;
 
 /**
  * Class to store all data required for each individual in-game survey.
+ * <b>Time Spent:</b>
+ * <ul>
+ * <li>Theodore - 20 min</li>
+ * <li>Larry - </li>
+ * </ul>
  *
  * @author Theodore Preduta
  * @author Larry Yuan

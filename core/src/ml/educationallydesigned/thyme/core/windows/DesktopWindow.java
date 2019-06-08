@@ -26,6 +26,11 @@ import com.kotcrab.vis.ui.widget.VisWindow;
 
 /**
  * Class to outline and implement some methods that all winows have.
+ * <b>Time Spent:</b>
+ * <ul>
+ * <li>Theodore - 1 min</li>
+ * <li>Larry - </li>
+ * </ul>
  *
  * @author Theodore Preduta
  * @author Larry Yuan

@@ -20,6 +20,11 @@ package ml.educationallydesigned.thyme.util;
 
 /**
  * Interface that describs skippable classes
+ * <b>Time Spent:</b>
+ * <ul>
+ * <li>Theodore - 10 min</li>
+ * <li>Larry - </li>
+ * </ul>
  *
  * @author Theodore Preduta
  * @author Larry Yuan

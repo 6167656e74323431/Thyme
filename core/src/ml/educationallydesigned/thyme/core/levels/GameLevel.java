@@ -38,6 +38,11 @@ import java.util.Queue;
 
 /**
  * Game that contains all the methods that all levels have.
+ * <b>Time Spent:</b>
+ * <ul>
+ * <li>Theodore - 100 min</li>
+ * <li>Larry - </li>
+ * </ul>
  *
  * @author Theodore Preduta
  * @author Larry Yuan

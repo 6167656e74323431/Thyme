@@ -30,6 +30,11 @@ import ml.educationallydesigned.thyme.core.levels.GameLevel;
 
 /**
  * Window to track the progress of tasks in the game.
+ * <b>Time Spent:</b>
+ * <ul>
+ * <li>Theodore - 60 min</li>
+ * <li>Larry - </li>
+ * </ul>
  *
  * @author Theodore Preduta
  * @author Larry Yuan

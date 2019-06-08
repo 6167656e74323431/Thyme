@@ -24,6 +24,11 @@ import com.badlogic.gdx.graphics.Texture;
 
 /**
  * Class representing a bookmark
+ * <b>Time Spent:</b>
+ * <ul>
+ * <li>Theodore - 0 min</li>
+ * <li>Larry - </li>
+ * </ul>
  *
  * @author Theodore Preduta
  * @author Larry Yuan

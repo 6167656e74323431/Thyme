@@ -29,6 +29,11 @@ import java.io.FileNotFoundException;
 
 /**
  * Screen that displays the intro
+ * <b>Time Spent:</b>
+ * <ul>
+ * <li>Theodore - 15 min</li>
+ * <li>Larry - </li>
+ * </ul>
  *
  * @author Theodore Preduta
  * @author Larry Yuan

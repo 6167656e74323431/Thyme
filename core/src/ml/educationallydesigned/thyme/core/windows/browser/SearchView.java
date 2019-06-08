@@ -38,6 +38,11 @@ import java.util.List;
 
 /**
  * Class representing a GUI to search through each website.
+ * <b>Time Spent:</b>
+ * <ul>
+ * <li>Theodore - 0 min</li>
+ * <li>Larry - </li>
+ * </ul>
  *
  * @author Larry Yuan
  * @author Theodore Preduta
