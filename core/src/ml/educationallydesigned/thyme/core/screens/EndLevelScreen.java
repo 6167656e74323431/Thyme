@@ -19,6 +19,10 @@
 package ml.educationallydesigned.thyme.core.screens;
 
 import com.badlogic.gdx.*;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.scenes.scene2d.Actor;
+import com.badlogic.gdx.scenes.scene2d.ui.Label;
+import com.badlogic.gdx.utils.Align;
 import ml.educationallydesigned.thyme.Thyme;
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Game;
@@ -39,6 +43,7 @@ import ml.educationallydesigned.thyme.util.task.Task;
 import com.kotcrab.vis.ui.VisUI;
 import com.kotcrab.vis.ui.widget.*;
 
+import java.awt.*;
 import java.util.List;
 
 /**
@@ -86,31 +91,53 @@ public class EndLevelScreen implements Screen {
 		game.setInputProcessor(stage);
 		// make table
 		VisTable table = new VisTable();
+		table.align(Align.center);
 		table.setFillParent(true);
 		// make title
 		VisLabel gameTitle = new VisLabel("Level Completed");
+		VisLabel.LabelStyle titleStyle = new Label.LabelStyle();
+		titleStyle.font = new BitmapFont(Gdx.files.internal("skins/fonts/arial_large.fnt"));
+		gameTitle.setStyle(titleStyle);
 		table.add(gameTitle).padBottom(20);
 		table.row();
+
+		VisTable scoresTable = new VisTable();
+		scoresTable.align(Align.center);
 		// add the stats
 		for (Task t : tasks) {
 			VisLabel title = new VisLabel(t.getTitle());
-			table.add(title).width(100);
+			title.setAlignment(Align.left);
+			scoresTable.add(title).width(500 / 3);
 
 			VisLabel time = new VisLabel(t.getTime() / 1000 + "s");
-			table.add(time).width(100);
+			time.setAlignment(Align.center);
+			scoresTable.add(time).width(500 / 3);
 
 			VisLabel accuracy = new VisLabel(t.getAttemptPercentage() + "%");
-			table.add(accuracy).width(100).row();
+			accuracy.setAlignment(Align.right);
+			scoresTable.add(accuracy).width(500 / 3).row();
 		}
+		table.add(scoresTable).padBottom(20).row();
+
+		// add the points earned
+		VisTable pointsEarnedTable = new VisTable();
+		VisLabel pointsLabel = new VisLabel("Points Earned");
+		pointsLabel.setAlignment(Align.left);
+		pointsEarnedTable.add(pointsLabel).width(500 / 3 * 2);
+		VisLabel pointsEarned = new VisLabel(String.valueOf(points));
+		pointsEarned.setAlignment(Align.right);
+		pointsEarnedTable.add(pointsEarned).width(500 / 3);
+		table.add(pointsEarnedTable).align(Align.right).padBottom(20).row();
+
+		VisTable buttonTable = new VisTable();
 		// add buttons
 		VisTextButton continueGame = new VisTextButton("Continue");
-		table.add(continueGame).width(500).height(80).padBottom(20);
-		table.row();
+		buttonTable.add(continueGame).width(500).height(80).padBottom(20).row();
 
 		VisTextButton exit = new VisTextButton("Main Menu");
-		table.add(exit).width(500).height(80).padBottom(20);
-		table.row();
+		buttonTable.add(exit).width(500).height(80).padBottom(20).row();
 
+		table.add(buttonTable).row();
 		// add listeners
 		continueGame.addListener(new ClickListener() {
 			@Override
@@ -131,12 +158,6 @@ public class EndLevelScreen implements Screen {
 				game.setScreen(new HomeScreen(game));
 			}
 		});
-
-		VisLabel time = new VisLabel("Points Earned");
-		table.add(time).width(100);
-
-		VisLabel accuracy = new VisLabel(points + "");
-		table.add(accuracy).width(100).row();
 
 		stage.addActor(table);
 	}
