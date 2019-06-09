@@ -22,8 +22,9 @@ import com.badlogic.gdx.Game;
 import ml.educationallydesigned.thyme.Thyme;
 import ml.educationallydesigned.thyme.core.windows.TextEditorWindow;
 import ml.educationallydesigned.thyme.core.windows.TrackerWindow;
-import ml.educationallydesigned.thyme.util.Task;
-import ml.educationallydesigned.thyme.util.TaskGenerator;
+import ml.educationallydesigned.thyme.core.windows.browser.BrowserWindow;
+import ml.educationallydesigned.thyme.util.task.Task;
+import ml.educationallydesigned.thyme.util.task.TaskGenerator;
 
 /**
  * Class to implement the first room gamemode.
@@ -59,12 +60,11 @@ public class DeficiencyRoom extends GameLevel {
 				"What is the name of the browser?"};
 
 		String[] tutorialAnswers = {"LarryOffice",
-				"?"};
+				"Browser"};
 
-		tasks.add(new Task("Tutorial", "Explore the desktop, and see if you can answer the questions in the editor.",
-				tutorialQuestions, tutorialAnswers, 100.0) {
+		tasks.add(new Task("Tutorial", "Explore the desktop, and see if you can answer the questions in the editor.", tutorialQuestions, tutorialAnswers, 100.0) {
 			private boolean check(String given, String target) {
-				return given.indexOf(target) >= 0;
+				return given.toLowerCase().contains(target.toLowerCase());
 			}
 		});
 
@@ -77,6 +77,7 @@ public class DeficiencyRoom extends GameLevel {
 		windows.add(tracker);
 		stage.addActor(editor);
 		windows.add(editor);
+		stage.addActor(new BrowserWindow());
 
 		// start current task
 		tasks.get(currentTask).start();

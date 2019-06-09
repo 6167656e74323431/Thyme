@@ -22,7 +22,7 @@ import com.badlogic.gdx.Game;
 import ml.educationallydesigned.thyme.Thyme;
 import ml.educationallydesigned.thyme.core.windows.TextEditorWindow;
 import ml.educationallydesigned.thyme.core.windows.TrackerWindow;
-import ml.educationallydesigned.thyme.util.TaskGenerator;
+import ml.educationallydesigned.thyme.util.task.TaskGenerator;
 import ml.educationallydesigned.thyme.util.time.Timer;
 
 /**
