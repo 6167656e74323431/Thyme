@@ -58,7 +58,7 @@ public class Thyme extends Game {
 		// check if windows or linux
 		// libgdx-video does not currently work well with ffmpeg on linux.
 		if (System.getProperty("os.name").toLowerCase().contains("win")) {
-			this.setScreen(new DeficiencyRoom(this));
+			this.setScreen(new AnimationScreen(this));
 		} else {
 			this.setScreen(new HomeScreen(this));
 		}
