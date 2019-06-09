@@ -49,13 +49,13 @@ import java.util.Queue;
  * Game that contains all the methods that all levels have.
  * <b>Time Spent:</b>
  * <ul>
- * <li>Theodore - 100 min</li>
- * <li>Larry - min</li>
+ * <li>Theodore - 120 min</li>
+ * <li>Larry - 20min</li>
  * </ul>
  *
  * @author Theodore Preduta
  * @author Larry Yuan
- * @version 1.1
+ * @version 1.2
  */
 public class GameLevel implements Screen {
 	protected Thyme game;
@@ -63,6 +63,7 @@ public class GameLevel implements Screen {
 	protected List<Task> tasks;
 	protected int currentTask;
 	protected Queue<Actor> windows;
+	protected TrackerWindow tracker;
 
 	/**
 	 * Initiates the class with the game.
@@ -96,8 +97,11 @@ public class GameLevel implements Screen {
 		iconsTable.align(Align.topLeft);
 
 		DesktopIcon larryOfficeIcon = new DesktopIcon("Larry Office", new TextureRegionDrawable(manager.get("icons/writer.png", Texture.class))) {
+			@Override
 			public void clicked() {
-				// THEODORE: IMPLEMENT!
+				TextEditorWindow win = new TextEditorWindow(GameLevel.this.getActiveTask(), GameLevel.this);
+				GameLevel.this.getStage().addActor(win);
+				GameLevel.this.addToQueue(win);
 			}
 		};
 		iconsTable.add(larryOfficeIcon).padBottom(20).row();
@@ -105,7 +109,8 @@ public class GameLevel implements Screen {
 		DesktopIcon browserIcon = new DesktopIcon("Browser", new TextureRegionDrawable(manager.get("icons/browser.png", Texture.class))) {
 			@Override
 			public void clicked() {
-				// THEODORE: IMPLEMENT!
+				BrowserWindow win = new BrowserWindow(); 
+				GameLevel.this.getStage().addActor(win);
 			}
 		};
 		iconsTable.add(browserIcon).padBottom(20).row();
@@ -164,10 +169,40 @@ public class GameLevel implements Screen {
 	}
 
 	/**
+	 * Gets the active task.
+	 *
+	 * @return     The active task.
+	 */
+	public Task getActiveTask() {
+		return tasks.get(currentTask);
+	}
+
+	/**
+	 * Gets the stage of the window.
+	 *
+	 * @return     The stage.
+	 */
+	public Stage getStage() {
+		return stage;
+	}
+
+	/**
+	 * Adds an actor to the queue of windows to be closed.
+	 *
+	 * @param      a     The window that should be cloased at the end of a
+	 *                   submission.
+	 */
+	public void addToQueue(Actor a) {
+		windows.add(a);
+	}
+
+	/**
 	 * Submits a set of answers to the current task, increments the current task
 	 * if necessary, and updates windows.
 	 *
-	 * @param givenAnswers The given answers.
+	 * @param      givenAnswers  The given answers.
+	 *
+	 * @return     true if they passed, false otherwise.
 	 */
 	public boolean submit(String[] givenAnswers) {
 		if (tasks.get(currentTask).submit(givenAnswers)) {
@@ -175,6 +210,7 @@ public class GameLevel implements Screen {
 			if (currentTask < tasks.size()) {
 				resetWindows();
 				tasks.get(currentTask).start();
+				tracker.updateTask(tasks.get(currentTask));
 			} else {
 				enterScore();
 				game.setScreen(new HomeScreen(game));
@@ -227,12 +263,5 @@ public class GameLevel implements Screen {
 		// close windows
 		while (!windows.isEmpty())
 			windows.remove().remove();
-
-		TrackerWindow tracker = new TrackerWindow(tasks.get(currentTask), this);
-		TextEditorWindow editor = new TextEditorWindow(tasks.get(currentTask), this);
-		stage.addActor(tracker);
-		windows.add(tracker);
-		stage.addActor(editor);
-		windows.add(editor);
 	}
 }
