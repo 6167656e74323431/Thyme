@@ -22,14 +22,21 @@ import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
+import com.badlogic.gdx.utils.Align;
+import com.kotcrab.vis.ui.widget.VisImageTextButton;
+import com.kotcrab.vis.ui.widget.VisTable;
 import ml.educationallydesigned.thyme.Thyme;
 import ml.educationallydesigned.thyme.core.screens.HomeScreen;
 import ml.educationallydesigned.thyme.core.windows.TextEditorWindow;
 import ml.educationallydesigned.thyme.core.windows.TrackerWindow;
 import ml.educationallydesigned.thyme.core.windows.browser.BrowserWindow;
+import ml.educationallydesigned.thyme.util.desktop.DesktopIcon;
 import ml.educationallydesigned.thyme.util.task.Task;
 import ml.educationallydesigned.thyme.util.scoreboard.Score;
 
@@ -72,10 +79,37 @@ public class GameLevel implements Screen {
 	 */
 	@Override
 	public void show() {
+		AssetManager manager = new AssetManager();
+		manager.load("icons/writer.png", Texture.class);
+		manager.load("icons/browser.png", Texture.class);
+		manager.finishLoading();
 		stage = new Stage();
 		game.setInputProcessor(stage);
 		tasks = new ArrayList<Task>();
 		windows = new LinkedList<Actor>();
+
+		VisTable iconsTable = new VisTable();
+		iconsTable.padLeft(20);
+		iconsTable.padTop(20);
+		iconsTable.setWidth(300);
+		iconsTable.setHeight(Gdx.graphics.getHeight());
+		iconsTable.align(Align.topLeft);
+
+		DesktopIcon larryOfficeIcon = new DesktopIcon("Larry Office", new TextureRegionDrawable(manager.get("icons/writer.png", Texture.class))) {
+			public void clicked() {
+				// THEODORE: IMPLEMENT!
+			}
+		};
+		iconsTable.add(larryOfficeIcon).padBottom(20).row();
+
+		DesktopIcon browserIcon = new DesktopIcon("Browser", new TextureRegionDrawable(manager.get("icons/browser.png", Texture.class))) {
+			@Override
+			public void clicked() {
+				// THEODORE: IMPLEMENT!
+			}
+		};
+		iconsTable.add(browserIcon).padBottom(20).row();
+		stage.addActor(iconsTable);
 		currentTask = 0;
 	}
 
