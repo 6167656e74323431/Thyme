@@ -43,7 +43,7 @@ import java.util.Queue;
  * <b>Time Spent:</b>
  * <ul>
  * <li>Theodore - 100 min</li>
- * <li>Larry - </li>
+ * <li>Larry - min</li>
  * </ul>
  *
  * @author Theodore Preduta

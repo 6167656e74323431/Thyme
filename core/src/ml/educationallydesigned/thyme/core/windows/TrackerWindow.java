@@ -30,7 +30,7 @@ import ml.educationallydesigned.thyme.util.task.Task;
  * <b>Time Spent:</b>
  * <ul>
  * <li>Theodore - 60 min</li>
- * <li>Larry - </li>
+ * <li>Larry - 30 min</li>
  * </ul>
  *
  * @author Theodore Preduta
