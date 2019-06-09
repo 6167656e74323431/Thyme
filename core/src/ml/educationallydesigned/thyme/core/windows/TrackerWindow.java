@@ -23,14 +23,14 @@ import com.kotcrab.vis.ui.VisUI;
 import com.kotcrab.vis.ui.widget.VisLabel;
 import com.kotcrab.vis.ui.widget.VisTable;
 import ml.educationallydesigned.thyme.core.levels.GameLevel;
-import ml.educationallydesigned.thyme.util.Task;
+import ml.educationallydesigned.thyme.util.task.Task;
 
 /**
  * Window to track the progress of tasks in the game.
  * <b>Time Spent:</b>
  * <ul>
  * <li>Theodore - 60 min</li>
- * <li>Larry - </li>
+ * <li>Larry - 30 min</li>
  * </ul>
  *
  * @author Theodore Preduta
@@ -38,6 +38,8 @@ import ml.educationallydesigned.thyme.util.Task;
  * @version 1.5
  */
 public class TrackerWindow extends DesktopWindow {
+	private static int DEFAULT_WIDTH = 500;
+	private static int DEFAULT_HEIGHT = 200;
 	private Task currentTask;
 	private GameLevel level;
 	private VisLabel title;
@@ -54,29 +56,35 @@ public class TrackerWindow extends DesktopWindow {
 	public TrackerWindow(Task currentTask, GameLevel level) {
 		super("Current Task");
 		this.level = level;
-
-		setWidth(500);
-		setHeight(500);
-		align(Align.topLeft);
-
+		this.setWidth(DEFAULT_WIDTH);
+		this.setHeight(DEFAULT_HEIGHT);
+		this.align(Align.topLeft);
 		// create the window
 		VisTable mainContainer = new VisTable();
+		mainContainer.align(Align.top);
+		mainContainer.padLeft(20);
 
 		title = new VisLabel("");
-		mainContainer.add(title).row();
+		VisLabel.LabelStyle titleStyle = title.getStyle();
+		titleStyle.font = VisUI.getSkin().getFont("default-font");
+		title.setStyle(titleStyle);
+		mainContainer.add(title).width(DEFAULT_WIDTH).row();
 
 		description = new VisLabel("");
 		VisLabel.LabelStyle descriptionStyle = description.getStyle();
 		descriptionStyle.font = VisUI.getSkin().getFont("small-font");
 		description.setStyle(descriptionStyle);
 		description.setWrap(true);
-		mainContainer.add(description).row();
+		mainContainer.add(description).width(DEFAULT_WIDTH).row();
 
 		accuracy = new VisLabel("");
-		mainContainer.add(accuracy).row();
+		mainContainer.add(accuracy).width(DEFAULT_WIDTH).row();
 
-		add(mainContainer);
-
+		add(mainContainer).width(DEFAULT_WIDTH);
+		setX(0);
+		setY(0);
+		// remove close button
+		getTitleTable().removeActor(getTitleTable().getChildren().get(1));
 		// set the text in the window
 		updateTask(currentTask);
 	}
@@ -88,7 +96,6 @@ public class TrackerWindow extends DesktopWindow {
 	 */
 	public void updateTask(Task t) {
 		currentTask = t;
-
 		title.setText(currentTask.getTitle());
 		description.setText(currentTask.getDescription());
 		accuracy.setText("Pass Percentage: " + currentTask.getMinPassPercentage() + "%");

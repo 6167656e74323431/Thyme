@@ -29,7 +29,8 @@ import ml.educationallydesigned.thyme.Thyme;
 import ml.educationallydesigned.thyme.core.screens.HomeScreen;
 import ml.educationallydesigned.thyme.core.windows.TextEditorWindow;
 import ml.educationallydesigned.thyme.core.windows.TrackerWindow;
-import ml.educationallydesigned.thyme.util.Task;
+import ml.educationallydesigned.thyme.core.windows.browser.BrowserWindow;
+import ml.educationallydesigned.thyme.util.task.Task;
 import ml.educationallydesigned.thyme.util.scoreboard.Score;
 
 import java.util.ArrayList;
@@ -42,7 +43,7 @@ import java.util.Queue;
  * <b>Time Spent:</b>
  * <ul>
  * <li>Theodore - 100 min</li>
- * <li>Larry - </li>
+ * <li>Larry - min</li>
  * </ul>
  *
  * @author Theodore Preduta

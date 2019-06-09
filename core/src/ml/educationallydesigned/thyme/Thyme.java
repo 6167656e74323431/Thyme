@@ -19,6 +19,7 @@ package ml.educationallydesigned.thyme;
 
 import com.badlogic.gdx.*;
 import com.kotcrab.vis.ui.VisUI;
+import ml.educationallydesigned.thyme.core.levels.DeficiencyRoom;
 import ml.educationallydesigned.thyme.core.screens.AnimationScreen;
 import ml.educationallydesigned.thyme.core.screens.HomeScreen;
 import ml.educationallydesigned.thyme.util.Skippable;
@@ -57,7 +58,7 @@ public class Thyme extends Game {
 		// check if windows or linux
 		// libgdx-video does not currently work well with ffmpeg on linux.
 		if (System.getProperty("os.name").toLowerCase().contains("win")) {
-			this.setScreen(new AnimationScreen(this));
+			this.setScreen(new DeficiencyRoom(this));
 		} else {
 			this.setScreen(new HomeScreen(this));
 		}

@@ -25,7 +25,7 @@ import com.kotcrab.vis.ui.widget.VisLabel;
 import com.kotcrab.vis.ui.widget.VisTextButton;
 import com.kotcrab.vis.ui.widget.VisTextField;
 import ml.educationallydesigned.thyme.core.levels.GameLevel;
-import ml.educationallydesigned.thyme.util.Task;
+import ml.educationallydesigned.thyme.util.task.Task;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,7 +35,7 @@ import java.util.List;
  * <b>Time Spent:</b>
  * <ul>
  * <li>Theodore - 80 min</li>
- * <li>Larry - </li>
+ * <li>Larry - 30 min</li>
  * </ul>
  *
  * @author Theodore Preduta
@@ -60,16 +60,15 @@ public class TextEditorWindow extends DesktopWindow {
 
 		setWidth(500);
 		setHeight(500);
-		align(Align.topLeft);
+		align(Align.top);
 
 		answerBoxes = new ArrayList<VisTextField>();
 
 		for (String question : currentTask.getQuestions()) {
 			VisTextField field = new VisTextField();
-
-			add(new VisLabel(question)).row();
-			add(field).row();
-
+			field.setAlignment(Align.center);
+			add(new VisLabel(question)).padBottom(20).row();
+			add(field).padBottom(20).width(200).row();
 			answerBoxes.add(field);
 		}
 

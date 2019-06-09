@@ -22,9 +22,9 @@ import com.badlogic.gdx.Game;
 import ml.educationallydesigned.thyme.Thyme;
 import ml.educationallydesigned.thyme.core.windows.TextEditorWindow;
 import ml.educationallydesigned.thyme.core.windows.TrackerWindow;
-import ml.educationallydesigned.thyme.util.Survey;
-import ml.educationallydesigned.thyme.util.Task;
-import ml.educationallydesigned.thyme.util.TaskGenerator;
+import ml.educationallydesigned.thyme.util.task.Survey;
+import ml.educationallydesigned.thyme.util.task.Task;
+import ml.educationallydesigned.thyme.util.task.TaskGenerator;
 
 /**
  * Class to implement the third game mode for the Thyme video game.
