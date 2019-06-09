@@ -96,6 +96,6 @@ public class DeficiencyRoom extends GameLevel {
 
 		averagePercentage /= tasks.size();
 
-		return Math.max(0, (int) ((10000 - attempts * 100) * averagePercentage));
+		return Math.max(0, (int) ((10000 - attempts * 100) * averagePercentage / 100));
 	}
 }

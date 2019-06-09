@@ -39,6 +39,7 @@ import ml.educationallydesigned.thyme.core.windows.browser.BrowserWindow;
 import ml.educationallydesigned.thyme.util.desktop.DesktopIcon;
 import ml.educationallydesigned.thyme.util.task.Task;
 import ml.educationallydesigned.thyme.util.scoreboard.Score;
+import ml.educationallydesigned.thyme.core.screens.*;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -64,6 +65,7 @@ public class GameLevel implements Screen {
 	protected int currentTask;
 	protected Queue<Actor> windows;
 	protected TrackerWindow tracker;
+	protected int points;
 
 	/**
 	 * Initiates the class with the game.
@@ -232,7 +234,7 @@ public class GameLevel implements Screen {
 				tracker.updateTask(tasks.get(currentTask));
 			} else {
 				enterScore();
-				game.setScreen(new HomeScreen(game));
+				new EndLevelScreen(game, this, tasks, points);
 			}
 			return true;
 		} else {
@@ -272,7 +274,8 @@ public class GameLevel implements Screen {
 	 * Add the score to the scoreboard
 	 */
 	private void enterScore() {
-		game.addScore(new Score("", calcScore()));
+		points = calcScore();
+		game.addScore(new Score("", points));
 	}
 
 	/**
