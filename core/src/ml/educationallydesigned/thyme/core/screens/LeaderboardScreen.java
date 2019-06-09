@@ -88,8 +88,7 @@ public class LeaderboardScreen implements Screen {
 				}
 			}
 		} catch (IOException e) {
-			Gdx.app.error("Scoreboard", "Failed to read from database");
-			Gdx.app.exit();
+			Dialog.showErrorDialog(stage, "Failed to read scores", e);
 		}
 	}
 
@@ -144,7 +143,6 @@ public class LeaderboardScreen implements Screen {
 			public void clicked(InputEvent event, float x, float y) {
 				// clear scoreboard and re-render scoreboard
 				try {
-					Dialog.showErrorDialog(stage, "Failed clear scoreboard", new IOException("Test Error"));
 					scoreboard.clear();
 				} catch (IOException e) {
 					Dialog.showErrorDialog(stage, "Failed to clear scoreboard", e);

@@ -65,7 +65,7 @@ public class SocialMediaWindow extends DesktopWindow {
 		this.align(Align.top);
 		// load postsFiles
 		postsFiles = new LinkedList<String>();
-		postsFiles.addAll(Arrays.asList(Gdx.files.internal("distractions/index").readString().split("\n")));
+		postsFiles.addAll(Arrays.asList(Gdx.files.internal("distractions/index").readString().replaceAll("\r", "").split("\n")));
 		// create posts table
 		posts = new VisTable();
 		posts.align(Align.top);
