@@ -68,6 +68,7 @@ public class HomeScreen implements Screen {
 	 */
 	@Override
 	public void show() {
+		game.clearScores();
 		// load assets
 		AssetManager manager = new AssetManager();
 		manager.load("logos/thyme.png", Texture.class);
