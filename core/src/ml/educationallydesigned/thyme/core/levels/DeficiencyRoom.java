@@ -77,8 +77,6 @@ public class DeficiencyRoom extends GameLevel {
 		windows.add(tracker);
 		stage.addActor(editor);
 		windows.add(editor);
-		stage.addActor(new BrowserWindow());
-
 		// start current task
 		tasks.get(currentTask).start();
 	}
