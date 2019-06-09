@@ -34,13 +34,13 @@ import java.util.Queue;
  * Launches the game by displaying the first screen.
  * <b>Time Spent:</b>
  * <ul>
- * <li>Theodore - 40 min</li>
+ * <li>Theodore - 50 min</li>
  * <li>Larry - </li>
  * </ul>
  *
  * @author Larry Yuan
  * @author Theodore Preduta
- * @version 1.3
+ * @version 1.4
  */
 public class Thyme extends Game {
 	private Queue<Score> scores;
