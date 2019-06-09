@@ -55,7 +55,7 @@ import java.util.Queue;
  *
  * @author Theodore Preduta
  * @author Larry Yuan
- * @version 1.2
+ * @version 1.3
  */
 public class GameLevel implements Screen {
 	protected Thyme game;
@@ -83,6 +83,7 @@ public class GameLevel implements Screen {
 		AssetManager manager = new AssetManager();
 		manager.load("icons/writer.png", Texture.class);
 		manager.load("icons/browser.png", Texture.class);
+		manager.load("icons/exit.png", Texture.class);
 		manager.finishLoading();
 		stage = new Stage();
 		game.setInputProcessor(stage);
@@ -114,6 +115,15 @@ public class GameLevel implements Screen {
 			}
 		};
 		iconsTable.add(browserIcon).padBottom(20).row();
+
+		DesktopIcon exitIcon = new DesktopIcon("Main Menu", new TextureRegionDrawable(manager.get("icons/exit.png", Texture.class))) {
+			@Override
+			public void clicked() {
+				GameLevel.this.getGame().setScreen(new HomeScreen(GameLevel.this.getGame()));
+			}
+		};
+		iconsTable.add(exitIcon).padBottom(20).row();
+
 		stage.addActor(iconsTable);
 		currentTask = 0;
 	}
@@ -175,6 +185,15 @@ public class GameLevel implements Screen {
 	 */
 	public Task getActiveTask() {
 		return tasks.get(currentTask);
+	}
+
+	/**
+	 * Gets the game of the class.
+	 *
+	 * @return     The game that is being run.
+	 */
+	public Thyme getGame() {
+		return game;
 	}
 
 	/**
