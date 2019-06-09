@@ -28,13 +28,13 @@ import java.util.List;
  * Main interface for the scoreboard, handles reading and writing.
  * <b>Time Spent:</b>
  * <ul>
- * <li>Theodore - 20 min</li>
+ * <li>Theodore - 25 min</li>
  * <li>Larry - 1.5 hrs</li>
  * </ul>
  *
  * @author Theodore Preduta
  * @author Larry Yuan
- * @version 2.0
+ * @version 2.1
  */
 
 public class Scoreboard {
@@ -83,7 +83,7 @@ public class Scoreboard {
 				sorted.add(upper.remove(0));
 			else if (upper.isEmpty())
 				sorted.add(lower.remove(0));
-			else if (lower.get(0).compareTo(upper.get(0)) < 0)
+			else if (lower.get(0).compareTo(upper.get(0)) > 0)
 				sorted.add(upper.remove(0));
 			else
 				sorted.add(lower.remove(0));

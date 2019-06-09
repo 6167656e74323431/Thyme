@@ -38,15 +38,16 @@ import ml.educationallydesigned.thyme.core.levels.*;
 import ml.educationallydesigned.thyme.util.task.Task;
 import com.kotcrab.vis.ui.VisUI;
 import com.kotcrab.vis.ui.widget.*;
+import com.badlogic.gdx.utils.Align;
 
-import java.util.List;
+import java.io.IOException;
 
 /**
  * Class for end level screen. THis screen is displayed upon the completion the
  * end of each level
  * <b>Time Spent:</b>
  * <ul>
- * <li>Theodore - 60 min</li>
+ * <li>Theodore - 20 min</li>
  * <li>Larry - 0 min</li>
  * </ul>
  *
@@ -54,25 +55,18 @@ import java.util.List;
  * @author Larry Yuan
  * @version 1.0
  */
-public class EndLevelScreen implements Screen {
+public class NamePromptScreen implements Screen {
 	private Thyme game;
 	private Stage stage;
-	private GameLevel currentLevel;
-	private List<Task> tasks;
-	private int points;
+	private VisTextField nameField;
 
 	/**
 	 * Constructs the object.
 	 *
-	 * @param      game          The game that is running these classes
-	 * @param      currentLevel  The current game level
-	 * @param      tasks         The tasks that should be analyzed.
+	 * @param      game  The game
 	 */
-	public EndLevelScreen(Thyme game, GameLevel currentLevel, List<Task> tasks, int points) {
+	public NamePromptScreen(Thyme game) {
 		this.game = game;
-		this.currentLevel = currentLevel;
-		this.tasks = tasks;
-		this.points = points;
 		game.setScreen(this);
 	}
 
@@ -88,55 +82,31 @@ public class EndLevelScreen implements Screen {
 		VisTable table = new VisTable();
 		table.setFillParent(true);
 		// make title
-		VisLabel gameTitle = new VisLabel("Level Completed");
+		VisLabel gameTitle = new VisLabel("Enter Your Name");
 		table.add(gameTitle).padBottom(20);
 		table.row();
-		// add the stats
-		for (Task t : tasks) {
-			VisLabel title = new VisLabel(t.getTitle());
-			table.add(title).width(100);
-
-			VisLabel time = new VisLabel(t.getTime() / 1000 + "s");
-			table.add(time).width(100);
-
-			VisLabel accuracy = new VisLabel(t.getAttemptPercentage() + "%");
-			table.add(accuracy).width(100).row();
-		}
+		// add name field
+		nameField = new VisTextField();
+		nameField.setAlignment(Align.center);
+		table.add(nameField);
+		table.row();
 		// add buttons
-		VisTextButton continueGame = new VisTextButton("Continue");
-		table.add(continueGame).width(500).height(80).padBottom(20);
+		VisTextButton submitButton = new VisTextButton("Submit");
+		table.add(submitButton).width(500).height(80).padBottom(20);
 		table.row();
-
-		VisTextButton exit = new VisTextButton("Main Menu");
-		table.add(exit).width(500).height(80).padBottom(20);
-		table.row();
-
 		// add listeners
-		continueGame.addListener(new ClickListener() {
+		submitButton.addListener(new ClickListener() {
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
-				GameLevel current = EndLevelScreen.this.getLevel();
-				if (current instanceof DeficiencyRoom)
-					new PanicRoom(game);
-				else if (current instanceof PanicRoom)
-					new EscapeRoom(game);
-				else
-					new NamePromptScreen(game);
+				VisTextField nameField = NamePromptScreen.this.getNameField();
+
+				if (!nameField.getText().trim().equals(""))
+					try {
+						game.catScores(nameField.getText().trim().substring(0, Math.min(8, nameField.getText().trim().length())));
+						game.setScreen(new HomeScreen(game));
+					} catch (IOException e) {}
 			}
 		});
-
-		exit.addListener(new ClickListener() {
-			@Override
-			public void clicked(InputEvent event, float x, float y) {
-				game.setScreen(new HomeScreen(game));
-			}
-		});
-
-		VisLabel time = new VisLabel("Points Earned");
-		table.add(time).width(100);
-
-		VisLabel accuracy = new VisLabel(points + "");
-		table.add(accuracy).width(100).row();
 
 		stage.addActor(table);
 	}
@@ -192,11 +162,11 @@ public class EndLevelScreen implements Screen {
 	}
 
 	/**
-	 * Gets the level.
+	 * Gets the name field.
 	 *
-	 * @return     The level that this was called from.
+	 * @return     The name field.
 	 */
-	public GameLevel getLevel() {
-		return currentLevel;
+	public VisTextField getNameField() {
+		return nameField;
 	}
 }
