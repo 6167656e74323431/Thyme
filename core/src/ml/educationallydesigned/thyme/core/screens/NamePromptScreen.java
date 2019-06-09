@@ -83,8 +83,8 @@ public class NamePromptScreen implements Screen {
 		VisTable table = new VisTable();
 		table.setFillParent(true);
 		// make title
-		VisLabel gameTitle = new VisLabel("Enter Your Name");
-		table.add(gameTitle).padBottom(20);
+		VisLabel prompt = new VisLabel("Enter your name for the scoreboard");
+		table.add(prompt).padBottom(20);
 		table.row();
 		// add name field
 		nameField = new VisTextField();

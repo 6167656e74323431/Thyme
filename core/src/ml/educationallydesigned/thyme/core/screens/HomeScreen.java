@@ -84,15 +84,15 @@ public class HomeScreen implements Screen {
 		table.add(gameTitle).padBottom(20);
 		table.row();
 		// make level buttons
-		VisTextButton levelOneButton = new VisTextButton("Level One");
+		VisTextButton levelOneButton = new VisTextButton("Accuracy");
 		table.add(levelOneButton).width(500).height(80).padBottom(20);
 		table.row();
 
-		VisTextButton levelTwoButton = new VisTextButton("Level Two");
+		VisTextButton levelTwoButton = new VisTextButton("Speed");
 		table.add(levelTwoButton).width(500).height(80).padBottom(20);
 		table.row();
 
-		VisTextButton levelThreeButton = new VisTextButton("Level Three");
+		VisTextButton levelThreeButton = new VisTextButton("Planning");
 		table.add(levelThreeButton).width(500).height(80).padBottom(20);
 		table.row();
 
