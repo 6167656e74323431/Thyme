@@ -60,12 +60,8 @@ public class PanicRoom extends GameLevel {
 		tasks.add(TaskGenerator.generateTask());
 
 		// open the windows
-		TrackerWindow tracker = new TrackerWindow(tasks.get(currentTask), this);
-		TextEditorWindow editor = new TextEditorWindow(tasks.get(currentTask), this);
+		tracker = new TrackerWindow(tasks.get(currentTask), this);
 		stage.addActor(tracker);
-		windows.add(tracker);
-		stage.addActor(editor);
-		windows.add(editor);
 
 		// start current task
 		tasks.get(currentTask).start();
