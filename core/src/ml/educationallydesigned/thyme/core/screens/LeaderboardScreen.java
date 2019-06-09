@@ -32,6 +32,7 @@ import com.badlogic.gdx.utils.Align;
 import com.kotcrab.vis.ui.util.dialog.Dialogs;
 import com.kotcrab.vis.ui.widget.*;
 import ml.educationallydesigned.thyme.Thyme;
+import ml.educationallydesigned.thyme.util.Dialog;
 import ml.educationallydesigned.thyme.util.scoreboard.Score;
 import ml.educationallydesigned.thyme.util.scoreboard.Scoreboard;
 
@@ -106,8 +107,8 @@ public class LeaderboardScreen implements Screen {
 		try {
 			scoreboard = new Scoreboard();
 		} catch (IOException e) {
-			Gdx.app.error("Scoreboard", "Failed to read database");
-			Gdx.app.exit();
+			Dialog.showErrorDialog(stage, "Failed to load scoreboard", e);
+			return;
 		}
 
 		manager.load("logos/scoreboard.png", Texture.class);
@@ -143,17 +144,15 @@ public class LeaderboardScreen implements Screen {
 			public void clicked(InputEvent event, float x, float y) {
 				// clear scoreboard and re-render scoreboard
 				try {
+					Dialog.showErrorDialog(stage, "Failed clear scoreboard", new IOException("Test Error"));
 					scoreboard.clear();
 				} catch (IOException e) {
-					Gdx.app.error("Scoreboard", "Failed to clear database");
-					Gdx.app.exit();
+					Dialog.showErrorDialog(stage, "Failed to clear scoreboard", e);
+					return;
 				}
 				renderScoreboard();
 				// display success message
-				VisDialog dialog = Dialogs.showOKDialog(stage, "", "Successfully Cleared Scoreboard!");
-				dialog.setWidth(570);
-				dialog.setHeight(200);
-				dialog.pad(20);
+				Dialog.showDefaultDialog(stage, "Action succeeded", "Successfully cleared scoreboard");
 			}
 		});
 

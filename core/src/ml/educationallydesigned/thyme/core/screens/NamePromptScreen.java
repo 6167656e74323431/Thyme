@@ -35,6 +35,7 @@ import com.kotcrab.vis.ui.widget.VisTable;
 import com.kotcrab.vis.ui.widget.VisTextButton;
 import ml.educationallydesigned.thyme.Thyme;
 import ml.educationallydesigned.thyme.core.levels.*;
+import ml.educationallydesigned.thyme.util.Dialog;
 import ml.educationallydesigned.thyme.util.task.Task;
 import com.kotcrab.vis.ui.VisUI;
 import com.kotcrab.vis.ui.widget.*;
@@ -88,11 +89,10 @@ public class NamePromptScreen implements Screen {
 		// add name field
 		nameField = new VisTextField();
 		nameField.setAlignment(Align.center);
-		table.add(nameField);
-		table.row();
+		table.add(nameField).padBottom(20).width(200).row();
 		// add buttons
 		VisTextButton submitButton = new VisTextButton("Submit");
-		table.add(submitButton).width(500).height(80).padBottom(20);
+		table.add(submitButton).width(500).height(80);
 		table.row();
 		// add listeners
 		submitButton.addListener(new ClickListener() {
@@ -102,9 +102,12 @@ public class NamePromptScreen implements Screen {
 
 				if (!nameField.getText().trim().equals(""))
 					try {
-						game.catScores(nameField.getText().trim().substring(0, Math.min(8, nameField.getText().trim().length())));
+						game.catScores(nameField.getText().trim().substring(0, Math.min(20, nameField.getText().trim().length())));
+						Dialog.showDefaultDialog(stage, "Saved Score", "Successfully saved score");
 						game.setScreen(new HomeScreen(game));
-					} catch (IOException e) {}
+					} catch (IOException e) {
+						Dialog.showErrorDialog(stage, "Failed to save score", e);
+					}
 			}
 		});
 

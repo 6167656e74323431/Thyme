@@ -38,4 +38,6 @@ build
 # java installation
 Java/
 
-distractions
+core/assets/distractions/*.gif
+core/assets/distractions/*.jpg
+core/assets/distractions/*.png
