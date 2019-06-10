@@ -22,6 +22,7 @@ package ml.educationallydesigned.thyme.core.windows;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Event;
 import com.badlogic.gdx.scenes.scene2d.EventListener;
 import com.badlogic.gdx.utils.Align;
@@ -147,5 +148,11 @@ public class SocialMediaWindow extends DesktopWindow {
 		videoLabel.setWrap(true);
 		posts.add(videoLabel).width(DEFAULT_WIDTH - 20).padBottom(10).row();
 		posts.add(new Separator()).width(DEFAULT_WIDTH).height(10).padBottom(10).row();
+	}
+
+	@Override
+	protected void close() {
+
+		super.close();
 	}
 }
