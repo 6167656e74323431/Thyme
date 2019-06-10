@@ -39,7 +39,7 @@ import ml.educationallydesigned.thyme.util.task.Task;
  */
 public class TrackerWindow extends DesktopWindow {
 	private static int DEFAULT_WIDTH = 500;
-	private static int DEFAULT_HEIGHT = 200;
+	private static int DEFAULT_HEIGHT = 225;
 	private Task currentTask;
 	private GameLevel level;
 	private VisLabel title;
