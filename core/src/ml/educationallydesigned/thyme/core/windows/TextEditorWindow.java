@@ -21,9 +21,7 @@ package ml.educationallydesigned.thyme.core.windows;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.Align;
-import com.kotcrab.vis.ui.widget.VisLabel;
-import com.kotcrab.vis.ui.widget.VisTextButton;
-import com.kotcrab.vis.ui.widget.VisTextField;
+import com.kotcrab.vis.ui.widget.*;
 import ml.educationallydesigned.thyme.core.levels.GameLevel;
 import ml.educationallydesigned.thyme.util.task.Task;
 
@@ -58,17 +56,25 @@ public class TextEditorWindow extends DesktopWindow {
 		this.currentTask = currentTask;
 		this.level = level;
 
-		setWidth(500);
-		setHeight(500);
+		setWidth(600);
+		setHeight(250 + currentTask.getQuestions().length * 70);
 		align(Align.top);
+
+		VisTable table = new VisTable();
+		table.setWidth(getWidth());
+		table.setHeight(getHeight());
 
 		answerBoxes = new ArrayList<VisTextField>();
 
 		for (String question : currentTask.getQuestions()) {
 			VisTextField field = new VisTextField();
 			field.setAlignment(Align.center);
-			add(new VisLabel(question)).padBottom(20).row();
-			add(field).padBottom(20).width(200).row();
+			field.setWidth(300);
+			VisLabel questionLabel = new VisLabel(question);
+			questionLabel.setWrap(true);
+			questionLabel.setAlignment(Align.center);
+			table.add(questionLabel).width(500).padBottom(20).row();
+			table.add(field).padBottom(20).width(300).row();
 			answerBoxes.add(field);
 		}
 
@@ -83,7 +89,9 @@ public class TextEditorWindow extends DesktopWindow {
 		});
 
 		centerOnDesktop();
-		add(submitButton).row();
+		table.add(submitButton).row();
+		VisScrollPane scrollPane = new VisScrollPane(table);
+		add(scrollPane);
 	}
 
 	/**
