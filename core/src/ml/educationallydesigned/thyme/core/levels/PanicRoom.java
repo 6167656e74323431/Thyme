@@ -22,9 +22,11 @@ import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import ml.educationallydesigned.thyme.Thyme;
+import ml.educationallydesigned.thyme.core.windows.SocialMediaWindow;
 import ml.educationallydesigned.thyme.core.windows.TrackerWindow;
 import ml.educationallydesigned.thyme.util.task.TaskGenerator;
 import ml.educationallydesigned.thyme.util.time.Timer;
+import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 
 /**
  * Class to implement the second level of the Thyme game.
@@ -41,6 +43,7 @@ import ml.educationallydesigned.thyme.util.time.Timer;
 public class PanicRoom extends GameLevel {
 	private Texture background;
 	private Timer totalTime;
+	private Thread socialMediaShowTimer;
 
 	/**
 	 * Constructs the object.
@@ -71,6 +74,24 @@ public class PanicRoom extends GameLevel {
 		tasks.get(currentTask).start();
 
 		totalTime = new Timer();
+		socialMediaShowTimer = new Thread(new Runnable() {
+			@Override
+			public void run() {
+				try {
+					Thread.sleep(200000);
+				} catch (InterruptedException e) {
+					// player finished before the window could be shown.
+					return;
+				}
+				Gdx.app.postRunnable(new Runnable() {
+					@Override
+					public void run() {
+						stage.addActor(new SocialMediaWindow());
+					}
+				});
+			}
+		});
+		socialMediaShowTimer.start();
 	}
 
 	/**
@@ -95,4 +116,12 @@ public class PanicRoom extends GameLevel {
 		stage.getBatch().end();
 	}
 
+	/**
+	 * Stops the timer before disposing
+	 */
+	@Override
+	public void dispose() {
+		socialMediaShowTimer.interrupt();
+		super.dispose();
+	}
 }

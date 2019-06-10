@@ -22,10 +22,12 @@ import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import ml.educationallydesigned.thyme.Thyme;
+import ml.educationallydesigned.thyme.core.windows.SocialMediaWindow;
 import ml.educationallydesigned.thyme.core.windows.TrackerWindow;
 import ml.educationallydesigned.thyme.util.task.Survey;
 import ml.educationallydesigned.thyme.util.task.Task;
 import ml.educationallydesigned.thyme.util.task.TaskGenerator;
+import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 
 /**
  * Class to implement the third game mode for the Thyme video game.
@@ -58,7 +60,7 @@ public class EscapeRoom extends GameLevel {
 	 */
 	@Override
 	public void show() {
-		// call GameLevel's show to initilize protected variables
+		// call GameLevel's show to initialize protected variables
 		super.show();
 
 		tasks.add(TaskGenerator.generateTask());
@@ -79,6 +81,7 @@ public class EscapeRoom extends GameLevel {
 
 		// start current task
 		tasks.get(currentTask).start();
+
 	}
 
 	/**
@@ -114,4 +117,5 @@ public class EscapeRoom extends GameLevel {
 
 		return Math.max(0, 10000 - totalDiff);
 	}
+
 }

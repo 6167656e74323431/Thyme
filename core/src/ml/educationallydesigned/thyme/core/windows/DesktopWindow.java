@@ -64,8 +64,8 @@ public class DesktopWindow extends VisWindow {
 	 */
 	@Override
 	protected void close() {
-		super.close();
 		remove();
+		super.close();
 	}
 
 	/**

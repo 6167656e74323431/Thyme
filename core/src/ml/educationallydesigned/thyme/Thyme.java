@@ -113,5 +113,17 @@ public class Thyme extends Game {
 		while (!scores.isEmpty())
 			scores.remove();
 	}
+
+	/**
+	 * Dispose the current screen before displaying the new one.
+	 * @param screen the screen to change to
+	 */
+	@Override
+	public void setScreen(Screen screen) {
+		if (this.getScreen() != null){
+			this.getScreen().dispose();
+		}
+		super.setScreen(screen);
+	}
 }
 
