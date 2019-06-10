@@ -244,7 +244,6 @@ abstract public class GameLevel implements Screen {
 			}
 			return true;
 		} else {
-			resetWindows();
 			return false;
 		}
 	}
