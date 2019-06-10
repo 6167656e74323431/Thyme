@@ -29,7 +29,7 @@ import com.kotcrab.vis.ui.widget.VisDialog;
  * Non-level game state.
  * <b>Time Spent:</b>
  * <ul>
- * <li>Theodore - </li>
+ * <li>Theodore - 0 min</li>
  * <li>Larry - 5 min</li>
  * </ul>
  *

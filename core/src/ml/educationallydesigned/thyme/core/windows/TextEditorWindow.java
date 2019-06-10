@@ -24,6 +24,7 @@ import com.badlogic.gdx.utils.Align;
 import com.kotcrab.vis.ui.widget.*;
 import ml.educationallydesigned.thyme.core.levels.GameLevel;
 import ml.educationallydesigned.thyme.util.task.Task;
+import ml.educationallydesigned.thyme.util.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,7 +39,7 @@ import java.util.List;
  *
  * @author Theodore Preduta
  * @author Larry Yuan
- * @version 1.2
+ * @version 1.3
  */
 public class TextEditorWindow extends DesktopWindow {
 	private List<VisTextField> answerBoxes;
@@ -103,11 +104,16 @@ public class TextEditorWindow extends DesktopWindow {
 		for (int i = 0; i < answerBoxes.size(); i++)
 			attempt[i] = answerBoxes.get(i).getText();
 
-		return level.submit(attempt);
+		boolean result = level.submit(attempt);
+
+		if (!result) 
+			Dialog.showDefaultDialog(level.getStage(), "Task Quizzer", "You did not pass this task.");
+
+		return result;
 	}
 
 	/**
-	 * Clears all the text fields.
+	 * Clears all the text fields, and displays a message.
 	 */
 	public void clearAnswers() {
 		for (VisTextField field : answerBoxes)

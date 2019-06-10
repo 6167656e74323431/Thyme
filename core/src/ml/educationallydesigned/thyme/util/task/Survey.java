@@ -21,18 +21,19 @@
 package ml.educationallydesigned.thyme.util.task;
 
 import ml.educationallydesigned.thyme.core.levels.EscapeRoom;
+import ml.educationallydesigned.thyme.util.*;
 
 /**
  * Class to store all data required for each individual in-game survey.
  * <b>Time Spent:</b>
  * <ul>
- * <li>Theodore - 20 min</li>
+ * <li>Theodore - 25 min</li>
  * <li>Larry - </li>
  * </ul>
  *
  * @author Theodore Preduta
  * @author Larry Yuan
- * @version 1.0
+ * @version 1.2
  */
 public class Survey extends Task {
 	private EscapeRoom room;
@@ -74,7 +75,9 @@ public class Survey extends Task {
 			tracker.stop();
 			room.addEstimates(estimates);
 			return true;
-		} else
+		} else {
+			Dialog.showDefaultDialog(room.getStage(), "Task Quizzer", "You should only enter numbers for this task.");
 			return false;
+		}
 	}
 }
