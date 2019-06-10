@@ -41,16 +41,14 @@ import java.io.IOException;
 
 /**
  * Class for end level screen. THis screen is displayed upon the completion the
- * end of each level
- * <b>Time Spent:</b>
- * <ul>
- * <li>Theodore - 20 min</li>
- * <li>Larry - 0 min</li>
- * </ul>
+ * end of each level. It will display the stats of each level, along with the
+ * points earned. <b>Time Spent:</b> <ul>
+ * <li>Theodore - 40 min</li>
+ * <li>Larry - 0 min</li> </ul>
  *
- * @author Theodore Preduta
- * @author Larry Yuan
- * @version 1.0
+ * @author     Theodore Preduta
+ * @author     Larry Yuan
+ * @version    1.0
  */
 public class NamePromptScreen implements Screen {
 	private Thyme game;

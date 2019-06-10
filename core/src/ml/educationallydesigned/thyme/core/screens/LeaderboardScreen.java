@@ -43,16 +43,14 @@ import ml.educationallydesigned.thyme.util.scoreboard.Scoreboard;
 import java.io.IOException;
 
 /**
- * Non-level game state.
- * <b>Time Spent:</b>
- * <ul>
+ * This non-level game state contains, and displays the leaderboard of the
+ * highest scoreing players for our game. <b>Time Spent:</b> <ul>
  * <li>Theodore - 0 min</li>
- * <li>Larry - </li>
- * </ul>
+ * <li>Larry - 20 min</li> </ul>
  *
- * @author Theodore Preduta
- * @author Larry Yuan
- * @version 1.0
+ * @author     Theodore Preduta
+ * @author     Larry Yuan
+ * @version    1.0
  */
 public class LeaderboardScreen implements Screen {
 	private final static int MAX_ITEMS = 12;
@@ -65,7 +63,7 @@ public class LeaderboardScreen implements Screen {
 	/**
 	 * Initializes the game instance variable.
 	 *
-	 * @param game The game
+	 * @param      game  The game
 	 */
 	public LeaderboardScreen(Thyme game) {
 		this.game = game;
@@ -100,8 +98,7 @@ public class LeaderboardScreen implements Screen {
 
 	/**
 	 * Called when this screen becomes the current screen for a {@link Game}.
-	 * <p>
-	 * Creates the GUI items
+	 * <p>} Creates the GUI items
 	 */
 	@Override
 	public void show() {
@@ -175,7 +172,7 @@ public class LeaderboardScreen implements Screen {
 	/**
 	 * Called when the screen should render itself.
 	 *
-	 * @param delta The time in seconds since the last render.
+	 * @param      delta  The time in seconds since the last render.
 	 */
 	@Override
 	public void render(float delta) {
@@ -189,30 +186,37 @@ public class LeaderboardScreen implements Screen {
 	}
 
 	/**
-	 * @param width
-	 * @param height
-	 * @see ApplicationListener#resize(int, int)
+	 * Function for the resizing of the winodw
+	 *
+	 * @param      width   The width
+	 * @param      height  The height
+	 * @see        ApplicationListener#resize(int, int)
 	 */
 	@Override
 	public void resize(int width, int height) {
 	}
 
 	/**
-	 * @see ApplicationListener#pause()
+	 * @see        ApplicationListener#pause()
+	 *
+	 * Empty function
 	 */
 	@Override
 	public void pause() {
 	}
 
 	/**
-	 * @see ApplicationListener#resume()
+	 * @see        ApplicationListener#resume()
+	 *
+	 * Empty function
 	 */
 	@Override
 	public void resume() {
 	}
 
 	/**
-	 * Called when this screen is no longer the current screen for a {@link Game}.
+	 * Called when this screen is no longer the current screen for a {@link
+	 * Game}.
 	 */
 	@Override
 	public void hide() {

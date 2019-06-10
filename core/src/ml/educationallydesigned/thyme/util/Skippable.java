@@ -19,16 +19,13 @@
 package ml.educationallydesigned.thyme.util;
 
 /**
- * Interface that describs skippable classes
- * <b>Time Spent:</b>
- * <ul>
+ * Interface that describs skippable classes. <b>Time Spent:</b> <ul>
  * <li>Theodore - 10 min</li>
- * <li>Larry - </li>
- * </ul>
+ * <li>Larry - </li> </ul>
  *
- * @author Theodore Preduta
- * @author Larry Yuan
- * @version 1.0
+ * @author     Theodore Preduta
+ * @author     Larry Yuan
+ * @version    1.0
  */
 public interface Skippable {
 	/**

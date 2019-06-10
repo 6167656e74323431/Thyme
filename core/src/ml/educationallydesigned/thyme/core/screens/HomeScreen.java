@@ -41,16 +41,14 @@ import ml.educationallydesigned.thyme.util.BackgroundColor;
 import ml.educationallydesigned.thyme.util.CenteredTable;
 
 /**
- * Non-level game state.
- * <b>Time Spent:</b>
- * <ul>
- * <li>Theodore - 10 min</li>
- * <li>Larry - </li>
- * </ul>
+ * Main screen which allows the user to choose what gamemode they will play.
+ * <b>Time Spent:</b> <ul>
+ * <li>Theodore - 30 min</li>
+ * <li>Larry - 30 min</li> </ul>
  *
- * @author Theodore Preduta
- * @author Larry Yuan
- * @version 1.4
+ * @author     Theodore Preduta
+ * @author     Larry Yuan
+ * @version    1.4
  */
 public class HomeScreen implements Screen {
 	private Stage stage;

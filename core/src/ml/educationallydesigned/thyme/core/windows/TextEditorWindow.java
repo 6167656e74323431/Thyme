@@ -32,16 +32,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Class to implement the text editor window for in the Thyme game.
- * <b>Time Spent:</b>
- * <ul>
- * <li>Theodore - 80 min</li>
- * <li>Larry - 30 min</li>
- * </ul>
+ * Class to implement the text editor window for in the Thyme game. <b>Time
+ * Spent:</b> <ul>
+ * <li>Theodore - 90 min</li>
+ * <li>Larry - 30 min</li> </ul>
  *
- * @author Theodore Preduta
- * @author Larry Yuan
- * @version 1.3
+ * @author     Theodore Preduta
+ * @author     Larry Yuan
+ * @version    1.3
  */
 public class TextEditorWindow extends DesktopWindow {
 	private List<VisTextField> answerBoxes;

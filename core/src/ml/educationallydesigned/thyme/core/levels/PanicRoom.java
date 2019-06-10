@@ -27,16 +27,14 @@ import ml.educationallydesigned.thyme.util.task.TaskGenerator;
 import ml.educationallydesigned.thyme.util.time.Timer;
 
 /**
- * Class to implement the second level of the Thyme game.
- * <b>Time Spent:</b>
- * <ul>
+ * Class to implement the second level of the Thyme game. THis level focuses on
+ * speed <b>Time Spent:</b> <ul>
  * <li>Theodore - 30 min</li>
- * <li>Larry - </li>
- * </ul>
+ * <li>Larry - 0 min</li> </ul>
  *
- * @author Theodore Preduta
- * @author Larry Yuan
- * @version 1.2
+ * @author     Theodore Preduta
+ * @author     Larry Yuan
+ * @version    1.2
  */
 public class PanicRoom extends GameLevel {
 	private Texture background;

@@ -28,16 +28,14 @@ import ml.educationallydesigned.thyme.util.task.Task;
 import ml.educationallydesigned.thyme.util.task.TaskGenerator;
 
 /**
- * Class to implement the third game mode for the Thyme video game.
- * <b>Time Spent:</b>
- * <ul>
+ * Class to implement the third game mode for the Thyme video game. THis level
+ * focuses on planning. <b>Time Spent:</b> <ul>
  * <li>Theodore - 30 min</li>
- * <li>Larry - </li>
- * </ul>
+ * <li>Larry - 0 min</li> </ul>
  *
- * @author Theodore Preduta
- * @author Larry Yuan
- * @version 1.1
+ * @author     Theodore Preduta
+ * @author     Larry Yuan
+ * @version    1.1
  */
 public class EscapeRoom extends GameLevel {
 	private Texture background;

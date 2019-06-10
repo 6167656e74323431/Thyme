@@ -46,16 +46,13 @@ import java.util.List;
 
 /**
  * Class for end level screen. THis screen is displayed upon the completion the
- * end of each level
- * <b>Time Spent:</b>
- * <ul>
+ * end of each level <b>Time Spent:</b> <ul>
  * <li>Theodore - 60 min</li>
- * <li>Larry - 0 min</li>
- * </ul>
+ * <li>Larry - 0 min</li> </ul>
  *
- * @author Theodore Preduta
- * @author Larry Yuan
- * @version 1.0
+ * @author     Theodore Preduta
+ * @author     Larry Yuan
+ * @version    1.0
  */
 public class EndLevelScreen implements Screen {
 	private Thyme game;

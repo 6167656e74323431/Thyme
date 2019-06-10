@@ -28,16 +28,14 @@ import ml.educationallydesigned.thyme.util.Skippable;
 import java.io.FileNotFoundException;
 
 /**
- * Screen that displays the intro
- * <b>Time Spent:</b>
- * <ul>
+ * Screen that displays the intro animation. It can be skipped with the escape
+ * key. <b>Time Spent:</b> <ul>
  * <li>Theodore - 15 min</li>
- * <li>Larry - </li>
- * </ul>
+ * <li>Larry - 20 min</li> </ul>
  *
- * @author Theodore Preduta
- * @author Larry Yuan
- * @version 1.2
+ * @author     Theodore Preduta
+ * @author     Larry Yuan
+ * @version    1.2
  */
 public class AnimationScreen implements Screen, Skippable {
 	private VideoPlayer player;

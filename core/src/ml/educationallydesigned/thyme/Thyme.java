@@ -30,16 +30,13 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * Launches the game by displaying the first screen.
- * <b>Time Spent:</b>
- * <ul>
- * <li>Theodore - 50 min</li>
- * <li>Larry - </li>
- * </ul>
+ * Launches the game by displaying the first screen. <b>Time Spent:</b> <ul>
+ * <li>Theodore - 60 min</li>
+ * <li>Larry - 0 min</li> </ul>
  *
- * @author Larry Yuan
- * @author Theodore Preduta
- * @version 1.4
+ * @author     Larry Yuan
+ * @author     Theodore Preduta
+ * @version    1.4
  */
 public class Thyme extends Game {
 	private Queue<Score> scores;
@@ -54,8 +51,8 @@ public class Thyme extends Game {
 		scores = new LinkedList<Score>();
 
 		VisUI.load(VisUI.SkinScale.X2);
-		// check if windows or linux
-		// libgdx-video does not currently work well with ffmpeg on linux.
+		// check if windows or linux libgdx-video does not currently work well
+		// with ffmpeg on linux.
 		if (System.getProperty("os.name").toLowerCase().contains("win")) {
 			this.setScreen(new AnimationScreen(this));
 		} else {
