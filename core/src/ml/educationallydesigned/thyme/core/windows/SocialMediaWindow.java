@@ -21,7 +21,6 @@
 package ml.educationallydesigned.thyme.core.windows;
 
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.scenes.scene2d.Event;
 import com.badlogic.gdx.scenes.scene2d.EventListener;
@@ -90,6 +89,7 @@ public class SocialMediaWindow extends DesktopWindow {
 
 	/**
 	 * Normalize file name, removing unneeded characters and extension
+	 *
 	 * @param name the name of the file
 	 * @return the normalized name
 	 */
@@ -107,6 +107,7 @@ public class SocialMediaWindow extends DesktopWindow {
 			addPicture();
 		}
 	}
+
 	/**
 	 * Add first video in queue to display, loading as much as possible on new thread.
 	 */

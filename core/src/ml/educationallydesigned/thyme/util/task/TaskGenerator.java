@@ -20,8 +20,6 @@
 
 package ml.educationallydesigned.thyme.util.task;
 
-import ml.educationallydesigned.thyme.util.task.Task;
-
 /**
  * Class to generate random tasks.
  * <b>Time Spent:</b>

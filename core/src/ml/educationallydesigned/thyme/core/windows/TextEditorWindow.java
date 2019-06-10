@@ -54,7 +54,7 @@ public class TextEditorWindow extends DesktopWindow {
 	 * @param level       The current level
 	 */
 	public TextEditorWindow(Task currentTask, GameLevel level) {
-		super("LarryOffice Writer");
+		super("Task Quizzer");
 		this.currentTask = currentTask;
 		this.level = level;
 
@@ -81,6 +81,8 @@ public class TextEditorWindow extends DesktopWindow {
 					clearAnswers();
 			}
 		});
+
+		centerOnDesktop();
 		add(submitButton).row();
 	}
 

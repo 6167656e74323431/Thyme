@@ -21,7 +21,6 @@
 package ml.educationallydesigned.thyme.util.task;
 
 import ml.educationallydesigned.thyme.core.levels.EscapeRoom;
-import ml.educationallydesigned.thyme.util.task.Task;
 
 /**
  * Class to store all data required for each individual in-game survey.

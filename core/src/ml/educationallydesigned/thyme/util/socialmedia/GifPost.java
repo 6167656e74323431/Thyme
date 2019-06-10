@@ -20,7 +20,6 @@
 
 package ml.educationallydesigned.thyme.util.socialmedia;
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Pixmap;
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.holidaystudios.tools.GifDecoder;
@@ -46,6 +45,7 @@ public class GifPost {
 	private int width;
 	private int height;
 	private GifDecoder decoder;
+
 	/**
 	 * Creates the gif post
 	 *
@@ -71,6 +71,7 @@ public class GifPost {
 
 	/**
 	 * Gets the height of the gif
+	 *
 	 * @return the height
 	 */
 	public int getHeight() {

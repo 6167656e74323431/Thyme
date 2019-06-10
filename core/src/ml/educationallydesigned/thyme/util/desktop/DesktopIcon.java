@@ -52,14 +52,15 @@ abstract public class DesktopIcon extends VisTable {
 	public DesktopIcon(String name, Drawable icon) {
 		super();
 		this.setWidth(75);
-		this.add(new VisImage(icon)).width(50).height(50).row();
+		this.add(new VisImage(icon)).width(50).height(50).padBottom(10).row();
 		final VisLabel label = new VisLabel(name);
 		label.setWrap(true);
 		label.setAlignment(Align.center);
-		this.add(label).align(Align.center).width(100).row();
+		this.add(label).align(Align.center).width(150).row();
 		// listen for double clicks
 		this.addListener(new ClickListener() {
 			long lastClick = Long.MAX_VALUE;
+
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
 				if (lastClick - System.currentTimeMillis() <= 500) {

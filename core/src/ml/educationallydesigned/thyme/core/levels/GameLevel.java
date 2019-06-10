@@ -29,17 +29,16 @@ import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
 import com.badlogic.gdx.utils.Align;
-import com.kotcrab.vis.ui.widget.VisImageTextButton;
 import com.kotcrab.vis.ui.widget.VisTable;
 import ml.educationallydesigned.thyme.Thyme;
+import ml.educationallydesigned.thyme.core.screens.EndLevelScreen;
 import ml.educationallydesigned.thyme.core.screens.HomeScreen;
 import ml.educationallydesigned.thyme.core.windows.TextEditorWindow;
 import ml.educationallydesigned.thyme.core.windows.TrackerWindow;
 import ml.educationallydesigned.thyme.core.windows.browser.BrowserWindow;
 import ml.educationallydesigned.thyme.util.desktop.DesktopIcon;
-import ml.educationallydesigned.thyme.util.task.Task;
 import ml.educationallydesigned.thyme.util.scoreboard.Score;
-import ml.educationallydesigned.thyme.core.screens.*;
+import ml.educationallydesigned.thyme.util.task.Task;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -99,7 +98,7 @@ public class GameLevel implements Screen {
 		iconsTable.setHeight(Gdx.graphics.getHeight());
 		iconsTable.align(Align.topLeft);
 
-		DesktopIcon larryOfficeIcon = new DesktopIcon("Larry Office", new TextureRegionDrawable(manager.get("icons/writer.png", Texture.class))) {
+		DesktopIcon larryOfficeIcon = new DesktopIcon("Task Quizzer", new TextureRegionDrawable(manager.get("icons/writer.png", Texture.class))) {
 			@Override
 			public void clicked() {
 				TextEditorWindow win = new TextEditorWindow(GameLevel.this.getActiveTask(), GameLevel.this);
@@ -112,7 +111,7 @@ public class GameLevel implements Screen {
 		DesktopIcon browserIcon = new DesktopIcon("Browser", new TextureRegionDrawable(manager.get("icons/browser.png", Texture.class))) {
 			@Override
 			public void clicked() {
-				BrowserWindow win = new BrowserWindow(); 
+				BrowserWindow win = new BrowserWindow();
 				GameLevel.this.getStage().addActor(win);
 			}
 		};
@@ -183,7 +182,7 @@ public class GameLevel implements Screen {
 	/**
 	 * Gets the active task.
 	 *
-	 * @return     The active task.
+	 * @return The active task.
 	 */
 	public Task getActiveTask() {
 		return tasks.get(currentTask);
@@ -192,7 +191,7 @@ public class GameLevel implements Screen {
 	/**
 	 * Gets the game of the class.
 	 *
-	 * @return     The game that is being run.
+	 * @return The game that is being run.
 	 */
 	public Thyme getGame() {
 		return game;
@@ -201,7 +200,7 @@ public class GameLevel implements Screen {
 	/**
 	 * Gets the stage of the window.
 	 *
-	 * @return     The stage.
+	 * @return The stage.
 	 */
 	public Stage getStage() {
 		return stage;
@@ -210,8 +209,8 @@ public class GameLevel implements Screen {
 	/**
 	 * Adds an actor to the queue of windows to be closed.
 	 *
-	 * @param      a     The window that should be cloased at the end of a
-	 *                   submission.
+	 * @param a The window that should be cloased at the end of a
+	 *          submission.
 	 */
 	public void addToQueue(Actor a) {
 		windows.add(a);
@@ -221,9 +220,8 @@ public class GameLevel implements Screen {
 	 * Submits a set of answers to the current task, increments the current task
 	 * if necessary, and updates windows.
 	 *
-	 * @param      givenAnswers  The given answers.
-	 *
-	 * @return     true if they passed, false otherwise.
+	 * @param givenAnswers The given answers.
+	 * @return true if they passed, false otherwise.
 	 */
 	public boolean submit(String[] givenAnswers) {
 		if (tasks.get(currentTask).submit(givenAnswers)) {

@@ -18,28 +18,21 @@
 
 package ml.educationallydesigned.thyme.core.screens;
 
-import com.badlogic.gdx.*;
-import ml.educationallydesigned.thyme.Thyme;
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
-import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.GL20;
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
-import com.kotcrab.vis.ui.widget.VisImage;
+import com.badlogic.gdx.utils.Align;
+import com.kotcrab.vis.ui.widget.VisLabel;
 import com.kotcrab.vis.ui.widget.VisTable;
 import com.kotcrab.vis.ui.widget.VisTextButton;
+import com.kotcrab.vis.ui.widget.VisTextField;
 import ml.educationallydesigned.thyme.Thyme;
-import ml.educationallydesigned.thyme.core.levels.*;
 import ml.educationallydesigned.thyme.util.Dialog;
-import ml.educationallydesigned.thyme.util.task.Task;
-import com.kotcrab.vis.ui.VisUI;
-import com.kotcrab.vis.ui.widget.*;
-import com.badlogic.gdx.utils.Align;
 
 import java.io.IOException;
 
@@ -64,7 +57,7 @@ public class NamePromptScreen implements Screen {
 	/**
 	 * Constructs the object.
 	 *
-	 * @param      game  The game
+	 * @param game The game
 	 */
 	public NamePromptScreen(Thyme game) {
 		this.game = game;
@@ -167,7 +160,7 @@ public class NamePromptScreen implements Screen {
 	/**
 	 * Gets the name field.
 	 *
-	 * @return     The name field.
+	 * @return The name field.
 	 */
 	public VisTextField getNameField() {
 		return nameField;
