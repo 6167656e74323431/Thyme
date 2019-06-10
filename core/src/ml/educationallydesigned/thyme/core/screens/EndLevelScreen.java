@@ -18,32 +18,27 @@
 
 package ml.educationallydesigned.thyme.core.screens;
 
-import com.badlogic.gdx.*;
-import com.badlogic.gdx.graphics.g2d.BitmapFont;
-import com.badlogic.gdx.scenes.scene2d.Actor;
-import com.badlogic.gdx.scenes.scene2d.ui.Label;
-import com.badlogic.gdx.utils.Align;
-import ml.educationallydesigned.thyme.Thyme;
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
-import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.GL20;
-import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
-import com.kotcrab.vis.ui.widget.VisImage;
+import com.badlogic.gdx.utils.Align;
+import com.kotcrab.vis.ui.widget.VisLabel;
 import com.kotcrab.vis.ui.widget.VisTable;
 import com.kotcrab.vis.ui.widget.VisTextButton;
 import ml.educationallydesigned.thyme.Thyme;
-import ml.educationallydesigned.thyme.core.levels.*;
+import ml.educationallydesigned.thyme.core.levels.DeficiencyRoom;
+import ml.educationallydesigned.thyme.core.levels.EscapeRoom;
+import ml.educationallydesigned.thyme.core.levels.GameLevel;
+import ml.educationallydesigned.thyme.core.levels.PanicRoom;
 import ml.educationallydesigned.thyme.util.task.Task;
-import com.kotcrab.vis.ui.VisUI;
-import com.kotcrab.vis.ui.widget.*;
 
-import java.awt.*;
 import java.util.List;
 
 /**
@@ -69,9 +64,9 @@ public class EndLevelScreen implements Screen {
 	/**
 	 * Constructs the object.
 	 *
-	 * @param      game          The game that is running these classes
-	 * @param      currentLevel  The current game level
-	 * @param      tasks         The tasks that should be analyzed.
+	 * @param game         The game that is running these classes
+	 * @param currentLevel The current game level
+	 * @param tasks        The tasks that should be analyzed.
 	 */
 	public EndLevelScreen(Thyme game, GameLevel currentLevel, List<Task> tasks, int points) {
 		this.game = game;
@@ -215,7 +210,7 @@ public class EndLevelScreen implements Screen {
 	/**
 	 * Gets the level.
 	 *
-	 * @return     The level that this was called from.
+	 * @return The level that this was called from.
 	 */
 	public GameLevel getLevel() {
 		return currentLevel;

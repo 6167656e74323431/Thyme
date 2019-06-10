@@ -19,7 +19,6 @@ package ml.educationallydesigned.thyme;
 
 import com.badlogic.gdx.*;
 import com.kotcrab.vis.ui.VisUI;
-import ml.educationallydesigned.thyme.core.levels.DeficiencyRoom;
 import ml.educationallydesigned.thyme.core.screens.AnimationScreen;
 import ml.educationallydesigned.thyme.core.screens.HomeScreen;
 import ml.educationallydesigned.thyme.util.Skippable;

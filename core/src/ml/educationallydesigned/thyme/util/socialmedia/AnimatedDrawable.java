@@ -34,7 +34,7 @@ public class AnimatedDrawable extends BaseDrawable {
 	private Animation animation;
 	private float stateTime = 0;
 
-	public AnimatedDrawable(Animation animation){
+	public AnimatedDrawable(Animation animation) {
 		this.animation = animation;
 		TextureRegion key = (TextureRegion) animation.getKeyFrame(0);
 		this.setLeftWidth(key.getRegionWidth() / 2);
@@ -46,7 +46,7 @@ public class AnimatedDrawable extends BaseDrawable {
 	}
 
 	@Override
-	public void draw(Batch batch, float x, float y, float width, float height){
+	public void draw(Batch batch, float x, float y, float width, float height) {
 		stateTime += Gdx.graphics.getDeltaTime();
 		TextureRegion keyFrame = (TextureRegion) animation.getKeyFrame(stateTime, true);
 		batch.draw(keyFrame, x, y, width, height);

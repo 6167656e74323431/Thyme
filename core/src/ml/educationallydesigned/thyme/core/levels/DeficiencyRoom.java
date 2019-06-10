@@ -20,10 +20,7 @@ package ml.educationallydesigned.thyme.core.levels;
 
 import com.badlogic.gdx.Game;
 import ml.educationallydesigned.thyme.Thyme;
-import ml.educationallydesigned.thyme.core.windows.SocialMediaWindow;
-import ml.educationallydesigned.thyme.core.windows.TextEditorWindow;
 import ml.educationallydesigned.thyme.core.windows.TrackerWindow;
-import ml.educationallydesigned.thyme.core.windows.browser.BrowserWindow;
 import ml.educationallydesigned.thyme.util.task.Task;
 import ml.educationallydesigned.thyme.util.task.TaskGenerator;
 
@@ -54,7 +51,7 @@ public class DeficiencyRoom extends GameLevel {
 	 */
 	@Override
 	public void show() {
-		// call GameLevel's show to initilize protected variables
+		// call GameLevel's show to initialize protected variables
 		super.show();
 
 		String[] tutorialQuestions = {"What is the name of the QnA window?",
@@ -73,7 +70,6 @@ public class DeficiencyRoom extends GameLevel {
 
 		// open the windows
 		tracker = new TrackerWindow(tasks.get(currentTask), this);
-		stage.addActor(new SocialMediaWindow());
 		stage.addActor(tracker);
 		// start current task
 		tasks.get(currentTask).start();

@@ -26,7 +26,6 @@ import com.kotcrab.vis.ui.widget.VisDialog;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
-import java.util.Arrays;
 
 /**
  * Non-level game state.
@@ -43,9 +42,10 @@ import java.util.Arrays;
 public class Dialog {
 	/**
 	 * Shows the default OK dialog
+	 *
 	 * @param stage stage to show
 	 * @param title the title
-	 * @param text the text
+	 * @param text  the text
 	 */
 	public static void showDefaultDialog(Stage stage, String title, String text) {
 		VisDialog dialog = Dialogs.showOKDialog(stage, title, text);
@@ -56,9 +56,10 @@ public class Dialog {
 
 	/**
 	 * Shows the error dialog
+	 *
 	 * @param stage stage to show
 	 * @param title the title
-	 * @param e the exception that was thrown
+	 * @param e     the exception that was thrown
 	 */
 	public static void showErrorDialog(Stage stage, String title, Exception e) {
 		// print stack trace to our own string writer
