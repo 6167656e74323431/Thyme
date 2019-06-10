@@ -105,11 +105,11 @@ public class EndLevelScreen implements Screen {
 		for (Task t : tasks) {
 			VisLabel title = new VisLabel(t.getTitle());
 			title.setAlignment(Align.left);
-			scoresTable.add(title).width(500 / 3);
+			scoresTable.add(title).width((int) (500 / 3 * 1.5));
 
 			VisLabel time = new VisLabel(t.getTime() / 1000 + "s");
 			time.setAlignment(Align.center);
-			scoresTable.add(time).width(500 / 3);
+			scoresTable.add(time).width((int) (500 / 3 * 0.5));
 
 			VisLabel accuracy = new VisLabel(t.getAttemptPercentage() + "%");
 			accuracy.setAlignment(Align.right);

@@ -60,7 +60,7 @@ public class SocialMediaWindow extends DesktopWindow {
 	 */
 	public SocialMediaWindow() {
 		super("RedditBot");
-		this.setWidth(DEFAULT_WIDTH);
+		this.setWidth(DEFAULT_WIDTH + 30);
 		this.setHeight(DEFAULT_HEIGHT);
 		this.align(Align.top);
 		// load postsFiles
@@ -73,6 +73,7 @@ public class SocialMediaWindow extends DesktopWindow {
 			addPost();
 		}
 		final VisScrollPane scrollPane = new VisScrollPane(posts);
+		scrollPane.setFadeScrollBars(false);
 		// lazy loading
 		scrollPane.addListener(new EventListener() {
 			@Override
@@ -83,7 +84,7 @@ public class SocialMediaWindow extends DesktopWindow {
 				return false;
 			}
 		});
-		this.add(scrollPane).width(DEFAULT_WIDTH).height(DEFAULT_HEIGHT).row();
+		this.add(scrollPane).width(DEFAULT_WIDTH + 30).height(DEFAULT_HEIGHT).row();
 		this.centerOnDesktop();
 	}
 

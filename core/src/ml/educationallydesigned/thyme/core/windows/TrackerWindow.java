@@ -21,6 +21,7 @@ package ml.educationallydesigned.thyme.core.windows;
 import com.badlogic.gdx.utils.Align;
 import com.kotcrab.vis.ui.VisUI;
 import com.kotcrab.vis.ui.widget.VisLabel;
+import com.kotcrab.vis.ui.widget.VisScrollPane;
 import com.kotcrab.vis.ui.widget.VisTable;
 import ml.educationallydesigned.thyme.core.levels.GameLevel;
 import ml.educationallydesigned.thyme.util.task.Task;
@@ -38,7 +39,7 @@ import ml.educationallydesigned.thyme.util.task.Task;
  * @version 1.5
  */
 public class TrackerWindow extends DesktopWindow {
-	private static int DEFAULT_WIDTH = 500;
+	private static int DEFAULT_WIDTH = 550;
 	private static int DEFAULT_HEIGHT = 225;
 	private Task currentTask;
 	private GameLevel level;
@@ -59,28 +60,33 @@ public class TrackerWindow extends DesktopWindow {
 		this.setWidth(DEFAULT_WIDTH);
 		this.setHeight(DEFAULT_HEIGHT);
 		this.align(Align.topLeft);
+
 		// create the window
 		VisTable mainContainer = new VisTable();
-		mainContainer.align(Align.top);
-		mainContainer.padLeft(20);
+		mainContainer.setWidth(DEFAULT_WIDTH - 50);
+		mainContainer.align(Align.topLeft);
+		mainContainer.padLeft(10);
 
 		title = new VisLabel("");
 		VisLabel.LabelStyle titleStyle = title.getStyle();
 		titleStyle.font = VisUI.getSkin().getFont("default-font");
 		title.setStyle(titleStyle);
-		mainContainer.add(title).width(DEFAULT_WIDTH).row();
+		mainContainer.add(title).width(DEFAULT_WIDTH - 50).row();
 
 		description = new VisLabel("");
+		description.setAlignment(Align.left);
 		VisLabel.LabelStyle descriptionStyle = description.getStyle();
 		descriptionStyle.font = VisUI.getSkin().getFont("small-font");
 		description.setStyle(descriptionStyle);
 		description.setWrap(true);
-		mainContainer.add(description).width(DEFAULT_WIDTH).row();
+		mainContainer.add(description).width(DEFAULT_WIDTH - 50).align(Align.left).row();
 
 		accuracy = new VisLabel("");
-		mainContainer.add(accuracy).width(DEFAULT_WIDTH).row();
+		mainContainer.add(accuracy).width(DEFAULT_WIDTH - 50).row();
 
-		add(mainContainer).width(DEFAULT_WIDTH);
+		VisScrollPane scrollPane = new VisScrollPane(mainContainer);
+		scrollPane.setFadeScrollBars(false);
+		add(scrollPane).width(DEFAULT_WIDTH);
 		setX(0);
 		setY(0);
 		// remove close button

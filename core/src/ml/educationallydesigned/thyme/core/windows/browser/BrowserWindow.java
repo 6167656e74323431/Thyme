@@ -115,10 +115,10 @@ public class BrowserWindow extends DesktopWindow {
 		VisTextField.VisTextFieldStyle urlBarStyle = urlBar.getStyle();
 		urlBarStyle.focusBorder = new BaseDrawable(); // no border on active
 		urlBarStyle.font = smallFont; // make font smaller
-		topTable.add(urlBar).width(DEFAULT_WIDTH - 10 - 50).height(40);
+		topTable.add(urlBar).width(DEFAULT_WIDTH - 30 - 50).height(40);
 		topTable.row();
 		// add top table to the window
-		this.add(topTable).width(DEFAULT_WIDTH - 10).padBottom(5).height(40).row();
+		this.add(topTable).width(DEFAULT_WIDTH - 30).padBottom(5).height(40).row();
 
 		// initialize bookmarks bar
 		VisTable bookmarksBar = new VisTable();
@@ -158,17 +158,19 @@ public class BrowserWindow extends DesktopWindow {
 		}
 		bookmarksBar.align(Align.left);
 		bookmarksBar.row();
-		this.add(bookmarksBar).width(DEFAULT_WIDTH - 10).height(40).padBottom(5).row();
+		this.add(bookmarksBar).width(DEFAULT_WIDTH - 30).height(40).padBottom(5).row();
 
 		// add separator
 		VisTable separator = new VisTable();
-		separator.add(new Separator()).width(DEFAULT_WIDTH - 10).height(5).row();
-		this.add(separator).width(DEFAULT_WIDTH - 10).height(5).row();
+		separator.add(new Separator()).width(DEFAULT_WIDTH - 50).height(5).row();
+		this.add(separator).width(DEFAULT_WIDTH - 50).height(5).row();
 
 		// initialize the page renderer
 		this.browserDisplay = new VisTable();
 		this.browserDisplay.padLeft(10).padRight(10);
 		VisScrollPane scrollPane = new VisScrollPane(this.browserDisplay);
+		scrollPane.setWidth(DEFAULT_WIDTH);
+		scrollPane.setFadeScrollBars(false);
 		scrollPane.setFlickScroll(true);
 		this.add(scrollPane).row();
 		this.browseTo(HOME_URL);

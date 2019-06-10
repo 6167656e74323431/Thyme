@@ -32,6 +32,7 @@ import com.kotcrab.vis.ui.widget.VisTable;
 import ml.educationallydesigned.thyme.Thyme;
 import ml.educationallydesigned.thyme.core.screens.EndLevelScreen;
 import ml.educationallydesigned.thyme.core.screens.HomeScreen;
+import ml.educationallydesigned.thyme.core.windows.HelpWindow;
 import ml.educationallydesigned.thyme.core.windows.SocialMediaWindow;
 import ml.educationallydesigned.thyme.core.windows.TextEditorWindow;
 import ml.educationallydesigned.thyme.core.windows.TrackerWindow;
@@ -87,6 +88,7 @@ abstract public class GameLevel implements Screen {
 		manager.load("icons/browser.png", Texture.class);
 		manager.load("icons/exit.png", Texture.class);
 		manager.load("icons/reddit.png", Texture.class);
+		manager.load("icons/help.png", Texture.class);
 		manager.finishLoading();
 		stage = new Stage();
 		game.setInputProcessor(stage);
@@ -131,6 +133,16 @@ abstract public class GameLevel implements Screen {
 			}
 		};
 		iconsTable.add(redditIcon).padBottom(20).row();
+
+		DesktopIcon helpIcon = new DesktopIcon("Help", new TextureRegionDrawable(manager.get("icons/help.png", Texture.class))) {
+			@Override
+			public void clicked() {
+				HelpWindow win = new HelpWindow();
+				GameLevel.this.getStage().addActor(win);
+			}
+		};
+		iconsTable.add(helpIcon).padBottom(20).row();
+
 
 		DesktopIcon exitIcon = new DesktopIcon("Main Menu", new TextureRegionDrawable(manager.get("icons/exit.png", Texture.class))) {
 			@Override
