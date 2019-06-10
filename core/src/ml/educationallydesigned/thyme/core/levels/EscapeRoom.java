@@ -72,7 +72,7 @@ public class EscapeRoom extends GameLevel {
 			questions[i] = current.getTitle() + "(" + current.getMinPassPercentage() + " - " + current.getQuestions().length + ")";
 		}
 		tasks.add(0, new Survey("Planning Time!",
-				"Enter the amount of time needed for each task",
+				"Enter the amount of time needed for each task. In the quiz window, you are provided the name of the quiz. In brackets, you are provided the minimum pass percentage, and the number of questions",
 				questions, this));
 
 		// open the windows
