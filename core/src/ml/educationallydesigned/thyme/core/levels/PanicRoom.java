@@ -78,7 +78,7 @@ public class PanicRoom extends GameLevel {
 			@Override
 			public void run() {
 				try {
-					Thread.sleep(200000);
+					Thread.sleep(20000);
 				} catch (InterruptedException e) {
 					// player finished before the window could be shown.
 					return;
