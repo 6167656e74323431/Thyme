@@ -67,7 +67,7 @@ public class DeficiencyRoom extends GameLevel {
 
 		tasks.add(new Task("Tutorial", "Explore the desktop, and see if you can answer the questions in the editor.", tutorialQuestions, tutorialAnswers, 100.0) {
 			private boolean check(String given, String target) {
-				return given.toLowerCase().contains(target.toLowerCase());
+				return given.toLowerCase().trim().contains(target.toLowerCase().trim());
 			}
 		});
 
