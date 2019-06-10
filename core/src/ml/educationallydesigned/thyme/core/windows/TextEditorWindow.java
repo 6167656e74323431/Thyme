@@ -60,7 +60,7 @@ public class TextEditorWindow extends DesktopWindow {
 		this.level = level;
 
 		setWidth(600);
-		setHeight(250 + currentTask.getQuestions().length * 110);
+		setHeight(Math.min(250 + currentTask.getQuestions().length * 110, 800));
 		align(Align.top);
 
 		VisTable table = new VisTable();
@@ -71,7 +71,6 @@ public class TextEditorWindow extends DesktopWindow {
 
 		// display questions
 		for (String question : currentTask.getQuestions()) {
-			System.out.println(question);
 			// text field
 			VisTextField field = new VisTextField();
 			field.setAlignment(Align.center);
@@ -101,6 +100,7 @@ public class TextEditorWindow extends DesktopWindow {
 		centerOnDesktop();
 		table.add(submitButton).row();
 		VisScrollPane scrollPane = new VisScrollPane(table);
+		scrollPane.setWidth(getWidth());
 		add(scrollPane);
 	}
 
