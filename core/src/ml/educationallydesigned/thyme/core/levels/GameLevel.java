@@ -33,6 +33,7 @@ import com.kotcrab.vis.ui.widget.VisTable;
 import ml.educationallydesigned.thyme.Thyme;
 import ml.educationallydesigned.thyme.core.screens.EndLevelScreen;
 import ml.educationallydesigned.thyme.core.screens.HomeScreen;
+import ml.educationallydesigned.thyme.core.windows.SocialMediaWindow;
 import ml.educationallydesigned.thyme.core.windows.TextEditorWindow;
 import ml.educationallydesigned.thyme.core.windows.TrackerWindow;
 import ml.educationallydesigned.thyme.core.windows.browser.BrowserWindow;
@@ -86,6 +87,7 @@ abstract public class GameLevel implements Screen {
 		manager.load("icons/writer.png", Texture.class);
 		manager.load("icons/browser.png", Texture.class);
 		manager.load("icons/exit.png", Texture.class);
+		manager.load("icons/reddit.png", Texture.class);
 		manager.finishLoading();
 		stage = new Stage();
 		game.setInputProcessor(stage);
@@ -122,6 +124,15 @@ abstract public class GameLevel implements Screen {
 		};
 		iconsTable.add(browserIcon).padBottom(20).row();
 
+		DesktopIcon redditIcon = new DesktopIcon("Reddit", new TextureRegionDrawable(manager.get("icons/reddit.png", Texture.class))) {
+			@Override
+			public void clicked() {
+				SocialMediaWindow win = new SocialMediaWindow();
+				GameLevel.this.getStage().addActor(win);
+			}
+		};
+		iconsTable.add(redditIcon).padBottom(20).row();
+
 		DesktopIcon exitIcon = new DesktopIcon("Main Menu", new TextureRegionDrawable(manager.get("icons/exit.png", Texture.class))) {
 			@Override
 			public void clicked() {
@@ -143,9 +154,7 @@ abstract public class GameLevel implements Screen {
 	 */
 	@Override
 	public void render(float delta) {
-		Gdx.gl.glClearColor(0, 0, 0, 1);
-		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-		stage.act(delta);
+stage.act(delta);
 		renderDesktop();
 		stage.draw();
 	}

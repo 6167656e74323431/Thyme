@@ -22,6 +22,7 @@ package ml.educationallydesigned.thyme.core.windows;
 
 import com.badlogic.gdx.Gdx;
 import com.kotcrab.vis.ui.VisUI;
+import com.kotcrab.vis.ui.widget.VisTable;
 import com.kotcrab.vis.ui.widget.VisWindow;
 
 /**
@@ -67,4 +68,35 @@ public class DesktopWindow extends VisWindow {
 		super.close();
 		remove();
 	}
+
+	/**
+	 * Override the fade out because it seems to be triggering when its not supposed to
+	 */
+	@Override
+	public void fadeOut(float t) { }
+
+	/**
+	 * Override the fade out because it seems to be triggering when its not supposed to
+	 */
+	@Override
+	public void fadeOut() { }
+
+	/**
+	 * Override the fade in because it seems to be triggering when its not supposed to
+	 *
+	 * @return the window
+	 */
+	public VisWindow fadeIn(float t) {
+		return this;
+	}
+
+	/**
+	 * Override the fade in because it seems to be triggering when its not supposed to
+	 *
+	 * @return the window
+	 */
+	public VisWindow fadeIn() {
+		return this;
+	}
+
 }
