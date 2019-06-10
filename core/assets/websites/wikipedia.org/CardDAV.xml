@@ -1,0 +1,43 @@
+<:import macros/html.xml />
+<:h1>CardDAV</:h1>
+<:p>vCard Extensions to WebDAV (CardDAV) is an address book client/server protocol designed to allow users to access and share contact data on a server.</:p>
+<:p>The CardDAV protocol was developed by the IETF and was published as RFC 6352 in August 2011. CardDAV is based on WebDAV, which is based on HTTP, and it uses vCard for contact data.</:p>
+<:p>The specification has been proposed as a standard by IETF as the RFC 6352 in August 2011 by C. Daboo from Apple Inc.</:p>
+<:p>The following products implement the "server"-side portion of the CardDAV protocol:</:p>
+<:p>- Apple Contacts Server.</:p>
+<:p>- CommuniGate Pro supports CardDav protocol.</:p>
+<:p>- DAViCal supports CardDAV from version 0.9.9.2</:p>
+<:p>- fruux, a synchronization service, supporting CardDAV</:p>
+<:p>- GMail and Google Contacts allow access to user's address book via CardDAV.</:p>
+<:p>- Group-Office, an open-source groupware and CRM application</:p>
+<:p>- Horde Groupware, a complete web-based groupware solution with CalDAV and CardDAV support.</:p>
+<:p>- MDaemon Email Server</:p>
+<:p>- Meishi, a standalone, Ruby on Rails based CardDAV server</:p>
+<:p>- Nextcloud supports CardDAV protocol since the first version.</:p>
+<:p>- ownCloud supports CardDAV protocol since version 2.0.</:p>
+<:p>- Radicale</:p>
+<:p>- SabreDAV, a WebDAV framework for PHP, supports CardDAV since version 1.5.</:p>
+<:p>- SOGo supports CardDAV access to its address books.</:p>
+<:p>- Zimbra 6 allows access to its address book via CardDAV.</:p>
+<:p>- SYNOLOGY DSM 6.0 supports CardDAV.</:p>
+<:p>- Xandikos is a lightweight CalDAV/CardDAV server.</:p>
+<:p>The following products implement the "client"-side portion of the CardDAV protocol:</:p>
+<:p>- Apple Contacts starting from Mac OS X Snow Leopard and higher.</:p>
+<:p>- Apple iOS, starting from iOS 4.</:p>
+<:p>- Blackberry devices running QNX - Blackberry 10+ phones, Playbook OS 2.0+ tablets</:p>
+<:p>- DAVx⁵ (previously called DAVdroid) is an open-source CalDAV/CardDAV sync app for Android (supporting VCard 4)</:p>
+<:p>- Evolution has built-in support for CalDAV/CardDAV.</:p>
+<:p>- KDE Software Compilation 4.5 will feature CardDAV client support, due in August 2010. It will be available for use by Kaddressbook, which is part of Kontact PIM suite. It will be provided by Akonadi: a PIM server which will also make the data available to other applications.</:p>
+<:p>- Kerio Connect</:p>
+<:p>- Outlook CalDav Synchronizer</:p>
+<:p>- Sailfish OS, the OS of the Jolla phones and tablet (since 2015)</:p>
+<:p>- Thunderbird, via the SOGo Connector or the CardBook add-on</:p>
+<:p>- Comparison of CalDAV and CardDAV implementations</:p>
+<:p>- CalDAV</:p>
+<:p>- Exchange ActiveSync</:p>
+<:p>- GroupDAV</:p>
+<:p>- SyncML</:p>
+<:p>- vCard</:p>
+<:p>- WebDAV</:p>
+<:p>- The Internet Engineering Task Force (IETF)</:p>
+<:p>- CardDAV Resources</:p>

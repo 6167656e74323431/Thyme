@@ -1,0 +1,9 @@
+<:import macros/html.xml />
+<:h1>GData</:h1>
+<:p>GData (Google Data Protocol) provides a simple protocol for reading and writing data on the Internet, designed by Google. GData combines common XML-based syndication formats (Atom and RSS) with a feed-publishing system based on the Atom Publishing Protocol, plus some extensions for handling queries. It relies on XML or JSON as a data format.</:p>
+<:p>Google provides GData client libraries for Java, JavaScript, .NET, PHP, Python, and Objective-C.</:p>
+<:p>An implementation called libgdata written in C is available under the LGPL license.</:p>
+<:p>- Open Data Protocol (OData) – competing protocol from Microsoft</:p>
+<:p>- Resource Description Framework (RDF) – a similar concept by W3C</:p>
+<:p>- GData</:p>
+<:p>- Learning from THE WEB by Adam Bosworth - the vision behind GData</:p>

@@ -1,8 +1,8 @@
 <:import macros/html.xml />
 <:h1>Internet studies</:h1>
-<:p><onlyinclude></:p>
+<:p>onlyinclude</:p>
 <:p>Internet studies is an interdisciplinary field studying the social, psychological, pedagogical, political, technical, cultural, artistic, and other dimensions of the Internet and associated information and communication technologies. While studies of the Internet are now widespread across academic disciplines, there is a growing collaboration among these investigations. In recent years, Internet studies have become institutionalized as courses of study at several institutions of higher learning. Cognates are found in departments of a number of other names, including departments of "Internet and Society", "virtual society", "digital culture", "new media" or "convergent media", various "iSchools", or programs like "Media in Transition" at MIT. On the research side, Internet studies intersects with studies of cyberculture, human–computer interaction, and science and technology studies.</:p>
-<:p></onlyinclude></:p>
+<:p>/onlyinclude</:p>
 <:p>Internet and society is a research field that addresses the interrelationship of Internet and society, i.e. how society has changed the Internet and how the Internet has changed society.</:p>
 <:p>The topic of social issues relating to Internet has become notable since the rise of the World Wide Web, which can be observed from the fact that journals and newspapers run many stories on topics such as cyberlove, cyberhate, Web 2.0, cybercrime, cyberpolitics, Internet economy, etc.</:p>
 <:p>As most of the scientific monographs that have considered Internet and society in their book titles are social theoretical in nature, internet and society can be considered as a primarily social theoretical research approach of Internet studies.</:p>

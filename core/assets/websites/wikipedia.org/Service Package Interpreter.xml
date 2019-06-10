@@ -1,0 +1,10 @@
+<:import macros/html.xml />
+<:h1>Service Package Interpreter</:h1>
+<:p>A Service Package Interpreter (SPI) is a software module that takes special tasks (Packages) from a generic HTTP daemon and handles them with the help of UI components.</:p>
+<:p>The SPI module usually sits in kernel space as a UI driver from one side, and as an Ethernet device at the other side. The SPI then captures network traffic in order to find Package Requests (PR). When it captures one, the HTTP daemon sets up the FLGOT_POST_PACKAGE or FLGOT_GET_PACKAGE. The SPI compares both Ethernet data and HTTP request, interprets them and passes the interpreted data to the UI peripheral.</:p>
+<:p>The first SPI prototype created by the M5 Commission, after the overall conclusion pointed about the lake of dynamic interpreter for the HTTP standard.</:p>
+<:p>It became a standard in 1998 by the same M5 Commission.</:p>
+<:p>- CGI</:p>
+<:p>- Simple Common Gateway Interface</:p>
+<:p>- ISAPI</:p>
+<:p>- OROT - Opening Of Hope</:p>

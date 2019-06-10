@@ -1,0 +1,23 @@
+<:import macros/html.xml />
+<:h1>MUSCULAR (surveillance program)</:h1>
+<:p>MUSCULAR (DS-200B), located in the United Kingdom, is the name of a surveillance program jointly operated by Britain's Government Communications Headquarters (GCHQ) and the U.S. National Security Agency (NSA) that was revealed by documents released by Edward Snowden and interviews with knowledgeable officials. GCHQ is the primary operator of the program. GCHQ and the NSA have secretly broken into the main communications links that connect the data centers of Yahoo! and Google. Substantive information about the program was made public at the end of October 2013.</:p>
+<:p>The programme is jointly run by:</:p>
+<:p>- – Government Communications Headquarters (GCHQ) (United Kingdom)</:p>
+<:p>- – U.S. National Security Agency (NSA)</:p>
+<:p>MUSCULAR is one of at least four other similar programs that rely on a trusted 2nd party, programs which together are known as WINDSTOP. In a 30-day period from December 2012 to January 2013, MUSCULAR was responsible for collecting 181 million records. It was however dwarfed by another WINDSTOP program known (insofar) only by its code DS-300 and codename INCENSER, which collected over 14 billion records in the same period.</:p>
+<:p>According to the leaked document the NSA's acquisitions directorate sends millions of records every day from internal Yahoo! and Google networks to data warehouses at the agency's headquarters at Fort Meade, Maryland. The program operates via an access point known as DS-200B, which is outside the United States, and it relies on an unnamed telecommunications operator to provide secret access for the NSA and the GCHQ.</:p>
+<:p>According to the "Washington Post", the MUSCULAR program collects more than twice as many data points ("selectors" in NSA jargon) compared to the better known PRISM. Unlike PRISM, the MUSCULAR program requires no (FISA or other type of) warrants.</:p>
+<:p>Because of the huge amount of data involved, MUSCULAR has presented a special challenge to NSA's Special Source Operations. For example, when Yahoo! decided to migrate a large amount of mailboxes between its data centers, the NSA's PINWALE database (their primary analytical database for the Internet) was quickly overwhelmed with the data coming from MUSCULAR.</:p>
+<:p>Closely related programmes are called INCENSER and TURMOIL. TURMOIL, belonging to the NSA, is a system for processing the data collected from MUSCULAR.</:p>
+<:p>According to a post-it style note from the presentation, the exploitation relied on the fact that (at the time at least) data was transmitted unencrypted inside Google's private cloud, with "Google Front End Servers" stripping and respectively adding back SSL from/to external connections. According to the "Washington Post": "Two engineers with close ties to Google exploded in profanity when they saw the drawing." After the information about MUSCULAR was published by the press, Google announced that it was working on deploying encrypted communication between its datacenters.</:p>
+<:p>In early November 2013, Google announced that it was encrypting traffic between its data centers. In mid-November, Yahoo! announced similar plans.</:p>
+<:p>In December 2013, Microsoft announced similar plans and used the expression "advanced persistent threat" in their press release (signed-off by their top legal representative), which the press immediately interpreted as comparison of the NSA with the Chinese government-sponsored hackers.</:p>
+<:p>- 2013 mass surveillance disclosures</:p>
+<:p>- DISHFIRE, another NSA–GCHQ collaboration collecting SMS and similar messages worldwide</:p>
+<:p>- List of government mass surveillance projects</:p>
+<:p>- Mass surveillance</:p>
+<:p>- Mass surveillance in the United Kingdom</:p>
+<:p>- Mass surveillance in the United States</:p>
+<:p>- Squeaky Dolphin, program targeting Facebook, YouTube, and Blogger</:p>
+<:p>- STELLARWIND</:p>
+<:p>- Total Information Awareness</:p>

@@ -64,7 +64,7 @@ public class Search {
 	public List<String> search(String keyword, int number, int threshold) {
 		List<ExtractedResult> results = FuzzySearch.extractSorted(keyword, pages, number);
 		List<String> resultList = new ArrayList<String>();
-		for (int i = 0; i < number; i++) {
+		for (int i = 0; i < number && i < results.size(); i++) {
 			if (results.get(i).getScore() >= threshold) {
 				resultList.add(results.get(i).getString());
 			}

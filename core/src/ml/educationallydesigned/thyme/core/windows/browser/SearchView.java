@@ -96,6 +96,7 @@ public class SearchView extends VisTable {
 					searchResult.addListener(new ClickListener() {
 						@Override
 						public void clicked(InputEvent event, float x, float y) {
+							if (result.lastIndexOf(".") == -1) return;
 							window.browseTo(domain + "/" + result.substring(0, result.lastIndexOf(".")));
 						}
 					});
@@ -108,7 +109,8 @@ public class SearchView extends VisTable {
 
 	private static String fileName(String path) {
 		File f = new File(path);
+		if (!f.getName().contains(".")) return f.getName();
 		// remove path and extension
-		return f.getName().substring(0, f.getName().indexOf("."));
+		return f.getName().substring(0, f.getName().lastIndexOf("."));
 	}
 }

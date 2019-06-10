@@ -43,5 +43,5 @@ const websites = fs.readdirSync(__dirname).filter(x => !fs.lstatSync(
 ).isFile());
 
 for (let website of websites) {
-    fs.writeFileSync(websites + "/index", walk(__dirname + "/" + website).join("\n"));
+    fs.writeFileSync(website + "/index", walk(__dirname + "/" + website).filter(x => x.toLowerCase().endsWith(".xml")).join("\n"));
 }

@@ -1,0 +1,41 @@
+<:import macros/html.xml />
+<:h1>Link prefetching</:h1>
+<:p>Link prefetching allows web browsers to pre-load resources. This speeds up both the loading and rendering of web pages. Prefetching was first introduced in HTML5. </:p>
+<:p>Prefetching is accomplished through hints in web pages. These hints are used by the browser to prefetch links. Resources which can be prefetched include: JavaScript, CSS, image, audio, video, and web fonts. DNS names and TCP connections can also be hinted for prefetching. </:p>
+<:p>There are two W3C standards covering prefetching for HTML5:</:p>
+<:p>- Link preload</:p>
+<:p>- Hints to specific URLs. Common hints include JavaScript, CSS, images and web fonts.</:p>
+<:p>- Resource hints</:p>
+<:p>- Hints to the browser. Common hints include DNS queries, opening TCP connections, and page pre-rendering.</:p>
+<:p>HTML5 methods for prefetch hints:</:p>
+<:p>- Standard link prefetch (supported by most browsers):</:p>
+<:p>- DNS prefetch (Mozilla Firefox, Google Chrome, and others):</:p>
+<:p>- Page pre-rendering (Google Chrome, Internet Explorer and others):</:p>
+<:p>- Lazy-load of images (Internet Explorer):</:p>
+<:p>-  for HTTP headers: Example below.</:p>
+<:p>Prefetching </:p>
+<:p>It is possible for implementations to prefetch links even when they are not specified as prefetch links.</:p>
+<:p>- Fasterfox has an option to enable the prefetching of all page links by the browser.</:p>
+<:p>- iCab, Mozilla Application Suite, and WebTV are the first referenced browsers to support link prefetching.</:p>
+<:p>- Browsing using a Google Web Accelerator (discontinued product, may technically be called precaching)</:p>
+<:p>- The Blue Coat proxy appliance is known to use non‑compliant prefetching.</:p>
+<:p>- Mozilla Firefox supports DNS prefetching, as of version 3.5.</:p>
+<:p>- Google Chrome supports prefetching of linked web content by "prerendering", as of version11.</:p>
+<:p>- Internet Explorer supports prefetching of IP addresses by "DNS prefetching", as of version9.</:p>
+<:p>- As of version 11, Internet Explorer supports the following set of features to expand its prefetching capabilities: "prerender", "dns-prefetch" and "lazyload" (images only).</:p>
+<:p>- Google is the most well-known website that takes advantage of this feature so as to improve the user experience. If the first hit is considered very probable to be the desired hit, it is assigned as a prefetchable link.</:p>
+<:p>- Specifically, Google implemented "Google Instant Pages" in August 2011 which takes advantage of the aforementioned feature, predictive search completion, and preloading search results as the user types in order to improve the performance of the search engine.</:p>
+<:p>- Bing has employed the use of prefetching and preloading since the release of Internet Explorer 11 (October, 2013).</:p>
+<:p>An issue inherent to indiscriminate link prefetching involves the misuse of "safe" HTTP methods. The HTTP GET and HEAD requests are said to be "safe", i.e., a user agent that issues one of these requests should expect that the request results in no change on the recipient server. However, it's common for website operators to use these requests outside of this constraint. Plain hyperlinks (which almost universally result in GET requests) are often used to implement logout functionality and account verification, e.g., when a user completes an account creation form, and an automated service sends a verification e-mail to the user's given e-mail address. Similarly, it is entirely possible for a hosting service to provide a Web front end to manage files, including links that delete one or more files. Users who visit pages containing these types of links, (whilst using a browser which employs an indiscriminate link prefetcher), might find that they have been logged out or that their files have been deleted.</:p>
+<:p>Additionally, there are a number of criticisms regarding the privacy and resource usage implications of link prefetching:</:p>
+<:p>- Users and website operators who pay for the amount of bandwidth they use find themselves paying for traffic for pages the user might not actually visit, and advertisers might pay for viewed ads on sites that are never visited.</:p>
+<:p>- Web statistics such as browser usage, search engine referers, and page hits may become less reliable due to registering page hits that were never seen by the user.</:p>
+<:p>- Users may be exposed to more security risks by downloading more pages, or from un-requested sites (additionally compounded as drive-by downloads become more advanced and diverse).</:p>
+<:p>- Users may violate acceptable-use policies of their network or organisation if prefetching accesses unauthorised content.</:p>
+<:p>In the case of mobile devices or for users with a limited bandwidth allowance, prefetching may result in an unnecessary costly drain on limited bandwidth.</:p>
+<:p>In the case of prerendering, Google warns that improper use may result in the aforementioned increased bandwidth usage, slower loading of other links, and slightly stale content.</:p>
+<:p>- Cache prefetching</:p>
+<:p>- Mozilla Link Prefetching FAQ</:p>
+<:p>- Test for Prefetch support</:p>
+<:p>- Prerender and prefetch support in Internet Explorer 11</:p>
+<:p>- A WordPress plugin that implements the true dynamic prerender meta tag</:p>

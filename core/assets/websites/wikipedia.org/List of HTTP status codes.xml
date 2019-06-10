@@ -13,7 +13,7 @@
 <:p>- 100 Continue</:p>
 <:p>- 101 Switching Protocols</:p>
 <:p>- 102 Processing (WebDAV; RFC 2518)</:p>
-<:p>- 103 Early Hints (<nowiki>RFC 8297</nowiki>)</:p>
+<:p>- 103 Early Hints (nowikiRFC 8297/nowiki)</:p>
 <:p>This class of status codes indicates the action requested by the client was received, understood and accepted.</:p>
 <:p>- 200 OK</:p>
 <:p>- 201 Created</:p>

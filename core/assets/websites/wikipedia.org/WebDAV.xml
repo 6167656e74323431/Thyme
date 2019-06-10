@@ -1,0 +1,78 @@
+<:import macros/html.xml />
+<:h1>WebDAV</:h1>
+<:p>Web Distributed Authoring and Versioning (WebDAV) is an extension of the Hypertext Transfer Protocol (HTTP) that allows clients to perform remote Web content authoring operations. WebDAV is defined in by a working group of the Internet Engineering Task Force.</:p>
+<:p>The WebDAV1 protocol provides a framework for users to create, change and move documents on a server. The most important features of the WebDAV protocol include the maintenance of properties about an author or modification date, namespace management, collections, and overwrite protection. Maintenance of properties includes such things as the creation, removal, and querying of file information. Namespace management deals with the ability to copy and move web pages within a server's namespace. Collections deal with the creation, removal, and listing of various resources. Lastly, overwrite protection handles aspects related to locking of files.</:p>
+<:p>Many modern operating systems provide built-in client-side support for WebDAV.</:p>
+<:p>WebDAV began in 1996 when Jim Whitehead, a PhD graduate from UC Irvine, worked with the World Wide Web Consortium (W3C) to host two meetings to discuss the problem of distributed authoring on the World Wide Web with interested people.</:p>
+<:p>Tim Berners-Lee's original vision of the Web involved a medium for both reading and writing. In fact, Berners-Lee's first web browser, called WorldWideWeb, could both view and edit web pages; but, as the Web grew, it became a read-only medium for most users. Whitehead and other like-minded people wanted to transcend that limitation.</:p>
+<:p>The meetings resulted in the formation of an IETF working group, because the new effort would lead to extensions to HTTP, which the IETF had started to standardize.</:p>
+<:p>As work began on the protocol, it became clear that handling both distributed authoring and versioning together would involve too much work and that the tasks would have to be separated. The WebDAV group focused on distributed authoring, and left versioning for the future. (The Delta-V extension added versioning later see the Extensions section below.)</:p>
+<:p>The WebDAV working group concluded its work in March 2007, after the Internet Engineering Steering Group (IESG) accepted an incremental update to . Other extensions left unfinished at that time, such as the BIND method, have been finished by their individual authors, independent of the formal working group.</:p>
+<:p>WebDAV extends the set of standard HTTP verbs and headers allowed for request methods. The added verbs include:</:p>
+<:p>- COPY</:p>
+<:p>- LOCK</:p>
+<:p>- MKCOL</:p>
+<:p>- MOVE</:p>
+<:p>- PROPFIND</:p>
+<:p>- PROPPATCH</:p>
+<:p>- UNLOCK</:p>
+<:p>- Apache HTTP Server provides WebDAV modules based on both davfs and Apache Subversion (svn).</:p>
+<:p>- Microsoft's IIS has a WebDAV module.</:p>
+<:p>- Nginx has a very limited optional WebDAV module and a third-party module</:p>
+<:p>- SabreDAV is a PHP application that can be used on Apache or Nginx in lieu of their bundled modules</:p>
+<:p>- ownCloud is a cloud storage PHP application which offers full WebDAV support</:p>
+<:p>- Nextcloud is a fork of ownCloud, and therefore also offers full WebDAV support</:p>
+<:p>- lighttpd has an optional WebDAV module</:p>
+<:p>- Caddy has an optional WebDAV module</:p>
+<:p>- Git supports writing to HTTP remotes, although the "smart" Git protocol for HTTP requiring special server support was made the preferred protocol over WebDAV</:p>
+<:p>- Linux via GVfs, including GNOME Files and via KIO, including Konqueror and Dolphin</:p>
+<:p>- macOS, including native support for CalDAV and CardDAV, the design of which is based on WebDAV</:p>
+<:p>- Microsoft Windows, including native support in Explorer</:p>
+<:p>- Microsoft Office</:p>
+<:p>The WebDAV working group produced several works:</:p>
+<:p>- a requirements document: "Requirements for a Distributed Authoring and Versioning Protocol for the World Wide Web" , issued February 1998</:p>
+<:p>- a base protocol document (excluding versioning, despite its title): "HTTP Extensions for Web Distributed Authoring and Versioning (WebDAV)" , issued June 2007 (which updates and supersedes "HTTP Extensions for Distributed Authoring WebDAV" , issued February 1999)</:p>
+<:p>- the ordered collections protocol: "Web Distributed Authoring and Versioning (WebDAV) Ordered Collections Protocol" , issued December 2003</:p>
+<:p>- the access control protocol: "Web Distributed Authoring and Versioning (WebDAV) Access Control Protocol" , issued May 2004</:p>
+<:p>- a quota specification: "Quota and Size Properties for Distributed Authoring and Versioning (DAV) Collections" , issued February 2006</:p>
+<:p>- a redirect specification: "Web Distributed Authoring and Versioning (WebDAV) Redirect Reference Resources" , issued March 2006</:p>
+<:p>- the versioning protocol: "Versioning Extensions to WebDAV (Web Distributed Authoring and Versioning)" (created by the Delta-V working group)</:p>
+<:p>- a specification of WebDAV property datatypes: "Datatypes for Web Distributed Authoring and Versioning (WebDAV) Properties"</:p>
+<:p>- a document defining how to initiate mounting of a WebDAV resource: "Mounting Web Distributed Authoring and Versioning (WebDAV) Servers"</:p>
+<:p>- a calendar access protocol: "Calendaring Extensions to WebDAV (CalDAV)"</:p>
+<:p>- a query protocol: "Web Distributed Authoring and Versioning (WebDAV) SEARCH"</:p>
+<:p>- an extension to the WebDAV ACL specification: "WebDAV Current Principal Extension"</:p>
+<:p>- an extension to the WebDAV MKCOL method: "Extended MKCOL for Web Distributed Authoring and Versioning (WebDAV)"</:p>
+<:p>- an extension of the collection model, defining creation and discovery of additional bindings to a resource: "Binding Extensions to Web Distributed Authoring and Versioning (WebDAV)"</:p>
+<:p>- an application of POST to WebDAV collections: "Using POST to Add Members to Web Distributed Authoring and Versioning (WebDAV) Collections"</:p>
+<:p>- an extension which allows synchronizing large collections efficiently: "Collection Synchronization for Web Distributed Authoring and Versioning (WebDAV)"</:p>
+<:p>For versioning, the Delta-V protocol under the Web Versioning and Configuration Management working group adds resource revision tracking, published in .</:p>
+<:p>For searching and locating, the DAV Searching and Locating (DASL) working group never produced any official standard although there are a number of implementations of its last draft. Work continued as non-working-group activity. The WebDAV Search specification attempts to pick up where the working group left off, and was published as in November 2008.</:p>
+<:p>For calendaring, CalDAV is a protocol allowing calendar access via WebDAV. CalDAV models calendar events as HTTP resources in iCalendar format, and models calendars containing events as WebDAV collections.</:p>
+<:p>For groupware, GroupDAV is a variant of WebDAV which allows client/server groupware systems to store and fetch objects such as calendar items and address book entries instead of web pages.</:p>
+<:p>For MS Exchange interoperability, WebDAV can be used for reading/updating/deleting items in a mailbox or public folder. WebDAV for Exchange has been extended by Microsoft to accommodate working with messaging data. Exchange Server version 2000, 2003, and 2007 support WebDAV. However, WebDAV support has been discontinued in Exchange 2010 in favor of Exchange Web Services (EWS), a SOAP/XML based API.</:p>
+<:p>As part of the Windows Server Protocols (WSPP) documentation set, Microsoft published the following protocol documents detailing extensions to WebDAV:</:p>
+<:p>- [MS-WDVME]: Web Distributed Authoring and Versioning (WebDAV) Protocol: Microsoft Extensions. These extensions include a new verb and new headers, and properties that enable previously unmanageable file types and optimize protocol interactions for file system clients. These extensions introduce new functionality into WebDAV, optimize processing, and eliminate the need for special-case processing.</:p>
+<:p>- [MS-WDV]: Web Distributed Authoring and Versioning (WebDAV) Protocol: Client Extensions. The client extensions in this specification extend the WebDAV Protocol by introducing new headers that both enable the file types that are not currently manageable and optimize protocol interactions for file system clients. These extensions do not introduce new functionality into the WebDAV Protocol, but instead optimize processing and eliminate the need for special-case processing.</:p>
+<:p>- [MS-WDVSE]: Web Distributed Authoring and Versioning (WebDAV) Protocol: Server Extensions. The server extensions in this specification extend WebDAV by introducing new HTTP request and response headers that both enable the file types that are not currently manageable and optimize protocol interactions for file system clients. This specification also introduces a new WebDAV method that is used to send search queries to disparate search providers.</:p>
+<:p>- [MS-WEBDAVE]: Web Distributed Authoring and Versioning Error Extensions Protocol Specification. This SharePoint Front-End Protocol describes extended error codes and extended error handling mechanism specified in [MS-WDV] to enable compliant servers to report error condition details on a server response.</:p>
+<:p>- File Transfer Protocol (FTP), a simple network protocol based on IP, allows users to transfer files between network hosts. FTPS extends FTP for secure traffic.</:p>
+<:p>- SSH File Transfer Protocol (SFTP), an extension of the Secure Shell protocol (SSH) version 2.0, provides secure file-transfer capability</:p>
+<:p>- A distributed file system such as the Server Message Block (SMB) protocol allows Microsoft Windows and open-source Samba clients to access and manage files and folders remotely on a suitable file server</:p>
+<:p>- AtomPub, an HTTP-based protocol for creating and updating web resources, can be used for some of the use cases of WebDAV. It is based on standard HTTP verbs with standardized collection resources that behave somewhat like the WebDAV model of directories.</:p>
+<:p>- CMIS, a standard consisting of a set of Web services for sharing information among disparate content repositories, seeks to ensure interoperability for people and applications using multiple content repositories; it has both SOAP- and AtomPub-based interfaces</:p>
+<:p>- Wiki software, such as MediaWiki.</:p>
+<:p>- Linked Data Platform (LDP), a Linked Data specification defining a set of integration patterns for building RESTful HTTP services that are capable of read-write of RDF data.</:p>
+<:p>- CalDAV</:p>
+<:p>- CardDAV</:p>
+<:p>- GroupDAV</:p>
+<:p>- Content management</:p>
+<:p>- Comparison of WebDAV software</:p>
+<:p>- Distributed file system</:p>
+<:p>- Filing OSID</:p>
+<:p>- ICE</:p>
+<:p>- WebDAV Resources</:p>
+<:p>- Davfs2 project</:p>
+<:p>- Fusedav project</:p>
+<:p>- WebDAV Apache modules</:p>
+<:p>- WebDAV Drive Mapping Tool</:p>
