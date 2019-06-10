@@ -32,7 +32,7 @@ import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
  * Class to implement the second level of the Thyme game.
  * <b>Time Spent:</b>
  * <ul>
- * <li>Theodore - 30 min</li>
+ * <li>Theodore - 35 min</li>
  * <li>Larry - 5 min</li>
  * </ul>
  *
@@ -103,7 +103,7 @@ public class PanicRoom extends GameLevel {
 	protected int calcScore() {
 		totalTime.stop();
 
-		return Math.max(0, 10000 - (int) (totalTime.getTime() / 100000000L) + 3000);
+		return Math.max(0, Math.min(10000 - (int) (totalTime.getTime() / 100000000L) + 300, 10000));
 	}
 
 	/**

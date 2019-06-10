@@ -112,7 +112,7 @@ public class EscapeRoom extends GameLevel {
 	protected int calcScore() {
 		int totalDiff = 0;
 		for (int i = 0; i < estimates.length; i++) {
-			totalDiff += Math.abs(estimates[i] - tasks.get(i + 1).getTime() / 1000);
+			totalDiff += Math.abs(estimates[i] * 100 - tasks.get(i + 1).getTime() / 10);
 		}
 
 		return Math.max(0, 10000 - totalDiff);
