@@ -7,7 +7,7 @@
 <:p>The regional Internet registries (RIR) allocate IPs within a particular region of the world.</:p>
 <:p>Note that this list may not include current assignments of /8 blocks to all regional or national Internet registries.</:p>
 <:p>The original list of IPv4 address blocks can be found in RFC 790 (J. B. Postel, September 1981). In previous versions of the document, (RFC 776 (J. B. Postel, January 1981), RFC 750, (J. B. Postel, 26 September 1978)), network numbers were 8-bit numbers rather than the 32-bit numbers used in IPv4. RFC 790 also added three networks not listed in RFC 776: 42.rrr.rrr.rrr, 43.rrr.rrr.rrr, and 44.rrr.rrr.rrr.</:p>
-<:p>The relevant portion of RFC<nowiki></nowiki> 790 is reproduced here with minor changes:</:p>
+<:p>The relevant portion of RFCnowiki/nowiki 790 is reproduced here with minor changes:</:p>
 <:p>- Classless Inter-Domain Routing (CIDR)</:p>
 <:p>- List of countries by IPv4 address allocation</:p>
 <:p>- The authoritative up-to-date list of IANA assignments.</:p>

@@ -1,0 +1,10 @@
+<:import macros/html.xml />
+<:h1>Roy Fielding</:h1>
+<:p>Roy Thomas Fielding (born 1965) is an American computer scientist, one of the principal authors of the HTTP specification and the originator of the Representational State Transfer (REST) architectural style. He is an authority on computer network architecture, and co-founder of the Apache HTTP Server project.</:p>
+<:p>Fielding works as a Senior Principal Scientist at Adobe Systems in San Jose, California.</:p>
+<:p>In 1965, Fielding was born in Laguna Beach, California. He describes himself as "part Maori, Kiwi, Yank, Irish, Scottish, British, and California beach bum".</:p>
+<:p>In 1999, Fielding was named to the MIT Technology Review TR100 as one of the top 100 innovators in the world under the age of 35.</:p>
+<:p>In 2000, Fielding was granted his doctorate by the University of California, Irvine.</:p>
+<:p>"Architectural Styles and the Design of Network-based Software Architectures", Fielding's doctoral dissertation, describes Representational State Transfer (REST) as a key architectural principle of the World Wide Web, and received a large amount of attention. People now frequently hold up REST as an approach to developing web services, as an alternative to other distributed-computing specifications such as SOAP. Fielding has also been heavily involved in the development of HTML and Uniform Resource Identifiers. Fielding was a co-founder of the Apache HTTP Server project and was a member of the interim OpenSolaris Boards until he resigned from the community in 2008. He was the chair of the Apache Software Foundation for its first three years and was a member of its board of directors until May 2014.</:p>
+<:p>Between 2001 and 2006, Fielding worked on Waka, an application protocol intended as "a binary, token-based replacement for HTTP". It was "designed to match the efficiency of the REST architectural style".</:p>
+<:p>- Fielding's blog</:p>

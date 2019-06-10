@@ -1,0 +1,13 @@
+<:import macros/html.xml />
+<:h1>Salmon (protocol)</:h1>
+<:p>The Salmon Protocol is a message exchange protocol running over HTTP designed to decentralize commentary and annotations made against newsfeed articles such as blog posts. It allows a single discussion thread to be established between the article's origin and any feed reader or "aggregator" which is subscribing to the content. Put simply, that if an article appeared on 3 sites: A (the source), B and C (the aggregates), that members of all 3 sites could see and contribute to a single thread of conversation regardless of site they were viewing from.</:p>
+<:p>The origin supplies a Salmon end point – a URL in the metadata of an RSS/Atom (standard) feed. An aggregating site makes a note of the end point.</:p>
+<:p>If a member of the aggregator makes a comment, the aggregator will construct a comment for the benefit of the origin. </:p>
+<:p>The comment will be base64 encoded, digitally signed, placed in an envelope and POSTed back to the origin via the endpoint.</:p>
+<:p>The comment is then made available by the origin in its original feed so subscriber aggregators may refresh their view of the conversation. The protocol provides security so that each aggregator and each member is uniquely identified so that the upstream could employ measures to ban or filter out rogue sites or members if so desired.</:p>
+<:p>Federated social networks such as GNU Social and Diaspora use Salmon as defined in the OStatus specification to coordinate discussion between members belonging to different servers. A member of one server can publish an article which is disseminated to other users over the network via Salmon who in turn can comment back in a similar fashion.</:p>
+<:p>- RSS</:p>
+<:p>- AtomPub</:p>
+<:p>- Publish Subscribe</:p>
+<:p>- OStatus (mentions OStatus users, not specifically Salmon protocol use)</:p>
+<:p>- Salmon Protocol - The homepage and technical information regarding the protocol</:p>

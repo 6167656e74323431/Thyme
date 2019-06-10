@@ -1,0 +1,7 @@
+<:import macros/html.xml />
+<:h1>Project Sunroof</:h1>
+<:p>Project Sunroof is a solar power initiative started by Google engineer Carl Elkin. The initiative's stated purpose is "mapping the planet's solar potential, one roof at a time."</:p>
+<:p>Project Sunroof primarily works to encourage the private adoption of solar energy by providing a set of tools to facilitate the purchase and installation of solar panels. Using data from Google Maps to calculate shadows from nearby structures and trees and taking into account historical weather and temperature patterns, the Project Sunroof website calculates how much money a user can expect to save yearly by making use of solar power. In addition, the Project Sunroof website also provides a list of local solar power retailers capable of installing solar panels in that area.</:p>
+<:p>Project Sunroof was created by Google engineer Carl Elkin as a 20% time project. While initially launching only in the cities of Boston, San Francisco, and Fresno, the project is planned eventually to expand nationally or even globally, depending upon the project's success in its launch areas.</:p>
+<:p>Google has previously invested in projects with solar energy provider, SolarCity.</:p>
+<:p>- Official webpage</:p>
