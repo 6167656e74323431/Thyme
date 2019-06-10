@@ -1,0 +1,11 @@
+<:import macros/html.xml />
+<:h1>Google.ai</:h1>
+<:p>Google.ai is a division of Google dedicated solely to artificial intelligence. It was announced at Google I/O 2017 by CEO Sundar Pichai.</:p>
+<:p>- Serving cloud-based TPUs (tensor processing units) in order to develop machine learning software</:p>
+<:p>- Development of TensorFlow.</:p>
+<:p>- The TensorFlow Research Cloud will give researchers a free cluster of one thousand cloud TPUs to perform machine learning research on, under the condition that the research is open source and they put their findings and publish it in a peer-reviewed scientific journal.</:p>
+<:p>- Portal to over 5100 (as of May 2019) research publications by Google staff.</:p>
+<:p>- "Google Puts All Of Their A.I. Stuff On Google.ai, Announces Cloud TPU"</:p>
+<:p>- "Google collects its AI initiatives under Google.ai"</:p>
+<:p>- "Google collects AI-based services across the company into Google.ai" – "Google.ai is a collection of products and teams across Alphabet with a focus on AI."</:p>
+<:p>- "Google's deep focus on AI is paying off"</:p>

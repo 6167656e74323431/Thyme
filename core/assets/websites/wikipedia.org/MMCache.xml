@@ -1,0 +1,11 @@
+<:import macros/html.xml />
+<:h1>MMCache</:h1>
+<:p>MMCache, also known as Turck MMCache, is a PHP accelerator, or an extension to PHP meant to improve performance. It is structured as a simple proxy server between the web server and the web browser. Its most important feature is using memcached for caching the data in memory. MMCache is free software released under the GNU GPL 2.0. The key identifying the given site is designated from the URL, so if, for example, there is a session defined within the URL, then the proxy will not work effectively.</:p>
+<:p>A newer version of MMCache, MMCache-LB, has an option to connect more web servers behind the proxy, with load balancing between them.</:p>
+<:p>Development work on MMCache was discontinued in 2009, and the code was forked into the eAccelerator application.</:p>
+<:p>- List of PHP accelerators</:p>
+<:p>- Web caching</:p>
+<:p>- Zend Performance Suite</:p>
+<:p>- Turck MMCache SourceForge page</:p>
+<:p>- PHPCoder, a web based front-end for both MMCache and eAccelerator</:p>
+<:p>- "The PHP Scalability Myth", a 2003 article</:p>
