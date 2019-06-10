@@ -18,53 +18,23 @@
  * /
  */
 
-package ml.educationallydesigned.thyme.core.windows;
+package ml.educationallydesigned.thyme.util;
 
 import com.badlogic.gdx.Gdx;
-import com.kotcrab.vis.ui.VisUI;
-import com.kotcrab.vis.ui.widget.VisWindow;
+import com.kotcrab.vis.ui.widget.VisTable;
 
-/**
- * Class to outline and implement some methods that all winows have.
- * <b>Time Spent:</b>
- * <ul>
- * <li>Theodore - 1 min</li>
- * <li>Larry - </li>
- * </ul>
- *
- * @author Theodore Preduta
- * @author Larry Yuan
- * @version 2.0
- */
-public class DesktopWindow extends VisWindow {
-	/**
-	 * Creates the window with a title and close button
-	 *
-	 * @param title The title of the window
-	 */
-	public DesktopWindow(String title) {
-		super(title);
-		WindowStyle windowStyle = new WindowStyle(this.getStyle());
-		windowStyle.titleFont = VisUI.getSkin().getFont("small-font");
-		this.getTitleTable().padLeft(10);
-		this.setStyle(windowStyle);
-		this.addCloseButton();
+public class CenteredTable extends VisTable {
+	public CenteredTable() {
+		super();
 	}
 
-	/**
-	 * Center the window on the desktop
-	 */
-	public void centerOnDesktop() {
+	public void centerTable() {
+		// center table
 		this.setX((Gdx.graphics.getWidth() >> 1) - this.getWidth() / 2);
 		this.setY((Gdx.graphics.getHeight() >> 1) - this.getHeight() / 2);
-	}
-
-	/**
-	 * Called when window should close
-	 */
-	@Override
-	protected void close() {
-		super.close();
-		remove();
+		// set background color
+		BackgroundColor blackBackground = new BackgroundColor("backgrounds/white.png",  this.getX(), this.getY(), this.getWidth(), this.getHeight());
+		blackBackground.setColor(37, 37, 39, 255);
+		this.setBackground(blackBackground);
 	}
 }

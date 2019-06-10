@@ -34,6 +34,8 @@ import com.kotcrab.vis.ui.widget.VisLabel;
 import com.kotcrab.vis.ui.widget.VisTable;
 import com.kotcrab.vis.ui.widget.VisTextButton;
 import ml.educationallydesigned.thyme.Thyme;
+import ml.educationallydesigned.thyme.util.BackgroundColor;
+import ml.educationallydesigned.thyme.util.CenteredTable;
 import ml.educationallydesigned.thyme.util.Dialog;
 import ml.educationallydesigned.thyme.util.scoreboard.Score;
 import ml.educationallydesigned.thyme.util.scoreboard.Scoreboard;
@@ -58,6 +60,7 @@ public class LeaderboardScreen implements Screen {
 	private Stage stage;
 	private Scoreboard scoreboard;
 	private VisTable scoresTable;
+	private Texture background;
 
 	/**
 	 * Initializes the game instance variable.
@@ -102,8 +105,10 @@ public class LeaderboardScreen implements Screen {
 	 */
 	@Override
 	public void show() {
+		background = new Texture(Gdx.files.internal("backgrounds/home.png"));
 		stage = new Stage();
 		game.setInputProcessor(stage);
+
 		AssetManager manager = new AssetManager();
 		try {
 			scoreboard = new Scoreboard();
@@ -115,9 +120,7 @@ public class LeaderboardScreen implements Screen {
 		manager.load("logos/scoreboard.png", Texture.class);
 		manager.finishLoading();
 		// make table
-		VisTable table = new VisTable();
-		table.setFillParent(true);
-
+		CenteredTable table = new CenteredTable();
 		// display logo
 		table.add(new VisImage(manager.get("logos/scoreboard.png", Texture.class)));
 		table.row();
@@ -163,6 +166,9 @@ public class LeaderboardScreen implements Screen {
 		table.add(split);
 		table.row();
 
+		table.setWidth(725);
+		table.setHeight(500 + (scoresTable.getChildren().size * 15));
+		table.centerTable();
 		stage.addActor(table);
 	}
 
@@ -176,6 +182,9 @@ public class LeaderboardScreen implements Screen {
 		Gdx.gl.glClearColor(0, 0, 0, 1);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 		stage.act(delta);
+		stage.getBatch().begin();
+		stage.getBatch().draw(background, 0, 0, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
+		stage.getBatch().end();
 		stage.draw();
 	}
 

@@ -23,6 +23,7 @@ import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
@@ -32,6 +33,8 @@ import com.kotcrab.vis.ui.widget.VisTable;
 import com.kotcrab.vis.ui.widget.VisTextButton;
 import com.kotcrab.vis.ui.widget.VisTextField;
 import ml.educationallydesigned.thyme.Thyme;
+import ml.educationallydesigned.thyme.util.BackgroundColor;
+import ml.educationallydesigned.thyme.util.CenteredTable;
 import ml.educationallydesigned.thyme.util.Dialog;
 
 import java.io.IOException;
@@ -53,7 +56,7 @@ public class NamePromptScreen implements Screen {
 	private Thyme game;
 	private Stage stage;
 	private VisTextField nameField;
-
+	private Texture background;
 	/**
 	 * Constructs the object.
 	 *
@@ -69,12 +72,12 @@ public class NamePromptScreen implements Screen {
 	 */
 	@Override
 	public void show() {
+		background = new Texture(Gdx.files.internal("backgrounds/home.png"));
 		// make the stage
 		stage = new Stage();
 		game.setInputProcessor(stage);
 		// make table
-		VisTable table = new VisTable();
-		table.setFillParent(true);
+		CenteredTable table = new CenteredTable();
 		// make title
 		VisLabel prompt = new VisLabel("Enter your name for the scoreboard");
 		table.add(prompt).padBottom(20);
@@ -103,7 +106,10 @@ public class NamePromptScreen implements Screen {
 					}
 			}
 		});
+		table.setWidth(550);
+		table.setHeight(300);
 
+		table.centerTable();
 		stage.addActor(table);
 	}
 
@@ -117,6 +123,9 @@ public class NamePromptScreen implements Screen {
 		Gdx.gl.glClearColor(0, 0, 0, 1);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 		stage.act(delta);
+		stage.getBatch().begin();
+		stage.getBatch().draw(background, 0, 0, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
+		stage.getBatch().end();
 		stage.draw();
 	}
 

@@ -19,6 +19,9 @@
 package ml.educationallydesigned.thyme.core.levels;
 
 import com.badlogic.gdx.Game;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
 import ml.educationallydesigned.thyme.Thyme;
 import ml.educationallydesigned.thyme.core.windows.TrackerWindow;
 import ml.educationallydesigned.thyme.util.task.Task;
@@ -37,6 +40,7 @@ import ml.educationallydesigned.thyme.util.task.TaskGenerator;
  * @version 1.2
  */
 public class DeficiencyRoom extends GameLevel {
+	private Texture background;
 	/**
 	 * Constructs the object.
 	 *
@@ -44,6 +48,7 @@ public class DeficiencyRoom extends GameLevel {
 	 */
 	public DeficiencyRoom(Thyme game) {
 		super(game);
+		background = new Texture(Gdx.files.internal("backgrounds/one.png"));
 	}
 
 	/**
@@ -54,10 +59,10 @@ public class DeficiencyRoom extends GameLevel {
 		// call GameLevel's show to initialize protected variables
 		super.show();
 
-		String[] tutorialQuestions = {"What is the name of the QnA window?",
+		String[] tutorialQuestions = {"What is the name of the question and answer window?",
 				"What is the name of the browser?"};
 
-		String[] tutorialAnswers = {"LarryOffice",
+		String[] tutorialAnswers = {"Task Quizzer",
 				"Browser"};
 
 		tasks.add(new Task("Tutorial", "Explore the desktop, and see if you can answer the questions in the editor.", tutorialQuestions, tutorialAnswers, 100.0) {
@@ -76,9 +81,19 @@ public class DeficiencyRoom extends GameLevel {
 	}
 
 	/**
+	 * Renders the desktop with a custom background image
+	 */
+	@Override
+	void renderDesktop() {
+		stage.getBatch().begin();
+		stage.getBatch().draw(background, 0, 0,  Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
+		stage.getBatch().end();
+	}
+
+	/**
 	 * Calculates the score once this level is done.
 	 *
-	 * @return the score for the deficciancy room.
+	 * @return the score for the deficiency room.
 	 */
 	@Override
 	protected int calcScore() {

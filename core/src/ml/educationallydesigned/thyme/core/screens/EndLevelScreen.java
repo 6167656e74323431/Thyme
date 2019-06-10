@@ -23,6 +23,7 @@ import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Stage;
@@ -37,6 +38,8 @@ import ml.educationallydesigned.thyme.core.levels.DeficiencyRoom;
 import ml.educationallydesigned.thyme.core.levels.EscapeRoom;
 import ml.educationallydesigned.thyme.core.levels.GameLevel;
 import ml.educationallydesigned.thyme.core.levels.PanicRoom;
+import ml.educationallydesigned.thyme.util.BackgroundColor;
+import ml.educationallydesigned.thyme.util.CenteredTable;
 import ml.educationallydesigned.thyme.util.task.Task;
 
 import java.util.List;
@@ -60,6 +63,7 @@ public class EndLevelScreen implements Screen {
 	private GameLevel currentLevel;
 	private List<Task> tasks;
 	private int points;
+	private Texture background;
 
 	/**
 	 * Constructs the object.
@@ -81,13 +85,14 @@ public class EndLevelScreen implements Screen {
 	 */
 	@Override
 	public void show() {
+		background = new Texture(Gdx.files.internal("backgrounds/home.png"));
 		// make the stage
 		stage = new Stage();
 		game.setInputProcessor(stage);
 		// make table
-		VisTable table = new VisTable();
+		CenteredTable table = new CenteredTable();
 		table.align(Align.center);
-		table.setFillParent(true);
+
 		// make title
 		VisLabel gameTitle = new VisLabel("Level Completed");
 		VisLabel.LabelStyle titleStyle = new Label.LabelStyle();
@@ -154,6 +159,10 @@ public class EndLevelScreen implements Screen {
 			}
 		});
 
+		table.setWidth(550);
+		table.setHeight(425 + 15 * tasks.size());
+		table.centerTable();
+
 		stage.addActor(table);
 	}
 
@@ -167,9 +176,11 @@ public class EndLevelScreen implements Screen {
 		Gdx.gl.glClearColor(0, 0, 0, 1);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 		stage.act(delta);
+		stage.getBatch().begin();
+		stage.getBatch().draw(background, 0, 0, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
+		stage.getBatch().end();
 		stage.draw();
 	}
-
 	/**
 	 * @param width
 	 * @param height

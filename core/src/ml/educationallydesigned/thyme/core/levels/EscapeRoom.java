@@ -19,6 +19,8 @@
 package ml.educationallydesigned.thyme.core.levels;
 
 import com.badlogic.gdx.Game;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Texture;
 import ml.educationallydesigned.thyme.Thyme;
 import ml.educationallydesigned.thyme.core.windows.TrackerWindow;
 import ml.educationallydesigned.thyme.util.task.Survey;
@@ -38,6 +40,7 @@ import ml.educationallydesigned.thyme.util.task.TaskGenerator;
  * @version 1.1
  */
 public class EscapeRoom extends GameLevel {
+	private Texture background;
 	private int[] estimates;
 
 	/**
@@ -47,6 +50,7 @@ public class EscapeRoom extends GameLevel {
 	 */
 	public EscapeRoom(Thyme game) {
 		super(game);
+		background = new Texture(Gdx.files.internal("backgrounds/two.png"));
 	}
 
 	/**
@@ -75,6 +79,16 @@ public class EscapeRoom extends GameLevel {
 
 		// start current task
 		tasks.get(currentTask).start();
+	}
+
+	/**
+	 * Renders the desktop with a custom background image
+	 */
+	@Override
+	void renderDesktop() {
+		stage.getBatch().begin();
+		stage.getBatch().draw(background, 0, 0,  Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
+		stage.getBatch().end();
 	}
 
 	/**
