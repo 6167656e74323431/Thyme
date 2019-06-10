@@ -20,23 +20,60 @@
 
 package ml.educationallydesigned.thyme.util.task;
 
+import com.badlogic.gdx.Gdx;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.nio.Buffer;
+import java.util.Random;
+
 /**
  * Class to generate random tasks.
  * <b>Time Spent:</b>
  * <ul>
  * <li>Theodore - 20 min</li>
- * <li>Larry - </li>
+ * <li>Larry - 40 min/li>
  * </ul>
  *
  * @author Theodore Preduta
  * @author Larry Yuan
- * @version 1.0
+ * @version 2.0
  */
 public class TaskGenerator {
+	private static String[] index = Gdx.files.internal("tasks/index").readString().replaceAll("\r", "").split("\n");
+	private static Task[] possibleTasks = new Task[index.length];
+	private static Random random = new Random();
+
+	static {
+		// read all tasks from index
+		for (int i = 0; i < index.length; i++) {
+			// make buffered reader from file
+			BufferedReader reader = new BufferedReader(Gdx.files.internal("tasks/" + index[i]).reader());
+			try {
+				// name and description
+				String name = reader.readLine(), description = reader.readLine();
+				// min pass percentage & number of questions
+				int minPassPercentage = Integer.parseInt(reader.readLine()), nQuestions = Integer.parseInt(reader.readLine());
+				String[] questions = new String[nQuestions], answers = new String[nQuestions];
+				// questions
+				for (int j = 0; j < nQuestions; j++) {
+					questions[j] = reader.readLine();
+				}
+				// answers
+				for (int j = 0; j < nQuestions; j++) {
+					answers[j] = reader.readLine();
+				}
+				possibleTasks[i] = new Task(name, description, questions, answers, minPassPercentage);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
 	/**
 	 * Private constructor to ensure no one creates an instance of this class.
 	 */
 	private TaskGenerator() {
+
 	}
 
 	/**
@@ -45,7 +82,6 @@ public class TaskGenerator {
 	 * @return The same task each time lol
 	 */
 	public static Task generateTask() {
-		String[] ab = {"a", "b"};
-		return new Task("a", "b", ab, ab, 50.0);
+		return possibleTasks[random.nextInt(possibleTasks.length)];
 	}
 }
