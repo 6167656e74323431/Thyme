@@ -15,6 +15,7 @@
 	You should have received a copy of the GNU Affero General Public License
 	along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
+
 package ml.educationallydesigned.thyme.desktop;
 
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
@@ -22,22 +23,21 @@ import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
 import ml.educationallydesigned.thyme.Thyme;
 
 /**
- * Class to launch the game.
- * <b>Time Spent:</b>
- * <ul>
- * <li>Theodore - 1 min</li>
- * <li>Larry - </li>
- * </ul>
+ * Main launcher class to launch the game for desktop distributions. This class
+ * contains the main method that sets up the initial state of the game <b>Time
+ * Spent:</b> <ul>
+ * <li>Theodore - 5 min</li>
+ * <li>Larry - 5 min</li> </ul>
  *
- * @author Theodore Preduta
- * @author Larry Yuan
- * @version 1.1
+ * @author     Theodore Preduta
+ * @author     Larry Yuan
+ * @version    1.1
  */
 public class DesktopLauncher {
 	/**
 	 * Launcher for desktop application, configures Lwjgl with some settings.
 	 *
-	 * @param arg Command line arguments
+	 * @param arg Command line arguments (not used)
 	 */
 	public static void main(String[] arg) {
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();

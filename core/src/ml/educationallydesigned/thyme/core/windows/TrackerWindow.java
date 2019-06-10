@@ -26,20 +26,18 @@ import ml.educationallydesigned.thyme.core.levels.GameLevel;
 import ml.educationallydesigned.thyme.util.task.Task;
 
 /**
- * Window to track the progress of tasks in the game.
- * <b>Time Spent:</b>
- * <ul>
- * <li>Theodore - 60 min</li>
- * <li>Larry - 30 min</li>
- * </ul>
+ * Window that displays the current task that needs to be completed by the end
+ * user of the program. <b>Time Spent:</b> <ul>
+ * <li>Theodore - 80 min</li>
+ * <li>Larry - 30 min</li> </ul>
  *
- * @author Theodore Preduta
- * @author Larry Yuan
- * @version 1.5
+ * @author     Theodore Preduta
+ * @author     Larry Yuan
+ * @version    1.5
  */
 public class TrackerWindow extends DesktopWindow {
 	private static int DEFAULT_WIDTH = 500;
-	private static int DEFAULT_HEIGHT = 225;
+	private static int DEFAULT_HEIGHT = 200;
 	private Task currentTask;
 	private GameLevel level;
 	private VisLabel title;

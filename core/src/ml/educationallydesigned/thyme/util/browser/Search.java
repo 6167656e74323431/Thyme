@@ -1,21 +1,19 @@
 /*
- *
- * 	Thyme is an educational game to assist teenagers in time management, and tracking.
- * 	Copyright (C) 2019 Theodore Preduta, Larry Yuan
- *
- * 	This program is free software: you can redistribute it and/or modify
- * 	it under the terms of the GNU Affero General Public License as published
- * 	by the Free Software Foundation, either version 3 of the License, or
- * 	(at your option) any later version.
- *
- * 	This program is distributed in the hope that it will be useful,
- * 	but WITHOUT ANY WARRANTY; without even the implied warranty of
- * 	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * 	GNU Affero General Public License for more details.
- *
- * 	You should have received a copy of the GNU Affero General Public License
- * 	along with this program.  If not, see <https://www.gnu.org/licenses/>.
- * /
+	Thyme is an educational game to assist teenagers in time management, and tracking.
+	Copyright (C) 2019 Theodore Preduta, Larry Yuan
+	
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU Affero General Public License as published
+	by the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+	
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU Affero General Public License for more details.
+	
+	You should have received a copy of the GNU Affero General Public License
+	along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
 package ml.educationallydesigned.thyme.util.browser;
@@ -29,15 +27,21 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
+<<<<<<< HEAD
  * Class that performs searching on the website index.
  * <b>Time Spent:</b>
  * <ul>
  * <li>Theodore - 0 min</li>
  * <li>Larry - 20 min</li>
  * </ul>
+=======
+ * Class that performs searching on the website index. <b>Time Spent:</b> <ul>
+ * <li>Theodore - 1 min</li>
+ * <li>Larry - 10 min</li> </ul>
+>>>>>>> theodore
  *
- * @author Larry Yuan
- * @author Theodore Preduta
+ * @author     Larry Yuan
+ * @author     Theodore Preduta
  */
 public class Search {
 	private String domain;
@@ -46,7 +50,7 @@ public class Search {
 	/**
 	 * Initializes the object with the domain to search through.
 	 *
-	 * @param domain the domain
+	 * @param      domain  the domain
 	 */
 	public Search(String domain) {
 		this.domain = domain;
@@ -57,9 +61,11 @@ public class Search {
 	/**
 	 * Searches through the pages by a keyword and returns the top matches
 	 *
-	 * @param keyword   the keyword
-	 * @param number    the number of results to list
-	 * @param threshold the threshold required to be selected
+	 * @param      keyword    the keyword
+	 * @param      number     the number of results to list
+	 * @param      threshold  the threshold required to be selected
+	 *
+	 * @return     a list if the top matches
 	 */
 	public List<String> search(String keyword, int number, int threshold) {
 		List<ExtractedResult> results = FuzzySearch.extractSorted(keyword, pages, number);

@@ -37,16 +37,23 @@ import ml.educationallydesigned.thyme.core.levels.PanicRoom;
 import ml.educationallydesigned.thyme.util.CenteredTable;
 
 /**
+<<<<<<< HEAD
  * Non-level game state.
  * <b>Time Spent:</b>
  * <ul>
  * <li>Theodore - 10 min</li>
  * <li>Larry - 1.5 hr</li>
  * </ul>
+=======
+ * Main screen which allows the user to choose what gamemode they will play.
+ * <b>Time Spent:</b> <ul>
+ * <li>Theodore - 30 min</li>
+ * <li>Larry - 30 min</li> </ul>
+>>>>>>> theodore
  *
- * @author Theodore Preduta
- * @author Larry Yuan
- * @version 1.4
+ * @author     Theodore Preduta
+ * @author     Larry Yuan
+ * @version    1.4
  */
 public class HomeScreen implements Screen {
 	private Stage stage;

@@ -1,21 +1,19 @@
 /*
- *
- * 	Thyme is an educational game to assist teenagers in time management, and tracking.
- * 	Copyright (C) 2019 Theodore Preduta, Larry Yuan
- *
- * 	This program is free software: you can redistribute it and/or modify
- * 	it under the terms of the GNU Affero General Public License as published
- * 	by the Free Software Foundation, either version 3 of the License, or
- * 	(at your option) any later version.
- *
- * 	This program is distributed in the hope that it will be useful,
- * 	but WITHOUT ANY WARRANTY; without even the implied warranty of
- * 	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * 	GNU Affero General Public License for more details.
- *
- * 	You should have received a copy of the GNU Affero General Public License
- * 	along with this program.  If not, see <https://www.gnu.org/licenses/>.
- * /
+	Thyme is an educational game to assist teenagers in time management, and tracking.
+	Copyright (C) 2019 Theodore Preduta, Larry Yuan
+	
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU Affero General Public License as published
+	by the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+	
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU Affero General Public License for more details.
+	
+	You should have received a copy of the GNU Affero General Public License
+	along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
 package ml.educationallydesigned.thyme.util.socialmedia;
@@ -27,13 +25,19 @@ import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.utils.BaseDrawable;
 
 /**
- * Taken from https://old.reddit.com/r/libgdx/comments/4gwxod/best_way_to_make_an_animated_button_in_scene2d/?ref=share&ref_source=link
+ * Taken from
+ * https://old.reddit.com/r/libgdx/comments/4gwxod/best_way_to_make_an_animated_button_in_scene2d/?ref=share&ref_source=link
  */
 public class AnimatedDrawable extends BaseDrawable {
 
 	private Animation animation;
 	private float stateTime = 0;
 
+	/**
+	 * Constructs the object.
+	 *
+	 * @param      animation  The animation to be displayed
+	 */
 	public AnimatedDrawable(Animation animation) {
 		this.animation = animation;
 		TextureRegion key = (TextureRegion) animation.getKeyFrame(0);
@@ -45,6 +49,15 @@ public class AnimatedDrawable extends BaseDrawable {
 		this.setMinHeight(key.getRegionHeight());
 	}
 
+	/**
+	 * Function that draws the animation.
+	 *
+	 * @param      batch   The batch
+	 * @param      x       x position
+	 * @param      y       y position
+	 * @param      width   The width
+	 * @param      height  The height
+	 */
 	@Override
 	public void draw(Batch batch, float x, float y, float width, float height) {
 		stateTime += Gdx.graphics.getDeltaTime();

@@ -27,16 +27,15 @@ import ml.educationallydesigned.thyme.util.task.Task;
 import ml.educationallydesigned.thyme.util.task.TaskGenerator;
 
 /**
- * Class to implement the first room gamemode.
- * <b>Time Spent:</b>
- * <ul>
+ * Class to implement the first room gamemode. THis level focusses on accuracy.
+ * <b>Time Spent:</b> <ul>
  * <li>Theodore - 30 min</li>
  * <li>Larry - 5 min</li>
  * </ul>
  *
- * @author Theodore Preduta
- * @author Larry Yuan
- * @version 1.2
+ * @author     Theodore Preduta
+ * @author     Larry Yuan
+ * @version    1.2
  */
 public class DeficiencyRoom extends GameLevel {
 	private Texture background;
@@ -65,7 +64,7 @@ public class DeficiencyRoom extends GameLevel {
 		String[] tutorialAnswers = {"Task Quizzer",
 				"Browser"};
 
-		tasks.add(new Task("Tutorial", "Explore the desktop, and see if you can answer the questions in the editor. Double click desktop icons to open.", tutorialQuestions, tutorialAnswers, 100.0) {
+		tasks.add(new Task("Tutorial", "Explore the desktop, and see if you can answer the questions in the editor.", tutorialQuestions, tutorialAnswers, 100.0) {
 			private boolean check(String given, String target) {
 				return given.toLowerCase().trim().contains(target.toLowerCase().trim());
 			}
