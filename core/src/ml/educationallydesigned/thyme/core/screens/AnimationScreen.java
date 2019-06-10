@@ -32,7 +32,7 @@ import java.io.FileNotFoundException;
  * <b>Time Spent:</b>
  * <ul>
  * <li>Theodore - 15 min</li>
- * <li>Larry - </li>
+ * <li>Larry - 2 hr</li>
  * </ul>
  *
  * @author Theodore Preduta

@@ -31,7 +31,7 @@ import ml.educationallydesigned.thyme.util.task.TaskGenerator;
  * <b>Time Spent:</b>
  * <ul>
  * <li>Theodore - 30 min</li>
- * <li>Larry - </li>
+ * <li>Larry - 5 min</li>
  * </ul>
  *
  * @author Theodore Preduta

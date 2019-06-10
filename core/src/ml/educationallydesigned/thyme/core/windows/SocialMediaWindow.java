@@ -38,8 +38,8 @@ import java.util.LinkedList;
  * Class to represent a Social Media window
  * <b>Time Spent:</b>
  * <ul>
- * <li>Theodore - </li>
- * <li>Larry - 2 hr</li>
+ * <li>Theodore - 0 min</li>
+ * <li>Larry - 3 hr</li>
  * </ul>
  *
  * @author Theodore Preduta

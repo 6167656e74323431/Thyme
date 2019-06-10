@@ -32,7 +32,7 @@ import com.github.czyzby.lml.util.Lml;
  * <b>Time Spent:</b>
  * <ul>
  * <li>Theodore - 0 min</li>
- * <li>Larry - </li>
+ * <li>Larry - 20 min</li>
  * </ul>
  *
  * @author Theodore Preduta

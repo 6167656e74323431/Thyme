@@ -23,11 +23,27 @@ package ml.educationallydesigned.thyme.util;
 import com.badlogic.gdx.Gdx;
 import com.kotcrab.vis.ui.widget.VisTable;
 
+/**
+ * Class representing a table centered with a background colr
+ * <b>Time Spent:</b>
+ * <ul>
+ * <li>Theodore - 0 min</li>
+ * <li>Larry - 5 min</li>
+ * </ul>
+ * @author Larry Yuan
+ * @author Theodore Preduta
+ */
 public class CenteredTable extends VisTable {
+	/**
+	 * Creates a new centered table
+	 */
 	public CenteredTable() {
 		super();
 	}
 
+	/**
+	 * Centers the table and sets the background
+	 */
 	public void centerTable() {
 		// center table
 		this.setX((Gdx.graphics.getWidth() >> 1) - this.getWidth() / 2);

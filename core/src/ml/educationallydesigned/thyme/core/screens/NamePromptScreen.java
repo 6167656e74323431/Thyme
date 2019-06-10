@@ -42,7 +42,7 @@ import java.io.IOException;
  * <b>Time Spent:</b>
  * <ul>
  * <li>Theodore - 20 min</li>
- * <li>Larry - 0 min</li>
+ * <li>Larry - 10 min</li>
  * </ul>
  *
  * @author Theodore Preduta

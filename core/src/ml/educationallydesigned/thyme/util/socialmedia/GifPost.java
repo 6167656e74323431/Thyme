@@ -32,7 +32,7 @@ import java.io.InputStream;
  *
  * <b>Time Spent:</b>
  * <ul>
- * <li>Theodore - </li>
+ * <li>Theodore - 20 min</li>
  * <li>Larry - 10 min</li>
  * </ul>
  *

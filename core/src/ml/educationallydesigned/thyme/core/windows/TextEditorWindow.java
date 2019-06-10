@@ -34,7 +34,7 @@ import java.util.List;
  * <b>Time Spent:</b>
  * <ul>
  * <li>Theodore - 80 min</li>
- * <li>Larry - 30 min</li>
+ * <li>Larry - 50 min</li>
  * </ul>
  *
  * @author Theodore Preduta
