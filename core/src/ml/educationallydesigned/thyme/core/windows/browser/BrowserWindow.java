@@ -58,6 +58,7 @@ public class BrowserWindow extends DesktopWindow {
 	private static String HOME_URL = "home/home";
 	private static Bookmark[] bookmarks = {
 			new Bookmark("Wikipedia", new Texture(Gdx.files.internal("favicons/wikipedia.png")), "wikipedia.org"),
+			new Bookmark("Random Facts", new Texture(Gdx.files.internal("favicons/randomfacts.png")), "randomfacts.com")
 	};
 	private static String prefix = " local://";
 	private VisTable browserDisplay;
@@ -124,8 +125,8 @@ public class BrowserWindow extends DesktopWindow {
 
 		// add each bookmark to bar
 		for (final Bookmark bookmark : bookmarks) {
-			final VisImageTextButton bookmarkButton = new VisImageTextButton("Wikipedia", new TextureRegionDrawable(bookmark.favicon));
-
+			final VisImageTextButton bookmarkButton = new VisImageTextButton(bookmark.name, new TextureRegionDrawable(bookmark.favicon));
+			bookmarkButton.padLeft(10);
 			// properly style bookmark
 			VisImageTextButton.VisImageTextButtonStyle bookmarkButtonStyle = bookmarkButton.getStyle();
 			// remove background and border
@@ -143,7 +144,7 @@ public class BrowserWindow extends DesktopWindow {
 			bookmarkButton.getLabel().setStyle(bookmarkLabelStyle);
 
 			// make favicon small
-			bookmarkButton.getImageCell().height(30);
+			bookmarkButton.getImageCell().height(30).width(30);
 
 			// add handler for when user clicks bookmark
 			bookmarkButton.addListener(new ClickListener() {
