@@ -41,7 +41,7 @@ import java.util.List;
  * <b>Time Spent:</b>
  * <ul>
  * <li>Theodore - 0 min</li>
- * <li>Larry - </li>
+ * <li>Larry - 1.5 hr</li>
  * </ul>
  *
  * @author Larry Yuan

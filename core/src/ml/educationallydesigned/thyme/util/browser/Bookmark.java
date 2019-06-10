@@ -27,7 +27,7 @@ import com.badlogic.gdx.graphics.Texture;
  * <b>Time Spent:</b>
  * <ul>
  * <li>Theodore - 0 min</li>
- * <li>Larry - </li>
+ * <li>Larry - 5 min</li>
  * </ul>
  *
  * @author Theodore Preduta

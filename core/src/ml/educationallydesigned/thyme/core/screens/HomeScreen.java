@@ -41,7 +41,7 @@ import ml.educationallydesigned.thyme.util.CenteredTable;
  * <b>Time Spent:</b>
  * <ul>
  * <li>Theodore - 10 min</li>
- * <li>Larry - </li>
+ * <li>Larry - 1.5 hr</li>
  * </ul>
  *
  * @author Theodore Preduta

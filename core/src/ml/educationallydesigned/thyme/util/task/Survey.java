@@ -28,7 +28,7 @@ import ml.educationallydesigned.thyme.util.*;
  * <b>Time Spent:</b>
  * <ul>
  * <li>Theodore - 25 min</li>
- * <li>Larry - </li>
+ * <li>Larry - 0 min</li>
  * </ul>
  *
  * @author Theodore Preduta

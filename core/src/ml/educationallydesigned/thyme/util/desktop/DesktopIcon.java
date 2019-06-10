@@ -34,7 +34,7 @@ import com.kotcrab.vis.ui.widget.VisTable;
  * Represents a desktop icon
  * <b>Time Spent:</b>
  * <ul>
- * <li>Theodore - </li>
+ * <li>Theodore - 0 min </li>
  * <li>Larry - 30 min</li>
  * </ul>
  *

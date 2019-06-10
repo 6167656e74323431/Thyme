@@ -34,7 +34,7 @@ import java.util.Queue;
  * <b>Time Spent:</b>
  * <ul>
  * <li>Theodore - 50 min</li>
- * <li>Larry - </li>
+ * <li>Larry - 50 min</li>
  * </ul>
  *
  * @author Larry Yuan

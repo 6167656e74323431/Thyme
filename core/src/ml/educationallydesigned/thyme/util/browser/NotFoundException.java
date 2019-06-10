@@ -25,7 +25,7 @@ package ml.educationallydesigned.thyme.util.browser;
  * <b>Time Spent:</b>
  * <ul>
  * <li>Theodore - 0 min</li>
- * <li>Larry - </li>
+ * <li>Larry - 1 min</li>
  * </ul>
  *
  * @author Theodore Preduta

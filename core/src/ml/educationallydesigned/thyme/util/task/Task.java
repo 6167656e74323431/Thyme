@@ -27,7 +27,7 @@ import ml.educationallydesigned.thyme.util.time.Timer;
  * <b>Time Spent:</b>
  * <ul>
  * <li>Theodore - 150 min</li>
- * <li>Larry - </li>
+ * <li>Larry - 0 min</li>
  * </ul>
  *
  * @author Theodore Preduta

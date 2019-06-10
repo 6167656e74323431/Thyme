@@ -24,7 +24,7 @@ import java.io.Serializable;
  * <b>Time Spent:</b>
  * <ul>
  * <li>Theodore - 10 min</li>
- * <li>Larry - </li>
+ * <li>Larry - 10 min</li>
  * </ul>
  *
  * @author Theodore Preduta
