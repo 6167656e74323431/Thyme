@@ -20,6 +20,7 @@
 
 package ml.educationallydesigned.thyme.util;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.kotcrab.vis.ui.util.dialog.Dialogs;
 import com.kotcrab.vis.ui.widget.VisDialog;
@@ -52,6 +53,9 @@ public class Dialog {
 		dialog.setWidth(570);
 		dialog.setHeight(200);
 		dialog.padLeft(10);
+		// center
+		dialog.setX((Gdx.graphics.getWidth() >> 1) - dialog.getWidth() / 2);
+		dialog.setY((Gdx.graphics.getHeight() >> 1) - dialog.getHeight() / 2);
 	}
 
 	/**
@@ -62,14 +66,13 @@ public class Dialog {
 	 * @param e     the exception that was thrown
 	 */
 	public static void showErrorDialog(Stage stage, String title, Exception e) {
-		// print stack trace to our own string writer
-		StringWriter errorStringWriter = new StringWriter();
-		PrintWriter errorPrintWriter = new PrintWriter(errorStringWriter);
-		e.printStackTrace(errorPrintWriter);
 		// display dialog, with the ability to copy the exception under details.
-		VisDialog dialog = Dialogs.showErrorDialog(stage, title, errorStringWriter.toString());
+		VisDialog dialog = Dialogs.showErrorDialog(stage, title, e);
 		dialog.setWidth(570);
 		dialog.setHeight(200);
 		dialog.padLeft(10);
+		// center
+		dialog.setX((Gdx.graphics.getWidth() >> 1) - dialog.getWidth() / 2);
+		dialog.setY((Gdx.graphics.getHeight() >> 1) - dialog.getHeight() / 2);
 	}
 }

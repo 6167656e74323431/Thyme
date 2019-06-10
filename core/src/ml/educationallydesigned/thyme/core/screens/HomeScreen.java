@@ -28,6 +28,8 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
+import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
+import com.badlogic.gdx.utils.Align;
 import com.kotcrab.vis.ui.widget.VisImage;
 import com.kotcrab.vis.ui.widget.VisTable;
 import com.kotcrab.vis.ui.widget.VisTextButton;
@@ -35,6 +37,8 @@ import ml.educationallydesigned.thyme.Thyme;
 import ml.educationallydesigned.thyme.core.levels.DeficiencyRoom;
 import ml.educationallydesigned.thyme.core.levels.EscapeRoom;
 import ml.educationallydesigned.thyme.core.levels.PanicRoom;
+import ml.educationallydesigned.thyme.util.BackgroundColor;
+import ml.educationallydesigned.thyme.util.CenteredTable;
 
 /**
  * Non-level game state.
@@ -51,6 +55,7 @@ import ml.educationallydesigned.thyme.core.levels.PanicRoom;
 public class HomeScreen implements Screen {
 	private Stage stage;
 	private Thyme game;
+	private Texture background;
 
 	/**
 	 * Constructs the HomeScreen.
@@ -72,13 +77,15 @@ public class HomeScreen implements Screen {
 		// load assets
 		AssetManager manager = new AssetManager();
 		manager.load("logos/thyme.png", Texture.class);
+		manager.load("backgrounds/home.png", Texture.class);
 		manager.finishLoading();
 		// make stage
+		background = manager.get("backgrounds/home.png", Texture.class);
 		stage = new Stage();
 		game.setInputProcessor(stage);
 		// make table
-		VisTable table = new VisTable();
-		table.setFillParent(true);
+		CenteredTable table = new CenteredTable();
+
 		// make title
 		VisImage gameTitle = new VisImage(manager.get("logos/thyme.png", Texture.class));
 		table.add(gameTitle).padBottom(20);
@@ -105,6 +112,12 @@ public class HomeScreen implements Screen {
 		split.add(exitButton).width(240).height(80);
 		table.add(split);
 		table.row();
+
+		// set table dimensions
+		table.setWidth(550);
+		table.setHeight(700);
+
+		table.centerTable();
 
 		// add listener for exit button
 		exitButton.addListener(new ClickListener() {
@@ -159,6 +172,9 @@ public class HomeScreen implements Screen {
 		Gdx.gl.glClearColor(0, 0, 0, 1);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 		stage.act(delta);
+		stage.getBatch().begin();
+		stage.getBatch().draw(background, 0, 0, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
+		stage.getBatch().end();
 		stage.draw();
 	}
 

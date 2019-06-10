@@ -36,6 +36,7 @@ import ml.educationallydesigned.thyme.core.screens.HomeScreen;
 import ml.educationallydesigned.thyme.core.windows.TextEditorWindow;
 import ml.educationallydesigned.thyme.core.windows.TrackerWindow;
 import ml.educationallydesigned.thyme.core.windows.browser.BrowserWindow;
+import ml.educationallydesigned.thyme.util.BackgroundColor;
 import ml.educationallydesigned.thyme.util.desktop.DesktopIcon;
 import ml.educationallydesigned.thyme.util.scoreboard.Score;
 import ml.educationallydesigned.thyme.util.task.Task;
@@ -57,7 +58,7 @@ import java.util.Queue;
  * @author Larry Yuan
  * @version 1.3
  */
-public class GameLevel implements Screen {
+abstract public class GameLevel implements Screen {
 	protected Thyme game;
 	protected Stage stage;
 	protected List<Task> tasks;
@@ -94,9 +95,13 @@ public class GameLevel implements Screen {
 		VisTable iconsTable = new VisTable();
 		iconsTable.padLeft(20);
 		iconsTable.padTop(20);
-		iconsTable.setWidth(300);
+		iconsTable.setWidth(190);
 		iconsTable.setHeight(Gdx.graphics.getHeight());
 		iconsTable.align(Align.topLeft);
+
+		BackgroundColor backgroundColor = new BackgroundColor("backgrounds/white.png");
+		backgroundColor.setColor(0, 0, 0, 100);
+		iconsTable.setBackground(backgroundColor);
 
 		DesktopIcon larryOfficeIcon = new DesktopIcon("Task Quizzer", new TextureRegionDrawable(manager.get("icons/writer.png", Texture.class))) {
 			@Override
@@ -129,6 +134,8 @@ public class GameLevel implements Screen {
 		currentTask = 0;
 	}
 
+	abstract void renderDesktop();
+
 	/**
 	 * Called when the screen should render itself.
 	 *
@@ -139,6 +146,7 @@ public class GameLevel implements Screen {
 		Gdx.gl.glClearColor(0, 0, 0, 1);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 		stage.act(delta);
+		renderDesktop();
 		stage.draw();
 	}
 

@@ -51,6 +51,7 @@ abstract public class DesktopIcon extends VisTable {
 	 */
 	public DesktopIcon(String name, Drawable icon) {
 		super();
+
 		this.setWidth(75);
 		this.add(new VisImage(icon)).width(50).height(50).padBottom(10).row();
 		final VisLabel label = new VisLabel(name);
