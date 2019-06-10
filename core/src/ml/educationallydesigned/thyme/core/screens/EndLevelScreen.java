@@ -22,7 +22,6 @@ import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
-import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
@@ -38,7 +37,6 @@ import ml.educationallydesigned.thyme.core.levels.DeficiencyRoom;
 import ml.educationallydesigned.thyme.core.levels.EscapeRoom;
 import ml.educationallydesigned.thyme.core.levels.GameLevel;
 import ml.educationallydesigned.thyme.core.levels.PanicRoom;
-import ml.educationallydesigned.thyme.util.BackgroundColor;
 import ml.educationallydesigned.thyme.util.CenteredTable;
 import ml.educationallydesigned.thyme.util.task.Task;
 
@@ -173,12 +171,13 @@ public class EndLevelScreen implements Screen {
 	 */
 	@Override
 	public void render(float delta) {
-stage.act(delta);
+		stage.act(delta);
 		stage.getBatch().begin();
 		stage.getBatch().draw(background, 0, 0, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
 		stage.getBatch().end();
 		stage.draw();
 	}
+
 	/**
 	 * @param width
 	 * @param height

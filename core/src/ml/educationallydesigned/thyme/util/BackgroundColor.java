@@ -44,9 +44,9 @@ public class BackgroundColor implements Drawable {
 	private void initialize(String filename) {
 		setFilename(filename);
 		if (x == null || y == null)
-			setPosition();	// x = 0.0f; y = 0.0f;
+			setPosition();    // x = 0.0f; y = 0.0f;
 		if (width == null || height == null || width < 0.0f || height < 0.0f)
-			setSize();	// width = 0.0f; height = 0.0f;
+			setSize();    // width = 0.0f; height = 0.0f;
 		if (color == null)
 			setColor(255, 255, 255, 255);
 		if (sprite == null) {
@@ -103,14 +103,14 @@ public class BackgroundColor implements Drawable {
 	}
 
 	public void setColor(int r, int g, int b, int a) {
-		color = new Color(r/255f, g/255f, b/255f, a/255f);
+		color = new Color(r / 255f, g / 255f, b / 255f, a / 255f);
 		if (sprite != null) {
 			setSpriteColor();
 		}
 	}
 
 	public void setColor(float r, float g, float b, float a) {
-		color = new Color(r/255f, g/255f, b/255f, a/255f);
+		color = new Color(r / 255f, g / 255f, b / 255f, a / 255f);
 		if (sprite != null) {
 			setSpriteColor();
 		}
@@ -210,12 +210,12 @@ public class BackgroundColor implements Drawable {
 
 	}
 
-	private void setFilename(String filename) {
-		this.filename = filename;
-	}
-
 	private String getFilename() {
 		return filename;
+	}
+
+	private void setFilename(String filename) {
+		this.filename = filename;
 	}
 
 	public float getX() {

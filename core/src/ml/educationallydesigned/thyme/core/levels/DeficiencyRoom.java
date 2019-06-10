@@ -21,7 +21,6 @@ package ml.educationallydesigned.thyme.core.levels;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
 import ml.educationallydesigned.thyme.Thyme;
 import ml.educationallydesigned.thyme.core.windows.TrackerWindow;
 import ml.educationallydesigned.thyme.util.task.Task;
@@ -41,6 +40,7 @@ import ml.educationallydesigned.thyme.util.task.TaskGenerator;
  */
 public class DeficiencyRoom extends GameLevel {
 	private Texture background;
+
 	/**
 	 * Constructs the object.
 	 *
@@ -86,7 +86,7 @@ public class DeficiencyRoom extends GameLevel {
 	@Override
 	void renderDesktop() {
 		stage.getBatch().begin();
-		stage.getBatch().draw(background, 0, 0,  Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
+		stage.getBatch().draw(background, 0, 0, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
 		stage.getBatch().end();
 	}
 

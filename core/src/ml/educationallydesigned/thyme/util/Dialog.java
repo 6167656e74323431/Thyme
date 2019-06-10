@@ -25,9 +25,6 @@ import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.kotcrab.vis.ui.util.dialog.Dialogs;
 import com.kotcrab.vis.ui.widget.VisDialog;
 
-import java.io.PrintWriter;
-import java.io.StringWriter;
-
 /**
  * Non-level game state.
  * <b>Time Spent:</b>

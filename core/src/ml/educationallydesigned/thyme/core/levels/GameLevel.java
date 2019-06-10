@@ -23,7 +23,6 @@ import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.assets.AssetManager;
-import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Stage;
@@ -154,7 +153,7 @@ abstract public class GameLevel implements Screen {
 	 */
 	@Override
 	public void render(float delta) {
-stage.act(delta);
+		stage.act(delta);
 		renderDesktop();
 		stage.draw();
 	}

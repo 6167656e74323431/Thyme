@@ -33,7 +33,7 @@ public class CenteredTable extends VisTable {
 		this.setX((Gdx.graphics.getWidth() >> 1) - this.getWidth() / 2);
 		this.setY((Gdx.graphics.getHeight() >> 1) - this.getHeight() / 2);
 		// set background color
-		BackgroundColor blackBackground = new BackgroundColor("backgrounds/white.png",  this.getX(), this.getY(), this.getWidth(), this.getHeight());
+		BackgroundColor blackBackground = new BackgroundColor("backgrounds/white.png", this.getX(), this.getY(), this.getWidth(), this.getHeight());
 		blackBackground.setColor(37, 37, 39, 255);
 		this.setBackground(blackBackground);
 	}
