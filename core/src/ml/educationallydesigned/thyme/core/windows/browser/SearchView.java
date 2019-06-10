@@ -85,14 +85,15 @@ public class SearchView extends VisTable {
 					searchResults.add(enterTextLabel);
 					return false;
 				}
-				List<String> results = search.search(searchBox.getText(), 10, 70);
+				List<String> results = search.search(searchBox.getText(), 10, searchBox.getText().length() >= 6 ? 70 : 30);
 				// if no results, display message
 				if (results.size() == 0) {
 					searchResults.add(nothingFound);
 					return false;
 				}
 				for (final String result : results) {
-					VisTextButton searchResult = new VisTextButton(fileName(result));
+					String searchItem = fileName(result);
+					VisTextButton searchResult = new VisTextButton(searchItem.length() > 40 ? searchItem.substring(0, 40) + "..." : searchItem);
 					searchResult.addListener(new ClickListener() {
 						@Override
 						public void clicked(InputEvent event, float x, float y) {
