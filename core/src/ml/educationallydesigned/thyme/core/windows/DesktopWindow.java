@@ -67,4 +67,37 @@ public class DesktopWindow extends VisWindow {
 		super.close();
 		remove();
 	}
+
+	/**
+	 * Override the fade out because it seems to be triggering when its not supposed to
+	 */
+	@Override
+	public void fadeOut(float t) {
+	}
+
+	/**
+	 * Override the fade out because it seems to be triggering when its not supposed to
+	 */
+	@Override
+	public void fadeOut() {
+	}
+
+	/**
+	 * Override the fade in because it seems to be triggering when its not supposed to
+	 *
+	 * @return the window
+	 */
+	public VisWindow fadeIn(float t) {
+		return this;
+	}
+
+	/**
+	 * Override the fade in because it seems to be triggering when its not supposed to
+	 *
+	 * @return the window
+	 */
+	public VisWindow fadeIn() {
+		return this;
+	}
+
 }

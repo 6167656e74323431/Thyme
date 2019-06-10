@@ -213,4 +213,6 @@ public class BrowserWindow extends DesktopWindow {
 	public String getURL() {
 		return urlBar.getText().replace(prefix, "");
 	}
+
+
 }

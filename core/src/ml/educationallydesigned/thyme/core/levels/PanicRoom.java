@@ -91,7 +91,7 @@ public class PanicRoom extends GameLevel {
 	@Override
 	void renderDesktop() {
 		stage.getBatch().begin();
-		stage.getBatch().draw(background, 0, 0,  Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
+		stage.getBatch().draw(background, 0, 0, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
 		stage.getBatch().end();
 	}
 
