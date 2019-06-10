@@ -175,6 +175,6 @@ public class Task {
 	 * @return true if given is correct enough, flase otherwise.
 	 */
 	private boolean check(String given, String target) {
-		return given.equals(target);
+		return given.trim().toLowerCase().equals(target.trim().toLowerCase());
 	}
 }
