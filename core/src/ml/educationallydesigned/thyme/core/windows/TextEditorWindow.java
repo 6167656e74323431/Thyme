@@ -19,8 +19,10 @@
 package ml.educationallydesigned.thyme.core.windows;
 
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
+import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.Align;
+import com.kotcrab.vis.ui.VisUI;
 import com.kotcrab.vis.ui.widget.*;
 import ml.educationallydesigned.thyme.core.levels.GameLevel;
 import ml.educationallydesigned.thyme.util.task.Task;
@@ -30,23 +32,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
-<<<<<<< HEAD
  * Class to implement the text editor window for in the Thyme game.
  * <b>Time Spent:</b>
  * <ul>
  * <li>Theodore - 80 min</li>
  * <li>Larry - 50 min</li>
  * </ul>
-=======
- * Class to implement the text editor window for in the Thyme game. <b>Time
- * Spent:</b> <ul>
- * <li>Theodore - 90 min</li>
- * <li>Larry - 30 min</li> </ul>
->>>>>>> theodore
  *
- * @author     Theodore Preduta
- * @author     Larry Yuan
- * @version    1.3
+ * @author Theodore Preduta
+ * @author Larry Yuan
+ * @version 1.3
  */
 public class TextEditorWindow extends DesktopWindow {
 	private List<VisTextField> answerBoxes;
@@ -64,21 +59,26 @@ public class TextEditorWindow extends DesktopWindow {
 		this.currentTask = currentTask;
 		this.level = level;
 
-		setWidth(600);
-		setHeight(250 + currentTask.getQuestions().length * 70);
+		setWidth(530);
+		setHeight(Math.min(250 + currentTask.getQuestions().length * 110, 800));
 		align(Align.top);
 
 		VisTable table = new VisTable();
-		table.setWidth(getWidth());
 		table.setHeight(getHeight());
 
 		answerBoxes = new ArrayList<VisTextField>();
 
+		// display questions
 		for (String question : currentTask.getQuestions()) {
+			// text field
 			VisTextField field = new VisTextField();
 			field.setAlignment(Align.center);
 			field.setWidth(300);
+			// question label
 			VisLabel questionLabel = new VisLabel(question);
+			Label.LabelStyle questionLabelStyle = questionLabel.getStyle();
+			questionLabelStyle.font = VisUI.getSkin().getFont("small-font");
+			questionLabel.setStyle(questionLabelStyle);
 			questionLabel.setWrap(true);
 			questionLabel.setAlignment(Align.center);
 			table.add(questionLabel).width(500).padBottom(20).row();
@@ -97,8 +97,9 @@ public class TextEditorWindow extends DesktopWindow {
 		});
 
 		centerOnDesktop();
-		table.add(submitButton).row();
+		table.add(submitButton).padBottom(10).row();
 		VisScrollPane scrollPane = new VisScrollPane(table);
+		scrollPane.setWidth(getWidth());
 		add(scrollPane);
 	}
 

@@ -1,0 +1,20 @@
+HTTP
+8 questions about the Hypertext Transfer Protocol.
+80
+8
+Who developed HTTP?
+What HTTP status code has the text "I'm a teapot"?
+Which year was the standard for Secure Hypertext Transfer Protocol published?
+In which RFC was SHTTP standardized? (number)
+Is DSA an algorithm used for HTTPSec? (yes or no)
+What is the seperator between the username and password in HTTP Basic Access Authentication? (a symbol)
+What is the predecessor of TLS in HTTPS? (an acronym)
+What does the DAV in WebDAV stand for?
+Tim Berners-Lee
+418
+1999
+2660
+no
+:
+SSL
+Distributed Authoring and Versioning

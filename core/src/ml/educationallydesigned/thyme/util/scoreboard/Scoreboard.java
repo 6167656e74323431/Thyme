@@ -25,14 +25,16 @@ import java.util.List;
 
 
 /**
- * Main interface for the scoreboard, handles reading and writing. Also handles
- * sorting via merge sort implementation. <b>Time Spent:</b> <ul>
- * <li>Theodore - 30 min</li>
- * <li>Larry - 1.5 hrs</li> </ul>
+ * Main interface for the scoreboard, handles reading and writing.
+ * <b>Time Spent:</b>
+ * <ul>
+ * <li>Theodore - 25 min</li>
+ * <li>Larry - 1.5 hrs</li>
+ * </ul>
  *
- * @author     Theodore Preduta
- * @author     Larry Yuan
- * @version    2.1
+ * @author Theodore Preduta
+ * @author Larry Yuan
+ * @version 2.1
  */
 
 public class Scoreboard {

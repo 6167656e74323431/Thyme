@@ -1,19 +1,21 @@
 /*
-	Thyme is an educational game to assist teenagers in time management, and tracking.
-	Copyright (C) 2019 Theodore Preduta, Larry Yuan
-	
-	This program is free software: you can redistribute it and/or modify
-	it under the terms of the GNU Affero General Public License as published
-	by the Free Software Foundation, either version 3 of the License, or
-	(at your option) any later version.
-	
-	This program is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	GNU Affero General Public License for more details.
-	
-	You should have received a copy of the GNU Affero General Public License
-	along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ *
+ * 	Thyme is an educational game to assist teenagers in time management, and tracking.
+ * 	Copyright (C) 2019 Theodore Preduta, Larry Yuan
+ *
+ * 	This program is free software: you can redistribute it and/or modify
+ * 	it under the terms of the GNU Affero General Public License as published
+ * 	by the Free Software Foundation, either version 3 of the License, or
+ * 	(at your option) any later version.
+ *
+ * 	This program is distributed in the hope that it will be useful,
+ * 	but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * 	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * 	GNU Affero General Public License for more details.
+ *
+ * 	You should have received a copy of the GNU Affero General Public License
+ * 	along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ * /
  */
 
 package ml.educationallydesigned.thyme.core.windows.browser;
@@ -35,20 +37,16 @@ import java.io.File;
 import java.util.List;
 
 /**
- * Class representing a GUI to search through each website. <b>Time Spent:</b>
+ * Class representing a GUI to search through each website.
+ * <b>Time Spent:</b>
  * <ul>
-<<<<<<< HEAD
  * <li>Theodore - 0 min</li>
  * <li>Larry - 1.5 hr</li>
  * </ul>
-=======
- * <li>Theodore - 1 min</li>
- * <li>Larry - 20 min</li> </ul>
->>>>>>> theodore
  *
- * @author     Larry Yuan
- * @author     Theodore Preduta
- * @version    1.1
+ * @author Larry Yuan
+ * @author Theodore Preduta
+ * @version 1.0
  */
 public class SearchView extends VisTable {
 	public SearchView(final BrowserWindow window, final String domain) {
@@ -87,7 +85,7 @@ public class SearchView extends VisTable {
 					searchResults.add(enterTextLabel);
 					return false;
 				}
-				List<String> results = search.search(searchBox.getText(), 10, searchBox.getText().length() >= 6 ? 70 : 30);
+				List<String> results = search.search(searchBox.getText(), 10, searchBox.getText().length() >= 6 ? 60 : 30);
 				// if no results, display message
 				if (results.size() == 0) {
 					searchResults.add(nothingFound);

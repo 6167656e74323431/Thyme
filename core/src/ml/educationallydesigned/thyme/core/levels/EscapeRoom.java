@@ -30,23 +30,16 @@ import ml.educationallydesigned.thyme.util.task.TaskGenerator;
 import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 
 /**
-<<<<<<< HEAD
  * Class to implement the third game mode for the Thyme video game.
  * <b>Time Spent:</b>
  * <ul>
- * <li>Theodore - 40 min</li>
+ * <li>Theodore - 30 min</li>
  * <li>Larry - 5 min </li>
  * </ul>
-=======
- * Class to implement the third game mode for the Thyme video game. THis level
- * focuses on planning. <b>Time Spent:</b> <ul>
- * <li>Theodore - 30 min</li>
- * <li>Larry - 0 min</li> </ul>
->>>>>>> theodore
  *
- * @author     Theodore Preduta
- * @author     Larry Yuan
- * @version    1.1
+ * @author Theodore Preduta
+ * @author Larry Yuan
+ * @version 1.1
  */
 public class EscapeRoom extends GameLevel {
 	private Texture background;
@@ -76,10 +69,10 @@ public class EscapeRoom extends GameLevel {
 		String[] questions = new String[tasks.size()];
 		for (int i = 0; i < questions.length; i++) {
 			Task current = tasks.get(i);
-			questions[i] = current.getTitle() + "(" + current.getMinPassPercentage() + "% - " + current.getQuestions().length + ")";
+			questions[i] = current.getTitle() + "(" + current.getMinPassPercentage() + " - " + current.getQuestions().length + ")";
 		}
 		tasks.add(0, new Survey("Planning Time!",
-				"Enter the amount of time needed for each task. In the quiz window, you are provided the name of the quiz. In brackets, you are provided the minimum pass percentage, and the number of questions",
+				"Enter the amount of time needed for each task",
 				questions, this));
 
 		// open the windows

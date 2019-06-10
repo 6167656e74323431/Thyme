@@ -47,14 +47,16 @@ import java.util.List;
 import java.util.Queue;
 
 /**
- * Game that contains all the methods that all levels have. <b>Time Spent:</b>
+ * Game that contains all the methods that all levels have.
+ * <b>Time Spent:</b>
  * <ul>
- * <li>Theodore - 140 min</li>
- * <li>Larry - 20min</li> </ul>
+ * <li>Theodore - 120 min</li>
+ * <li>Larry - 20min</li>
+ * </ul>
  *
- * @author     Theodore Preduta
- * @author     Larry Yuan
- * @version    1.3
+ * @author Theodore Preduta
+ * @author Larry Yuan
+ * @version 1.3
  */
 abstract public class GameLevel implements Screen {
 	protected Thyme game;

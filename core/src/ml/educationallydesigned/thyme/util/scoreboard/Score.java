@@ -20,19 +20,16 @@ package ml.educationallydesigned.thyme.util.scoreboard;
 import java.io.Serializable;
 
 /**
- * Score data class to store the scores ina unified manor. <b>Time Spent:</b>
+ * Score data class.
+ * <b>Time Spent:</b>
  * <ul>
  * <li>Theodore - 10 min</li>
-<<<<<<< HEAD
  * <li>Larry - 10 min</li>
  * </ul>
-=======
- * <li>Larry - 20 min</li> </ul>
->>>>>>> theodore
  *
- * @author     Theodore Preduta
- * @author     Larry Yuan
- * @version    1.1
+ * @author Theodore Preduta
+ * @author Larry Yuan
+ * @version 1.1
  */
 public class Score implements Comparable<Score>, Serializable {
 	public final String username;
