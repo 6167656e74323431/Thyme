@@ -85,7 +85,7 @@ public class SearchView extends VisTable {
 					searchResults.add(enterTextLabel);
 					return false;
 				}
-				List<String> results = search.search(searchBox.getText(), 10, searchBox.getText().length() >= 6 ? 70 : 30);
+				List<String> results = search.search(searchBox.getText(), 10, searchBox.getText().length() >= 6 ? 60 : 30);
 				// if no results, display message
 				if (results.size() == 0) {
 					searchResults.add(nothingFound);
