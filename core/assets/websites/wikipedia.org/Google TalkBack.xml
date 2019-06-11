@@ -1,5 +1,0 @@
-<:import macros/html.xml />
-<:h1>Google TalkBack</:h1>
-<:p>Google Talkback was an accessibility service for Android that helped blind and visually impaired users to interact with their devices. It made use of spoken words, vibration and other audible feedback to allow the user to know what is happening on the screen allowing the user to better interact with their device. The service was pre-installed on many Android devices. In 2017, it was replaced by Google with Android Accessibility Suite 6.2.</:p>
-<:p>- Google Play application page</:p>
-<:p>- Get started on Android with TalkBack</:p>

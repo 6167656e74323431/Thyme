@@ -1,4 +1,0 @@
-<:import macros/html.xml />
-<:h1>Domain Application Protocol</:h1>
-<:p>A domain application protocol (DAP) is the set of rules and conventions governing the interactions between participants in a distributed computing application.</:p>
-<:p>DAPs sit atop HTTP and narrow HTTP’s broad application protocol to support specific business goals. Services implement DAPs by adding hypermedia links to resource representations. These links highlight other resources with which a consumer can interact to make progress through a business transaction.</:p>

@@ -1,6 +1,0 @@
-<:import macros/html.xml />
-<:h1>List of mobile app distribution platforms</:h1>
-<:p>This list of mobile app distribution platforms includes digital distribution platforms that are intended to provide mobile apps to mobile devices. For information on each mobile platform and its market share see the operating systems section of the mobile operating system and smartphone. A comparison of development capabilities of each mobile platform can be found in the article mobile development. For cross-platform development see multiple phone web-based application framework. The article mobile software contains other general information.</:p>
-<:p>These application marketplaces are native to the major mobile operating systems.</:p>
-<:p>- Notes:</:p>
-<:p>Third-party platforms are software distribution platforms which are used as alternatives for operating system native distribution platforms. Independent operating systems are software collections which use their own software distribution, customized user interface, SDK and API (except billing API which is related only to application store).</:p>

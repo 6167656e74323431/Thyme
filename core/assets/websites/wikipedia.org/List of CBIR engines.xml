@@ -1,3 +1,0 @@
-<:import macros/html.xml />
-<:h1>List of CBIR engines</:h1>
-<:p>This is a list of publicly available Content-based image retrieval (CBIR) engines. These image search engines look at the content (pixels) of images in order to return results that match a particular query.</:p>
