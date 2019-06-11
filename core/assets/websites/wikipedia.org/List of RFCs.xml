@@ -1,9 +1,0 @@
-<:import macros/html.xml />
-<:h1>List of RFCs</:h1>
-<:p>This is a partial list of RFCs (request for comments memoranda).</:p>
-<:p>While there are over 8,393 RFCs as of May 2018, this list consists of RFCs that have related articles. A complete list is available from the IETF website.</:p>
-<:p>Obsolete RFCs are indicated with struck-through text.</:p>
-<:p>- RFC Database - contains various lists of RFCs</:p>
-<:p>- RFC Bibliographic Listing - Listing of bibliographic entries for all RFCs. Also notes when an RFC has been made obsolete.</:p>
-<:p>- RFC Search - search by keywords; cross-referenced RFCs</:p>
-<:p>- RFC Authors - list of top RFC authors</:p>

@@ -1,5 +1,0 @@
-<:import macros/html.xml />
-<:h1>List of countries by number of Internet hosts</:h1>
-<:p>This is the list of countries by number of Internet hosts, based on 2012 figures from the CIA World Factbook. Several dependent territories, not fully recognized states, and non-state territories are also listed. The European Union host (.eu) is mostly composed of French, Polish and German hosts.</:p>
-<:p>(*) The U.S. figure includes hosts in the .us, .mil, .gov, .edu, .com, .org, and .net domains. </:p>
-<:p>- Internet Census of 2012</:p>
