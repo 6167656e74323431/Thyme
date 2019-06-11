@@ -1,4 +1,4 @@
-# Thyme [![Travis Build Status](https://travis-ci.org/educationallydesigned/Thyme.svg?branch=master)
+# Thyme ![Travis Build Status](https://travis-ci.org/educationallydesigned/Thyme.svg?branch=master)
 Thyme is an educational game to assist teenagers in time management, and tracking. All data related to this program is hosted on our github page which can be accessed via [educationallydesigned.ml](http://educationallydesigned.ml).
 
 ## Usage
