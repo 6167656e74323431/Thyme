@@ -1,0 +1,32 @@
+<:import macros/html.xml />
+<:h1>OpenPOWER Foundation</:h1>
+<:p>The OpenPOWER Foundation is a collaboration around Power ISA-based products initiated by IBM and announced as the "OpenPOWER Consortium" on August 6, 2013. IBM is opening up technology surrounding their Power Architecture offerings, such as processor specifications, firmware and software with a liberal license, and will be using a collaborative development model with their partners.</:p>
+<:p>The goal stated is to enable the server vendor ecosystem to build their own customized server, networking and storage hardware for future data centers and cloud computing.</:p>
+<:p>Power.org is still the governing body around the Power ISA instruction set but specific implementations are now free to use under a liberal license granted by IBM. Processors based on IBM's IP can now be fabricated on any foundry and mixed with other hardware products of the integrator's choice.</:p>
+<:p>IBM is using the word "open" to describe this project in three ways:</:p>
+<:p>1. They are licensing the microprocessor technology "openly" to its partners. They are sharing the blueprints to their hardware and software to their partners, so they can hire IBM or other companies to manufacture processors or other related chips.</:p>
+<:p>2. They will collaborate openly in an "open-collaboration" business model where participants share technologies and innovations with each other.</:p>
+<:p>3. Advantages via open-source software such as the Linux operating system.</:p>
+<:p>IBM is looking to offer the POWER8 chip technology and other future iterations under the OpenPOWER initiative but they are also making previous designs available for licensing. Partners are required to contribute intellectual property to the OpenPOWER Foundation to be able to gain high level status.</:p>
+<:p>The POWER8 processor architecture incorporates facilities to integrate it more easily into custom designs. The generic memory controllers are designed to evolve with future technologies, and the new CAPI (Coherent Accelerator Processor Interface) expansion bus is built to integrate easily with external coprocessors like GPUs, ASICs and FPGAs. </:p>
+<:p>Nvidia is contributing their fast interconnect technology, NVLink, that will enable tight coupling of Nvidia's Pascal based graphics processors into future POWER processors.</:p>
+<:p>The OpenPOWER initiative will include firmware, the KVM hypervisor and little endian Linux operating system. The foundation has a site on GitHub for the software they are releasing as open source. As of July 2014, they have released firmware to boot Linux.</:p>
+<:p>SUSE included support for Power8 in their enterprise Linux distribution SUSE Linux Enterprise Server version 12 (release 27 October 2014).</:p>
+<:p>Canonical Ltd. has working firmware and general Linux support via their Ubuntu Server version 16.04 LTS.</:p>
+<:p>FreeBSD has also been reported to have preliminary support for the architecture.</:p>
+<:p>Google, Tyan, Nvidia and Mellanox are all founding members of the OpenPOWER Foundation. Nvidia is looking to merge its graphics cores and Mellanox to integrate its high performance interconnects with Power cores. Tyan is said to be working on servers using POWER8 and Google sees using POWER processors in its data centers as a future possibility.</:p>
+<:p>Altera announced support for OpenPOWER in November 2013 with their FPGA offerings and OpenCL software.</:p>
+<:p>On January 19, 2014, the Suzhou PowerCore Technology Company and the Research Institute of Jiangsu Industrial Technology announced that they will join the OpenPOWER Foundation and license POWER8 technologies to promote and help build systems around and design custom made processors for use in big data and cloud computing applications.</:p>
+<:p>On February 12, 2014, Samsung Electronics joined.</:p>
+<:p>As of March 2014, members also include Altera, Fusion-io, Hynix, Micron, Servergy and Xilinx.</:p>
+<:p>As of April 2014, Canonical, Chuanghe Mobile, Emulex, Hitachi, Inspur, Jülich Research Centre, Oregon State University, Teamsun, Unisource Technology Inc and ZTE are listed as members at various levels.</:p>
+<:p>As of December 2014, Rackspace, Avnet, Lawrence Livermore National Laboratory, Sandia National Laboratories, Tsinghua University, Nallatech, Bull and Qlogic have joined, to bring it to a total of about 80 members.</:p>
+<:p>At the first annual OpenPOWER Summit 2015, the organization announced that there were 113 members, including Wistron, Cirrascale, and PMC-Sierra.</:p>
+<:p>As of late 2016, the OpenPOWER foundation has more than 250 members.</:p>
+<:p>- IBM OpenPower – a line of POWER5 based Power Systems machines running Linux</:p>
+<:p>- PowerOpen Environment</:p>
+<:p>- List of open-source hardware projects</:p>
+<:p>- Open Compute Project</:p>
+<:p>- OpenBMC</:p>
+<:p>- OpenPOWER's home page</:p>
+<:p>- open-power at GitHub</:p>

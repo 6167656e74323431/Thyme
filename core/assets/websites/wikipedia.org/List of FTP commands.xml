@@ -1,0 +1,20 @@
+<:import macros/html.xml />
+<:h1>List of FTP commands</:h1>
+<:p>Below is a list of FTP commands that may be sent to an FTP server, including all commands that are standardized in RFC 959 by the IETF. All commands below are RFC 959 based unless stated otherwise. Note that most command-line FTP clients present their own set of commands to users. For example, GET is the common user command to download a file instead of the raw command RETR.</:p>
+<:p>- List of FTP server return codes - in response to commands from a client, the FTP server returns reply codes</:p>
+<:p>- RFC 697 - CWD Command of FTP</:p>
+<:p>- RFC 959 - File Transfer Protocol (FTP)</:p>
+<:p>- RFC 1639 - FTP Operation Over Big Address Records (FOOBAR)</:p>
+<:p>- RFC 2228 - FTP Security Extensions</:p>
+<:p>- RFC 2389 - Feature negotiation mechanism for the File Transfer Protocol</:p>
+<:p>- RFC 2428 - FTP Extensions for IPv6 and NATs</:p>
+<:p>- RFC 2640 - Internationalization of the File Transfer Protocol</:p>
+<:p>- RFC 3659 - Extensions to FTP</:p>
+<:p>- RFC 5797 - FTP Command and Extension Registry</:p>
+<:p>- RFC 7151 - File Transfer Protocol HOST Command for Virtual Hosts</:p>
+<:p>- The 'MFMT', 'MFCT', and 'MFF' Command Extensions for FTP</:p>
+<:p>- Streamlined FTP Command Extensions ('CSID', 'AVBL', 'DSIZ', 'RMDA', and 'THMB' commands)</:p>
+<:p>- FTP Extension Allowing IP Forwarding (NATs)</:p>
+<:p>- UTF-8 Option for FTP</:p>
+<:p>- IANA FTP Commands and Extensions registry - The official registry of FTP Commands and Extensions</:p>
+<:p>- Raw FTP command list</:p>

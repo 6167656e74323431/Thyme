@@ -1,0 +1,30 @@
+<:import macros/html.xml />
+<:h1>List of HTTP header fields</:h1>
+<:p>HTTP header fields are components of the header section of request and response messages in the Hypertext Transfer Protocol (HTTP). They define the operating parameters of an HTTP transaction.</:p>
+<:p>The header fields are transmitted after the request line (in case of a request HTTP message) or the response line (in case of a response HTTP message), which is the first line of a message. Header fields are colon-separated key-value pairs in clear-text string format, terminated by a carriage return (CR) and line feed (LF) character sequence. The end of the header section is indicated by an empty field(line), resulting in the transmission of two consecutive CR-LF pairs. In the past, long lines could be folded into multiple lines; continuation lines are indicated by the presence of a space (SP) or horizontal tab (HT) as the first character on the next line. This folding is now deprecated.</:p>
+<:p>A core set of fields is standardized by the Internet Engineering Task Force (IETF) in RFCs 7230, 7231, 7232, 7233, 7234, and 7235. The permanent registry of header fields and repository of provisional registrations are maintained by the IANA. Additional field names and permissible values may be defined by each application.</:p>
+<:p>Header field names are case-insensitive. This is in contrast to HTTP method names (GET, POST, etc.), which are case-sensitive.</:p>
+<:p>HTTP/2 makes some restrictions on specific header fields (see below).</:p>
+<:p>Non-standard header fields were conventionally marked by prefixing the field name with  but this convention was deprecated in June 2012 because of the inconveniences it caused when non-standard fields became standard. An earlier restriction on use of  was lifted in March 2013.</:p>
+<:p>A few fields can contain comments (i.e. in User-Agent, Server, Via fields), which can be ignored by software.</:p>
+<:p>Many field values may contain a quality ("q") key-value pair separated by equals sign, specifying a weight to use in content negotiation.</:p>
+<:p>The standard imposes no limits to the size of each header field name or value, or to the number of fields. However, most servers, clients, and proxy software impose some limits for practical and security reasons. For example, the Apache 2.3 server by default limits the size of each field to 8,190 bytes, and there can be at most 100 header fields in a single request.</:p>
+<:p>If a web server responds with  then a web browser or other caching system (intermediate proxies) must not use the response to satisfy subsequent requests without first checking with the originating server (this process is called validation). This header field is part of HTTP version 1.1, and is ignored by some caches and browsers. It may be simulated by setting the  HTTP version 1.0 header field value to a time earlier than the response time.</:p>
+<:p>Notice that no-cache is not instructing the browser or proxies about whether or not to cache the content. It just tells the browser and proxies to validate the cache content with the server before using it (this is done by using If-Modified-Since, If-Unmodified-Since, If-Match, If-None-Match attributes mentioned above). Sending a no-cache value thus instructs a browser or proxy to not use the cache contents merely based on "freshness criteria" of the cache content. Another common way to prevent old content from being shown to the user without validation is . This instructs the user agent that the content is stale and should be validated before use.</:p>
+<:p>The header field  is intended to instruct a browser application to make a best effort not to write it to disk (i.e not to cache it).</:p>
+<:p>The request that a resource should not be cached is no guarantee that it will not be written to disk. In particular, the HTTP/1.1 definition draws a distinction between history stores and caches. If the user navigates back to a previous page a browser may still show you a page that has been stored on disk in the history store. This is correct behavior according to the specification. Many user agents show different behavior in loading pages from the history store or cache depending on whether the protocol is HTTP or HTTPS.</:p>
+<:p>The  HTTP/1.1 header field is also intended for use in requests made by the client. It is a means for the browser to tell the server and any intermediate caches that it wants a fresh version of the resource. The  header field, defined in the HTTP/1.0 spec, has the same purpose. It, however, is only defined for the request header. Its meaning in a response header is not specified. The behavior of  in a response is implementation specific. While some user agents do pay attention to this field in responses, the HTTP/1.1 RFC specifically warns against relying on this behavior.</:p>
+<:p>- HTTP header injection</:p>
+<:p>- HTTP ETag</:p>
+<:p>- List of HTTP status codes</:p>
+<:p>- Headers: Permanent Message Header Field Names</:p>
+<:p>- RFC 7230: Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing</:p>
+<:p>- RFC 7231: Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</:p>
+<:p>- RFC 7232: Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests</:p>
+<:p>- RFC 7233: Hypertext Transfer Protocol (HTTP/1.1): Range Requests</:p>
+<:p>- RFC 7234: Hypertext Transfer Protocol (HTTP/1.1): Caching</:p>
+<:p>- RFC 7235: Hypertext Transfer Protocol (HTTP/1.1): Authentication</:p>
+<:p>- RFC 7239: Forwarded HTTP Extension</:p>
+<:p>- RFC 2965: IETF HTTP State Management Mechanism RFC</:p>
+<:p>- HTTP/1.1 headers from a web server point of view</:p>
+<:p>- Internet Explorer and Custom HTTP Headers - EricLaw's IEInternals - Site Home - MSDN Blogs</:p>

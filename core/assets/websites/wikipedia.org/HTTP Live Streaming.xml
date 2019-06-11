@@ -1,0 +1,52 @@
+<:import macros/html.xml />
+<:h1>HTTP Live Streaming</:h1>
+<:p>HTTP Live Streaming (also known as HLS) is an HTTP-based adaptive bitrate streaming communications protocol implemented by Apple Inc. as part of its QuickTime, Safari, OS X, and iOS software. Client implementations are also available in Microsoft Edge, Firefox and some versions of Google Chrome. Support is widespread in streaming media servers.</:p>
+<:p>HLS resembles MPEG-DASH in that it works by breaking the overall stream into a sequence of small HTTP-based file downloads, each download loading one short chunk of an overall potentially unbounded transport stream. A list of available streams, encoded at different bit rates, is sent to the client using an extended M3U playlist.</:p>
+<:p>Based on standard HTTP transactions, HTTP Live Streaming can traverse any firewall or proxy server that lets through standard HTTP traffic, unlike UDP-based protocols such as RTP. This also allows content to be offered from conventional HTTP servers and delivered over widely available HTTP-based content delivery networks. The standard also includes a standard encryption mechanism and secure-key distribution using HTTPS, which together provide a simple DRM system. Later versions of the protocol also provide for trick-mode fast-forward and rewind and for integration of subtitles.</:p>
+<:p>Apple has documented HTTP Live Streaming as an Internet Draft (Individual Submission), the first stage in the process of publishing it as a Request for Comments (RFC). As of December 2015, the authors of that document have requested the RFC Independent Stream Editor (ISE) to publish the document as an informational (non-standard) RFC outside of the IETF consensus process.</:p>
+<:p>In August 2017, RFC8216 was published to describe version 7 of the protocol.</:p>
+<:p>HTTP Live Streaming uses a conventional web server to distribute audiovisual content and requires specific software to fit into the proper format transmission in real time. The service architecture comprises:</:p>
+<:p>- Server</:p>
+<:p>- Distributor</:p>
+<:p>- Client</:p>
+<:p>HTTP Live Streaming provides mechanisms for players to adapt to unreliable network conditions without causing user-visible playback stalling. For example, on an unreliable wireless network, HLS allows the player to use a lower quality video, thus reducing bandwidth usage. HLS videos can be made highly available by providing multiple servers for the same video, allowing the player to swap seamlessly if one of the servers fails.</:p>
+<:p>To enable a player to adapt to the bandwidth of the network, the original video is encoded in several distinct quality levels. The server serves an index, called a "master playlist", of these encodings, called "variant streams". The player can then choose between the variant streams during playback, changing back and forth seamlessly as network conditions change.</:p>
+<:p>The master playlist can list duplicate variant streams that have the same level of quality but are hosted by different servers. This enables the player to swap to a different server for a given bitrate if one of the servers fails. This grants a degree of high availability to serving streams.</:p>
+<:p>This can be combined with adaptability by listing multiple variant streams for each distinct quality level.</:p>
+<:p>On WWDC2016 Apple announced the inclusion of byte-range addressing for fragmented MP4 files, or fMP4, allowing content to be played in HLS without the need to multiplex it into MPEG-2 Transport Stream. The industry considered this as a step towards compatibility between HLS and MPEG-DASH.</:p>
+<:p>- Adobe Media Server supports HLS for iOS devices (HLS) and Protected HTTP Live Streaming (PHLS).</:p>
+<:p>- Akamai supports HLS for live and on-demand streams.</:p>
+<:p>- Amazon CloudFront supports HLS for on-demand streams.</:p>
+<:p>- Bitmovin supports HLS for on-demand and live streaming.</:p>
+<:p>- CDNetworks supports HLS for live and on-demand streams.</:p>
+<:p>- Cisco Systems: Supports full end to end delivery for Live/TSTV/VOD/HLS and Cloud DVR services.</:p>
+<:p>- Cloudflare supports HLS for live and on-demand streams.</:p>
+<:p>- EdgeCast Networks supports cross-device streaming using HLS.</:p>
+<:p>- Edgeware: Supports full end to end delivery for Live/TSTV/VOD/HLS.</:p>
+<:p>- Helix Universal Server from RealNetworks supports iPhone OS 3.0 and later for live and on-demand HTTP Live or On-Demand streaming of H.264 and AAC content to iPhone, iPad and iPod.</:p>
+<:p>- IIS Media Services from Microsoft supports live and on-demand Smooth Streaming and HTTP Live Streaming.</:p>
+<:p>- Level 3 supports HLS live and on-demand streams.</:p>
+<:p>- Limelight Networks supports HLS for some accounts.</:p>
+<:p>- Nginx with the nginx-rtmp-module supports HLS in live mode. Commercial version Nginx Plus also supports HLS/HDS VOD.</:p>
+<:p>- Nimble Streamer supports HLS in live and VOD mode.</:p>
+<:p>- Node.js with the hls-server package supports hls encoding to live mode and local files conversion.</:p>
+<:p>- Tata Communications CDN supports HLS for live and on-demand streams.</:p>
+<:p>- TVersity supports HLS in conjunction with on-the-fly transcoding for playback of any video content on iOS devices.</:p>
+<:p>- Unreal Media Server supports low latency HLS as of version 9.5.</:p>
+<:p>- Ustream supports HLS delivery of live broadcasts. The ingested stream is re-transcoded if the original audio and video codec falls outside HLS requirements.</:p>
+<:p>- VLC Media Player supports HLS for serving live and on-demand streams as of version 2.0.</:p>
+<:p>- Wowza Streaming Engine from "Wowza Media Systems" supports HLS and encrypted HLS for live (with DVR) and on-demand streaming.</:p>
+<:p>- Google added HTTP Live Streaming support in Android 3.0 (Honeycomb).</:p>
+<:p>- HP added HTTP Live Streaming support in webOS 3.0.5.</:p>
+<:p>- Microsoft added support for HTTP Live Streaming in EdgeHTML rendering engine in Windows 10 in 2015.</:p>
+<:p>- Microsoft added support for HTTP Live Streaming in IIS Media Services 4.0.</:p>
+<:p>- Yospace added HTTP Live Streaming support in Yospace HLS Player and SDK for flash version 1.0.</:p>
+<:p>- Sling Media added HTTP Live Streaming support to its Slingboxes and its SlingPlayer apps.</:p>
+<:p>- In 2014/15, the BBC introduced HLS-AAC streams for its live internet radio and on-demand audio services, and supports those streams with its iPlayer Radio clients.</:p>
+<:p>HTTP Live Streaming is natively supported in the following operating systems:</:p>
+<:p>- Windows 10 (Microsoft Edge)</:p>
+<:p>- macOS 10.6+ (Safari and QuickTime)</:p>
+<:p>- iOS 3.0+ (Safari)</:p>
+<:p>- Android 4.1+ (Google Chrome)</:p>
+<:p>- Adaptive bitrate streaming</:p>
+<:p>- Dynamic Adaptive Streaming over HTTP</:p>

@@ -1,0 +1,63 @@
+<:import macros/html.xml />
+<:h1>List of SMTP server return codes</:h1>
+<:p>This is a list of Simple Mail Transfer Protocol (SMTP) response status codes. Status codes are issued by a server in response to a client's request made to the server. It includes codes from IETF Request for Comments (RFCs) and other specifications of SMTP. The first digit of the status code specifies one of five standard classes of responses: 1xx (Informational); 2xx (Successful); 3xx (Redirection); 4xx (Client Error) or 5xx (Server Error).</:p>
+<:p>The message phrases shown are typical, but any human-readable alternative may be provided.</:p>
+<:p>Unless otherwise stated, the status code is part of the current SMTP standard . The Internet Assigned Numbers Authority (IANA) maintains the official registry of SMTP status codes.</:p>
+<:p>All SMTP response status codes are separated into five classes (or categories). The first digit of the status code defines the class of response:</:p>
+<:p>- 1xx (Informational): The request was received, continuing process</:p>
+<:p>- 2xx (Successful): The request was successfully received, understood, and accepted</:p>
+<:p>- 3xx (Redirection): Further action needs to be taken in order to complete the request</:p>
+<:p>- 4xx (Client Error): The request contains bad syntax or cannot be fulfilled</:p>
+<:p>- 5xx (Server Error): The server failed to fulfill an apparently valid request</:p>
+<:p>The last two digits do not have any class or categorization role.</:p>
+<:p>These return codes have been in SMTP from the beginning, with RFC 821 in 1982, but were extended rather extensively, and haphazardly so that by 2003 RFC 3463 rather grumpily noted that: "SMTP suffers some scars from history, most notably the unfortunate damage to the reply code extension mechanism by uncontrolled use."</:p>
+<:p>101 "The server is unable to connect"</:p>
+<:p>111 "Connection refused or inability to open an SMTP stream"</:p>
+<:p>This class of status codes indicates the action requested by the client was received, understood and accepted.</:p>
+<:p>200 "System status message or help reply"</:p>
+<:p>214 "A response to the HELP command"</:p>
+<:p>220 "The server is ready"</:p>
+<:p>221 "The server is closing its transmission channel"</:p>
+<:p>250 "Requested mail action okay completed"</:p>
+<:p>251 "User not local will forward"</:p>
+<:p>252 "Cannot verify the user, but it will try to deliver the message anyway"</:p>
+<:p>354 "Start mail input"</:p>
+<:p>In most cases when receiving a 4xx error the sending mail server will attempt to retry delivery after a delay, and may repeatedly do so for up to a day or two depending on configuration before reporting to their user that the mail could not be delivered.</:p>
+<:p>420 "Timeout connection problem"</:p>
+<:p>421 "Service is unavailable due to a connection problem"</:p>
+<:p>422 "The recipient’s mailbox has exceeded its storage limit"</:p>
+<:p>431 "Not enough space on the disk"</:p>
+<:p>432 "Recipient’s incoming mail queue has been stopped"</:p>
+<:p>441 "The recipient’s server is not responding"</:p>
+<:p>442 "The connection was dropped during the transmission"</:p>
+<:p>446 "The maximum hop count was exceeded for the message"</:p>
+<:p>447 "Message timed out because of issues concerning the incoming server"</:p>
+<:p>449 "Routing error"</:p>
+<:p>450 "User’s mailbox is unavailable"</:p>
+<:p>451 "Aborted – Local error in processing"</:p>
+<:p>452 "Too many emails sent or too many recipients"</:p>
+<:p>471 "An error of your mail server"</:p>
+<:p>These errors will result in the SMTP connection being dropped, and the "sending" mail server will advise the user that their mail could not be delivered.</:p>
+<:p>500 "Syntax error"</:p>
+<:p>501 "Syntax error in parameters or arguments"</:p>
+<:p>503 "Bad sequence of commands, or requires authentication"</:p>
+<:p>504 "Command parameter is not implemented"</:p>
+<:p>510 "Bad email address"</:p>
+<:p>511 "Bad email address"</:p>
+<:p>512 "Host server for the recipient’s domain name cannot be found in DNS"</:p>
+<:p>513 "Address type is incorrect"</:p>
+<:p>523 "Size of your mail exceeds the server limits"</:p>
+<:p>530 " Authentication problem"</:p>
+<:p>541 "The recipient address rejected your message"</:p>
+<:p>550 "Non-existent email address"</:p>
+<:p>551 "User not local or invalid address – relay denied"</:p>
+<:p>552 "Exceeded storage allocation"</:p>
+<:p>553 "Mailbox name invalid"</:p>
+<:p>554 "Transaction has failed"</:p>
+<:p>Below is an example SMTP connection, where a client "C" is sending to server "S":</:p>
+<:p>- Custom error pages</:p>
+<:p>- List of FTP server return codes</:p>
+<:p>- List of HTTP header fields</:p>
+<:p>- Common Log Format</:p>
+<:p>- Hypertext Transfer Protocol (HTTP) Status Code Registry</:p>
+<:p>- Microsoft Knowledge Base: MSKB943891: The HTTP status codes in IIS 7.0</:p>

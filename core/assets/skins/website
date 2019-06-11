@@ -1,0 +1,18 @@
+{
+  BitmapFont: {
+    small: {
+      file: fonts/arial_small.fnt
+    }
+    large: {
+      file: fonts/arial_large.fnt
+    }
+  }
+  LabelStyle: {
+    default: {
+      font: small
+    }
+    large: {
+      font: large
+    }
+  }
+}

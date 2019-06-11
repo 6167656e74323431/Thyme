@@ -1,0 +1,7 @@
+<:import macros/html.xml />
+<:h1>Httperf</:h1>
+<:p>httperf (pronounced h-t-t-perf) is a testing tool to measure the performance of web servers. It was originally developed by David Mosberger and other staff at Hewlett-Packard Research Laboratories.</:p>
+<:p>httperf is able to test HTTP pipelining workloads.</:p>
+<:p>- Webの負荷テストに使えるフリーソフトウェア, ITmedia</:p>
+<:p>- D. Mosberger and T. Jin. httperf: A Tool for Measuring Web Server Performance . Performance Evaluation Review, Volume 26, Number 3, December 1998, 31-37. (Originally appeared in Proceedings of the 1998 Internet Server Performance Workshop, June 1998, 59-67.)</:p>
+<:p>- httperf github repository</:p>

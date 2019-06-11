@@ -1,0 +1,36 @@
+<:import macros/html.xml />
+<:h1>Languages used on the Internet</:h1>
+<:p>About half of the homepages of the most visited websites on the World Wide Web are in English, with varying amounts of information available in many other languages. Other top languages, according to W3Techs, are Russian, German, Spanish, French, Japanese, Portuguese, Italian, and Persian. </:p>
+<:p>Of the more than 7,000 existing languages, only a few hundred are recognized as being in use for Web pages on the World Wide Web.</:p>
+<:p>There is debate over the most-used languages on the Internet. A 2009 UNESCO report monitoring the languages of websites for 12 years, from 1996 to 2008, found a steady year-on-year decline in the percentage of webpages in English, from 75 percent in 1998 to 45 percent in 2005. The authors found that English remained at 45 percent of content for 2005 to the end of the study but believe this was due to the bias of search engines indexing more English-language content rather than a true stabilization of the percentage of content in English on the World Wide Web.</:p>
+<:p>Ongoing monitoring by W3Techs showed that in March 2015, just over 55 percent of the most visited websites had English-language homepages.</:p>
+<:p>Other top languages that are used at least in 2 percent of the one million most visited websites according to W3Techs are Russian, German, Japanese, Spanish, French, Chinese, and Portuguese.</:p>
+<:p>The figures from the W3Techs study are based on the one million most visited websites (i.e., approximately 0.27 percent of all websites according to December 2011 figures) as ranked by Alexa.com, and language is identified using only the home page of the sites in most cases (e.g., all of Wikipedia is based on the language detection of http://www.wikipedia.org). As a consequence, the figures show a significantly higher percentage for many languages (especially for English) as compared to the figures for all websites. The figures for all websites are unknown, but some sources estimate below 50 percent for English; see for instance, Towards a multilingual cyberspace and the 2009 UNESCO report.</:p>
+<:p>The number of non-English web pages is rapidly expanding. The use of English online increased by around 281 percent from 2001 to 2011, a lower rate of growth than that of Spanish (743 percent), Chinese (1,277 percent), Russian (1,826 percent) or Arabic (2,501 percent) over the same period.</:p>
+<:p>According to a 2000 study, the international auxiliary language Esperanto ranked 40 out of all languages in search engine queries, also ranking 27 out of all languages that rely on the Latin script.</:p>
+<:p>W3Techs estimated percentages of the top 10 million websites on the World Wide Web using various content languages as of March 2018:</:p>
+<:p>All other languages are used in less than 0.1% of websites. Even including all languages, percentages may not sum to 100% because some websites contain multiple content languages.</:p>
+<:p>InternetWorldStats estimates of the number of Internet users by language as of April 30, 2019:</:p>
+<:p>- Internationalization and localization</:p>
+<:p>- Language localization</:p>
+<:p>- Website localization</:p>
+<:p>- List of countries by number of Internet users</:p>
+<:p>- List of countries by number of broadband Internet users</:p>
+<:p>- List of countries by number of Internet hosts</:p>
+<:p>- Multilingualism</:p>
+<:p>- English in computer science</:p>
+<:p>- Global digital divide</:p>
+<:p>- Rural Internet</:p>
+<:p>- Unicode</:p>
+<:p>- Computer recycling</:p>
+<:p>- Computer technology for developing areas</:p>
+<:p>- Internet World Users by Language, Internet World Stats.</:p>
+<:p>- "Estimation of English and non-English Language Use on the WWW", Gregory Grefenstette and Julien Nioche, in Proceedings of RIAO'2000, "Content-Based Multimedia Information Access", Paris, 12–14 April 2000, pp. 237–246.</:p>
+<:p>- World GDP by Language 1975–2002, Mark Davis, Unicode Technical Note #13 (2003).</:p>
+<:p>- "Writing the Web’s Future in Many Languages", Daniel Sorid, "New York Times", 30 December 2008.</:p>
+<:p>- Statistical Survey Report on Internet Usage in China, China Internet Network Information Center (2009), English translation.</:p>
+<:p>- List of CNNIC statistical reports, China Internet Network Information Center (1997-2010).</:p>
+<:p>- Measuring Linguistic Diversity on the Internet, UNESCO (2006).</:p>
+<:p>- Twelve years of measuring linguistic diversity in the Internet, UNESCO (2009).</:p>
+<:p>- Language Observatory, Japan Science and Technology Agency (2012).</:p>
+<:p>- Observatory of linguistic and cultural diversity on the Internet, FUNREDES/MAAYA</:p>

@@ -1,0 +1,14 @@
+<:import macros/html.xml />
+<:h1>Google Fast Pair</:h1>
+<:p>Google Fast Pair Service ("GFPS") or Fast Pair, is Google's proprietary standard for quickly pair Bluetooth devices when they come in close proximity for the first time using Bluetooth Low Energy (BLE). It announced in October 2017, initially design for connecting audio device such as speakers, headphones and car kits with Android. In 2018 Google updated Fast Pair with support for Chrome OS devices in 2019 and Fair Pair connections to be sync with other Android devices with the same Google Account. Google has partnered with Bluetooth SoC designers including Qualcomm, Airoha Technology and BES Technic to add Fast Pair support to their SDKs. In May 2019, Qualcomm announced their Smart Headset Reference Design, Qualcomm QCC5100, QCC3024 and QCC3034 SoC series with Fast Pair and Google Assistant support.</:p>
+<:p>Earbuds include:</:p>
+<:p>- Google Pixel Buds</:p>
+<:p>In-Ear Monitors include:</:p>
+<:p>- Jaybird Tarah Wireless Sport Headphones</:p>
+<:p>Headphones include:</:p>
+<:p>- Bose Corporation QuietComfort 35 II</:p>
+<:p>- Libratone Q Adapt On-Ear</:p>
+<:p>- Plantronics Voyager 8200</:p>
+<:p>- AiAiAi TMA-2</:p>
+<:p>Bluetooth SoCs include:</:p>
+<:p>- Qualcomm QCC3024, QCC3034 and QCC5100 series.</:p>

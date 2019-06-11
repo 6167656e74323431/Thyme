@@ -1,0 +1,5 @@
+<:import macros/html.xml />
+<:h1>List of IPv6 tunnel brokers</:h1>
+<:p>This is a list of IPv6 tunnel brokers that conform to the principles of RFC 3053 which describes a system with which users can request creation of an IPv6 tunnel on a host called a point of presence (PoP) that provides IPv6 connectivity to the user's network.</:p>
+<:p>nowiki*/nowiki"Paid services"</:p>
+<:p>The columns in the table provide the following details:</:p>
